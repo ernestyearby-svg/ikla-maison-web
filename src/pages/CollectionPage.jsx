@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Filter, SlidersHorizontal, ArrowUpDown, Search, X } from 'lucide-react';
 import { PRODUCTS, CATEGORIES } from '../data/products';
-import { BRAND_LIST } from '../data/brands';
+import { BRAND_LIST, BRANDS } from '../data/brands';
 import ProductCard from '../components/ProductCard';
 
 export default function CollectionPage({
@@ -53,7 +53,7 @@ export default function CollectionPage({
       <div className="bg-[#F4EFE6] border-b border-[#E5DFD5] py-14 sm:py-18 px-6 sm:px-8 lg:px-12 text-center relative overflow-hidden">
         {/* Subtle Watermark in Collection Header */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.05]">
-          <img src="/assets/ikla-maison/logos/wordmark-dark.webp" alt="" className="w-[80vw] max-w-[1000px] object-contain" />
+          <img src={BRANDS['ikla-maison'].logos.wordmarkDark} alt="" className="w-[80vw] max-w-[1000px] object-contain" />
         </div>
 
         <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2 relative z-10">

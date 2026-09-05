@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/assets.js';
+
 export const PRODUCTS = [
   // ==========================================
   // IKLA MAISON
@@ -581,4 +583,11 @@ export const PRODUCTS = [
   }
 ];
 
+PRODUCTS.forEach(product => {
+  if (product.image) {
+    product.image = getAssetPath(product.image);
+  }
+});
+
 export const CATEGORIES = ['All', 'Outerwear', 'Tops', 'Bottoms', 'Sets', 'Accessories'];
+

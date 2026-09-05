@@ -50,7 +50,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
         {/* Oversized Faded IKLA Maison Wordmark Watermark behind Hero Content (4%–9% opacity) */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0">
           <img
-            src="/assets/ikla-maison/logos/wordmark-dark.webp"
+            src={BRANDS['ikla-maison'].logos.wordmarkDark}
             alt=""
             className="w-[90vw] max-w-[1300px] object-contain opacity-[0.06] filter contrast-125"
             loading="eager"
@@ -60,7 +60,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
         {/* Rotating Circular Collective Crest Behind Hero (7%–14% opacity) */}
         <div className="absolute -right-24 md:right-12 -bottom-24 md:bottom-8 w-80 md:w-96 h-80 md:h-96 pointer-events-none select-none z-0 opacity-12">
           <img
-            src="/assets/ikla-maison/logos/crest-light.webp"
+            src={BRANDS['ikla-maison'].logos.crestLight}
             alt=""
             className="w-full h-full object-contain animate-spin-slow filter brightness-125"
             loading="eager"
@@ -137,7 +137,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
           <div className="flex items-center gap-6">
             <div className="w-16 h-16 rounded-full border border-[#C8A97E]/50 flex items-center justify-center p-3 shrink-0 bg-white shadow-sm">
               <img
-                src="/assets/ikla-maison/logos/crest-light.webp"
+                src={BRANDS['ikla-maison'].logos.crestLight}
                 alt="IKLA Maison Emblem"
                 className="w-full h-full object-contain animate-spin-slow"
               />
@@ -293,7 +293,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
           >
             {/* Background Watermark Crest */}
             <div className="absolute -bottom-10 -right-10 w-48 h-48 opacity-[0.06] pointer-events-none">
-              <img src="/assets/ikla-maison/logos/crest-light.webp" alt="" className="w-full h-full object-contain" />
+              <img src={BRANDS['ikla-maison'].logos.crestLight} alt="" className="w-full h-full object-contain" />
             </div>
 
             <div className="relative z-10">
@@ -380,7 +380,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             className="group relative aspect-[16/9] overflow-hidden bg-neutral-900 border border-[#E0DBD0] shadow-sm hover:shadow-xl cursor-pointer rounded-xs"
           >
             <img
-              src="/assets/ikla-maison/editorial.webp"
+              src={BRANDS['ikla-maison'].assets.editorial}
               alt="IKLA Maison Editorial Lifestyle visual at coastal infinity pool"
               loading="lazy"
               className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
@@ -405,7 +405,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             className="group relative aspect-[16/9] overflow-hidden bg-neutral-900 border border-[#E0DBD0] shadow-sm hover:shadow-xl cursor-pointer rounded-xs"
           >
             <img
-              src="/assets/moteon/editorial.webp"
+              src={BRANDS['moteon'].assets.editorial}
               alt="Motéon Mediterranean boat arrival editorial lookbook"
               loading="lazy"
               className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
@@ -430,7 +430,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             className="group relative aspect-[16/9] overflow-hidden bg-neutral-900 border border-[#E0DBD0] shadow-sm hover:shadow-xl cursor-pointer rounded-xs"
           >
             <img
-              src="/assets/moral-compass/editorial.webp"
+              src={BRANDS['moral-compass'].assets.editorial}
               alt="Moral Compass circular rotunda celestial floor editorial visual"
               loading="lazy"
               className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
@@ -455,7 +455,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             className="group relative aspect-[16/9] overflow-hidden bg-neutral-900 border border-[#E0DBD0] shadow-sm hover:shadow-xl cursor-pointer rounded-xs"
           >
             <img
-              src="/assets/my-drink-family/editorial.webp"
+              src={BRANDS['my-drink-family'].assets.editorial}
               alt="My Drink Family rooftop celebration lifestyle banner"
               loading="lazy"
               className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"

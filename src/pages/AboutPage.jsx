@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, Sparkles, Compass, Users, Heart, ArrowRight } from 'lucide-react';
-import { BRAND_LIST } from '../data/brands';
+import { BRAND_LIST, BRANDS } from '../data/brands';
 
 export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigateCollection }) {
   return (
@@ -40,7 +40,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
 
           <div className="relative aspect-[4/3] bg-white border border-[#DDD7CB] shadow-md overflow-hidden rounded-xs">
             <img
-              src="/assets/ikla-maison/editorial.webp"
+              src={BRANDS['ikla-maison'].assets.editorial}
               alt="Ikla Maison architectural terrace overlooking the sea"
               className="w-full h-full object-cover"
             />

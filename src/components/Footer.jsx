@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Check, Shield, Globe, Award, Sparkles } from 'lucide-react';
-import { BRAND_LIST } from '../data/brands';
+import { BRAND_LIST, BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
 export default function Footer({ onNavigate }) {
@@ -69,7 +69,7 @@ export default function Footer({ onNavigate }) {
         <div className="py-14 border-b border-neutral-800/80 relative">
           {/* Subtle Collective Watermark in Footer (pointer-events: none) */}
           <div className="absolute right-0 bottom-4 w-72 h-72 pointer-events-none select-none opacity-[0.03] overflow-hidden">
-            <img src="/assets/ikla-maison/logos/crest-light.webp" alt="" className="w-full h-full object-contain" />
+            <img src={BRANDS['ikla-maison'].logos.crestLight} alt="" className="w-full h-full object-contain" />
           </div>
 
           <div className="flex items-center justify-between mb-8">

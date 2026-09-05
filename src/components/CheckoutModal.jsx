@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, CheckCircle2, Shield, Lock, CreditCard, ArrowRight, Truck } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { BRANDS } from '../data/brands';
 
 export default function CheckoutModal({ isOpen, onClose, onReturnHome }) {
   const { items, subtotal, giftPackaging, isEligibleForFreeShipping, clearCart, closeCart } = useCart();
@@ -50,7 +51,7 @@ export default function CheckoutModal({ isOpen, onClose, onReturnHome }) {
         {/* Background Watermark */}
         <div className="absolute -right-20 -bottom-20 w-96 h-96 opacity-[0.03] pointer-events-none select-none z-0">
           <img
-            src="/assets/ikla-maison/logos/crest-light.webp"
+            src={BRANDS['ikla-maison'].logos.crestLight}
             alt=""
             className="w-full h-full object-contain animate-spin-slow"
           />

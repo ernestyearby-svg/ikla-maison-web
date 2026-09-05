@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Trash2, Plus, Minus, ArrowRight, ShieldCheck, Gift, ShoppingBag } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { BRANDS } from '../data/brands';
 
 export default function CartDrawer({ onNavigateCollection, onSelectBrand, onReturnHome, onProceedToCheckout }) {
   const {
@@ -41,7 +42,7 @@ export default function CartDrawer({ onNavigateCollection, onSelectBrand, onRetu
             {/* Background Watermark */}
             <div className="absolute -right-16 -bottom-16 w-80 h-80 opacity-[0.04] pointer-events-none select-none z-0">
               <img
-                src="/assets/ikla-maison/logos/crest-light.webp"
+                src={BRANDS['ikla-maison'].logos.crestLight}
                 alt=""
                 className="w-full h-full object-contain animate-spin-slow"
               />

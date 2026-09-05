@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/assets.js';
+
 export const BRANDS = {
   'ikla-maison': {
     id: 'ikla-maison',
@@ -250,5 +252,19 @@ export const BRANDS = {
   }
 };
 
+Object.values(BRANDS).forEach(brand => {
+  if (brand.logos) {
+    Object.keys(brand.logos).forEach(k => {
+      brand.logos[k] = getAssetPath(brand.logos[k]);
+    });
+  }
+  if (brand.assets) {
+    Object.keys(brand.assets).forEach(k => {
+      brand.assets[k] = getAssetPath(brand.assets[k]);
+    });
+  }
+});
+
 export const BRAND_LIST = Object.values(BRANDS);
+
 
