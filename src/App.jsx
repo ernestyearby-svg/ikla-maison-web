@@ -30,6 +30,8 @@ export default function App() {
   // URL Hash Sync for fluid routing and direct deep-linking
   useEffect(() => {
     const handleHashChange = () => {
+      window.scrollTo(0, 0);
+      setIsMobileMenuOpen(false);
       const hash = window.location.hash.replace(/^#\/?/, '');
       if (!hash) {
         setCurrentView('home');

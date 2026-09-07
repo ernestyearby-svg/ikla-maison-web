@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, ShoppingBag, Search, ChevronDown, ArrowRight, X } from 'lucide-react';
+import { Menu, ShoppingBag, Search, ChevronDown, ArrowRight, X, Droplets } from 'lucide-react';
 import { BRANDS, BRAND_LIST } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
@@ -121,6 +121,34 @@ export default function Navbar({
                       </span>
                     </button>
                   ))}
+
+                  {/* Extension Concept: IKLA Water */}
+                  <div className="pt-2 border-t border-neutral-800/80 mt-1">
+                    <button
+                      onClick={() => {
+                        onNavigate('brand', 'ikla-water');
+                        setIsBrandsDropdownOpen(false);
+                      }}
+                      className="w-full text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#5E8896]/40 rounded-xs transition-all flex items-center justify-between group cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-8 h-8 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
+                          <Droplets className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-medium text-white group-hover:text-[#5E8896] transition-colors tracking-[0.08em]">
+                            IKLA Water
+                          </div>
+                          <div className="text-[11px] text-neutral-400 font-light truncate max-w-[320px]">
+                            Pure Mineral Hydration & Sculptural Monolithic Vessels
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-[9px] text-[#5E8896] uppercase tracking-widest opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 font-mono">
+                        Concept <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

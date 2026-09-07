@@ -264,7 +264,7 @@ export const PRODUCTS = [
     price: 450,
     category: 'Sets',
     image: '/assets/moteon/collection.webp',
-    imageAlt: 'Moteon Riviera Halter Wrap Top & Palazzo Pant on travertine flat lay',
+    imageAlt: 'Motéon Riviera Halter Wrap Top & Palazzo Pant on travertine flat lay',
     sizes: ['XS', 'S', 'M', 'L'],
     colors: [
       { name: 'Sun-Bleached Chalk', hex: '#F9F7F1' }
@@ -290,7 +290,7 @@ export const PRODUCTS = [
     price: 240,
     category: 'Tops',
     image: '/assets/moteon/collection.webp',
-    imageAlt: 'Moteon Open-Knit Short-Sleeve Resort Polo on travertine flat lay',
+    imageAlt: 'Motéon Open-Knit Short-Sleeve Resort Polo on travertine flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
       { name: 'Onyx Black', hex: '#161616' },
@@ -304,7 +304,7 @@ export const PRODUCTS = [
       'Artisanal open-stitch breathable crochet weave',
       'Camp collar silhouette suitable for layering or solo wear',
       'Natural horn button closure',
-      'Hem woven with subtle Moteon brand tab'
+      'Hem woven with subtle Motéon brand tab'
     ],
     fabricCare: 'Delicate hand wash cold in protective bag. Dry flat in shade.',
     fitNotes: 'Relaxed resort fit with airy drape.'
@@ -317,7 +317,7 @@ export const PRODUCTS = [
     price: 250,
     category: 'Bottoms',
     image: '/assets/moteon/collection.webp',
-    imageAlt: 'Moteon Pleated Mediterranean Linen Trousers on travertine flat lay',
+    imageAlt: 'Motéon Pleated Mediterranean Linen Trousers on travertine flat lay',
     sizes: ['30', '32', '34', '36'],
     colors: [
       { name: 'Warm Taupe', hex: '#9E8F81' },
@@ -344,7 +344,7 @@ export const PRODUCTS = [
     price: 230,
     category: 'Tops',
     image: '/assets/moteon/hero-mobile.webp',
-    imageAlt: 'Model wearing Moteon Embroidered Open-Collar Knit Shirt descending villa stairs',
+    imageAlt: 'Model wearing Motéon Embroidered Open-Collar Knit Shirt descending villa stairs',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
       { name: 'Chalk Cream', hex: '#F4EFE6' }
@@ -355,7 +355,7 @@ export const PRODUCTS = [
     description: 'As featured in the villa steps campaign, a light knitted button-down with tonal hem embroidery.',
     details: [
       'Light gauge summer cotton-silk blend',
-      'Subtle tonal Moteon hem embroidery',
+      'Subtle tonal Motéon hem embroidery',
       'Spread camp collar and mother-of-pearl buttons',
       'Side vents for comfortable movement'
     ],

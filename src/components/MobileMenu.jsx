@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ChevronRight, ShoppingBag, Globe, PhoneCall } from 'lucide-react';
+import { X, ChevronRight, ShoppingBag, Globe, PhoneCall, Droplets } from 'lucide-react';
 import { BRAND_LIST } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
@@ -107,6 +107,34 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                   <ChevronRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
                 </button>
               ))}
+
+              {/* Extension: IKLA Water */}
+              <button
+                onClick={() => {
+                  onNavigate('brand', 'ikla-water');
+                  onClose();
+                }}
+                className={`w-full text-left p-3 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
+                  currentView === 'brand' && currentBrandId === 'ikla-water'
+                    ? 'bg-white/10 text-white border-l-2 border-[#5E8896]'
+                    : 'hover:bg-white/5 text-neutral-300'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
+                    <Droplets className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-white group-hover:text-[#5E8896] transition-colors tracking-wide">
+                      IKLA Water
+                    </div>
+                    <div className="text-[11px] text-neutral-400 font-light truncate max-w-[190px]">
+                      Pure Mineral Glass Extension
+                    </div>
+                  </div>
+                </div>
+                <ChevronRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </div>
 

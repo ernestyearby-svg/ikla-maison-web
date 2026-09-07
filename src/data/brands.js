@@ -249,6 +249,65 @@ export const BRANDS = {
       'Vibrant sunset orange, rich emerald, and warm cream palette',
       'Seamless transition from day celebration to evening lounge'
     ]
+  },
+
+  'ikla-water': {
+    id: 'ikla-water',
+    name: 'IKLA Water',
+    tagline: 'Pure Mineral Hydration & Sculptural Monolithic Vessels',
+    description: 'An architectural house extension exploring sculptural glass vessels, dining aesthetics, and pure mineral hydration conceived for intentional tables.',
+    keywords: ['Pure', 'Sculptural', 'Monolithic', 'Essential', 'Pristine'],
+    palette: {
+      accent: '#5E8896',
+      accentHover: '#74A0AE',
+      badgeBg: 'rgba(94, 136, 150, 0.14)',
+      badgeBorder: 'rgba(94, 136, 150, 0.40)',
+      cardBg: '#FFFFFF',
+      heroOverlay: 'linear-gradient(to top, rgba(10,14,18,0.92) 0%, rgba(10,14,18,0.4) 60%, rgba(10,14,18,0.18) 100%)',
+    },
+    buttonStyle: 'bg-[#1A2830] text-[#FAFBFB] hover:bg-[#283C48] shadow-md border border-[#1A2830] hover:border-[#283C48] transition-all duration-300 font-medium tracking-[0.18em] uppercase text-xs cursor-pointer',
+    buttonOutlineStyle: 'border border-[#1A2830] text-[#1A2830] hover:bg-[#1A2830] hover:text-white transition-all duration-300 font-medium tracking-[0.18em] uppercase text-xs cursor-pointer',
+    navAccent: '#5E8896',
+    glowColor: 'rgba(94, 136, 150, 0.25)',
+    atmosphereBg: 'bg-[#F5F8F9] bg-radial-[at_top_right] from-[#EAF2F4] via-[#F5F8F9] to-[#DFECF0]',
+    houseBorder: 'border-[#CADCE0]',
+    typography: 'font-cormorant',
+    founded: 'Maison Concept',
+    origin: 'Alpine Source — Curation',
+    isExtension: true,
+    logos: {
+      wordmarkDark: '/assets/ikla-maison/logos/wordmark-dark.webp',
+      wordmarkLight: '/assets/ikla-maison/logos/wordmark-light.webp',
+      crestLight: '/assets/ikla-maison/logos/crest-light.webp',
+      crestDark: '/assets/ikla-maison/logos/crest-dark.webp',
+    },
+    assets: {
+      heroDesktop: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',
+      heroMobile: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',
+      collection: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg',
+      editorial: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',
+      roundedBottles: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg',
+      cylinderBottles: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg',
+      pedestal: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg',
+      diningTable: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',
+    },
+    alt: {
+      heroDesktop: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',
+      heroMobile: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',
+      collection: 'Three minimalist IKLA Water bottles displayed on architectural travertine pedestal',
+      editorial: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',
+      roundedBottles: 'Trio of rounded glass IKLA Water bottles against clean studio backdrop',
+      cylinderBottles: 'Trio of tall cylindrical glass IKLA Water bottles against clean studio backdrop',
+      pedestal: 'Three minimalist IKLA Water bottles displayed on architectural travertine pedestal',
+      diningTable: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',
+    },
+    manifesto: 'Conceived as an architectural extension of the IKLA Maison dining salon. Pure natural mineral water contained in heavyweight reusable flint glass vessels designed to integrate seamlessly into modern living spaces.',
+    keyAttributes: [
+      'Pure alpine mineral water profile in reusable flint glass vessels',
+      'Sculptural rounded and cylindrical monolithic bottle silhouettes',
+      'Designed for refined dining tables and executive hospitality',
+      'Maison concept and architectural lifestyle extension'
+    ]
   }
 };
 
@@ -265,6 +324,15 @@ Object.values(BRANDS).forEach(brand => {
   }
 });
 
-export const BRAND_LIST = Object.values(BRANDS);
+export const BRAND_LIST = [
+  BRANDS['ikla-maison'],
+  BRANDS['ktse'],
+  BRANDS['moteon'],
+  BRANDS['moral-compass'],
+  BRANDS['my-drink-family']
+];
+
+export const ALL_HOUSES = Object.values(BRANDS);
+
 
 
