@@ -638,6 +638,73 @@ export default function CollectionPage({
           </div>
         </div>
 
+        {/* Contextual Pathway Editorial Banners */}
+        {selectedPathway === 'Griffin Edition' && (
+          <div className="mb-8 p-6 sm:p-8 bg-[#0E1014] text-[#FAF7F2] rounded-xs border border-[#D4A657]/40 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in">
+            <div className="space-y-2">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4A657] font-semibold flex items-center gap-1.5">
+                <Sparkle className="w-3 h-3" /> The Griffin Edition Atelier
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-cormorant font-light text-white">
+                Private Bespoke Commissions & Design Visions
+              </h3>
+              <p className="text-xs text-neutral-300 font-manrope font-light max-w-xl leading-relaxed">
+                Explore future-facing design programs spanning custom automotive interiors, superyacht staterooms, and architectural aviation studies.
+              </p>
+            </div>
+            <button
+              onClick={() => { window.location.hash = '#/griffin'; }}
+              className="px-6 py-3.5 bg-[#D4A657] hover:bg-[#FAF7F2] text-black text-xs uppercase tracking-[0.2em] font-semibold rounded-xs transition-colors shrink-0 flex items-center gap-2 cursor-pointer shadow-md"
+            >
+              <span>Enter Griffin Atelier</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
+
+        {selectedPathway === 'Kids' && (
+          <div className="mb-8 p-6 sm:p-8 bg-[#0D1612] text-[#FAF7F2] rounded-xs border border-[#013220]/60 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in">
+            <div className="space-y-2">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8A97E] font-semibold flex items-center gap-1.5">
+                <Sparkle className="w-3 h-3" /> IKLA Kids Next-Generation
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-cormorant font-light text-white">
+                Generational Wardrobe Built Without Compromise
+              </h3>
+              <p className="text-xs text-neutral-300 font-manrope font-light max-w-xl leading-relaxed">
+                Explore elevated everyday sets for children, expressed through the master house palette with simpler marks and comfortable proportions.
+              </p>
+            </div>
+            <button
+              onClick={() => { window.location.hash = '#/kids'; }}
+              className="px-6 py-3.5 bg-[#C8A97E] hover:bg-[#FAF7F2] text-black text-xs uppercase tracking-[0.2em] font-semibold rounded-xs transition-colors shrink-0 flex items-center gap-2 cursor-pointer shadow-md"
+            >
+              <span>Enter IKLA Kids</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
+
+        {selectedPathway === 'Accessories & Objects' && (
+          <div className="mb-8 p-5 sm:p-6 bg-[#16171A] text-[#FAF7F2] rounded-xs border border-white/10 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in">
+            <div>
+              <span className="text-[9px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
+                Confidential Client Appointments
+              </span>
+              <p className="text-sm font-cormorant text-white mt-1">
+                Architectural eyewear, black onyx cufflinks, and leather travel goods available by special order.
+              </p>
+            </div>
+            <button
+              onClick={() => { window.location.hash = '#/appointments'; }}
+              className="px-5 py-2.5 bg-white/10 hover:bg-[#C8A97E] text-white hover:text-black text-xs uppercase tracking-wider transition-colors shrink-0 border border-white/20 rounded-xs flex items-center gap-1.5 cursor-pointer"
+            >
+              <span>View Private Appointments</span>
+              <ArrowRight className="w-3 h-3" />
+            </button>
+          </div>
+        )}
+
         {/* ========================================================================= */}
         {/* 5. PRODUCT CATALOG GRID */}
         {/* ========================================================================= */}

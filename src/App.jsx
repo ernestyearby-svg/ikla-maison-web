@@ -156,6 +156,7 @@ export default function App() {
             onSelectProduct={handleSelectProduct}
             onNavigateCollection={() => navigateTo('collection')}
             onNavigateAbout={() => navigateTo('about')}
+            onNavigate={navigateTo}
           />
         )}
 
@@ -197,6 +198,7 @@ export default function App() {
             world={currentView}
             onNavigateHome={() => navigateTo('home')}
             onNavigateContact={() => navigateTo('contact')}
+            onNavigateCollection={(cat) => navigateTo('collection', null, cat)}
           />
         )}
 

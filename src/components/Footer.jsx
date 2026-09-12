@@ -140,18 +140,33 @@ export default function Footer({ onNavigate }) {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
-                  The Maison Houses Ethos
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors cursor-pointer">
-                  Request Private Access
+                <button onClick={() => onNavigate('griffin')} className="hover:text-[#D4A657] transition-colors cursor-pointer text-[#D4A657]/90 font-medium">
+                  The Griffin Edition
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('appointments')} className="hover:text-white transition-colors cursor-pointer">
                   Private Appointments
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('kids')} className="hover:text-white transition-colors cursor-pointer">
+                  IKLA Kids
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('brand', 'ikla-water')} className="hover:text-white transition-colors cursor-pointer">
+                  IKLA Water Extension
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
+                  The Maison Ethos
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors cursor-pointer">
+                  Request Private Access
                 </button>
               </li>
             </ul>
@@ -203,7 +218,7 @@ export default function Footer({ onNavigate }) {
         {/* Bottom Legal & Exact Brand Names Preservation */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
           <div>
-            © {new Date().getFullYear()} IKLA Maison. Internationally Known. Locally Accepted.
+            © {new Date().getFullYear()} IKLA Maison. Internationally Known, Locally Accepted.
           </div>
           <div className="flex items-center gap-6">
             <button onClick={() => onNavigate('about')} className="hover:text-neutral-300 cursor-pointer">

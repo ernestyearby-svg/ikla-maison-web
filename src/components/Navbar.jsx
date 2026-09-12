@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, KeyRound, Search, ChevronDown, ArrowRight, X, Droplets, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, KeyRound, Search, ChevronDown, ArrowRight, X, Droplets, ExternalLink, Sparkles } from 'lucide-react';
 import { BRANDS, FASHION_HOUSES } from '../data/brands';
 import { EXTERNAL_LINKS } from '../data/externalLinks';
 
@@ -14,6 +14,34 @@ export default function Navbar({
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBrandsDropdownOpen, setIsBrandsDropdownOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+  const dropdownTimeoutRef = useRef(null);
+
+  const openDropdown = () => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setIsBrandsDropdownOpen(true);
+  };
+
+  const closeDropdown = (delay = 200) => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setIsBrandsDropdownOpen(false);
+    }, delay);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsBrandsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    };
+  }, []);
 
   const currentBrand = currentView === 'brand' && currentBrandId ? BRANDS[currentBrandId] : null;
   const activeAccent = currentBrand ? currentBrand.navAccent : '#C8A97E';
@@ -68,10 +96,16 @@ export default function Navbar({
             </button>
 
             {/* Desktop Brand Switcher Dropdown */}
-            <div className="relative hidden lg:block">
+            <div
+              ref={dropdownRef}
+              className="relative hidden lg:block"
+              onMouseEnter={openDropdown}
+              onMouseLeave={() => closeDropdown(200)}
+            >
               <button
+                data-testid="the-houses-dropdown-trigger"
                 onClick={() => setIsBrandsDropdownOpen((prev) => !prev)}
-                onMouseEnter={() => setIsBrandsDropdownOpen(true)}
+                onMouseEnter={openDropdown}
                 aria-expanded={isBrandsDropdownOpen}
                 aria-haspopup="menu"
                 className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-neutral-300 hover:text-[#C8A97E] py-2 transition-colors cursor-pointer group"
@@ -83,8 +117,10 @@ export default function Navbar({
               {/* Mega Dropdown Panel */}
               {isBrandsDropdownOpen && (
                 <div
-                  onMouseLeave={() => setIsBrandsDropdownOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-[760px] bg-[#0e1014]/98 backdrop-blur-xl border border-neutral-800/90 shadow-[0_25px_60px_rgba(0,0,0,0.85)] p-5 animate-fade-in z-50 rounded-xs"
+                  data-testid="mega-dropdown-panel"
+                  onMouseEnter={openDropdown}
+                  onMouseLeave={() => closeDropdown(200)}
+                  className="absolute top-full left-0 mt-2 w-[760px] bg-[#0e1014]/98 backdrop-blur-xl border border-neutral-800/90 shadow-[0_25px_60px_rgba(0,0,0,0.85)] p-5 animate-fade-in z-50 rounded-xs before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                 >
                   <div className="grid grid-cols-2 gap-6">
                     {/* Column 1: Fashion Houses */}
@@ -131,29 +167,116 @@ export default function Navbar({
 
                     {/* Column 2: Extensions and connected platforms */}
                     <div>
-                      <div className="flex items-center justify-between px-2 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#E26D35] font-medium">
-                        <span>Extensions & Connected Worlds</span>
-                        <span className="text-[9px] text-neutral-500 font-normal">Distinct Platforms</span>
+                      <div className="flex items-center justify-between px-2 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#D4A657] font-medium">
+                        <span>Extensions & Private Worlds</span>
+                        <span className="text-[9px] text-neutral-500 font-normal">Distinct Ateliers</span>
                       </div>
                       <div className="mt-2 space-y-1 text-left">
-                        <button onClick={() => { onNavigate('brand', 'ikla-water'); setIsBrandsDropdownOpen(false); }} className="w-full p-3 hover:bg-white/[0.04] border border-transparent hover:border-[#5E8896]/40 flex items-center gap-3">
-                          <Droplets className="w-5 h-5 text-[#5E8896]" />
-                          <span><strong className="block text-xs text-white">IKLA Water</strong><span className="text-[10px] text-neutral-400">Maison concept extension</span></span>
+                        <button
+                          onClick={() => {
+                            onNavigate('griffin');
+                            setIsBrandsDropdownOpen(false);
+                          }}
+                          className="w-full p-2.5 hover:bg-white/[0.04] border border-transparent hover:border-[#D4A657]/40 rounded-xs flex items-center justify-between group cursor-pointer transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-[#12110D] border border-[#D4A657]/40 flex items-center justify-center shrink-0 text-[#D4A657]">
+                              <Sparkles className="w-4 h-4" />
+                            </div>
+                            <div>
+                              <strong className="block text-xs text-white group-hover:text-[#D4A657] transition-colors">The Griffin Edition</strong>
+                              <span className="text-[10px] text-neutral-400">Bespoke mobility & architecture</span>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#D4A657] group-hover:translate-x-1 transition-all" />
                         </button>
-                        <button onClick={() => { onNavigate('brand', 'my-drink-family'); setIsBrandsDropdownOpen(false); }} className="w-full p-3 hover:bg-white/[0.04] border border-transparent hover:border-[#E26D35]/40 flex items-center gap-3">
-                          <img src={BRANDS['my-drink-family'].logos.crestLight} alt="" className="w-5 h-5 object-contain" />
-                          <span><strong className="block text-xs text-white">My Drink Family</strong><span className="text-[10px] text-neutral-400">Connected hospitality platform</span></span>
+
+                        <button
+                          onClick={() => {
+                            onNavigate('appointments');
+                            setIsBrandsDropdownOpen(false);
+                          }}
+                          className="w-full p-2.5 hover:bg-white/[0.04] border border-transparent hover:border-[#C8A97E]/40 rounded-xs flex items-center justify-between group cursor-pointer transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 text-[#C8A97E]">
+                              <KeyRound className="w-4 h-4" />
+                            </div>
+                            <div>
+                              <strong className="block text-xs text-white group-hover:text-[#C8A97E] transition-colors">Private Appointments</strong>
+                              <span className="text-[10px] text-neutral-400">Accessories by confidential request</span>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#C8A97E] group-hover:translate-x-1 transition-all" />
                         </button>
-                        <button onClick={() => { onNavigate('appointments'); setIsBrandsDropdownOpen(false); }} className="w-full p-3 hover:bg-white/[0.04] border border-transparent hover:border-[#C8A97E]/40 flex items-center gap-3">
-                          <KeyRound className="w-5 h-5 text-[#C8A97E]" />
-                          <span><strong className="block text-xs text-white">Private Appointments</strong><span className="text-[10px] text-neutral-400">Accessories by confidential request</span></span>
+
+                        <button
+                          onClick={() => {
+                            onNavigate('kids');
+                            setIsBrandsDropdownOpen(false);
+                          }}
+                          className="w-full p-2.5 hover:bg-white/[0.04] border border-transparent hover:border-[#013220]/60 rounded-xs flex items-center justify-between group cursor-pointer transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-[#0D1612] border border-[#013220]/60 flex items-center justify-center shrink-0 text-[#C8A97E]">
+                              <Sparkles className="w-4 h-4 text-[#8C9B8F]" />
+                            </div>
+                            <div>
+                              <strong className="block text-xs text-white group-hover:text-[#C8A97E] transition-colors">IKLA Kids</strong>
+                              <span className="text-[10px] text-neutral-400">Next-generation luxury wardrobe</span>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#C8A97E] group-hover:translate-x-1 transition-all" />
                         </button>
-                        <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="w-full p-3 hover:bg-white/[0.04] flex items-center justify-between text-xs text-neutral-300 hover:text-white">
-                          Visit My Drink Family <ExternalLink className="w-3.5 h-3.5" />
-                        </a>
-                        <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="w-full p-3 hover:bg-white/[0.04] flex items-center justify-between text-xs text-neutral-300 hover:text-white">
-                          Open My Drink Family App <ExternalLink className="w-3.5 h-3.5" />
-                        </a>
+
+                        <button
+                          onClick={() => {
+                            onNavigate('brand', 'ikla-water');
+                            setIsBrandsDropdownOpen(false);
+                          }}
+                          className="w-full p-2.5 hover:bg-white/[0.04] border border-transparent hover:border-[#5E8896]/40 rounded-xs flex items-center justify-between group cursor-pointer transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-[#10181C] border border-[#5E8896]/40 flex items-center justify-center shrink-0 text-[#5E8896]">
+                              <Droplets className="w-4 h-4" />
+                            </div>
+                            <div>
+                              <strong className="block text-xs text-white group-hover:text-[#5E8896] transition-colors">IKLA Water</strong>
+                              <span className="text-[10px] text-neutral-400">Maison concept extension</span>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#5E8896] group-hover:translate-x-1 transition-all" />
+                        </button>
+
+                        <div className="pt-2 border-t border-neutral-800/80 mt-1">
+                          <button
+                            onClick={() => {
+                              onNavigate('brand', 'my-drink-family');
+                              setIsBrandsDropdownOpen(false);
+                            }}
+                            className="w-full p-2.5 hover:bg-white/[0.04] border border-transparent hover:border-[#E26D35]/40 rounded-xs flex items-center justify-between group cursor-pointer transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1">
+                                <img src={BRANDS['my-drink-family'].logos.crestLight} alt="" className="w-full h-full object-contain" />
+                              </div>
+                              <div>
+                                <strong className="block text-xs text-white group-hover:text-[#E26D35] transition-colors">My Drink Family</strong>
+                                <span className="text-[10px] text-neutral-400">Connected hospitality platform</span>
+                              </div>
+                            </div>
+                            <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#E26D35] group-hover:translate-x-1 transition-all" />
+                          </button>
+
+                          <div className="grid grid-cols-2 gap-2 mt-1 px-1">
+                            <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
+                              <span>MDF Website</span> <ExternalLink className="w-3 h-3" />
+                            </a>
+                            <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
+                              <span>MDF App</span> <ExternalLink className="w-3 h-3" />
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -163,41 +286,43 @@ export default function Navbar({
             </div>
 
             {/* Desktop Direct Links */}
-            <div className="hidden lg:flex items-center gap-6 text-xs uppercase tracking-[0.2em]">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6 text-[11px] xl:text-xs uppercase tracking-[0.16em] xl:tracking-[0.2em]">
               <button
                 onClick={() => onNavigate('collection')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
-                  currentView === 'collection' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                  currentView === 'collection' ? 'text-[#C8A97E] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
                 Shop
               </button>
               <button
-                onClick={() => onNavigate('collection', null, 'Accessories')}
-                className="relative py-2 text-neutral-300 hover:text-white transition-colors cursor-pointer"
-              >
-                Accessories
-              </button>
-              <button
-                onClick={() => onNavigate('about')}
-                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
-                  currentView === 'about' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                onClick={() => onNavigate('griffin')}
+                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#D4A657] after:transition-all after:duration-300 ${
+                  currentView === 'griffin' ? 'text-[#D4A657] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
-                The Maison
+                Griffin Edition
               </button>
               <button
                 onClick={() => onNavigate('appointments')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
-                  currentView === 'appointments' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                  currentView === 'appointments' ? 'text-[#C8A97E] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
                 Appointments
               </button>
               <button
+                onClick={() => onNavigate('about')}
+                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
+                  currentView === 'about' ? 'text-[#C8A97E] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                }`}
+              >
+                The Maison
+              </button>
+              <button
                 onClick={() => onNavigate('contact')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
-                  currentView === 'contact' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                  currentView === 'contact' ? 'text-[#C8A97E] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
                 Concierge

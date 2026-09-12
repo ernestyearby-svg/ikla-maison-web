@@ -33,7 +33,7 @@ const WORLDS = {
   },
 };
 
-export default function PrivateWorldPage({ world, onNavigateHome, onNavigateContact }) {
+export default function PrivateWorldPage({ world, onNavigateHome, onNavigateContact, onNavigateCollection }) {
   const content = WORLDS[world] || WORLDS.kids;
   const subject = encodeURIComponent(`${content.title} private inquiry`);
 
@@ -43,7 +43,15 @@ export default function PrivateWorldPage({ world, onNavigateHome, onNavigateCont
         <img src={getAssetPath(content.hero)} alt={content.heroAlt} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-black/35 to-black/20" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-10 lg:px-12 pb-14 sm:pb-20">
-          <button onClick={onNavigateHome} className="mb-8 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-white/75 hover:text-white"><ArrowLeft className="w-4 h-4" /> Maison Home</button>
+          <div className="mb-8 flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-[0.22em] text-white/75 font-manrope">
+            <button onClick={onNavigateHome} className="hover:text-white flex items-center gap-1.5 cursor-pointer">
+              <ArrowLeft className="w-4 h-4" /> Maison Home
+            </button>
+            <span className="text-white/40">/</span>
+            <button onClick={() => onNavigateCollection?.(world === 'griffin' ? 'Griffin Edition' : 'Kids')} className="hover:text-[#D8B77D] cursor-pointer">
+              {world === 'griffin' ? 'Griffin Pieces in Catalogue' : 'Kids Pieces in Catalogue'}
+            </button>
+          </div>
           <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B77D]">{content.eyebrow}</p>
           <h1 className="mt-3 text-5xl sm:text-7xl lg:text-8xl font-cormorant font-light">{content.title}</h1>
           <p className="mt-5 max-w-2xl text-sm sm:text-base text-white/80 font-manrope font-light leading-relaxed">{content.intro}</p>
@@ -65,7 +73,10 @@ export default function PrivateWorldPage({ world, onNavigateHome, onNavigateCont
           <div><p className="text-[10px] uppercase tracking-[0.3em] text-[#D8B77D]">Private Client Relations</p><h2 className="mt-2 text-3xl sm:text-4xl font-cormorant">Begin the conversation.</h2><p className="mt-2 text-xs text-neutral-400">Specifications, availability, and next steps are confirmed directly.</p></div>
           <div className="flex flex-col sm:flex-row gap-3">
             <a href={`mailto:concierge@iklamaison.com?subject=${subject}`} className="px-6 py-3.5 bg-[#C8A97E] text-black text-[10px] uppercase tracking-[0.2em] font-semibold flex items-center justify-center gap-2"><Mail className="w-4 h-4" /> Email Concierge</a>
-            <button onClick={onNavigateContact} className="px-6 py-3.5 border border-white/25 hover:border-[#C8A97E] text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-2"><KeyRound className="w-4 h-4" /> Request Access <ArrowRight className="w-4 h-4" /></button>
+            <button onClick={() => onNavigateCollection?.(world === 'griffin' ? 'Griffin Edition' : 'Kids')} className="px-6 py-3.5 border border-[#D8B77D]/40 hover:border-[#D8B77D] text-[#D8B77D] hover:text-white text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-colors cursor-pointer">
+              <span>View Catalogue Pieces</span> <ArrowRight className="w-4 h-4" />
+            </button>
+            <button onClick={onNavigateContact} className="px-6 py-3.5 border border-white/25 hover:border-[#C8A97E] text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-2 cursor-pointer transition-colors"><KeyRound className="w-4 h-4" /> Request Access <ArrowRight className="w-4 h-4" /></button>
           </div>
         </div>
       </section>

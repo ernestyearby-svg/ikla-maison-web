@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Compass, Sparkles, Layers, Shield, ChevronRight, Gem, Droplets, Wine, Check, Scissors, Plane, PackageCheck } from 'lucide-react';
+import { ArrowRight, Compass, Sparkles, Layers, Shield, ChevronRight, Gem, Droplets, Wine, Check, Scissors, Plane, PackageCheck, KeyRound } from 'lucide-react';
 import { FASHION_HOUSES, BRANDS } from '../data/brands';
 import { PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -8,7 +8,7 @@ import HeroHouseNavigation from '../components/HeroHouseNavigation';
 import { getCampaignAsset } from '../data/campaigns';
 import { WARDROBE_CAMPAIGN_LOOKS, EXPANSION_PRODUCTS } from '../data/expansionProducts';
 
-export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout }) {
+export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout, onNavigate }) {
   const [activeEditorialHouse, setActiveEditorialHouse] = useState('ikla-maison');
   const featuredProducts = PRODUCTS.filter((p) => p.isFeatured).slice(0, 8);
 
@@ -150,7 +150,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
 
         {/* 1.5. Docked Hero House Navigation along the lower edge */}
         <div className="relative z-20 w-full mt-auto">
-          <HeroHouseNavigation onSelectBrand={onSelectBrand} />
+          <HeroHouseNavigation onSelectBrand={onSelectBrand} onNavigate={onNavigate} />
         </div>
       </section>
 
@@ -347,6 +347,163 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
             </div>
           </div>
+
+          {/* The Griffin Edition Card */}
+          <div
+            onClick={() => {
+              if (onNavigate) onNavigate('griffin');
+              else window.location.hash = '#/griffin';
+            }}
+            className="group bg-[#0D0E11] text-[#FAF7F2] border border-[#D4A657]/40 hover:border-[#D4A657] transition-all duration-300 p-6 flex flex-col justify-between rounded-xs shadow-xs hover:shadow-2xl cursor-pointer relative"
+          >
+            <div>
+              <div className="aspect-[4/3] w-full overflow-hidden bg-black mb-5 rounded-xs relative">
+                <img
+                  src="assets/griffin/griffin-private-commissions-hero.webp"
+                  alt="The Griffin Edition private commission design vision"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-2xs border border-[#D4A657]/40">
+                  <span className="text-[9px] uppercase tracking-widest text-[#D4A657] font-mono">Bespoke Atelier</span>
+                </div>
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#12110D] p-1.5 shadow-xs border border-[#D4A657]/40 flex items-center justify-center text-[#D4A657]">
+                  <Sparkles className="w-4 h-4" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-cormorant font-normal text-white">The Griffin Edition</h3>
+                <span className="text-[10px] font-mono text-[#D4A657] uppercase tracking-widest">Commissions</span>
+              </div>
+
+              <p className="text-xs text-neutral-300 font-light leading-relaxed font-manrope mt-2 line-clamp-2">
+                A future-facing commission program exploring the IKLA language across automotive, maritime, and aviation environments.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-white/15 flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#D4A657] group-hover:text-white transition-colors">
+              <span>Enter Atelier</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+            </div>
+          </div>
+
+          {/* Private Appointments Card */}
+          <div
+            onClick={() => {
+              if (onNavigate) onNavigate('appointments');
+              else window.location.hash = '#/appointments';
+            }}
+            className="group bg-white border border-[#DDD7CB] hover:border-[#C8A97E] transition-all duration-300 p-6 flex flex-col justify-between rounded-xs shadow-xs hover:shadow-xl cursor-pointer relative"
+          >
+            <div>
+              <div className="aspect-[4/3] w-full overflow-hidden bg-[#F5F2EC] mb-5 rounded-xs relative">
+                <img
+                  src="assets/eyewear-insignia/01_ikla_architectural_shield_sunglass.webp"
+                  alt="IKLA Maison private appointments eyewear and accessories"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-2xs border border-white/20">
+                  <span className="text-[9px] uppercase tracking-widest text-white font-mono">Confidential</span>
+                </div>
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md p-1.5 shadow-xs border border-neutral-200 flex items-center justify-center text-[#C8A97E]">
+                  <KeyRound className="w-4 h-4" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-cormorant font-normal text-[#111215]">Private Appointments</h3>
+                <span className="text-[10px] font-mono text-[#8C6D3F] uppercase tracking-widest">Accessories</span>
+              </div>
+
+              <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope mt-2 line-clamp-2">
+                Architectural eyewear, silk neckwear, obsidian cufflinks, and fine leather goods available by confidential request.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-[#EAE5DC] flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#8C6D3F] group-hover:text-[#111215] transition-colors">
+              <span>Request Appointment</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+            </div>
+          </div>
+
+          {/* IKLA Kids Card */}
+          <div
+            onClick={() => {
+              if (onNavigate) onNavigate('kids');
+              else window.location.hash = '#/kids';
+            }}
+            className="group bg-white border border-[#013220]/25 hover:border-[#013220] transition-all duration-300 p-6 flex flex-col justify-between rounded-xs shadow-xs hover:shadow-xl cursor-pointer relative"
+          >
+            <div>
+              <div className="aspect-[4/3] w-full overflow-hidden bg-[#F2F6F3] mb-5 rounded-xs relative">
+                <img
+                  src="assets/ikla-kids/ikla-kids-core-collection-hero.webp"
+                  alt="IKLA Kids core collection sweatsuits"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-[#013220]/90 backdrop-blur-md px-2.5 py-1 rounded-2xs border border-white/20">
+                  <span className="text-[9px] uppercase tracking-widest text-white font-mono">Next Gen</span>
+                </div>
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md p-1.5 shadow-xs border border-[#013220]/20 flex items-center justify-center text-[#013220]">
+                  <Sparkles className="w-4 h-4" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-cormorant font-normal text-[#111215]">IKLA Kids</h3>
+                <span className="text-[10px] font-mono text-[#013220] uppercase tracking-widest">Generational</span>
+              </div>
+
+              <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope mt-2 line-clamp-2">
+                Elevated everyday sets for children, expressed through the master house palette with simpler marks and comfortable proportions.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-[#EAE5DC] flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#8C6D3F] group-hover:text-[#111215] transition-colors">
+              <span>Explore Kids</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+            </div>
+          </div>
+
+          {/* My Drink Family Card */}
+          <div
+            onClick={() => onSelectBrand('my-drink-family')}
+            className="group bg-white border border-[#F2DACD] hover:border-[#E26D35] transition-all duration-300 p-6 flex flex-col justify-between rounded-xs shadow-xs hover:shadow-xl cursor-pointer relative"
+          >
+            <div>
+              <div className="aspect-[4/3] w-full overflow-hidden bg-[#FAF5F0] mb-5 rounded-xs relative">
+                <img
+                  src="assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg"
+                  alt="My Drink Family Rep The Legacy circular crest clubhouse fleece"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-[#E26D35]/90 backdrop-blur-md px-2.5 py-1 rounded-2xs border border-white/20">
+                  <span className="text-[9px] uppercase tracking-widest text-white font-mono">Connected</span>
+                </div>
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white p-1.5 shadow-xs border border-neutral-200">
+                  <img src={BRANDS['my-drink-family'].logos.crestLight} alt="" className="w-full h-full object-contain" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-cormorant font-normal text-[#111215]">My Drink Family</h3>
+                <span className="text-[10px] font-mono text-[#E26D35] uppercase tracking-widest">Hospitality</span>
+              </div>
+
+              <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope mt-2 line-clamp-2">
+                A connected celebration and hospitality platform sharing cultural vision—not an IKLA fashion house.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-[#F2DACD] flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#E26D35] group-hover:text-black transition-colors">
+              <span>Explore Platform</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -394,6 +551,137 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
                 <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-semibold block">04. Socks & Small Goods</span>
                 <p className="text-xs text-[#50545E] font-light font-manrope">Arch-support ribbed pima knit socks, solid brass buckle belts, and silk twill scarves.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5.2. THE GRIFFIN EDITION ATELIER SHOWCASE */}
+      {/* ========================================================================= */}
+      <section id="griffin-edition-showcase" className="relative py-28 px-6 sm:px-8 lg:px-12 bg-[#0B0C0E] text-white border-y border-[#D4A657]/30 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#D4A657]/5 blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/15">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#D4A657]/10 border border-[#D4A657]/40 text-[#D4A657] text-[10px] uppercase tracking-[0.3em] font-semibold rounded-xs mb-3">
+                <Sparkles className="w-3 h-3" />
+                <span>Invitation-Led Bespoke Commissions</span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-cormorant font-light text-white tracking-wide">
+                The Griffin Edition Atelier
+              </h2>
+            </div>
+            <div className="max-w-md space-y-3">
+              <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope">
+                A future-facing commission program exploring the IKLA language across automotive, maritime, residence, and aviation environments. Presented as design visions—not open mass commerce.
+              </p>
+              <button
+                onClick={() => {
+                  if (onNavigate) onNavigate('griffin');
+                  else window.location.hash = '#/griffin';
+                }}
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#D4A657] hover:text-white transition-colors cursor-pointer"
+              >
+                <span>Enter Full Commission Atelier</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Automotive Commission',
+                subtitle: 'Grand Touring Interior',
+                image: 'assets/griffin/griffin-automotive-commission.webp',
+                desc: 'Bespoke green leather grand touring interior with gold griffin medallion and walnut veneers.'
+              },
+              {
+                title: 'Maritime Commission',
+                subtitle: 'Superyacht Stateroom',
+                image: 'assets/griffin/griffin-maritime-commission.webp',
+                desc: 'Deep marine navy appointments, teak decking, brushed bronze hardware, and silk-wool throw.'
+              },
+              {
+                title: 'Residence & Aviation Study',
+                subtitle: 'Private Salons & Cabins',
+                image: 'assets/griffin/griffin-residence-aviation-commission.webp',
+                desc: 'Architectural scale study translating the Maison insignia across private aircraft and residential salons.'
+              }
+            ].map((study, sIdx) => (
+              <div
+                key={sIdx}
+                onClick={() => {
+                  if (onNavigate) onNavigate('griffin');
+                  else window.location.hash = '#/griffin';
+                }}
+                className="group bg-white/5 border border-white/10 hover:border-[#D4A657]/80 rounded-xs overflow-hidden transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <div>
+                  <div className="aspect-[16/10] overflow-hidden relative">
+                    <img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 text-[9px] uppercase tracking-widest text-[#D4A657] font-mono border border-[#D4A657]/30">
+                      Study 0{sIdx + 1}
+                    </div>
+                  </div>
+                  <div className="p-5 space-y-2">
+                    <span className="text-[10px] uppercase tracking-widest text-[#D4A657] font-mono block">
+                      {study.subtitle}
+                    </span>
+                    <h3 className="text-xl font-cormorant font-normal text-white">
+                      {study.title}
+                    </h3>
+                    <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
+                      {study.desc}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 pt-0">
+                  <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs uppercase tracking-widest text-[#D4A657] font-medium group-hover:text-white transition-colors">
+                    <span>View Study Dossier</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-6 bg-white/[0.03] border border-[#D4A657]/20 rounded-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-full bg-[#1A1813] border border-[#D4A657]/40 flex items-center justify-center shrink-0 text-[#D4A657]">
+                <Sparkles className="w-4 h-4" />
+              </div>
+              <div>
+                <strong className="block text-xs uppercase tracking-wider text-white">Confidential Advisory Dialogue</strong>
+                <span className="text-[11px] text-neutral-400 font-light font-manrope">Private commissions are accepted by confidential introduction and founder discretion.</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              <button
+                onClick={() => {
+                  if (onNavigate) onNavigate('contact');
+                  else window.location.hash = '#/contact';
+                }}
+                className="px-5 py-2.5 bg-[#D4A657] hover:bg-[#FAF7F2] text-black text-xs uppercase tracking-[0.2em] font-semibold rounded-xs transition-colors cursor-pointer"
+              >
+                Request Bespoke Consultation
+              </button>
+              <button
+                onClick={() => {
+                  if (onNavigate) onNavigate('griffin');
+                  else window.location.hash = '#/griffin';
+                }}
+                className="px-5 py-2.5 bg-transparent border border-[#D4A657]/60 hover:border-[#D4A657] text-[#D4A657] hover:text-white text-xs uppercase tracking-[0.2em] font-medium rounded-xs transition-colors cursor-pointer"
+              >
+                Explore Commission Dossier
+              </button>
             </div>
           </div>
         </div>

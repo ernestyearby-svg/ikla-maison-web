@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { X, ChevronRight, KeyRound, Globe, Droplets, ExternalLink } from 'lucide-react';
+import { X, ChevronRight, KeyRound, Globe, Droplets, ExternalLink, Sparkles } from 'lucide-react';
 import { FASHION_HOUSES, BRANDS } from '../data/brands';
 import { EXTERNAL_LINKS } from '../data/externalLinks';
 
@@ -50,14 +50,14 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
         {/* Navigation list */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6 text-sm">
           {/* Main Links */}
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <button
               onClick={() => {
                 onNavigate('home');
                 onClose();
               }}
-              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors ${
-                currentView === 'home' ? 'text-[#C8A97E] bg-white/5' : 'text-neutral-300 hover:text-white'
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors rounded-xs ${
+                currentView === 'home' ? 'text-[#C8A97E] bg-white/5 font-semibold' : 'text-neutral-300 hover:text-white'
               }`}
             >
               Master Home
@@ -68,8 +68,8 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                 onNavigate('collection');
                 onClose();
               }}
-              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors ${
-                currentView === 'collection' ? 'text-[#C8A97E] bg-white/5' : 'text-neutral-300 hover:text-white'
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors rounded-xs ${
+                currentView === 'collection' ? 'text-[#C8A97E] bg-white/5 font-semibold' : 'text-neutral-300 hover:text-white'
               }`}
             >
               Shop All Collections
@@ -77,12 +77,15 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
 
             <button
               onClick={() => {
-                onNavigate('collection', null, 'Accessories');
+                onNavigate('griffin');
                 onClose();
               }}
-              className="w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium text-neutral-300 hover:text-white transition-colors"
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors rounded-xs flex items-center justify-between ${
+                currentView === 'griffin' ? 'text-[#D4A657] bg-white/5 font-semibold' : 'text-[#D4A657] hover:text-white'
+              }`}
             >
-              Accessories Collection
+              <span>The Griffin Edition</span>
+              <Sparkles className="w-3.5 h-3.5 text-[#D4A657]" />
             </button>
 
             <button
@@ -90,11 +93,24 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                 onNavigate('appointments');
                 onClose();
               }}
-              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors ${
-                currentView === 'appointments' ? 'text-[#C8A97E] bg-white/5' : 'text-neutral-300 hover:text-white'
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors rounded-xs flex items-center justify-between ${
+                currentView === 'appointments' ? 'text-[#C8A97E] bg-white/5 font-semibold' : 'text-neutral-300 hover:text-white'
               }`}
             >
-              Private Appointments
+              <span>Private Appointments</span>
+              <KeyRound className="w-3.5 h-3.5 text-[#C8A97E]" />
+            </button>
+
+            <button
+              onClick={() => {
+                onNavigate('kids');
+                onClose();
+              }}
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors rounded-xs ${
+                currentView === 'kids' ? 'text-[#C8A97E] bg-white/5 font-semibold' : 'text-neutral-300 hover:text-white'
+              }`}
+            >
+              IKLA Kids
             </button>
           </div>
 
@@ -209,6 +225,71 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
               </div>
               <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
             </button>
+          </div>
+
+          {/* Private Worlds & Bespoke Ateliers */}
+          <div className="border-t border-neutral-800/80 pt-4">
+            <div className="flex items-center justify-between px-3 mb-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4A657] font-medium">
+                Bespoke Worlds
+              </span>
+              <span className="text-[9px] text-neutral-500 font-mono">Private Programs</span>
+            </div>
+            <div className="space-y-1">
+              <button
+                onClick={() => {
+                  onNavigate('griffin');
+                  onClose();
+                }}
+                className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
+                  currentView === 'griffin'
+                    ? 'bg-white/10 text-white border-l-2 border-[#D4A657]'
+                    : 'hover:bg-white/5 text-neutral-300'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-7 h-7 rounded-full bg-[#12110D] border border-[#D4A657]/40 flex items-center justify-center shrink-0 p-1 text-[#D4A657]">
+                    <Sparkles className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-medium text-white group-hover:text-[#D4A657] transition-colors tracking-wide">
+                      The Griffin Edition
+                    </div>
+                    <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
+                      Bespoke Mobility & Commissions
+                    </div>
+                  </div>
+                </div>
+                <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
+              </button>
+
+              <button
+                onClick={() => {
+                  onNavigate('kids');
+                  onClose();
+                }}
+                className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
+                  currentView === 'kids'
+                    ? 'bg-white/10 text-white border-l-2 border-[#013220]'
+                    : 'hover:bg-white/5 text-neutral-300'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-7 h-7 rounded-full bg-[#0D1612] border border-[#013220]/60 flex items-center justify-center shrink-0 p-1 text-[#C8A97E]">
+                    <Sparkles className="w-3.5 h-3.5 text-[#8C9B8F]" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-medium text-white group-hover:text-[#C8A97E] transition-colors tracking-wide">
+                      IKLA Kids
+                    </div>
+                    <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
+                      Next Generation Wardrobe
+                    </div>
+                  </div>
+                </div>
+                <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
+              </button>
+            </div>
           </div>
 
           {/* Company Links */}

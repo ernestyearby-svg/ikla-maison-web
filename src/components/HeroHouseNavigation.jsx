@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Droplets } from 'lucide-react';
+import { ArrowRight, Droplets, Sparkles, KeyRound } from 'lucide-react';
 import { getAssetPath } from '../utils/assets';
 
 export const HERO_HOUSES = [
@@ -54,11 +54,47 @@ export const HERO_HOUSES = [
     borderHover: 'hover:border-[#C5A869]/80',
   },
   {
+    id: 'griffin',
+    name: 'The Griffin Edition',
+    badge: 'Bespoke Atelier',
+    category: 'Private Commissions',
+    cta: 'Enter Griffin',
+    image: 'assets/griffin/griffin-private-commissions-hero.webp',
+    alt: 'The Griffin Edition private bespoke commission atelier',
+    borderHover: 'hover:border-[#D4A657]/80',
+    icon: Sparkles,
+    route: 'griffin',
+  },
+  {
+    id: 'appointments',
+    name: 'Private Appointments',
+    badge: 'Confidential',
+    category: 'Accessories & Objects',
+    cta: 'Book Appointment',
+    image: 'assets/eyewear-insignia/01_ikla_architectural_shield_sunglass.webp',
+    alt: 'IKLA Maison private appointments accessories and eyewear',
+    borderHover: 'hover:border-[#C8A97E]/80',
+    icon: KeyRound,
+    route: 'appointments',
+  },
+  {
+    id: 'kids',
+    name: 'IKLA Kids',
+    badge: 'Next Gen',
+    category: 'Generational Sets',
+    cta: 'Explore Kids',
+    image: 'assets/ikla-kids/ikla-kids-core-collection-hero.webp',
+    alt: 'IKLA Kids core collection sweatsuit essentials',
+    borderHover: 'hover:border-[#013220]/80',
+    icon: Sparkles,
+    route: 'kids',
+  },
+  {
     id: 'ikla-water',
     name: 'IKLA Water',
     badge: 'Extension',
     category: 'Flint Glass Decanters',
-    cta: 'Explore IKLA Water',
+    cta: 'Explore Water',
     image: 'assets/accessories/ikla-water/ikla-water-hydration-service.webp',
     alt: 'IKLA Water sculptural mineral flint decanter and hydration service',
     borderHover: 'hover:border-[#5E8896]/80',
@@ -69,14 +105,27 @@ export const HERO_HOUSES = [
     name: 'My Drink Family',
     badge: 'Connected World',
     category: 'Celebration & Spirits',
-    cta: 'Explore My Drink Family',
+    cta: 'Explore MDF',
     image: 'assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg',
     alt: 'My Drink Family Rep The Legacy circular crest clubhouse fleece',
     borderHover: 'hover:border-[#D97736]/80',
   },
 ];
 
-export default function HeroHouseNavigation({ onSelectBrand }) {
+export default function HeroHouseNavigation({ onSelectBrand, onNavigate }) {
+  const handleCardClick = (e, house) => {
+    e.preventDefault();
+    if (house.route) {
+      if (onNavigate) {
+        onNavigate(house.route);
+      } else {
+        window.location.hash = `#/${house.route}`;
+      }
+    } else {
+      onSelectBrand(house.id);
+    }
+  };
+
   return (
     <div
       id="hero-house-navigation"
@@ -87,35 +136,32 @@ export default function HeroHouseNavigation({ onSelectBrand }) {
         {/* Subtle Architectural Header Bar */}
         <div className="flex items-center justify-between pb-2.5 mb-3 border-b border-white/10 text-neutral-400">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4A657] animate-pulse" />
             <span className="text-[10px] uppercase tracking-[0.28em] font-medium text-white/90 font-manrope">
-              Five Houses · One Extension · One Connected World
+              The Complete Maison Worlds · From IKLA to The Griffin Edition
             </span>
           </div>
-          <span className="hidden sm:inline text-[10px] font-mono text-[#C8A97E]/80 tracking-widest uppercase">
-            Direct House Gateways
+          <span className="hidden sm:inline text-[10px] font-mono text-[#D4A657] tracking-widest uppercase">
+            Direct Gateways
           </span>
-          <span className="sm:hidden text-[9px] font-mono text-[#C8A97E]/80 tracking-wider uppercase">
+          <span className="sm:hidden text-[9px] font-mono text-[#D4A657] tracking-wider uppercase">
             Swipe to Explore →
           </span>
         </div>
 
         {/* Responsive Houses Container:
-            - Desktop (xl/lg): 7-column refined grid (all visible at once)
-            - Tablet (md): 4-column balanced grid
-            - Mobile: Touch-friendly horizontal snap carousel with card peek
+            - Desktop: Smooth horizontal strip with elegant responsive cards
+            - Tablet: Multi-card layout
+            - Mobile: Touch-friendly horizontal snap carousel
         */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-2.5 md:grid md:grid-cols-4 lg:grid-cols-7 pb-1 md:pb-0">
+        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-2.5 pb-2">
           {HERO_HOUSES.map((house) => (
             <a
               key={house.id}
-              href={`#/brand/${house.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                onSelectBrand(house.id);
-              }}
+              href={house.route ? `#/${house.route}` : `#/brand/${house.id}`}
+              onClick={(e) => handleCardClick(e, house)}
               aria-label={`${house.cta} — ${house.name}`}
-              className={`group flex-none w-[68vw] max-w-[210px] md:w-auto snap-start relative aspect-[4/5] bg-neutral-900 border border-white/15 ${house.borderHover} rounded-xs overflow-hidden transition-all duration-300 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] hover:shadow-2xl hover:-translate-y-1 block`}
+              className={`group flex-none w-[58vw] max-w-[170px] sm:max-w-[190px] snap-start relative aspect-[4/5] bg-neutral-900 border border-white/15 ${house.borderHover} rounded-xs overflow-hidden transition-all duration-300 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] hover:shadow-2xl hover:-translate-y-1 block`}
             >
               {/* Image with subtle zoom on hover */}
               <img
@@ -135,7 +181,7 @@ export default function HeroHouseNavigation({ onSelectBrand }) {
                   {house.badge}
                 </span>
                 {house.icon && (
-                  <house.icon className="w-3 h-3 text-[#5E8896]" />
+                  <house.icon className="w-3 h-3 text-[#D4A657]" />
                 )}
               </div>
 
@@ -145,12 +191,12 @@ export default function HeroHouseNavigation({ onSelectBrand }) {
                   {house.category}
                 </span>
 
-                <h3 className="text-sm sm:text-base font-cormorant font-normal text-white leading-tight tracking-wide group-hover:text-white transition-colors truncate">
+                <h3 className="text-xs sm:text-sm font-cormorant font-normal text-white leading-tight tracking-wide group-hover:text-white transition-colors truncate">
                   {house.name}
                 </h3>
 
-                {/* Exact CTA from Prompt */}
-                <div className="pt-1 flex items-center justify-between text-[9px] sm:text-[10px] uppercase tracking-[0.16em] font-medium text-white/80 group-hover:text-[#DFBF95] transition-colors font-manrope border-t border-white/15 mt-1">
+                {/* Exact CTA */}
+                <div className="pt-1 flex items-center justify-between text-[8px] sm:text-[9px] uppercase tracking-[0.16em] font-medium text-white/80 group-hover:text-[#DFBF95] transition-colors font-manrope border-t border-white/15 mt-1">
                   <span className="truncate">{house.cta}</span>
                   <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#C8A97E] group-hover:translate-x-1.5 transition-transform duration-300 shrink-0 ml-1" />
                 </div>
