@@ -108,7 +108,7 @@ export default function App() {
   useEffect(() => {
     const brandName = currentView === 'brand' ? BRANDS[currentBrandId]?.name : null;
     const pageNames = {
-      home: 'Internationally Known. Locally Accepted.',
+      home: 'Internationally Known, Locally Accepted',
       collection: collectionCategory === 'Accessories' ? 'Accessories & Objects' : 'Private Collections',
       about: 'The Maison',
       contact: 'Private Client Relations',

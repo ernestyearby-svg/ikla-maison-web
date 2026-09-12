@@ -6,6 +6,7 @@ import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
 import HeroHouseNavigation from '../components/HeroHouseNavigation';
 import { getCampaignAsset } from '../data/campaigns';
+import { WARDROBE_CAMPAIGN_LOOKS, EXPANSION_PRODUCTS } from '../data/expansionProducts';
 
 export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout }) {
   const [activeEditorialHouse, setActiveEditorialHouse] = useState('ikla-maison');

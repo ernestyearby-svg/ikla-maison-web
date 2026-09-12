@@ -1,7 +1,9 @@
 import { getAssetPath } from '../utils/assets.js';
 import { PRIVATE_PRODUCTS } from './privateProducts.js';
+import { EXPANSION_PRODUCTS } from './expansionProducts.js';
 
 export const PRODUCTS = [
+  ...EXPANSION_PRODUCTS,
   ...PRIVATE_PRODUCTS,
   // ==========================================
   // IKLA MAISON
@@ -265,7 +267,7 @@ export const PRODUCTS = [
     name: 'Riviera Halter Wrap Top & Palazzo Pant',
     price: 450,
     category: 'Sets',
-    image: 'assets/campaigns/round-two/moteon-womens-performance-hero.webp',
+    image: 'assets/moteon/collection.webp',
     imageAlt: 'Motéon Riviera Halter Wrap Top & Palazzo Pant on travertine flat lay',
     sizes: ['XS', 'S', 'M', 'L'],
     colors: [
@@ -375,7 +377,7 @@ export const PRODUCTS = [
     name: 'Celestial Navigation Wool Overcoat',
     price: 840,
     category: 'Outerwear',
-    image: 'assets/campaigns/round-one/moral-compass-hero.webp',
+    image: 'assets/moral-compass/collection.webp',
     imageAlt: 'Moral Compass Celestial Navigation Wool Overcoat flat lay showing compass star lining',
     sizes: ['38R', '40R', '42R', '44R'],
     colors: [
