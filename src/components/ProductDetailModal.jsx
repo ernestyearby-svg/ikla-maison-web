@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, ShoppingBag, ShieldCheck, Truck, RefreshCw, ChevronDown, ChevronUp, Check, ArrowRight, Bookmark, Clock } from 'lucide-react';
 import { BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
+import VIPInquiryModal from './VIPInquiryModal';
 
 export default function ProductDetailModal({ product, onClose, onSelectBrand, onContinueShopping }) {
   const { addToCart } = useCart();
@@ -10,6 +11,7 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
   const [quantity, setQuantity] = useState(1);
   const [openSection, setOpenSection] = useState('details');
   const [isAdded, setIsAdded] = useState(false);
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
   const brand = product ? BRANDS[product.brandId] : null;
 
@@ -202,34 +204,21 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
               )}
 
               {/* Action Buttons: Add to Bag vs Reserve Allocation */}
-              {product.isReserve || product.status ? (
+              {product.isReserve || product.status || product.isVIP || product.isMDFMerch ? (
                 <div className="mb-8 space-y-3">
                   <button
                     onClick={() => {
-                      setIsAdded(true);
-                      setTimeout(() => {
-                        setIsAdded(false);
-                        onClose();
-                      }, 1200);
+                      setIsInquiryOpen(true);
                     }}
                     className={`w-full py-3.5 px-6 rounded-xs flex items-center justify-center gap-2.5 active:scale-[0.99] shadow-lg cursor-pointer ${
                       brand ? brand.buttonStyle : 'bg-[#C8A97E] hover:bg-[#DFBF95] text-black text-xs uppercase tracking-[0.2em] font-semibold'
                     }`}
                   >
-                    {isAdded ? (
-                      <>
-                        <Check className="w-4 h-4 text-emerald-300" />
-                        <span>Interest Recorded — Allocation Ledger</span>
-                      </>
-                    ) : (
-                      <>
-                        <Bookmark className="w-4 h-4" />
-                        <span>Reserve Allocation Interest ({selectedColor})</span>
-                      </>
-                    )}
+                    <Bookmark className="w-4 h-4" />
+                    <span>{product.cta || 'Request Private Allocation'}</span>
                   </button>
                   <p className="text-[11px] text-neutral-400 font-light text-center font-manrope">
-                    Production preview curation. No advance payment required. You will receive priority notification upon capsule release.
+                    Private Maison allocation window. No advance payment required.
                   </p>
                 </div>
               ) : (
@@ -376,6 +365,16 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
           </div>
         </div>
       </div>
+
+      {/* Embedded VIP Private Allocation Modal */}
+      {isInquiryOpen && (
+        <VIPInquiryModal
+          isOpen={isInquiryOpen}
+          onClose={() => setIsInquiryOpen(false)}
+          product={product}
+          initialRequestType={product.accessMode || product.status || 'Private Allocation'}
+        />
+      )}
     </div>
   );
 }

@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, Check, Compass, Layers, Shield, Sparkles, Droplets, Wine, Clock, Zap, Target } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { ArrowLeft, ArrowRight, Check, Compass, Layers, Shield, Sparkles, Droplets, Wine, Clock, Zap, Target, ExternalLink } from 'lucide-react';
 import { BRANDS, BRAND_LIST } from '../data/brands';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, IKLA_VIP_PRODUCTS, MDF_MERCHANDISE_PRODUCTS } from '../data/products';
 import BrandHero from '../components/BrandHero';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
+import VIPInquiryModal from '../components/VIPInquiryModal';
+import { ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
+import { getAssetPath } from '../utils/assets';
 
 export default function BrandPage({
   brandId,
@@ -19,6 +22,21 @@ export default function BrandPage({
 
   const [filterCategory, setFilterCategory] = useState('All');
   const [activeMymosaColor, setActiveMymosaColor] = useState('classic-orange');
+  const [mdfFilter, setMdfFilter] = useState('All');
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+  const [selectedInquiryProduct, setSelectedInquiryProduct] = useState(null);
+
+  const handleOpenInquiry = (prod) => {
+    setSelectedInquiryProduct(prod);
+    setIsInquiryOpen(true);
+  };
+
+  const filteredMdfProducts = useMemo(() => {
+    if (mdfFilter === 'All') return MDF_MERCHANDISE_PRODUCTS;
+    return MDF_MERCHANDISE_PRODUCTS.filter(
+      (p) => p.category === mdfFilter || p.subcategory === mdfFilter
+    );
+  }, [mdfFilter]);
 
   const categories = ['All', ...new Set(brandProducts.map((p) => p.category))];
   const filteredProducts = filterCategory === 'All'
@@ -39,7 +57,7 @@ export default function BrandPage({
 
         <div className="flex items-center gap-2.5">
           <div className="w-4 h-4 rounded-full overflow-hidden shrink-0">
-            <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain" />
+            <img src={getAssetPath(brand.logos.crestLight)} alt="" className="w-full h-full object-contain" />
           </div>
           <span>The Houses</span>
           <span>/</span>
@@ -50,6 +68,10 @@ export default function BrandPage({
       {/* 1. Responsive Hero using <picture> */}
       <BrandHero
         brand={brand}
+        onRequestAccess={() => {
+          const firstMerch = MDF_MERCHANDISE_PRODUCTS[0];
+          handleOpenInquiry(firstMerch);
+        }}
         onExploreCollection={() => {
           const el = document.getElementById('brand-editorial-showcase') || document.getElementById('brand-collection-grid');
           if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -402,6 +424,44 @@ export default function BrandPage({
                     </button>
                   </div>
                 </div>
+              </div>
+            </section>
+
+            {/* Pathway 6: The Private Collection — VIP Lifestyle Suites */}
+            <section id="private-collection" className="space-y-12 border-t border-[#E5DFD5] pt-20">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#E5DFD5]">
+                <div className="max-w-2xl space-y-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+                    VIP Atelier Access
+                  </span>
+                  <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                    The Private Collection
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Reserved suites crafted in strictly limited allocations for private clients and patron households. Accessible exclusively through concierge inquiry.
+                  </p>
+                </div>
+
+                <div className="text-right hidden md:block">
+                  <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest block">
+                    Ten Private Suites
+                  </span>
+                  <span className="text-[10px] text-[#8C6D3F] font-medium font-manrope">
+                    Direct Concierge Escort
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {IKLA_VIP_PRODUCTS.map((prod) => (
+                  <ProductCard
+                    key={prod.id}
+                    product={prod}
+                    onSelectProduct={onSelectProduct}
+                    onSelectBrand={onSelectBrand}
+                    onOpenInquiry={handleOpenInquiry}
+                  />
+                ))}
               </div>
             </section>
           </div>
@@ -1566,6 +1626,76 @@ export default function BrandPage({
                     </button>
                   </div>
                 </div>
+              </div>
+            </section>
+
+            {/* The Full My Drink Family Merchandise Suites */}
+            <section id="mdf-merchandise-suites" className="space-y-12 border-t border-[#E2DCBE] pt-20">
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#E2DCBE]">
+                <div className="max-w-2xl space-y-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FDF5E6] border border-[#E2DCBE] text-[#E06D38] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs">
+                    <span>Dynasty Lifestyle & Hospitality</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                    The Merchandise Collection
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Clubhouse fleece, structured headwear, travel carry, crystalline barware, and resort pool accoutrements designed for the seventeen-house hospitality universe.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href={ECOSYSTEM_LINKS[0]?.href || '#/brand/my-drink-family'}
+                    target={ECOSYSTEM_LINKS[0]?.isExternal ? '_blank' : undefined}
+                    rel={ECOSYSTEM_LINKS[0]?.isExternal ? 'noopener noreferrer' : undefined}
+                    className="px-4 py-2.5 bg-white border border-[#E2DCBE] hover:border-[#E06D38] text-[#111215] text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
+                    aria-label="Visit the official My Drink Family website"
+                  >
+                    <span>Visit Official Website</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#E06D38]" />
+                  </a>
+                  <a
+                    href={ECOSYSTEM_LINKS[1]?.href || '#/brand/my-drink-family'}
+                    target={ECOSYSTEM_LINKS[1]?.isExternal ? '_blank' : undefined}
+                    rel={ECOSYSTEM_LINKS[1]?.isExternal ? 'noopener noreferrer' : undefined}
+                    className="px-4 py-2.5 bg-white border border-[#E2DCBE] hover:border-[#E06D38] text-[#111215] text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
+                    aria-label="Open the My Drink Family App"
+                  >
+                    <span>Open the App</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#E06D38]" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Category Filter Pills */}
+              <div className="flex flex-wrap items-center gap-2">
+                {['All', 'Apparel', 'Headwear', 'Travel and Leisure', 'Glassware and Barware', 'Resort and Hospitality'].map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setMdfFilter(cat)}
+                    className={`px-3.5 py-1.5 text-xs font-manrope uppercase tracking-wider rounded-xs transition-all cursor-pointer ${
+                      mdfFilter === cat
+                        ? 'bg-[#0B4F37] text-white font-semibold shadow-xs'
+                        : 'bg-white text-neutral-600 hover:bg-[#F7F4EE] border border-[#DDD7CB]'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+
+              {/* 10 Square Merchandise Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {filteredMdfProducts.map((prod) => (
+                  <ProductCard
+                    key={prod.id}
+                    product={prod}
+                    onSelectProduct={onSelectProduct}
+                    onSelectBrand={onSelectBrand}
+                    onOpenInquiry={handleOpenInquiry}
+                  />
+                ))}
               </div>
             </section>
           </div>
@@ -2749,6 +2879,7 @@ export default function BrandPage({
                   product={product}
                   onSelectProduct={onSelectProduct}
                   onSelectBrand={onSelectBrand}
+                  onOpenInquiry={handleOpenInquiry}
                 />
               ))}
             </div>
@@ -2762,7 +2893,7 @@ export default function BrandPage({
       <section id="brand-ethos-section" className="relative w-full py-32 px-6 sm:px-8 lg:px-12 bg-neutral-950 overflow-hidden z-10">
         <div className="absolute inset-0 w-full h-full">
           <img
-            src={brand.assets.editorial}
+            src={getAssetPath(brand.assets.editorial)}
             alt={brand.alt.editorial}
             loading="lazy"
             className="w-full h-full object-cover object-center brightness-45"
@@ -2772,7 +2903,7 @@ export default function BrandPage({
 
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
           <div className="w-14 h-14 rounded-full bg-black/60 border border-white/20 flex items-center justify-center p-2 mb-6 shadow-xl">
-            <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain animate-spin-slow" />
+            <img src={getAssetPath(brand.logos.crestLight)} alt="" className="w-full h-full object-contain animate-spin-slow" />
           </div>
 
           <span className="text-[10px] uppercase tracking-[0.35em] text-[#C8A97E] font-medium mb-4 block">
@@ -2826,12 +2957,12 @@ export default function BrandPage({
               <div>
                 <div className="aspect-[4/3] w-full overflow-hidden bg-[#F5F2EC] mb-4 rounded-xs relative">
                   <img
-                    src={b.assets.collection}
+                    src={getAssetPath(b.assets.collection)}
                     alt={b.alt.collection}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-black/60 p-1">
-                    <img src={b.logos.crestLight} alt="" className="w-full h-full object-contain" />
+                    <img src={getAssetPath(b.logos.crestLight)} alt="" className="w-full h-full object-contain" />
                   </div>
                 </div>
                 <h4 className="text-base font-cormorant font-normal text-[#111215] group-hover:text-black transition-colors">
@@ -2850,6 +2981,13 @@ export default function BrandPage({
           ))}
         </div>
       </section>
+
+      {/* VIP Inquiry Modal Flow */}
+      <VIPInquiryModal
+        isOpen={isInquiryOpen}
+        onClose={() => setIsInquiryOpen(false)}
+        product={selectedInquiryProduct}
+      />
     </div>
   );
 }

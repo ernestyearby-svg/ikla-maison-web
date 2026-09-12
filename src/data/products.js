@@ -11,7 +11,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Travertine Gold-Zip Track Jacket',
     price: 380,
     category: 'Outerwear',
-    image: '/assets/ikla-maison/collection.webp',
+    image: 'assets/ikla-maison/collection.webp',
     imageAlt: 'Ikla Maison Travertine Gold-Zip Track Jacket featured on collection flat lay',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: [
@@ -38,7 +38,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Travertine Wide-Leg Pleated Track Pant',
     price: 290,
     category: 'Bottoms',
-    image: '/assets/ikla-maison/collection.webp',
+    image: 'assets/ikla-maison/collection.webp',
     imageAlt: 'Ikla Maison Travertine Wide-Leg Pleated Track Pant in collection flat lay',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: [
@@ -65,7 +65,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Open-Knit Textured Cabana Polo',
     price: 280,
     category: 'Tops',
-    image: '/assets/ikla-maison/collection.webp',
+    image: 'assets/ikla-maison/collection.webp',
     imageAlt: 'Ikla Maison Open-Knit Textured Cabana Polo in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -91,7 +91,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Gilded Signature Heavyweight Hoodie',
     price: 340,
     category: 'Tops',
-    image: '/assets/ikla-maison/collection.webp',
+    image: 'assets/ikla-maison/collection.webp',
     imageAlt: 'Ikla Maison Gilded Signature Heavyweight Hoodie in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -118,7 +118,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Architectural Longline Double Trench',
     price: 890,
     category: 'Outerwear',
-    image: '/assets/ikla-maison/hero-desktop.webp',
+    image: 'assets/ikla-maison/hero-desktop.webp',
     imageAlt: 'Ikla Maison Architectural Longline Double Trench worn in architectural descent',
     sizes: ['38R', '40R', '42R', '44R'],
     colors: [
@@ -149,7 +149,7 @@ export const PRODUCTS = [
     name: '[Placeholder] 500GSM Raw-Hem Heavyweight Sweat Set',
     price: 360,
     category: 'Sets',
-    image: '/assets/ktse/collection.webp',
+    image: 'assets/ktse/collection.webp',
     imageAlt: 'Ktse 500GSM Raw-Hem Heavyweight Sweat Set flat lay on concrete',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -178,7 +178,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Heavyweight Drop-Shoulder Boxy Tee',
     price: 120,
     category: 'Tops',
-    image: '/assets/ktse/collection.webp',
+    image: 'assets/ktse/collection.webp',
     imageAlt: 'Ktse Heavyweight Drop-Shoulder Boxy Tee shown in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -205,7 +205,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Monolithic Bone Pullover Hoodie',
     price: 240,
     category: 'Tops',
-    image: '/assets/ktse/hero-mobile.webp',
+    image: 'assets/ktse/hero-mobile.webp',
     imageAlt: 'Model wearing Ktse Monolithic Bone Pullover Hoodie in brutalist corridor',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: [
@@ -232,7 +232,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Raw-Edge Heavyweight Denim Short',
     price: 160,
     category: 'Bottoms',
-    image: '/assets/ktse/hero-desktop.webp',
+    image: 'assets/ktse/hero-desktop.webp',
     imageAlt: 'Models wearing Ktse Raw-Edge Denim Shorts in courtyard',
     sizes: ['30', '32', '34', '36'],
     colors: [
@@ -263,7 +263,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Riviera Halter Wrap Top & Palazzo Pant',
     price: 450,
     category: 'Sets',
-    image: '/assets/moteon/collection.webp',
+    image: 'assets/moteon/collection.webp',
     imageAlt: 'Motéon Riviera Halter Wrap Top & Palazzo Pant on travertine flat lay',
     sizes: ['XS', 'S', 'M', 'L'],
     colors: [
@@ -289,7 +289,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Open-Knit Short-Sleeve Resort Polo',
     price: 240,
     category: 'Tops',
-    image: '/assets/moteon/collection.webp',
+    image: 'assets/moteon/collection.webp',
     imageAlt: 'Motéon Open-Knit Short-Sleeve Resort Polo on travertine flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -316,7 +316,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Pleated Mediterranean Linen Trousers',
     price: 250,
     category: 'Bottoms',
-    image: '/assets/moteon/collection.webp',
+    image: 'assets/moteon/collection.webp',
     imageAlt: 'Motéon Pleated Mediterranean Linen Trousers on travertine flat lay',
     sizes: ['30', '32', '34', '36'],
     colors: [
@@ -343,7 +343,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Embroidered Open-Collar Knit Shirt',
     price: 230,
     category: 'Tops',
-    image: '/assets/moteon/hero-mobile.webp',
+    image: 'assets/moteon/hero-mobile.webp',
     imageAlt: 'Model wearing Motéon Embroidered Open-Collar Knit Shirt descending villa stairs',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -373,7 +373,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Celestial Navigation Wool Overcoat',
     price: 840,
     category: 'Outerwear',
-    image: '/assets/moral-compass/collection.webp',
+    image: 'assets/moral-compass/collection.webp',
     imageAlt: 'Moral Compass Celestial Navigation Wool Overcoat flat lay showing compass star lining',
     sizes: ['38R', '40R', '42R', '44R'],
     colors: [
@@ -399,7 +399,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Gilded Compass Star French Terry Crewneck',
     price: 220,
     category: 'Tops',
-    image: '/assets/moral-compass/collection.webp',
+    image: 'assets/moral-compass/collection.webp',
     imageAlt: 'Moral Compass Gilded Compass Star French Terry Crewneck in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -425,7 +425,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Cardinal Heavyweight Ribbed Wool Sweater',
     price: 290,
     category: 'Tops',
-    image: '/assets/moral-compass/collection.webp',
+    image: 'assets/moral-compass/collection.webp',
     imageAlt: 'Moral Compass Cardinal Heavyweight Ribbed Wool Sweater in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -451,7 +451,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Pleated Wool Trousers with Compass Key Fob',
     price: 340,
     category: 'Bottoms',
-    image: '/assets/moral-compass/collection.webp',
+    image: 'assets/moral-compass/collection.webp',
     imageAlt: 'Moral Compass Pleated Wool Trousers with Compass Key Fob on black marble flat lay',
     sizes: ['30', '32', '34', '36'],
     colors: [
@@ -481,7 +481,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Circular Crest Heavyweight Club Hoodie',
     price: 180,
     category: 'Tops',
-    image: '/assets/my-drink-family/collection.webp',
+    image: 'assets/my-drink-family/collection.webp',
     imageAlt: 'My Drink Family Circular Crest Heavyweight Club Hoodie in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     colors: [
@@ -508,7 +508,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Emerald Satin Embroidered Varsity Jacket',
     price: 320,
     category: 'Outerwear',
-    image: '/assets/my-drink-family/collection.webp',
+    image: 'assets/my-drink-family/collection.webp',
     imageAlt: 'My Drink Family Emerald Satin Varsity Jacket with crest in flat lay',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -534,7 +534,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Sunset Orange Crest Twill Ball Cap',
     price: 65,
     category: 'Accessories',
-    image: '/assets/my-drink-family/collection.webp',
+    image: 'assets/my-drink-family/collection.webp',
     imageAlt: 'My Drink Family Sunset Orange Crest Twill Ball Cap on collection flat lay',
     sizes: ['One Size Adjustable'],
     colors: [
@@ -561,7 +561,7 @@ export const PRODUCTS = [
     name: '[Placeholder] Golden Hour Heritage Crest Tee',
     price: 85,
     category: 'Tops',
-    image: '/assets/my-drink-family/collection.webp',
+    image: 'assets/my-drink-family/collection.webp',
     imageAlt: 'My Drink Family Golden Hour Heritage Crest Tee in collection flat lay',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     colors: [
@@ -729,9 +729,9 @@ export const PRODUCTS = [
     id: 'mdf-crystal-glassware-set',
     brandId: 'my-drink-family',
     brandName: 'My Drink Family',
-    name: 'My Drink Family Master Flint Glass Highball & Coupe Set',
+    name: '[Placeholder] My Drink Family Master Flint Glass Highball & Coupe Set',
     category: 'Accessories',
-    image: '/assets/my-drink-family/collection.webp',
+    image: 'assets/my-drink-family/collection.webp',
     imageAlt: 'My Drink Family Master Flint Glass Highball and Coupe Set in collection display',
     sizes: ['Set of 4 Glasses'],
     colors: [
@@ -755,9 +755,9 @@ export const PRODUCTS = [
     id: 'mdf-gold-barware-kit',
     brandId: 'my-drink-family',
     brandName: 'My Drink Family',
-    name: 'My Drink Family Gilded Cocktail Shaker & Bar Tool Kit',
+    name: '[Placeholder] My Drink Family Gilded Cocktail Shaker & Bar Tool Kit',
     category: 'Accessories',
-    image: '/assets/my-drink-family/collection.webp',
+    image: 'assets/my-drink-family/collection.webp',
     imageAlt: 'My Drink Family Gilded Cocktail Shaker and Bar Tool Kit in collection display',
     sizes: ['5-Piece Tool Set'],
     colors: [
@@ -1535,8 +1535,852 @@ export const PRODUCTS = [
     ],
     fabricCare: 'Dishwasher safe flint glassware; clean travertine coasters with neutral stone soap.',
     fitNotes: 'Designed for residential dining and conference tables.'
+  },
+  // =========================================================================
+  // IKLA MAISON VIP PRIVATE COLLECTION (10 SQUARE 1:1 ASSETS)
+  // =========================================================================
+  {
+    id: 'ikla-vip-signature-evening-pajama-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Signature Evening Pajama Set',
+    category: 'Sleepwear',
+    image: 'assets/vip-products/signature-evening-pajama-set.webp',
+    imageAlt: 'Signature Evening Pajama Set in midnight obsidian silk-twill with French piped hems',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: [
+      { name: 'Obsidian Midnight', hex: '#0D0E11' },
+      { name: 'Champagne Ivory', hex: '#F3EFE6' }
+    ],
+    material: '100% 22-Momme Mulberry Silk Twill',
+    accessMode: 'Made to Order',
+    status: 'Made to Order',
+    cta: 'Request Access',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Midnight obsidian silk-twill pajama set tailored with French piped hems, mother-of-pearl buttons, and discreet tonal monogramming.',
+    details: [
+      '22-Momme Grade-6A pure mulberry silk twill',
+      'Hand-finished French seams and tonal piping',
+      'Engraved natural mother-of-pearl closure buttons',
+      'Tailored fluid lounge silhouette with relaxed elasticated drawstring'
+    ],
+    fabricCare: 'Specialist dry clean or delicate cold silk hand wash.',
+    fitNotes: 'True to size luxury lounge fit.'
+  },
+  {
+    id: 'ikla-vip-bespoke-cabin-travel-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Bespoke Cabin Travel Set',
+    category: 'Travel',
+    image: 'assets/vip-products/bespoke-cabin-travel-set.webp',
+    imageAlt: 'Bespoke Cabin Travel Set in full-grain calfskin and lightweight aerospace aluminum hardware',
+    sizes: ['Travel Set'],
+    colors: [
+      { name: 'Sovereign Noir', hex: '#111215' },
+      { name: 'Cognac Saddle', hex: '#5A3D28' }
+    ],
+    material: 'French Boxcalf & Aerospace-Grade Aluminum Alloy',
+    accessMode: 'Bespoke Commission',
+    status: 'Bespoke Commission',
+    cta: 'Begin a Commission',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Handcrafted full-grain calfskin cabin duffle and coordinating garment sleeve with brushed palladium hardware.',
+    details: [
+      'Hand-stitched French boxcalf leather exterior',
+      'Aerospace-grade custom-milled aluminum hardware in matte platinum finish',
+      'Coordinating fold-flat suit garment sleeve with cedar hanger',
+      'IATA carry-on compliant cabin dimensions'
+    ],
+    fabricCare: 'Treat with Maison leather balm annually.',
+    fitNotes: 'Engineered for transcontinental overhead storage.'
+  },
+  {
+    id: 'ikla-vip-private-table-dinnerware-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Private Table Dinnerware Set',
+    category: 'Table',
+    image: 'assets/vip-products/private-table-dinnerware-set.webp',
+    imageAlt: 'Private Table Dinnerware Set in Limoges porcelain with hand-applied 24k gold rim',
+    sizes: ['12-Place Service'],
+    colors: [
+      { name: 'Limoges White', hex: '#FAF9F6' },
+      { name: 'Pure 24k Gold', hex: '#D4AF37' }
+    ],
+    material: 'Limoges Fine Porcelain & 24k Gold Gilding',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request an Allocation',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Twelve-place Limoges porcelain service finished with hand-painted 24-karat gold concentric rims and bespoke house crest.',
+    details: [
+      'Authentic Limoges hard-paste porcelain fired at 1400°C',
+      'Hand-applied 24k burnished gold concentric borders',
+      'Complete set: Charger plates, dinner plates, dessert plates, and bread dishes',
+      'Bespoke serial number and client monogram crest applied to reverse'
+    ],
+    fabricCare: 'Hand wash with mild neutral detergent and soft cloth.',
+    fitNotes: 'Standard formal dining dimensions.'
+  },
+  {
+    id: 'ikla-vip-salon-tea-service-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Salon Tea Service Set',
+    category: 'Table',
+    image: 'assets/vip-products/salon-tea-service-set.webp',
+    imageAlt: 'Salon Tea Service Set featuring hand-hammered sterling teapot, matching infuser and cups',
+    sizes: ['Service Suite'],
+    colors: [
+      { name: 'Sterling Silver', hex: '#E5E8EB' },
+      { name: 'Fine Bone China', hex: '#FDFBF7' }
+    ],
+    material: '925 Sterling Silver & Fine Bone China',
+    accessMode: 'VIP Preview',
+    status: 'VIP Preview',
+    cta: 'Join the Waiting List',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Hand-hammered sterling silver ceremonial teapot, precision mesh infuser, and matching double-walled bone china cups.',
+    details: [
+      'Hand-hammered 925 sterling silver body with insulated ebony handle',
+      'Precision micro-etched silver mesh infuser chamber',
+      'Four double-walled fine bone china tasting cups',
+      'Solid silver rectangular presentation plinth'
+    ],
+    fabricCare: 'Polish silver with non-abrasive flannel; rinse china in warm water.',
+    fitNotes: 'Salon ceremonial proportion.'
+  },
+  {
+    id: 'ikla-vip-signature-top-handle-handbag',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Signature Top-Handle Handbag',
+    category: 'Leather',
+    image: 'assets/vip-products/signature-top-handle-handbag.webp',
+    imageAlt: 'Signature Top-Handle Handbag in boxcalf leather with sculpted palladium turn-lock',
+    sizes: ['Maison Medium'],
+    colors: [
+      { name: 'Obsidian Noir', hex: '#0B0C0E' },
+      { name: 'Forest Deep', hex: '#112217' }
+    ],
+    material: 'Full-Grain French Boxcalf & Polished Palladium',
+    accessMode: 'Private Drop',
+    status: 'Private Drop',
+    cta: 'Request VIP Access',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Architectural trapezoidal silhouette in obsidian boxcalf with sculpted palladium turn-lock and lambskin lining.',
+    details: [
+      'Hand-selected Grade-1 French boxcalf leather with saddle edge-paint',
+      'Sculpted solid brass turn-lock with hand-polished palladium finish',
+      'Full interior lining in supple cream French lambskin',
+      'Detachable adjustable shoulder strap and clochette key keeper'
+    ],
+    fabricCare: 'Store in archival sleeper dust bag; treat with wax balm annually.',
+    fitNotes: 'Dimensions: 28cm width × 21cm height × 11cm depth.'
+  },
+  {
+    id: 'ikla-vip-maison-bath-ritual-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Maison Bath Ritual Set',
+    category: 'Bath',
+    image: 'assets/vip-products/maison-bath-ritual-set.webp',
+    imageAlt: 'Maison Bath Ritual Set with 850 GSM organic Aegean towels, pumice soap dish, and stone tray',
+    sizes: ['Master Set'],
+    colors: [
+      { name: 'Aegean Cream', hex: '#FAF6EE' },
+      { name: 'Honed Travertine', hex: '#D8D0BF' }
+    ],
+    material: '850 GSM Aegean Cotton & Tuscan Travertine',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Register Interest',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: '850 GSM organic Aegean combed cotton bath sheets, hand-carved travertine soap dish, and cold-pressed olive amenity collection.',
+    details: [
+      'Two oversized 850 GSM bath sheets and two matching hand towels',
+      'Solid Tuscan travertine stone amenity caddy carved from a single block',
+      'Cold-pressed botanical soap bar and replenishing body oil in dark violet glass',
+      'Natural agave fiber scrub brush with oiled walnut handle'
+    ],
+    fabricCare: 'Wash towels warm; seal travertine yearly with stone sealer.',
+    fitNotes: 'Bath sheet dimensions: 100cm × 180cm.'
+  },
+  {
+    id: 'ikla-vip-signature-bedroom-textile-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Signature Bedroom Textile Set',
+    category: 'Bedroom',
+    image: 'assets/vip-products/signature-bedroom-textile-set.webp',
+    imageAlt: 'Signature Bedroom Textile Set in 1000-thread count Giza cotton sateen with bespoke monograms',
+    sizes: ['King', 'Super King'],
+    colors: [
+      { name: 'Pure Chalk', hex: '#FCFAF7' },
+      { name: 'Gilded Taupe', hex: '#B8A88E' }
+    ],
+    material: '1,000 TC Egyptian Giza Cotton & Mongolian Cashmere',
+    accessMode: 'Made to Order',
+    status: 'Made to Order',
+    cta: 'Request Access',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: '1,000-thread-count long-staple Giza cotton duvet, oxford pillow shams, and double-face silk-cashmere bed throw.',
+    details: [
+      'Certified authentic long-staple Giza 45 Egyptian cotton sateen',
+      'Double-face silk-cashmere bed runner with hand-knotted fringe',
+      'Concealed mother-of-pearl duvet closure with interior corner ties',
+      'Bespoke hand-embroidered Maison monogram option on shams'
+    ],
+    fabricCare: 'Machine wash delicate warm; line dry or tumble dry low.',
+    fitNotes: 'Full bespoke tailoring to master bed dimensions.'
+  },
+  {
+    id: 'ikla-vip-private-atmosphere-fragrance-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Private Atmosphere Fragrance Set',
+    category: 'Fragrance',
+    image: 'assets/vip-products/private-atmosphere-fragrance-set.webp',
+    imageAlt: 'Private Atmosphere Fragrance Set with alabaster vessel candle, reed diffuser, and room mist',
+    sizes: ['Triple Suite'],
+    colors: [
+      { name: 'Translucent Alabaster', hex: '#EDE8DE' },
+      { name: 'Amber Smoked Glass', hex: '#3E2F1E' }
+    ],
+    material: 'Natural Alabaster Stone, Vegetal Wax & Rare Botanicals',
+    accessMode: 'Waiting List Open',
+    status: 'Waiting List Open',
+    cta: 'Join the Waiting List',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Hand-poured vegetal wax candle in sculpted alabaster vessel, cold-extracted room mist, and black rattan reed diffuser.',
+    details: [
+      'Notes: Orris root, smoked cedar, Tuscan cypress, and frankincense resin',
+      'Hand-carved translucent alabaster vessel candle (80 hours burn time)',
+      '200ml cold-extracted atmospheric mist in heavy black glass flacon',
+      'Natural black rattan reed diffuser with stone collar ring'
+    ],
+    fabricCare: 'Trim wick to 5mm before each lighting; keep away from drafts.',
+    fitNotes: 'Scent coverage: spaces up to 120 sq meters.'
+  },
+  {
+    id: 'ikla-vip-private-office-writing-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Private Office Writing Set',
+    category: 'Office',
+    image: 'assets/vip-products/private-office-writing-set.webp',
+    imageAlt: 'Private Office Writing Set in bridle leather desk mat, brass letter opener, and fountain pen',
+    sizes: ['Executive Suite'],
+    colors: [
+      { name: 'Bridle Havana', hex: '#2B1A12' },
+      { name: 'Aged Solid Brass', hex: '#C29B4A' }
+    ],
+    material: 'English Bridle Leather, Solid Brass & 18k Gold',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Register Interest',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Bridle leather executive desk blotter, hand-turned brass letter opener, and piston-fill fountain pen with 18k gold nib.',
+    details: [
+      'Full-grain English bridle leather desk blotter with hand-burnished edges',
+      'Turned solid brass paper knife and matching pen rest',
+      'Piston-fill fountain pen with hand-tuned 18k solid gold medium nib',
+      'Lined archival watermarked paper journal with gilt-edged sheets'
+    ],
+    fabricCare: 'Condition leather with saddle cream; polish brass with jewelers cloth.',
+    fitNotes: 'Blotter dimensions: 70cm × 45cm.'
+  },
+  {
+    id: 'ikla-vip-grand-salon-textile-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'Grand Salon Textile Set',
+    category: 'Living',
+    image: 'assets/vip-products/grand-salon-textile-set.webp',
+    imageAlt: 'Grand Salon Textile Set in double-face cashmere throws and hand-loomed silk accent cushions',
+    sizes: ['Grand Salon Suite'],
+    colors: [
+      { name: 'Vicuna Camel', hex: '#A87A4F' },
+      { name: 'Ivory Cream', hex: '#F6F2EB' }
+    ],
+    material: '100% Pure Grade-A Mongolian Cashmere & Mulberry Raw Silk',
+    accessMode: 'Made to Order',
+    status: 'Made to Order',
+    cta: 'Request Access',
+    isVIP: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Heavyweight double-face cashmere throw with fringed borders and coordinating hand-loomed raw silk cushion covers.',
+    details: [
+      'Substantial 600 GSM pure Mongolian cashmere throw (140cm × 200cm)',
+      'Four hand-loomed raw silk accent cushion covers with goose feather inserts',
+      'Discreet tone-on-tone hand-embroidered Maison crest corner insignia',
+      'Bespoke color matching available upon direct consultation'
+    ],
+    fabricCare: 'Dry clean only by luxury garment specialist.',
+    fitNotes: 'Grand salon proportions.'
+  },
+
+  // =========================================================================
+  // MY DRINK FAMILY MERCHANDISE COLLECTION (10 SQUARE 1:1 ASSETS)
+  // =========================================================================
+  {
+    id: 'mdf-merch-white-mymosa-tshirt',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'MyMosa Signature White Tee',
+    category: 'Apparel',
+    subcategory: 'Premium T-shirts',
+    image: 'assets/my-drink-family-merch/white_mymosa_tshirt.webp',
+    imageAlt: 'MyMosa Signature White Tee in 280 GSM combed organic cotton with subtle orange embroidery',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Chalk White', hex: '#FBFBFA' },
+      { name: 'Citrus Accent', hex: '#E26D35' }
+    ],
+    material: '280 GSM Combed Organic Cotton',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request Allocation',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: '280 GSM combed organic cotton t-shirt in crisp chalk white with subtle citrus crest embroidery at the chest.',
+    details: [
+      '280 GSM heavyweight combed organic cotton jersey',
+      'Micro-ribbed collar that maintains shape over wear',
+      'Discreet tonal citrus MyMosa insignia at left chest',
+      'Reinforced shoulder seam binding'
+    ],
+    fabricCare: 'Machine wash cold inside out; flat dry.',
+    fitNotes: 'Structured relaxed fit.'
+  },
+  {
+    id: 'mdf-merch-black-mymosa-tshirt',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'MyMosa Obsidian Edition Black Tee',
+    category: 'Apparel',
+    subcategory: 'Premium T-shirts',
+    image: 'assets/my-drink-family-merch/black_mymosa_tshirt.webp',
+    imageAlt: 'MyMosa Obsidian Edition Black Tee in mercerized Egyptian cotton with midnight crest',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Obsidian Black', hex: '#111215' }
+    ],
+    material: '300 GSM Mercerized Egyptian Cotton',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request Allocation',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Mercerized heavyweight cotton tee in deep obsidian with tonal matte black family crest.',
+    details: [
+      '300 GSM mercerized long-staple Egyptian cotton',
+      'Silky hand feel with subtle structural luster',
+      'High-density tonal black crest print on reverse neck',
+      'Tailored sleeve break'
+    ],
+    fabricCare: 'Hand wash cold or specialist dry clean.',
+    fitNotes: 'Modern architectural fit.'
+  },
+  {
+    id: 'mdf-merch-family-hoodie',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'Family Heritage Heavyweight Hoodie',
+    category: 'Apparel',
+    subcategory: 'Heavyweight Hoodies',
+    image: 'assets/my-drink-family-merch/family_hoodie.webp',
+    imageAlt: 'Family Heritage Heavyweight Hoodie in 500 GSM loopback terry with tonal felt embroidery',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Clubhouse Navy', hex: '#131B2A' },
+      { name: 'Warm Cream', hex: '#EDE8DE' }
+    ],
+    material: '500 GSM Loopback French Terry',
+    accessMode: 'VIP Preview',
+    status: 'VIP Preview',
+    cta: 'Join the Waiting List',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: '500 GSM loopback French terry hoodie with double-layer hood, brushed brass aglets, and tonal felt crest.',
+    details: [
+      '500 GSM ultra-dense loopback French terry knit',
+      'Structured double-ply hood without drawstring for minimal profile',
+      'Brushed brass engraved family eyelets and aglets',
+      'Ribbed side gussets for natural freedom of movement'
+    ],
+    fabricCare: 'Machine wash gentle cold; lay flat to dry.',
+    fitNotes: 'Boxy athletic drape.'
+  },
+  {
+    id: 'mdf-merch-mymosa-bucket-hat',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'MyMosa Riviera Washed Bucket Hat',
+    category: 'Headwear',
+    subcategory: 'Bucket Hats',
+    image: 'assets/my-drink-family-merch/mymosa_bucket_hat.webp',
+    imageAlt: 'MyMosa Riviera Washed Bucket Hat in pigment-dyed cotton twill with brass eyelets',
+    sizes: ['S/M', 'L/XL'],
+    colors: [
+      { name: 'Riviera Sand', hex: '#DDD5C7' },
+      { name: 'Sunlit Orange', hex: '#E06D38' }
+    ],
+    material: '100% Washed Cotton Chino Twill',
+    accessMode: 'Limited Drop',
+    status: 'Limited Drop',
+    cta: 'Register Interest',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Washed cotton twill bucket hat with embroidered family emblem and antique brass ventilation grommets.',
+    details: [
+      'Pigment-dyed washed cotton twill with soft broken-in feel',
+      'Subtle circular crest embroidery at front crown',
+      'Four brass ventilation eyelets',
+      'Internal terrycloth sweatband for summer comfort'
+    ],
+    fabricCare: 'Spot clean with damp cloth.',
+    fitNotes: 'Comfortable relaxed crown.'
+  },
+  {
+    id: 'mdf-merch-mymosa-baseball-cap',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'MyMosa Clubhouse Structured Cap',
+    category: 'Headwear',
+    subcategory: 'Baseball Caps',
+    image: 'assets/my-drink-family-merch/mymosa_baseball_cap.webp',
+    imageAlt: 'MyMosa Clubhouse Structured Cap in brushed chino twill with antique brass closure',
+    sizes: ['One Size (Adjustable)'],
+    colors: [
+      { name: 'Heritage Khaki', hex: '#C5B9A5' },
+      { name: 'Midnight Navy', hex: '#161F2E' }
+    ],
+    material: 'Heavy Cotton Chino & Antique Brass Hardware',
+    accessMode: 'Limited Drop',
+    status: 'Limited Drop',
+    cta: 'Register Interest',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Structured six-panel crown cap in brushed chino twill with self-fabric adjustable strap and brass clasp.',
+    details: [
+      'Structured six-panel crown with curved brim',
+      'Three-dimensional bullion stitched family monogram',
+      'Self-fabric back strap with embossed brass buckle slider',
+      'Cotton twill interior taping'
+    ],
+    fabricCare: 'Spot clean only.',
+    fitNotes: 'Adjustable circumference (55cm - 61cm).'
+  },
+  {
+    id: 'mdf-merch-family-tote',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'Family Clubhouse Canvas Tote',
+    category: 'Travel and Leisure',
+    subcategory: 'Weekend Bags & Totes',
+    image: 'assets/my-drink-family-merch/family_tote.webp',
+    imageAlt: 'Family Clubhouse Canvas Tote in 24 oz heavy cotton duck with saddle leather straps',
+    sizes: ['Large Tote'],
+    colors: [
+      { name: 'Natural Ecru', hex: '#F4EFE6' },
+      { name: 'Havana Leather', hex: '#4A3525' }
+    ],
+    material: '24 oz Heavyweight Cotton Duck & Saddle Leather',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Request VIP Access',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: '24 oz heavyweight cotton duck canvas carryall with saddle leather handles and reinforced base.',
+    details: [
+      '24 oz water-repellent unbleached cotton duck canvas',
+      'Full-grain vegetable-tanned bridle leather handles (25cm drop)',
+      'Waterproof coated bottom panel for poolside placement',
+      'Internal zippered valuables pocket and key clip'
+    ],
+    fabricCare: 'Spot clean canvas with cold water; condition leather handles yearly.',
+    fitNotes: 'Generous weekend capacity (45L).'
+  },
+  {
+    id: 'mdf-merch-family-glassware-set',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'Family Crystal Coupe & Highball Suite',
+    category: 'Glassware and Barware',
+    subcategory: 'Branded Glassware',
+    image: 'assets/my-drink-family-merch/family_glassware_set.webp',
+    imageAlt: 'Family Crystal Coupe & Highball Suite featuring lead-free titanium crystal with etched crest',
+    sizes: ['6-Piece Suite'],
+    colors: [
+      { name: 'Clear Brilliant', hex: '#F4F7FA' },
+      { name: 'Etched Monogram', hex: '#EAEFF2' }
+    ],
+    material: 'Lead-Free Titanium Crystal Glass',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request an Allocation',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Mouth-blown lead-free crystal coupes and highballs featuring laser-etched family crest monogram.',
+    details: [
+      'Set includes: Two cocktail coupes, two tall highballs, two rocks glasses',
+      'Ultra-thin cold-cut rim for heightened tactile tasting experience',
+      'Discreet laser-etched family monogram on the base of each vessel',
+      'Lead-free titanium crystal formulated for exceptional clarity and durability'
+    ],
+    fabricCare: 'Hand wash with warm water and soft lint-free drying cloth.',
+    fitNotes: 'Standard cocktail and long-drink capacity.'
+  },
+  {
+    id: 'mdf-merch-canopy-pool-lounge',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'Canopy Cabana Pool Lounge Set',
+    category: 'Resort and Hospitality',
+    subcategory: 'Hospitality & Celebration Accessories',
+    image: 'assets/my-drink-family-merch/canopy_pool_lounge.webp',
+    imageAlt: 'Canopy Cabana Pool Lounge Set in marine-grade Sunbrella canvas with water-resistant cushions',
+    sizes: ['Double Cabana Daybed'],
+    colors: [
+      { name: 'Resort Natural', hex: '#ECE6DA' },
+      { name: 'Weathered Teak', hex: '#635345' }
+    ],
+    material: 'Marine-Grade Sunbrella Canvas & Teakwood Base',
+    accessMode: 'Made to Order',
+    status: 'Made to Order',
+    cta: 'Request Access',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Architectural poolside daybed lounge with collapsible canopy and waterproof memory foam cushions.',
+    details: [
+      'Sustainably harvested Grade-A teak frame with marine oil finish',
+      'Collapsible three-position Sunbrella fabric shading canopy',
+      'Quick-dry reticulated foam cushions upholstered in weather-resistant fabric',
+      'Integrated concealed teak side beverage shelves'
+    ],
+    fabricCare: 'Re-oil teak wood annually; hose down fabric with mild soap.',
+    fitNotes: 'Full-size double daybed (200cm × 160cm).'
+  },
+  {
+    id: 'mdf-merch-family-beach-ball',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'Family Clubhouse Beach Ball',
+    category: 'Resort and Hospitality',
+    subcategory: 'Hospitality & Celebration Accessories',
+    image: 'assets/my-drink-family-merch/family_beach_ball.webp',
+    imageAlt: 'Family Clubhouse Beach Ball in matte eco-composite vinyl with monogram paneling',
+    sizes: ['40cm Diameter'],
+    colors: [
+      { name: 'Club Navy & Cream', hex: '#1D2A3D' },
+      { name: 'Warm Gold', hex: '#D4AF37' }
+    ],
+    material: 'Non-Toxic Recycled Matte PVC',
+    accessMode: 'Limited Drop',
+    status: 'Limited Drop',
+    cta: 'Register Interest',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: false,
+    description: 'Matte-finish eco-composite inflatable sphere with alternating cream, navy, and gold monograms.',
+    details: [
+      'Durable 0.3mm recycled non-phthalate matte PVC',
+      'Four alternating panels with subtle crest and wordmark graphics',
+      'Recessed leakproof safety air valve',
+      'Includes custom canvas drawstring storage pouch'
+    ],
+    fabricCare: 'Rinse with fresh water after pool or saltwater immersion.',
+    fitNotes: '40cm inflated diameter.'
+  },
+  {
+    id: 'mdf-merch-family-floating-tray',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'Family Poolside Floating Serving Tray',
+    category: 'Resort and Hospitality',
+    subcategory: 'Serving Trays & Bottle Chillers',
+    image: 'assets/my-drink-family-merch/family_floating_serving_tray.webp',
+    imageAlt: 'Family Poolside Floating Serving Tray in marine-finished synthetic rattan with weighted recessed cup holders',
+    sizes: ['Grand Floating Plinth'],
+    colors: [
+      { name: 'Natural Sand Rattan', hex: '#C2B198' },
+      { name: 'Polished Brass Accents', hex: '#D4AF37' }
+    ],
+    material: 'Marine-Grade All-Weather Rattan & Aluminum Core',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Register Interest',
+    isMDFMerch: true,
+    isReserve: true,
+    isFeatured: true,
+    description: 'Waterproof hand-woven synthetic rattan floating bar plinth with weighted recessed bottle and glass slots.',
+    details: [
+      'High-density buoyancy core wrapped in hand-woven UV-resistant resin wicker',
+      'Recessed slots for four stemless crystal glasses and central ice chiller bucket',
+      'Non-tip counterweighted keel design engineered for pool balance',
+      'Polished brass dual carry handles'
+    ],
+    fabricCare: 'Rinse with clean water and air dry in shade.',
+    fitNotes: 'Dimensions: 75cm length × 45cm width × 15cm height.'
+  },
+
+  // =========================================================================
+  // IKLA KIDS — THE FIRST INHERITANCE (6 CORE ESSENTIALS + 1 ATELIER DROP)
+  // =========================================================================
+  {
+    id: 'ikla-kids-maison-green-pullover',
+    name: 'Maison Green Pullover Hoodie & Jogger Set',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Kids Essentials',
+    subcategory: 'Sweatsuits',
+    image: 'assets/kids/ikla-kids-maison-green-pullover-set.webp',
+    imageAlt: 'Maison-green IKLA Kids pullover hoodie and jogger set in heavyweight combed loopback cotton',
+    sizes: ['4Y', '6Y', '8Y', '10Y', '12Y', '14Y'],
+    colors: [
+      { name: 'Maison Green', hex: '#013220' },
+      { name: 'Restrained Gold Crest', hex: '#D4AF57' }
+    ],
+    material: '450 GSM Organic Combed Cotton Loopback Fleece',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isKids: true,
+    isKidsCore: true,
+    isFeatured: true,
+    description: 'Generational comfort tailored for young pioneers. Crafted from pure organic combed loopback cotton with double-lined hood and tonal embroidered Maison insignia.',
+    details: [
+      '450 GSM ultra-soft brushed French terry cotton',
+      'Pre-shrunk and garment-dyed in signature Maison Green',
+      'Ribbed elastic waistband with concealed organic cotton drawcord',
+      'Discreet tonal high-density Maison crest embroidery on left chest and hip'
+    ],
+    fabricCare: 'Machine wash delicate at 30°C. Lay flat to dry.',
+    fitNotes: 'True-to-size classic athletic silhouette with comfortable movement ease.'
+  },
+  {
+    id: 'ikla-kids-midnight-navy-zip',
+    name: 'Midnight Navy Zip Tracksuit Set',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Kids Essentials',
+    subcategory: 'Sweatsuits',
+    image: 'assets/kids/ikla-kids-midnight-navy-zip-set.webp',
+    imageAlt: 'Midnight-navy IKLA Kids zip hoodie and jogger set with subtle blue piping and brass puller',
+    sizes: ['4Y', '6Y', '8Y', '10Y', '12Y', '14Y'],
+    colors: [
+      { name: 'Midnight Navy', hex: '#101A2D' },
+      { name: 'Powder Blue Accent', hex: '#B0C4DE' }
+    ],
+    material: 'Heavyweight Loopback Fleece with Antiqued Brass Hardware',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isKids: true,
+    isKidsCore: true,
+    isFeatured: true,
+    description: 'Full-zip architectural youth track jacket paired with matching tapered joggers. Finished with custom antiqued brass zip hardware and powder blue French piping.',
+    details: [
+      'Full-zip construction with custom engraved brass puller',
+      'Reinforced knee panels engineered for active play longevity',
+      'Split kangaroo front pockets and zip security key pocket',
+      'Fine powder blue contrast piping along sleeves and side leg seams'
+    ],
+    fabricCare: 'Machine wash inside out cold. Dry flat in shade.',
+    fitNotes: 'Structured athletic fit with relaxed taper toward the ankle.'
+  },
+  {
+    id: 'ikla-kids-green-cream-accessory',
+    name: 'Green & Cream Heritage Accessory Set',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Kids Accessories',
+    subcategory: 'Headwear & Lifestyle',
+    image: 'assets/kids/ikla-kids-green-cream-accessory-set.webp',
+    imageAlt: 'IKLA Kids cap, knit beanie, ribbed organic cotton socks and slides in maison green and cream',
+    sizes: ['One Size (Adjustable)'],
+    colors: [
+      { name: 'Maison Green', hex: '#013220' },
+      { name: 'Cream White', hex: '#F8F5F0' }
+    ],
+    material: 'Brushed Cotton Twill, Ribbed Wool & Molded EVA',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isKids: true,
+    isKidsCore: true,
+    isFeatured: true,
+    description: 'A complete four-piece accessory suite comprising an adjustable 6-panel twill cap, fine rib-knit beanie, cushioned crew socks, and contoured poolside slides.',
+    details: [
+      'Unstructured 6-panel cap with brass sliding closure buckle',
+      '100% fine merino wool-blend cuffed beanie with woven label',
+      'Two pairs of heavy-cushion ribbed athletic crew socks',
+      'Molded dual-density ergonomic slides with embossed Maison crest'
+    ],
+    fabricCare: 'Spot clean cap and slides. Hand wash beanie in cold water.',
+    fitNotes: 'Engineered for ages 4–14 with adjustable hardware.'
+  },
+  {
+    id: 'ikla-kids-cream-camel-pullover',
+    name: 'Cream & Camel Relaxed Pullover Set',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Kids Essentials',
+    subcategory: 'Sweatsuits',
+    image: 'assets/kids/ikla-kids-cream-camel-pullover-set.webp',
+    imageAlt: 'Cream IKLA Kids hoodie and jogger set with warm camel ribbing details and tailored cuff finish',
+    sizes: ['4Y', '6Y', '8Y', '10Y', '12Y', '14Y'],
+    colors: [
+      { name: 'Cream White', hex: '#F8F5F0' },
+      { name: 'Warm Camel', hex: '#C19A6B' }
+    ],
+    material: '100% Organic Unbleached Cotton Terry',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isKids: true,
+    isKidsCore: true,
+    isFeatured: true,
+    description: 'Natural unbleached warm cream hooded sweatshirt and lounge pant ensemble accented with camel ribbed trim and hand-stitched bartack accents.',
+    details: [
+      'Pure organic unbleached cream cotton without chemical brighteners',
+      'Contrast warm camel ribbed cuffs, hem, and neck gusset',
+      'Deep side pockets and rear welt patch pocket',
+      'Softest fleece interior brushed for tender skin comfort'
+    ],
+    fabricCare: 'Machine wash cold with mild organic detergent. Tumble dry low.',
+    fitNotes: 'Relaxed lifestyle drape for layered trans-seasonal wear.'
+  },
+  {
+    id: 'ikla-kids-imperial-black-crew',
+    name: 'Imperial Black Minimalist Crewneck Set',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Kids Essentials',
+    subcategory: 'Sweatsuits',
+    image: 'assets/kids/ikla-kids-imperial-black-crew-set.webp',
+    imageAlt: 'Imperial-black IKLA Kids crewneck and jogger set in dense luxury fleece with discreet tonal crest',
+    sizes: ['4Y', '6Y', '8Y', '10Y', '12Y', '14Y'],
+    colors: [
+      { name: 'Imperial Black', hex: '#080808' },
+      { name: 'Matte Obsidian Crest', hex: '#1C1D21' }
+    ],
+    material: '500 GSM Heavyweight Dense Loopback Cotton',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isKids: true,
+    isKidsCore: true,
+    isFeatured: true,
+    description: 'Understated sovereign simplicity. Deep imperial black crewneck pullover paired with tailored athletic joggers featuring tonal matte silicon badges.',
+    details: [
+      '500 GSM heavyweight dense combed cotton fleece',
+      'Collar reinforced with herringbone neck tape for shape retention',
+      'Matte obsidian silicon crest placed discretely below back neck',
+      'Side seam pockets with invisible zip closure'
+    ],
+    fabricCare: 'Machine wash cold gentle cycle. Hang dry.',
+    fitNotes: 'Clean, architectural silhouette.'
+  },
+  {
+    id: 'ikla-kids-sky-summer-essentials',
+    name: 'Sky Blue Summer Essentials Set',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Kids Summer',
+    subcategory: 'Activewear',
+    image: 'assets/kids/ikla-kids-sky-summer-essentials.webp',
+    imageAlt: 'IKLA Kids T-shirt, athletic shorts, cap and socks in sky blue, cream and heritage green',
+    sizes: ['4Y', '6Y', '8Y', '10Y', '12Y', '14Y'],
+    colors: [
+      { name: 'Sky Blue', hex: '#87CEEB' },
+      { name: 'Warm Cream', hex: '#F8F5F0' },
+      { name: 'Maison Green', hex: '#013220' }
+    ],
+    material: 'Mercerized Cotton Jersey & Quick-Dry Nylon',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isKids: true,
+    isKidsCore: true,
+    isFeatured: true,
+    description: 'High-summer capsule featuring a lightweight 220 GSM mercerized cotton jersey tee, quick-dry lined athletic shorts, washed twill cap, and athletic quarter socks.',
+    details: [
+      '220 GSM combed organic cotton t-shirt with ribbed crewneck',
+      'Quick-dry micro-ripstop shorts with breathable mesh brief lining',
+      'Adjustable 5-panel unstructured summer visor cap',
+      'Quick-wicking cotton-blend cushioned socks'
+    ],
+    fabricCare: 'Machine wash warm. Tumble dry normal.',
+    fitNotes: 'Easy athletic cut optimized for beach, court, and resort days.'
+  },
+  {
+    id: 'ikla-kids-custom-velour-drop',
+    name: 'The Atelier Drop · Custom Velour Capsule',
+    brand: 'ikla-kids',
+    houseName: 'IKLA Kids',
+    category: 'Limited Drop',
+    subcategory: 'Velour Tracksuits',
+    image: 'assets/kids/ikla-kids-custom-velour-limited-drop.webp',
+    imageAlt: 'Three children modeling custom jewel-tone IKLA velour tracksuits in sapphire, emerald, and ruby tones',
+    sizes: ['Bespoke Sizing by Allocation (4Y–14Y)'],
+    colors: [
+      { name: 'Sapphire Midnight', hex: '#0F2537' },
+      { name: 'Emerald Jewel', hex: '#0B3B2B' },
+      { name: 'Deep Ruby', hex: '#4B1018' }
+    ],
+    material: 'Custom-Dyed Silk-Velour Blend & Gold-Dipped Aglets',
+    accessMode: 'Limited Drop',
+    status: 'Limited Drop · Custom Velour',
+    cta: 'Request Drop Access',
+    isKids: true,
+    isKidsAtelierDrop: true,
+    isFeatured: true,
+    description: 'An exclusive limited-drop presentation of hand-finished jewel-tone silk-velour tracksuits. Available by private allocation only.',
+    details: [
+      'High-luster silk-cotton velour woven in Como, Italy',
+      'Hand-finished gold-dipped cord aglets and custom zipper pulls',
+      'Tonal chain-stitched Atelier insignia across upper back yoke',
+      'Numbered certificate of bespoke allocation included in keepsake presentation box'
+    ],
+    fabricCare: 'Professional dry clean only. Steam gently.',
+    fitNotes: 'Bespoke fit tailored upon allocation confirmation.'
   }
 ];
+
+export const IKLA_VIP_PRODUCTS = PRODUCTS.filter((p) => p.isVIP);
+export const MDF_MERCHANDISE_PRODUCTS = PRODUCTS.filter((p) => p.isMDFMerch);
+export const IKLA_KIDS_PRODUCTS = PRODUCTS.filter((p) => p.isKids);
+export const IKLA_KIDS_CORE_PRODUCTS = PRODUCTS.filter((p) => p.isKidsCore);
 
 PRODUCTS.forEach(product => {
   if (product.image) {
@@ -1544,5 +2388,25 @@ PRODUCTS.forEach(product => {
   }
 });
 
-export const CATEGORIES = ['All', 'Outerwear', 'Tops', 'Bottoms', 'Sets', 'Accessories'];
+export const CATEGORIES = [
+  'All',
+  'Outerwear',
+  'Tops',
+  'Bottoms',
+  'Sets',
+  'Accessories',
+  'Apparel',
+  'Headwear',
+  'Travel and Leisure',
+  'Glassware and Barware',
+  'Resort and Hospitality',
+  'Sleepwear',
+  'Table',
+  'Leather',
+  'Bath',
+  'Bedroom',
+  'Fragrance',
+  'Office',
+  'Living'
+];
 

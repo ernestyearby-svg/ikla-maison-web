@@ -1,13 +1,18 @@
 import React, { useState, useMemo } from 'react';
-import { Filter, SlidersHorizontal, ArrowUpDown, Search, X, Droplets, Wine, ArrowRight, Compass, Sparkles, Check, Layers, ShieldCheck, Bookmark, Palette } from 'lucide-react';
-import { PRODUCTS, CATEGORIES } from '../data/products';
+import { Filter, SlidersHorizontal, ArrowUpDown, Search, X, Droplets, Wine, ArrowRight, Compass, Sparkles, Check, Layers, ShieldCheck, Bookmark, Palette, ExternalLink } from 'lucide-react';
+import { PRODUCTS, CATEGORIES, IKLA_KIDS_CORE_PRODUCTS } from '../data/products';
 import { BRAND_LIST, BRANDS, FASHION_HOUSES, BEVERAGE_HOUSES } from '../data/brands';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
+import VIPInquiryModal from '../components/VIPInquiryModal';
+import { ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
+import { getAssetPath } from '../utils/assets.js';
 
 export default function CollectionPage({
   onSelectProduct,
   onSelectBrand,
+  onNavigateKids,
+  onNavigateGriffin,
   initialBrandFilter = 'all',
   searchQuery = '',
   onClearSearch,
@@ -20,13 +25,27 @@ export default function CollectionPage({
   const [waitlistEmail, setWaitlistEmail] = useState('');
   const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
 
+  // VIP & MDF Merchandise State
+  const [inquiryProduct, setInquiryProduct] = useState(null);
+  const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
+  const [mdfMerchFilter, setMdfMerchFilter] = useState('All');
+
+  const handleOpenInquiry = (prod) => {
+    setInquiryProduct(prod);
+    setIsInquiryModalOpen(true);
+  };
+
   // Filter & Sort computation
   const filteredProducts = useMemo(() => {
     if (selectedBrand === 'ikla-water') return [];
     return PRODUCTS.filter((product) => {
       // Brand filter
-      if (selectedBrand !== 'all' && product.brandId !== selectedBrand) {
-        return false;
+      if (selectedBrand !== 'all') {
+        if (selectedBrand === 'ikla-kids') {
+          if (!product.isKids) return false;
+        } else if (product.brandId !== selectedBrand) {
+          return false;
+        }
       }
       // Category filter
       if (selectedCategory !== 'All' && product.category !== selectedCategory) {
@@ -60,6 +79,13 @@ export default function CollectionPage({
   const mygaritaProducts = useMemo(() => PRODUCTS.filter((p) => p.brandId === 'mygarita'), []);
   const accessoriesProducts = useMemo(() => PRODUCTS.filter((p) => p.category === 'Accessories'), []);
   const fashionProducts = useMemo(() => PRODUCTS.filter((p) => ['ikla-maison', 'ktse', 'moteon', 'moral-compass', 'wnnr'].includes(p.brandId)), []);
+  const vipProducts = useMemo(() => PRODUCTS.filter((p) => p.isVIP), []);
+  const mdfMerchProducts = useMemo(() => PRODUCTS.filter((p) => p.isMDFMerch), []);
+  const kidsProducts = useMemo(() => PRODUCTS.filter((p) => p.isKids), []);
+  const filteredMdfMerch = useMemo(() => {
+    if (mdfMerchFilter === 'All') return mdfMerchProducts;
+    return mdfMerchProducts.filter((p) => p.category === mdfMerchFilter || p.subcategory === mdfMerchFilter);
+  }, [mdfMerchFilter, mdfMerchProducts]);
 
   const mymosaColorways = [
     {
@@ -229,6 +255,21 @@ export default function CollectionPage({
               );
             })}
 
+            {/* IKLA Kids Tab */}
+            <button
+              onClick={() => setSelectedBrand('ikla-kids')}
+              className={`px-4 py-2.5 text-xs uppercase tracking-[0.14em] font-medium whitespace-nowrap transition-all cursor-pointer rounded-xs flex items-center gap-2 ${
+                selectedBrand === 'ikla-kids'
+                  ? 'bg-[#013220] text-white shadow-md border border-[#D4AF57]/40'
+                  : 'bg-white border border-[#E8E1D5] text-[#013220] hover:text-black hover:border-[#013220]'
+              }`}
+            >
+              <div className="w-4 h-4 rounded-full bg-[#013220]/20 flex items-center justify-center text-[#D4AF57] text-[9px] font-bold">
+                K
+              </div>
+              <span>IKLA Kids ({kidsProducts.length})</span>
+            </button>
+
             {/* IKLA Water Concept Tab */}
             <button
               onClick={() => setSelectedBrand('ikla-water')}
@@ -277,6 +318,43 @@ export default function CollectionPage({
                 className="px-5 py-2.5 bg-[#111215] text-white hover:bg-neutral-800 transition-colors text-xs uppercase tracking-widest font-medium rounded-xs flex items-center gap-2 cursor-pointer shadow-sm"
               >
                 <span>Explore House Atelier</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* IKLA Kids House Spotlight Banner */}
+        {selectedBrand === 'ikla-kids' && (
+          <div className="mb-12 p-6 sm:p-8 bg-[#0D1612] border border-[#1E3A2F] text-white rounded-xs shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 bg-[#013220] p-1.5 border border-[#D4AF57]/40 flex items-center justify-center text-[#D4AF57] font-serif text-xl font-bold">
+                K
+              </div>
+              <div>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF57] font-semibold block">
+                  Maison Junior Collection
+                </span>
+                <h2 className="text-xl sm:text-2xl font-cormorant font-normal text-white">
+                  IKLA Kids — The First Inheritance
+                </h2>
+                <p className="text-xs text-neutral-300 font-light mt-1 font-manrope max-w-xl">
+                  Disciplined comfort and heirloom silhouettes engineered for young dynasty members. Crafted in heavyweight fleece, combed cotton, and luxury velour.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              <button
+                onClick={() => setSelectedBrand('all')}
+                className="px-4 py-2.5 text-xs uppercase tracking-wider text-neutral-300 hover:text-white border border-neutral-700 rounded-xs transition-colors cursor-pointer"
+              >
+                View All Houses
+              </button>
+              <button
+                onClick={() => onNavigateKids ? onNavigateKids() : (window.location.hash = '#/kids')}
+                className="px-5 py-2.5 bg-[#D4AF57] text-black hover:bg-white transition-colors text-xs uppercase tracking-widest font-semibold rounded-xs flex items-center gap-2 cursor-pointer shadow-md"
+              >
+                <span>Explore Dedicated House</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
@@ -394,6 +472,178 @@ export default function CollectionPage({
             {/* When viewing All Houses, show the curated 11-step editorial sections */}
             {selectedBrand === 'all' && (
               <div className="space-y-28 mb-20">
+                {/* ========================================================================= */}
+                {/* 2.5 THE PRIVATE COLLECTION — IKLA MAISON VIP COMMERCE */}
+                {/* ========================================================================= */}
+                <section id="the-private-collection" className="space-y-8 bg-[#0C0D10] text-[#F3EFE6] border border-[#C8A97E]/30 p-6 sm:p-10 lg:p-12 rounded-xs shadow-2xl relative overflow-hidden">
+                  {/* Subtle Gold Ambient Radial Glow */}
+                  <div className="absolute top-0 right-0 w-96 h-96 bg-[#8C6D3F]/10 rounded-full blur-3xl pointer-events-none" />
+
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-white/10 relative z-10">
+                    <div className="space-y-3 max-w-2xl">
+                      <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-white/5 border border-[#C8A97E]/40 text-[#DFBF95] text-[10px] uppercase tracking-[0.3em] font-medium rounded-xs">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#DFBF95] animate-pulse" />
+                        <span>IKLA Maison Master House · Est. 2026</span>
+                      </div>
+                      <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-normal text-white tracking-tight leading-none">
+                        The Private Collection
+                      </h2>
+                      <p className="text-xs sm:text-sm text-neutral-300 font-light font-manrope leading-relaxed">
+                        Objects of dress, travel, hospitality, and private living—released through limited drops, made-to-order production, and personal allocation.
+                      </p>
+                      <p className="text-[11px] font-mono text-[#DFBF95]/80 uppercase tracking-wider pt-1">
+                        Continue through the My Drink Family universe.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 shrink-0 relative z-10">
+                      <button
+                        onClick={() => handleOpenInquiry(vipProducts[0])}
+                        className="px-6 py-3 bg-[#DFBF95] text-black hover:bg-white transition-colors text-xs uppercase tracking-[0.2em] font-medium rounded-xs cursor-pointer shadow-lg flex items-center gap-2"
+                      >
+                        <span>Request Private Access</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => onSelectBrand('ikla-maison')}
+                        className="px-5 py-3 border border-white/30 text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-[0.2em] font-medium rounded-xs cursor-pointer"
+                      >
+                        Explore The Maison
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* 10 Square 1:1 VIP Product Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+                    {vipProducts.map((product) => (
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        onSelectProduct={onSelectProduct}
+                        onSelectBrand={onSelectBrand}
+                        onOpenInquiry={handleOpenInquiry}
+                      />
+                    ))}
+                  </div>
+                </section>
+
+                {/* ========================================================================= */}
+                {/* 2.6 IKLA KIDS — THE FIRST INHERITANCE */}
+                {/* ========================================================================= */}
+                <section id="ikla-kids-collection-section" className="space-y-8 bg-[#0D1612] text-[#F3EFE6] border border-[#1E3A2F]/80 p-6 sm:p-10 lg:p-12 rounded-xs shadow-2xl relative overflow-hidden">
+                  {/* Subtle Emerald / Gold Ambient Glow */}
+                  <div className="absolute top-0 right-0 w-96 h-96 bg-[#013220]/40 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#C48259]/15 rounded-full blur-3xl pointer-events-none" />
+
+                  {/* Section Editorial Header */}
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-white/10 relative z-10">
+                    <div className="space-y-3 max-w-2xl">
+                      <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-white/5 border border-[#D4AF57]/40 text-[#D4AF57] text-[10px] uppercase tracking-[0.3em] font-medium rounded-xs">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF57] animate-pulse" />
+                        <span>Maison Junior · The First Inheritance</span>
+                      </div>
+                      <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-normal text-white tracking-tight leading-none">
+                        IKLA Kids Essentials
+                      </h2>
+                      <p className="text-xs sm:text-sm text-neutral-300 font-light font-manrope leading-relaxed">
+                        Heavyweight brushed fleece, custom ribbing, and disciplined heirloom essentials proportioned exclusively for young dynasty members. Strict allocation via private client concierge.
+                      </p>
+                      <p className="text-[11px] font-mono text-[#D4AF57]/80 uppercase tracking-wider pt-1">
+                        Private Preview · Request Access · Bespoke Sizing 4Y–14Y
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 shrink-0 relative z-10">
+                      <button
+                        onClick={() => handleOpenInquiry({
+                          id: 'ikla-kids-family-allocation',
+                          name: 'IKLA Kids Family List Private Allocation',
+                          category: 'Family Concierge',
+                          accessMode: 'Private Preview',
+                          houseName: 'IKLA Kids',
+                          image: 'assets/kids/ikla-kids-core-collection-hero.webp'
+                        })}
+                        className="px-6 py-3 bg-[#D4AF57] text-black hover:bg-white transition-colors text-xs uppercase tracking-[0.2em] font-semibold rounded-xs cursor-pointer shadow-lg flex items-center gap-2"
+                      >
+                        <span>Request Family Access</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => onNavigateKids ? onNavigateKids() : (window.location.hash = '#/kids')}
+                        className="px-5 py-3 border border-white/30 text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-[0.2em] font-medium rounded-xs cursor-pointer"
+                      >
+                        Explore Kids House
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* 16:9 Architectural Campaign Image */}
+                  <div className="relative rounded-xs overflow-hidden border border-white/10 group aspect-16/9 sm:aspect-21/9 max-h-[420px] w-full z-10">
+                    <img
+                      src={getAssetPath('assets/kids/ikla-kids-core-collection-hero.webp')}
+                      alt="Four children wearing coordinated IKLA Kids sweatsuit essentials in an architectural studio"
+                      className="w-full h-full object-cover filter brightness-[0.88] transition-transform duration-700 group-hover:scale-[1.02]"
+                      style={{ objectPosition: 'center 28%' }}
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D1612] via-[#0D1612]/30 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                      <div>
+                        <span className="text-[9px] uppercase tracking-[0.25em] text-[#D4AF57] font-mono">
+                          Campaign Silhouette
+                        </span>
+                        <h3 className="text-xl sm:text-2xl font-cormorant font-light text-white">
+                          Architectural Proportions for the Next Generation
+                        </h3>
+                      </div>
+                      <span className="text-[10px] text-neutral-300 font-mono tracking-wider hidden sm:inline">
+                        100% French Terry & Organic Combed Cotton
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* 6 Square 1:1 Core Kids Product Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 relative z-10">
+                    {IKLA_KIDS_CORE_PRODUCTS.map((product) => (
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        onSelectProduct={onSelectProduct}
+                        onSelectBrand={onSelectBrand}
+                        onOpenInquiry={handleOpenInquiry}
+                      />
+                    ))}
+                  </div>
+
+                  {/* The Atelier Drop Teaser Card */}
+                  <div className="p-6 bg-gradient-to-r from-[#141E1A] to-[#1C1613] border border-[#D4AF57]/30 rounded-xs flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-10 h-10 rounded-full bg-[#D4AF57]/10 border border-[#D4AF57]/40 flex items-center justify-center text-[#D4AF57] text-xs font-serif font-bold">
+                        ✦
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[9px] uppercase tracking-[0.25em] text-[#D4AF57] font-mono font-semibold">
+                            Limited Drop · Capsule
+                          </span>
+                        </div>
+                        <h4 className="text-sm sm:text-base font-cormorant font-normal text-white">
+                          The Atelier Drop — Custom Velour Collection
+                        </h4>
+                        <p className="text-xs text-neutral-400 font-light font-manrope">
+                          Numbered production run of 150 sets. Rich plush velour with antique gold hardware.
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => onNavigateKids ? onNavigateKids() : (window.location.hash = '#/kids')}
+                      className="px-4 py-2 bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 transition-all text-[11px] uppercase tracking-widest font-medium rounded-xs cursor-pointer whitespace-nowrap"
+                    >
+                      View The Atelier Drop
+                    </button>
+                  </div>
+                </section>
+
                 {/* ========================================================================= */}
                 {/* 3. MYMOSA FLAGSHIP COLLECTION */}
                 {/* ========================================================================= */}
@@ -883,6 +1133,91 @@ export default function CollectionPage({
                 </section>
 
                 {/* ========================================================================= */}
+                {/* 8.5 MY DRINK FAMILY MERCHANDISE — SPORTS, LEISURE & HOSPITALITY */}
+                {/* ========================================================================= */}
+                <section id="my-drink-family-merchandise" className="space-y-8 bg-white border border-[#E2DCBE] p-6 sm:p-10 lg:p-12 rounded-xs shadow-xl relative overflow-hidden">
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#EAE5DC]">
+                    <div className="space-y-2 max-w-2xl">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FDF5E6] border border-[#E2DCBE] text-[#E06D38] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs">
+                        <span>Beverage & Hospitality Universe</span>
+                      </div>
+                      <h3 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
+                        My Drink Family Merchandise
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#50545E] font-light font-manrope leading-relaxed">
+                        A private collection of sport, leisure, travel, and poolside hospitality essentials created for the houses of My Drink Family.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3">
+                      <button
+                        onClick={() => setSelectedBrand('my-drink-family')}
+                        className="px-4 py-2.5 bg-[#0B4F37] text-white hover:bg-[#0E6244] transition-colors text-xs uppercase tracking-widest font-semibold rounded-xs cursor-pointer shadow-md flex items-center gap-2"
+                      >
+                        <span>Shop Family Merch</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => onSelectBrand('my-drink-family')}
+                        className="px-4 py-2.5 border border-[#0B4F37] text-[#0B4F37] hover:bg-[#0B4F37] hover:text-white transition-colors text-xs uppercase tracking-widest font-semibold rounded-xs cursor-pointer"
+                      >
+                        Explore Family Universe
+                      </button>
+                      <a
+                        href={ECOSYSTEM_LINKS[0]?.href || '#/brand/my-drink-family'}
+                        target={ECOSYSTEM_LINKS[0]?.isExternal ? '_blank' : undefined}
+                        rel={ECOSYSTEM_LINKS[0]?.isExternal ? 'noopener noreferrer' : undefined}
+                        className="px-4 py-2.5 bg-[#FAF7F2] border border-[#DDD7CB] hover:border-[#0B4F37] text-[#111215] transition-colors text-xs uppercase tracking-widest font-medium rounded-xs flex items-center gap-1.5 cursor-pointer"
+                        aria-label="Visit the official My Drink Family website"
+                      >
+                        <span>Visit Official Website</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-[#0B4F37]" />
+                      </a>
+                      <a
+                        href={ECOSYSTEM_LINKS[1]?.href || '#/brand/my-drink-family'}
+                        target={ECOSYSTEM_LINKS[1]?.isExternal ? '_blank' : undefined}
+                        rel={ECOSYSTEM_LINKS[1]?.isExternal ? 'noopener noreferrer' : undefined}
+                        className="px-4 py-2.5 bg-[#FAF7F2] border border-[#DDD7CB] hover:border-[#0B4F37] text-[#111215] transition-colors text-xs uppercase tracking-widest font-medium rounded-xs flex items-center gap-1.5 cursor-pointer"
+                        aria-label="Open the My Drink Family App"
+                      >
+                        <span>Open the App</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-[#0B4F37]" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Category Filter Tabs */}
+                  <div className="flex flex-wrap items-center gap-2 pt-2">
+                    {['All', 'Apparel', 'Headwear', 'Travel and Leisure', 'Glassware and Barware', 'Resort and Hospitality'].map((cat) => (
+                      <button
+                        key={cat}
+                        onClick={() => setMdfMerchFilter(cat)}
+                        className={`px-3.5 py-1.5 text-xs font-manrope uppercase tracking-wider rounded-xs transition-all cursor-pointer ${
+                          mdfMerchFilter === cat
+                            ? 'bg-[#0B4F37] text-white font-semibold shadow-xs'
+                            : 'bg-[#F7F4EE] text-neutral-600 hover:bg-[#EFE9DD] border border-[#DDD7CB]'
+                        }`}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* 10 Square 1:1 MDF Merchandise Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pt-2">
+                    {filteredMdfMerch.map((product) => (
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        onSelectProduct={onSelectProduct}
+                        onSelectBrand={onSelectBrand}
+                        onOpenInquiry={handleOpenInquiry}
+                      />
+                    ))}
+                  </div>
+                </section>
+
+                {/* ========================================================================= */}
                 {/* 9. ACCESSORIES ACROSS THE HOUSES */}
                 {/* ========================================================================= */}
                 <section id="accessories-across-houses" className="space-y-8 bg-white border border-[#E6E0D5] p-6 sm:p-10 rounded-xs shadow-md">
@@ -1286,6 +1621,16 @@ export default function CollectionPage({
           </>
         )}
       </div>
+
+      {/* VIP Private Client Inquiry Modal */}
+      {isInquiryModalOpen && (
+        <VIPInquiryModal
+          isOpen={isInquiryModalOpen}
+          onClose={() => setIsInquiryModalOpen(false)}
+          product={inquiryProduct}
+          initialRequestType={inquiryProduct?.accessMode || inquiryProduct?.status || 'Private Allocation'}
+        />
+      )}
     </div>
   );
 }

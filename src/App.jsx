@@ -11,6 +11,8 @@ import BrandPage from './pages/BrandPage';
 import CollectionPage from './pages/CollectionPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import KidsPage from './pages/KidsPage';
+import GriffinPage from './pages/GriffinPage';
 
 import { useCart } from './context/CartContext';
 import { BRANDS } from './data/brands';
@@ -44,7 +46,11 @@ export default function App() {
       // Split base route from in-page anchor (e.g., "brand/ikla-maison#home-living")
       const [hashPath, anchorId] = rawHash.split('#');
 
-      if (hashPath.startsWith('brand/')) {
+      if (hashPath === 'brand/ikla-kids' || hashPath === 'kids' || hashPath.startsWith('kids') || hashPath === 'collection/kids') {
+        setCurrentView('kids');
+      } else if (hashPath === 'brand/griffin' || hashPath === 'griffin' || hashPath.startsWith('griffin') || hashPath === 'commissions/griffin') {
+        setCurrentView('griffin');
+      } else if (hashPath.startsWith('brand/')) {
         const bId = hashPath.split('/')[1];
         if (BRANDS[bId]) {
           setCurrentBrandId(bId);
@@ -138,6 +144,23 @@ export default function App() {
             onSelectProduct={handleSelectProduct}
             onNavigateCollection={() => navigateTo('collection')}
             onNavigateAbout={() => navigateTo('about')}
+            onNavigateKids={() => navigateTo('kids')}
+            onNavigateGriffin={() => navigateTo('griffin')}
+          />
+        )}
+
+        {currentView === 'kids' && (
+          <KidsPage
+            onSelectProduct={handleSelectProduct}
+            onNavigateHome={() => navigateTo('home')}
+            onNavigateCollection={() => navigateTo('collection')}
+          />
+        )}
+
+        {currentView === 'griffin' && (
+          <GriffinPage
+            onNavigateHome={() => navigateTo('home')}
+            onNavigateCollection={() => navigateTo('collection')}
           />
         )}
 
@@ -155,6 +178,8 @@ export default function App() {
           <CollectionPage
             onSelectProduct={handleSelectProduct}
             onSelectBrand={handleSelectBrand}
+            onNavigateKids={() => navigateTo('kids')}
+            onNavigateGriffin={() => navigateTo('griffin')}
             initialBrandFilter="all"
             searchQuery={searchQuery}
             onClearSearch={() => setSearchQuery('')}

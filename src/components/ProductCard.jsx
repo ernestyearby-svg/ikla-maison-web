@@ -3,7 +3,7 @@ import { ShoppingBag, Eye, Check, Bookmark, Clock } from 'lucide-react';
 import { BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
-export default function ProductCard({ product, onSelectProduct, onSelectBrand }) {
+export default function ProductCard({ product, onSelectProduct, onSelectBrand, onOpenInquiry }) {
   const { addToCart, showToast } = useCart();
   const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : 'One Size');
   const [selectedColor, setSelectedColor] = useState(product.colors ? product.colors[0].name : 'Standard');
@@ -14,10 +14,19 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
   const brandAccent = brand ? brand.palette.accent : '#C8A97E';
   const brandGlow = brand ? brand.glowColor : 'rgba(200,169,126,0.3)';
 
-  const isProductionPreview = product.isReserve || product.status;
+  const isProductionPreview = product.isReserve || product.status || product.isVIP || product.isMDFMerch;
 
   const handleQuickAction = (e) => {
     e.stopPropagation();
+    if (product.isVIP || product.isMDFMerch) {
+      if (onOpenInquiry) {
+        onOpenInquiry(product);
+        return;
+      }
+      onSelectProduct && onSelectProduct(product);
+      return;
+    }
+
     if (isProductionPreview) {
       setIsReserved(true);
       if (showToast) {
@@ -102,7 +111,9 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
                 brand ? brand.buttonStyle : 'bg-[#0F172A] text-white hover:bg-[#1E293B]'
               }`}
             >
-              {isProductionPreview ? (
+              {product.isVIP || product.isMDFMerch ? (
+                <span>{product.cta || 'Request Access'}</span>
+              ) : isProductionPreview ? (
                 isReserved ? (
                   <>
                     <Check className="w-3.5 h-3.5 text-emerald-300" />
@@ -130,7 +141,11 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                onSelectProduct && onSelectProduct(product);
+                if (product.isVIP || product.isMDFMerch) {
+                  onOpenInquiry ? onOpenInquiry(product) : onSelectProduct && onSelectProduct(product);
+                } else {
+                  onSelectProduct && onSelectProduct(product);
+                }
               }}
               title="View Product Details"
               aria-label={`View details for ${product.name}`}
@@ -150,7 +165,7 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
             {isProductionPreview ? (
               <span className="text-[#8C6D3F] text-[10px] tracking-wider uppercase font-semibold flex items-center gap-1">
                 <Clock className="w-2.5 h-2.5" />
-                <span>{product.status || 'Production Preview'}</span>
+                <span>{product.accessMode || product.status || 'Private Allocation'}</span>
               </span>
             ) : (
               <span className="text-emerald-700 text-[10px] tracking-wider uppercase font-semibold">
@@ -173,7 +188,7 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
         <div className="flex items-center justify-between pt-2.5 border-t border-[#EAE5DC]">
           {isProductionPreview ? (
             <span className="text-xs uppercase tracking-wider text-[#8C6D3F] font-semibold font-manrope flex items-center gap-1">
-              <span>Reserve Allocation</span>
+              <span>{product.accessMode || 'Private Allocation'}</span>
             </span>
           ) : (
             <span className="text-sm font-semibold text-[#0E0F12] tracking-wider font-manrope">

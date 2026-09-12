@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { ArrowRight, Check, Shield, Globe, Award, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, Shield, Globe, Award, Sparkles, ExternalLink } from 'lucide-react';
 import { BRAND_LIST, BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
+import { ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
+import { getAssetPath } from '../utils/assets.js';
 
 export default function Footer({ onNavigate }) {
   const { openCart } = useCart();
@@ -69,7 +71,7 @@ export default function Footer({ onNavigate }) {
         <div className="py-14 border-b border-neutral-800/80 relative">
           {/* Subtle Collective Watermark in Footer (pointer-events: none) */}
           <div className="absolute right-0 bottom-4 w-72 h-72 pointer-events-none select-none opacity-[0.03] overflow-hidden">
-            <img src={BRANDS['ikla-maison'].logos.crestLight} alt="" className="w-full h-full object-contain" />
+            <img src={getAssetPath(BRANDS['ikla-maison'].logos.crestLight)} alt="" className="w-full h-full object-contain" />
           </div>
 
           <div className="flex items-center justify-between mb-8">
@@ -92,7 +94,7 @@ export default function Footer({ onNavigate }) {
 
                 <div className="flex items-center gap-2.5">
                   <div className="w-5 h-5 rounded-full overflow-hidden shrink-0 opacity-80 group-hover:opacity-100">
-                    <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain" />
+                    <img src={getAssetPath(brand.logos.crestLight)} alt="" className="w-full h-full object-contain" />
                   </div>
                   <button
                     onClick={() => onNavigate('brand', brand.id)}
@@ -119,8 +121,8 @@ export default function Footer({ onNavigate }) {
           </div>
         </div>
 
-        {/* Global Navigation & Client Services */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs border-b border-neutral-800/80">
+        {/* Global Navigation, Dynasty Ecosystem & Client Services */}
+        <div className="py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-xs border-b border-neutral-800/80">
           {/* Navigation */}
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
@@ -138,6 +140,18 @@ export default function Footer({ onNavigate }) {
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('kids')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-neutral-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#013220]" />
+                  <span>IKLA Kids</span>
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('griffin')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-neutral-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869]" />
+                  <span>Griffin Edition</span>
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
                   The Maison Houses Ethos
                 </button>
@@ -147,6 +161,47 @@ export default function Footer({ onNavigate }) {
                   Shopping Bag
                 </button>
               </li>
+            </ul>
+          </div>
+
+          {/* Dynasty Ecosystem Links */}
+          <div className="space-y-3">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-medium block">
+              Dynasty Ecosystem
+            </span>
+            <ul className="space-y-2.5 text-neutral-400 font-manrope">
+              <li>
+                <div className="text-white font-medium flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E]" />
+                  <span>IKLA Maison</span>
+                </div>
+                <div className="text-[10px] text-neutral-500 font-light">
+                  Master Fashion & Lifestyle House · Active Site
+                </div>
+              </li>
+              {ECOSYSTEM_LINKS.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={link.href}
+                    target={link.isExternal ? '_blank' : undefined}
+                    rel={link.isExternal ? 'noopener noreferrer' : undefined}
+                    onClick={(e) => {
+                      if (!link.isExternal) {
+                        e.preventDefault();
+                        onNavigate('brand', 'my-drink-family');
+                      }
+                    }}
+                    className="hover:text-[#E06D38] transition-colors flex items-center gap-1.5 text-white group cursor-pointer"
+                    aria-label={link.ariaLabel}
+                  >
+                    <span>{link.label}</span>
+                    {link.isExternal && <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover:opacity-100" />}
+                  </a>
+                  <div className="text-[10px] text-neutral-500 font-light">
+                    {link.description}
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit:assets": "node -e \"import('./src/utils/duplicateAssetAudit.js').then(m => { const r = m.auditDuplicateAssets(); console.log(JSON.stringify(r, null, 2)); if (!r.passed) process.exit(1); })\""
   },
   "type": "module",
   "dependencies": {

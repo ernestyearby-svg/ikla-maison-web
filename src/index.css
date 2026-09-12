@@ -8,6 +8,17 @@
     --font-cinzel: 'Cinzel', serif;
     --font-syne: 'Syne', sans-serif;
     --font-sans: 'Manrope', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Master IKLA Luxury Foundation Colors */
+    --color-imperial-black: #080808;
+    --color-maison-green: #013220;
+    --color-regal-gold: #D4AF57;
+    --color-cream-white: #F8F5F0;
+    --color-warm-ivory: #EFE8DD;
+    --color-charcoal: #181818;
+    --color-stone: #B8B0A4;
+    --color-oxblood: #4B1018;
+    --color-deep-navy: #101A2D;
   }
 
   html {
