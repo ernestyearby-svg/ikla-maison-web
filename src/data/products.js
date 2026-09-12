@@ -1273,6 +1273,268 @@ export const PRODUCTS = [
     ],
     fabricCare: 'Spot clean bags and hats.',
     fitNotes: 'Unisex one-size adjustable.'
+  },
+
+  // =========================================================================
+  // LIFESTYLE ACCESSORY COLLECTIONS (9 APPROVED HOUSES)
+  // =========================================================================
+  {
+    id: 'ikla-bedroom-suite',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'IKLA Maison Bedroom Collection Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/ikla-maison/ikla-maison-bedroom-collection.webp',
+    imageAlt: 'IKLA Maison bedroom collection featuring bedding, pillows, throws, slippers, a sleep mask, candle, and leather valet tray.',
+    sizes: ['Full / Queen', 'King / Cal King'],
+    colors: [
+      { name: 'Limestone Cream', hex: '#F0ECE1' },
+      { name: 'Warm Travertine', hex: '#DCD4C5' },
+      { name: 'Obsidian Black', hex: '#141414' }
+    ],
+    material: '300 TC Washed Egyptian Cotton, Double-Faced Cashmere & Calfskin',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Private rituals, considered materials, and quiet comfort—an extension of IKLA Maison beyond the wardrobe.',
+    details: [
+      'Bedding, pillows, throws, slippers, sleep masks, candles, valet trays',
+      '300-thread-count washed Egyptian cotton sateen bedding with discreet tonal embroidery',
+      'Double-faced cashmere jacquard accent throws in warm limestone tones',
+      'Molded calfskin and shearling residential slippers with brass monogram hardware'
+    ],
+    fabricCare: 'Specialist laundering for bedding; dry clean cashmere throws.',
+    fitNotes: 'Standard residential bed and unisex slipper sizing.'
+  },
+  {
+    id: 'ikla-bath-spa-suite',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    name: 'IKLA Maison Bath & Spa Collection Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/ikla-maison/ikla-maison-bath-spa-collection.webp',
+    imageAlt: 'IKLA Maison bath and spa collection featuring plush towels, waffle robes, bath mats, slippers, ceramic vanity vessels, and leather toiletry cases.',
+    sizes: ['S/M', 'L/XL'],
+    colors: [
+      { name: 'Alabaster White', hex: '#F7F6F2' },
+      { name: 'Sandstone Grey', hex: '#C2BBB0' }
+    ],
+    material: '750 GSM Zero-Twist Aegean Cotton, Honeycomb Waffle & French Calfskin',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Plush towels, textured robes, ceramic vanity vessels, and calfskin toiletry cases designed for daily restorative ceremonies.',
+    details: [
+      'Towels, robes, bath mats, bath slippers, vanity vessels, toiletry cases, grooming accessories',
+      '750 GSM ultra-dense zero-twist Aegean cotton bath sheets',
+      'Textured honeycomb waffle spa robes with tonal gilded bullion chest insignia',
+      'Hand-turned matte ceramic vanity canisters with brushed brass lids'
+    ],
+    fabricCare: 'Machine wash warm with mild detergent; tumble dry low.',
+    fitNotes: 'Generous spa kimono cut.'
+  },
+  {
+    id: 'mdf-glassware-barware-suite',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'My Drink Family Glassware & Barware Hospitality Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/my-drink-family/my-drink-family-glassware-barware.webp',
+    imageAlt: 'My Drink Family glassware and barware suite featuring crystal coupes, champagne flutes, rocks glasses, cocktail shaker, jigger, strainer, and gold serving tray.',
+    sizes: ['Complete Set'],
+    colors: [
+      { name: 'Clear Crystal', hex: '#F0F4F8' },
+      { name: 'Brushed Gold', hex: '#D4AF37' }
+    ],
+    material: 'Lead-Free European Crystalline & Brushed Brass 18/10 Stainless Steel',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Objects designed for gathering—across the bar, beside the pool, and throughout the seventeen-house hospitality universe.',
+    details: [
+      'Champagne flutes, coupes, wine goblets, rocks glasses, shakers, jiggers, strainers, ice buckets, serving trays',
+      'Lead-free crystalline stemware blown with architectural faceted bowls',
+      'Double-walled 18/10 stainless steel shaker and jigger set in brushed brass',
+      'Solid brass mirror-polished rectangular serving plinth'
+    ],
+    fabricCare: 'Hand wash recommended for fine crystalline; polish brass with soft microfiber.',
+    fitNotes: 'Standard hospitality specifications.'
+  },
+  {
+    id: 'mdf-poolside-hospitality-suite',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'My Drink Family Poolside Hospitality Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/my-drink-family/my-drink-family-poolside-hospitality.webp',
+    imageAlt: 'My Drink Family poolside hospitality collection featuring floating bar stations, luxury pool floats, beach towels, tumblers, and outdoor entertaining pieces.',
+    sizes: ['Complete Suite'],
+    colors: [
+      { name: 'Resort Ivory', hex: '#FAF8F3' },
+      { name: 'Club Navy', hex: '#16233B' },
+      { name: 'Warm Gold', hex: '#D4AF37' }
+    ],
+    material: 'Marine-Grade PVC, 600 GSM Jacquard Cotton & Double-Walled Steel',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Floating serving stations, resort pool floats, cabana towels, and outdoor entertaining pieces for elevated poolside gatherings.',
+    details: [
+      'Floating serving stations, resort floats, beach balls, towels, coolers, tumblers, serving caddies',
+      'Marine-grade floating service plinth with recessed beverage holders',
+      '600 GSM jacquard woven cabana beach towels',
+      'Double-vacuum insulated stainless steel tumblers with splashproof lids'
+    ],
+    fabricCare: 'Rinse with fresh water after pool or saltwater use; store dry.',
+    fitNotes: 'Full-size resort specifications.'
+  },
+  {
+    id: 'ktse-training-carry-suite',
+    brandId: 'ktse',
+    brandName: 'KTSE',
+    name: 'KTSE Training & Everyday Carry Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/ktse/ktse-training-everyday-carry.webp',
+    imageAlt: 'KTSE training and everyday carry collection featuring heavyweight training duffels, technical backpacks, exercise mats, insulated bottles, lifting straps, and performance accessories.',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Obsidian Black', hex: '#141414' },
+      { name: 'Raw Concrete', hex: '#8C8C88' }
+    ],
+    material: '1680D Ballistic Nylon, 5mm Natural Rubber & Heavy Cotton Webbing',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Purpose-built objects for training, movement, recovery, and the discipline between sessions. Built Different. Made Consistent.',
+    details: [
+      'Training duffels, technical backpacks, exercise mats, insulated bottles, wrist wraps, lifting straps, resistance bands, crew socks, slides',
+      '1680D ballistic waterproof nylon duffels with ventilated footwear compartment',
+      'High-density non-slip natural rubber 5mm training mats',
+      'Ergonomic textured recovery slides with contoured arch support'
+    ],
+    fabricCare: 'Spot clean bags and mats with damp cloth; machine wash socks cold.',
+    fitNotes: 'Universal training dimensions.'
+  },
+  {
+    id: 'moteon-resort-travel-suite',
+    brandId: 'moteon',
+    brandName: 'Motéon',
+    name: 'Motéon Resort & Travel Collection Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/moteon/moteon-resort-travel-collection.webp',
+    imageAlt: 'Motéon resort and travel collection featuring weekender luggage, carryall totes, leather toiletry cases, passport wallets, designer sunglasses, and leisure accessories.',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Terracotta Clay', hex: '#A85741' },
+      { name: 'Sandstone Natural', hex: '#DED5C5' },
+      { name: 'Riviera Navy', hex: '#1F2A38' }
+    ],
+    material: 'Heavy Water-Repellent Cotton Canvas, Bridle Saddle Leather & Italian Acetate',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'A considered travel system shaped for resort mornings, coastal afternoons, and movement without interruption.',
+    details: [
+      'Weekender bags, carryall totes, toiletry cases, passport wallets, sunglasses, silk scarves, visors, slides, travel socks, pool towels',
+      'Structured water-repellent canvas weekenders with saddle leather reinforced handles',
+      'Italian acetate handcrafted sunglasses with Category 3 UV gradient optics',
+      'Pure silk twill foulards with hand-rolled hems in sun-baked Mediterranean hues'
+    ],
+    fabricCare: 'Condition leather handles yearly; dry clean silk twill.',
+    fitNotes: 'IATA airline carry-on compliant.'
+  },
+  {
+    id: 'moral-compass-leather-suite',
+    brandId: 'moral-compass',
+    brandName: 'Moral Compass',
+    name: 'Moral Compass Executive Leather Goods Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/moral-compass/moral-compass-executive-leather.webp',
+    imageAlt: 'Moral Compass executive leather goods collection featuring architectural briefcases, document portfolios, leather journals, card holders, watch rolls, and refined brass keepsakes.',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Sovereign Black', hex: '#0F1110' },
+      { name: 'Deep Espresso', hex: '#2C1D16' },
+      { name: 'Aged Brass', hex: '#B89758' }
+    ],
+    material: 'Full-Grain French Boxcalf, Bridle Leather & Machined Solid Brass',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Quietly constructed instruments for those who move with intention and answer to an internal standard.',
+    details: [
+      'Briefcases, document portfolios, leather journals, fountain pens, card holders, wallets, passport covers, key cases, watch rolls, belts, gloves',
+      'Hand-stitched full-grain French calfskin briefcases with brass tuck locks',
+      'Archival parchment refillable journals bound in burnished bridle leather',
+      'Machined solid brass compass paperweight with cardinal coordinate engravings'
+    ],
+    fabricCare: 'Treat periodically with beeswax leather balm; polish solid brass with soft cloth.',
+    fitNotes: 'Architectural executive proportions.'
+  },
+  {
+    id: 'wnnr-travel-suite',
+    brandId: 'wnnr',
+    brandName: 'WNNR',
+    name: 'WNNR Executive Travel & Carry Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/wnnr/wnnr-executive-travel.webp',
+    imageAlt: 'WNNR executive travel and everyday-carry collection featuring obsidian leather totes, weekender duffels, executive backpacks, headwear, card holders, and discipline travel accessories.',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Obsidian Black', hex: '#0D0F0E' },
+      { name: 'Deep Forest', hex: '#1B2E24' },
+      { name: 'Restrained Gold', hex: '#C5A869' }
+    ],
+    material: 'Obsidian Pebble Leather, 1000D Cordura & Champagne Gold Alloy',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Executive travel and everyday-carry objects built around discipline, readiness, and the victory that begins within. WIN WITHIN.',
+    details: [
+      'Leather totes, weekenders, executive backpacks, caps, beanies, belts, wallets, card holders, passport covers, watch rolls, shoe bags',
+      'Obsidian pebble-grain leather weekender with champagne gold zippers and luggage strap',
+      'Structured technical executive backpack with padded laptop and device compartments',
+      'Full-grain leather passport travel organizer with RFID-blocking inner lining'
+    ],
+    fabricCare: 'Spot clean with specialized leather foam; wipe nylon with warm damp cloth.',
+    fitNotes: 'Compliant with transcontinental overhead compartments.'
+  },
+  {
+    id: 'ikla-water-hydration-suite',
+    brandId: 'ikla-water',
+    brandName: 'IKLA Water',
+    name: 'IKLA Water Hydration & Table Service Suite',
+    category: 'Accessories',
+    image: 'assets/accessories/ikla-water/ikla-water-hydration-service.webp',
+    imageAlt: 'IKLA Water hydration and table service collection featuring minimalist glass carafes, water tumblers, reusable glass travel bottles, ice buckets, coaster sets, and serving trays.',
+    sizes: ['Table Set'],
+    colors: [
+      { name: 'Flint Glass Clear', hex: '#E8F1F5' },
+      { name: 'Travertine Stone', hex: '#D8D1C2' },
+      { name: 'Alpine Glacier', hex: '#5E8896' }
+    ],
+    material: 'Heavyweight Reusable Flint Glass, Travertine Stone & Canvas Cooler',
+    status: 'Collection Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Hydration expressed through considered vessels, refined table service, and objects designed for everyday ceremony.',
+    details: [
+      'Glass carafes, water tumblers, insulated bottles, reusable glass travel bottles, ice buckets, tongs, coaster sets, bottle carriers, picnic coolers, serving trays',
+      'Hand-blown architectural flint glass water carafes with silicone-sealed glass stoppers',
+      'Fine-rimmed crystalline mineral water tumblers designed for formal dinner settings',
+      'Honed natural travertine stone coaster sets with non-scratch protective backing'
+    ],
+    fabricCare: 'Dishwasher safe flint glassware; clean travertine coasters with neutral stone soap.',
+    fitNotes: 'Designed for residential dining and conference tables.'
   }
 ];
 

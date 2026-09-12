@@ -831,6 +831,163 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
       </section>
 
       {/* ========================================================================= */}
+      {/* 11.8. RESTRAINED LIFESTYLE MODULE: BEYOND THE WARDROBE */}
+      {/* ========================================================================= */}
+      <section id="lifestyle-preview" className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F6F3EC] border-b border-[#E2DDD3]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#D8D2C4]">
+            <div className="max-w-2xl space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs shadow-2xs">
+                <span>Lifestyle & Personal Rituals</span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                Beyond the Wardrobe.
+              </h2>
+              <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                The world of IKLA Maison extends into private living, hospitality, movement, travel, and daily ritual—each house expressed through objects designed for its own environment.
+              </p>
+            </div>
+
+            <button
+              onClick={() => {
+                window.location.hash = '/collection#beyond-the-wardrobe';
+              }}
+              className="px-6 py-3.5 bg-[#111215] text-white hover:bg-neutral-800 text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shrink-0 self-start md:self-auto shadow-md"
+            >
+              <span>Explore Lifestyle Collections</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          {/* Exactly 3 Featured Collection Cards as instructed: 1. IKLA Maison Home & Living, 2. MDF Hospitality, 3. WNNR Travel */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 1. IKLA Maison Home & Living */}
+            <div
+              onClick={() => {
+                window.location.hash = '/brand/ikla-maison#home-living';
+              }}
+              className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                  <CampaignImage
+                    src="assets/accessories/ikla-maison/ikla-maison-bedroom-collection.webp"
+                    alt="IKLA Maison bedroom collection featuring bedding, pillows, throws, slippers, a sleep mask, candle, and leather valet tray."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
+                      Maison Living
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                      Preview
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                    The Maison, At Home.
+                  </h3>
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Private rituals, considered materials, and quiet comfort—an extension of IKLA Maison beyond the wardrobe.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#8C6D3F] group-hover:text-[#111215]">
+                <span>Discover Home & Living</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+
+            {/* 2. My Drink Family Hospitality */}
+            <div
+              onClick={() => {
+                window.location.hash = '/brand/my-drink-family#hospitality';
+              }}
+              className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                  <CampaignImage
+                    src="assets/accessories/my-drink-family/my-drink-family-glassware-barware.webp"
+                    alt="My Drink Family glassware and barware suite featuring crystal coupes, champagne flutes, rocks glasses, cocktail shaker, jigger, strainer, and gold serving tray."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-semibold">
+                      Hospitality Universe
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                      Preview
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                    The Art of the Serve.
+                  </h3>
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Objects designed for gathering—across the bar, beside the pool, and throughout the seventeen-house hospitality universe.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#E06D38] group-hover:text-[#111215]">
+                <span>Discover Hospitality</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+
+            {/* 3. WNNR Executive Travel */}
+            <div
+              onClick={() => {
+                window.location.hash = '/brand/wnnr#executive-travel';
+              }}
+              className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                  <CampaignImage
+                    src="assets/accessories/wnnr/wnnr-executive-travel.webp"
+                    alt="WNNR executive travel and everyday-carry collection featuring obsidian leather totes, weekender duffels, executive backpacks, headwear, card holders, and discipline travel accessories."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A869] font-semibold">
+                      WIN WITHIN
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                      Preview
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                    Prepared to Win.
+                  </h3>
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Executive travel and everyday-carry objects built around discipline, readiness, and the victory that begins within.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#C5A869] group-hover:text-[#111215]">
+                <span>Discover Executive Travel</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
       {/* 12. PRESERVED COLLECTIVE: IKLA WATER EXTENSION (OBJECT-FIT: CONTAIN) */}
       {/* ========================================================================= */}
       <section className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">

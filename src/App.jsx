@@ -30,34 +30,49 @@ export default function App() {
   // URL Hash Sync for fluid routing and direct deep-linking
   useEffect(() => {
     const handleHashChange = () => {
-      window.scrollTo(0, 0);
       setIsMobileMenuOpen(false);
-      const hash = window.location.hash.replace(/^#\/?/, '');
-      if (!hash) {
+      const rawHash = window.location.hash.replace(/^#\/?/, '');
+      if (!rawHash) {
+        window.scrollTo(0, 0);
         setCurrentView('home');
         return;
       }
-      if (!hash.startsWith('product/')) {
+      if (!rawHash.startsWith('product/')) {
         setSelectedProduct(null);
       }
-      if (hash.startsWith('brand/')) {
-        const bId = hash.split('/')[1];
+
+      // Split base route from in-page anchor (e.g., "brand/ikla-maison#home-living")
+      const [hashPath, anchorId] = rawHash.split('#');
+
+      if (hashPath.startsWith('brand/')) {
+        const bId = hashPath.split('/')[1];
         if (BRANDS[bId]) {
           setCurrentBrandId(bId);
           setCurrentView('brand');
         }
-      } else if (hash === 'collection') {
+      } else if (hashPath === 'collection' || hashPath.startsWith('collection')) {
         setCurrentView('collection');
-      } else if (hash === 'about') {
+      } else if (hashPath === 'about') {
         setCurrentView('about');
-      } else if (hash === 'contact') {
+      } else if (hashPath === 'contact') {
         setCurrentView('contact');
-      } else if (hash.startsWith('product/')) {
-        const pId = hash.split('/')[1];
+      } else if (hashPath.startsWith('product/')) {
+        const pId = hashPath.split('/')[1];
         const prod = PRODUCTS.find((p) => p.id === pId);
         if (prod) {
           setSelectedProduct(prod);
         }
+      }
+
+      if (anchorId) {
+        setTimeout(() => {
+          const el = document.getElementById(anchorId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 150);
+      } else {
+        window.scrollTo(0, 0);
       }
     };
 

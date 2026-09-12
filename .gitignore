@@ -62,3 +62,4 @@ tests/screenshots/
 # Archival Masters & Local Archive Zips
 archival/
 *.zip
+scratch/

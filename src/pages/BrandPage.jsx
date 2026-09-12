@@ -276,6 +276,134 @@ export default function BrandPage({
                 </div>
               </div>
             </section>
+
+            {/* Pathway 5: The Maison, At Home. (Home & Living Collections) */}
+            <section id="home-living" className="space-y-12 border-t border-[#E5DFD5] pt-20">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+                  Home & Living Curation
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                  The Maison, At Home.
+                </h2>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Private rituals, considered materials, and quiet comfort—an extension of IKLA Maison beyond the wardrobe.
+                </p>
+              </div>
+
+              {/* Side by side on desktop, stacked on mobile */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* 1. Bedroom Collection */}
+                <div id="bedroom-collection" className="bg-white border border-[#DDD7CB] p-4 sm:p-6 rounded-xs shadow-xl flex flex-col justify-between group">
+                  <div className="space-y-4">
+                    <div className="overflow-hidden rounded-xs">
+                      <CampaignImage
+                        src="assets/accessories/ikla-maison/ikla-maison-bedroom-collection.webp"
+                        alt="IKLA Maison bedroom collection featuring bedding, pillows, throws, slippers, a sleep mask, candle, and leather valet tray."
+                        aspectRatio="16/9"
+                        position="center center"
+                        className="rounded-xs w-full group-hover:scale-102 transition-transform duration-500"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
+                          Bedroom Collection
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                          Collection Preview
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-cormorant font-normal text-[#111215] mt-1">
+                        Sanctuary of Rest & Ritual
+                      </h3>
+                      <p className="text-xs text-[#50545E] font-light mt-2 leading-relaxed font-manrope">
+                        300-thread-count washed Egyptian cotton sateen bedding, double-faced cashmere jacquard accent throws, molded calfskin slippers, scented poured vegetable wax candles, and hand-burnished valet trays.
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#EAE5DC] flex flex-wrap gap-1.5">
+                      {['Bedding', 'Pillows', 'Throws', 'Slippers', 'Sleep masks', 'Candles', 'Valet trays'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2.5 py-1 bg-[#FAF7F2] border border-[#E2DDD3] text-[#555] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-6 mt-4 border-t border-[#EAE5DC] flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono">
+                      Allocation Window
+                    </span>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'ikla-bedroom-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#8C6D3F] hover:text-[#111215] font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <span>Request Allocation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* 2. Bath & Spa Collection */}
+                <div id="bath-spa" className="bg-white border border-[#DDD7CB] p-4 sm:p-6 rounded-xs shadow-xl flex flex-col justify-between group">
+                  <div className="space-y-4">
+                    <div className="overflow-hidden rounded-xs">
+                      <CampaignImage
+                        src="assets/accessories/ikla-maison/ikla-maison-bath-spa-collection.webp"
+                        alt="IKLA Maison bath and spa collection featuring plush towels, waffle robes, bath mats, slippers, ceramic vanity vessels, and leather toiletry cases."
+                        aspectRatio="16/9"
+                        position="center center"
+                        className="rounded-xs w-full group-hover:scale-102 transition-transform duration-500"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
+                          Bath & Spa Collection
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                          Collection Preview
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-cormorant font-normal text-[#111215] mt-1">
+                        Restorative Personal Ceremony
+                      </h3>
+                      <p className="text-xs text-[#50545E] font-light mt-2 leading-relaxed font-manrope">
+                        750 GSM zero-twist Aegean cotton towels, textured honeycomb waffle spa robes with gilded bullion monograms, hand-turned ceramic canisters with brass lids, and full-grain calfskin dopp kits.
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#EAE5DC] flex flex-wrap gap-1.5">
+                      {['Towels', 'Robes', 'Bath mats', 'Bath slippers', 'Vanity vessels', 'Toiletry cases', 'Grooming accessories'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2.5 py-1 bg-[#FAF7F2] border border-[#E2DDD3] text-[#555] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-6 mt-4 border-t border-[#EAE5DC] flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono">
+                      Allocation Window
+                    </span>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'ikla-bath-spa-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#8C6D3F] hover:text-[#111215] font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <span>Request Allocation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         )}
 
@@ -373,6 +501,78 @@ export default function BrandPage({
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
                     Ballistic canvas carry weekenders, unstructured cotton twill dad caps, arch-support ribbed socks, and molded recovery slides engineered for fast-paced metropolitan movement.
                   </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Training & Everyday Carry Collection Feature */}
+            <section id="training-carry" className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C7A6B] font-semibold block">
+                  Discipline Accessories & Carry
+                </span>
+                <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Carry the Energy.
+                </h3>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Purpose-built objects for training, movement, recovery, and the discipline between sessions.
+                </p>
+                <div className="flex flex-wrap gap-4 text-[11px] font-mono text-neutral-600 uppercase tracking-widest pt-1">
+                  <span>Keep That Same Energy</span>
+                  <span>•</span>
+                  <span>No Switches. No Excuses.</span>
+                  <span>•</span>
+                  <span>Built Different. Made Consistent.</span>
+                </div>
+              </div>
+
+              <div className="bg-white border border-[#DDD7CB] p-4 sm:p-6 rounded-xs shadow-xl space-y-6">
+                <div className="overflow-hidden rounded-xs">
+                  <CampaignImage
+                    src="assets/accessories/ktse/ktse-training-everyday-carry.webp"
+                    alt="KTSE training and everyday carry collection featuring heavyweight training duffels, technical backpacks, exercise mats, insulated bottles, lifting straps, and performance accessories."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full hover:scale-101 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+                  <div className="lg:col-span-8 space-y-3">
+                    <span className="text-[10px] uppercase tracking-widest text-[#8C7A6B] font-semibold block">
+                      Objects of Movement & Recovery
+                    </span>
+                    <h4 className="text-xl font-cormorant font-normal text-[#111215]">
+                      Heavyweight Training Duffels, Recovery Mats & Field Essentials
+                    </h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope leading-relaxed">
+                      1680D ballistic nylon training duffels with ventilated shoe vaults, non-slip 5mm natural rubber mats, heavy cotton lifting straps, and recovery slides calibrated for ruthless consistency.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Training duffels', 'Technical backpacks', 'Exercise mats', 'Insulated bottles', 'Wrist wraps', 'Lifting straps', 'Resistance bands', 'Performance towels', 'Crew socks', 'Slides', 'Caps', 'Beanies', 'Crossbody pouches'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-[#FAF7F2] border border-[#E2DDD3] text-[#555] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full space-y-4 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-[#EAE5DC] lg:pl-6">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono block">Status</span>
+                      <span className="text-sm font-cormorant text-[#111215] font-semibold">Collection Preview</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'ktse-training-carry-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="px-6 py-3 bg-[#111215] text-white hover:bg-neutral-800 text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shadow-md"
+                    >
+                      <span>Request Allocation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </section>
@@ -498,6 +698,71 @@ export default function BrandPage({
                 </div>
               </div>
             </section>
+
+            {/* Resort & Travel Lifestyle Collection Feature */}
+            <section id="resort-travel" className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#B85D3B] font-semibold block">
+                  Resort & Travel Accessories
+                </span>
+                <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Movement, Refined.
+                </h3>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  A considered travel system shaped for resort mornings, coastal afternoons, and movement without interruption.
+                </p>
+              </div>
+
+              <div className="bg-white border border-[#DDD7CB] p-4 sm:p-6 rounded-xs shadow-xl space-y-6">
+                <div className="overflow-hidden rounded-xs">
+                  <CampaignImage
+                    src="assets/accessories/moteon/moteon-resort-travel-collection.webp"
+                    alt="Motéon resort and travel collection featuring weekender luggage, carryall totes, leather toiletry cases, passport wallets, designer sunglasses, and leisure accessories."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full hover:scale-101 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+                  <div className="lg:col-span-8 space-y-3">
+                    <span className="text-[10px] uppercase tracking-widest text-[#B85D3B] font-semibold block">
+                      Coastal Transit & Leisure System
+                    </span>
+                    <h4 className="text-xl font-cormorant font-normal text-[#111215]">
+                      Weekender Luggage, Italian Acetate Optics & Travel Foulards
+                    </h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope leading-relaxed">
+                      Structured water-repellent canvas weekenders with saddle leather trims, handcrafted Italian acetate sunglasses with Category 3 UV optics, and pure silk twill foulards tailored for effortless passage between coastal terraces.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Weekender bags', 'Carryall totes', 'Toiletry cases', 'Passport wallets', 'Sunglasses', 'Silk scarves', 'Visors', 'Slides', 'Travel socks', 'Pool towels', 'Insulated bottles', 'Leisure equipment'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-[#FAF4EE] border border-[#E8DCCF] text-[#B85D3B] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full space-y-4 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-[#EAE5DC] lg:pl-6">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono block">Status</span>
+                      <span className="text-sm font-cormorant text-[#111215] font-semibold">Collection Preview</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'moteon-resort-travel-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="px-6 py-3 bg-[#B85D3B] text-white hover:bg-[#A04D2D] text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shadow-md"
+                    >
+                      <span>Request Allocation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         )}
 
@@ -590,6 +855,71 @@ export default function BrandPage({
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
                     Leather carry folios, woven celestial scarves, solid buckle belts, ribbed merino beanies, and recovery slides arranged with measured precision.
                   </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Executive Leather Goods Lifestyle Collection Feature */}
+            <section id="executive-leather" className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A828A] font-semibold block">
+                  Private Office & Personal Instruments
+                </span>
+                <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Objects of Certainty.
+                </h3>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Quietly constructed instruments for those who move with intention and answer to an internal standard.
+                </p>
+              </div>
+
+              <div className="bg-[#111315] text-[#FAF8F5] border border-neutral-800 p-4 sm:p-6 rounded-xs shadow-2xl space-y-6">
+                <div className="overflow-hidden rounded-xs border border-neutral-800">
+                  <CampaignImage
+                    src="assets/accessories/moral-compass/moral-compass-executive-leather.webp"
+                    alt="Moral Compass executive leather goods collection featuring architectural briefcases, document portfolios, leather journals, card holders, watch rolls, and refined brass keepsakes."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full hover:scale-101 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+                  <div className="lg:col-span-8 space-y-3">
+                    <span className="text-[10px] uppercase tracking-widest text-[#B89758] font-semibold block">
+                      Architectural Saddlery & Private Instruments
+                    </span>
+                    <h4 className="text-xl font-cormorant font-normal text-white">
+                      Boxcalf Briefcases, Bridle Parchment Folios & Machined Solid Brass Keepsakes
+                    </h4>
+                    <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
+                      Hand-stitched full-grain French boxcalf briefcases with brass tuck locks, refillable archival journals bound in bridle leather, and solid brass compass weights engraved with cardinal coordinates.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Briefcases', 'Document portfolios', 'Leather journals', 'Fountain pens', 'Card holders', 'Wallets', 'Passport covers', 'Key cases', 'Watch rolls', 'Belts', 'Gloves', 'Eyewear cases', 'Compass keepsakes'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-neutral-900 border border-neutral-700 text-neutral-300 rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full space-y-4 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-neutral-800 lg:pl-6">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-mono block">Access</span>
+                      <span className="text-sm font-cormorant text-white font-semibold">Private Preview</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'moral-compass-leather-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="px-6 py-3 bg-[#B89758] text-[#111315] hover:bg-[#C9A96E] text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shadow-md"
+                    >
+                      <span>Private Allocation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </section>
@@ -776,6 +1106,74 @@ export default function BrandPage({
               </div>
             </section>
 
+            {/* Executive Travel Lifestyle Collection Feature */}
+            <section id="executive-travel" className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A869] font-semibold block">
+                  Discipline Travel & Transit
+                </span>
+                <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Prepared to Win.
+                </h3>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Executive travel and everyday-carry objects built around discipline, readiness, and the victory that begins within.
+                </p>
+                <div className="text-xs font-mono text-[#C5A869] uppercase tracking-widest pt-1">
+                  WNNR · WIN WITHIN
+                </div>
+              </div>
+
+              <div className="bg-[#0D0F0E] text-[#F4F1EA] border border-[#C5A869]/30 p-4 sm:p-6 rounded-xs shadow-2xl space-y-6">
+                <div className="overflow-hidden rounded-xs border border-[#C5A869]/20">
+                  <CampaignImage
+                    src="assets/accessories/wnnr/wnnr-executive-travel.webp"
+                    alt="WNNR executive travel and everyday-carry collection featuring obsidian leather totes, weekender duffels, executive backpacks, headwear, card holders, and discipline travel accessories."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full hover:scale-101 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+                  <div className="lg:col-span-8 space-y-3">
+                    <span className="text-[10px] uppercase tracking-widest text-[#C5A869] font-semibold block">
+                      Discipline Carry Architecture
+                    </span>
+                    <h4 className="text-xl font-cormorant font-normal text-white">
+                      Obsidian Pebble Weekenders, Technical Backpacks & Passport Folios
+                    </h4>
+                    <p className="text-xs text-neutral-300 font-light font-manrope leading-relaxed">
+                      Obsidian pebble-grain leather weekenders with champagne gold hardware, structured technical executive backpacks with device compartments, and RFID-shielding leather passport organizers designed for focused global movement.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Leather totes', 'Weekenders', 'Executive backpacks', 'Caps', 'Beanies', 'Belts', 'Wallets', 'Card holders', 'Passport covers', 'Watch rolls', 'Shoe bags', 'Insulated bottles', 'Key fobs'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-[#1B2E24]/60 border border-[#C5A869]/30 text-neutral-200 rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full space-y-4 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-neutral-800 lg:pl-6">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono block">Allocation</span>
+                      <span className="text-sm font-cormorant text-[#C5A869] font-semibold">Collection Preview</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'wnnr-travel-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="px-6 py-3 bg-[#C5A869] text-[#0D0F0E] hover:bg-[#DFC78E] text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shadow-md"
+                    >
+                      <span>Request Allocation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             {/* 7. Honest Category Links & Discipline Reserve CTA */}
             <section className="bg-gradient-to-r from-[#0D0F0E] via-[#1B2E24] to-[#0D0F0E] border border-[#C5A869]/40 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
               <div className="max-w-2xl mx-auto relative z-10 space-y-4">
@@ -926,6 +1324,71 @@ export default function BrandPage({
                 </div>
               </div>
             </section>
+
+            {/* Hydration & Table Service Lifestyle Collection Feature */}
+            <section id="hydration-service" className="space-y-8 border-t border-[#CADCE0] pt-16">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#5E8896] font-semibold block">
+                  Table Ceremony & Vessels
+                </span>
+                <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                  The Ritual of Water.
+                </h3>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Hydration expressed through considered vessels, refined table service, and objects designed for everyday ceremony.
+                </p>
+              </div>
+
+              <div className="bg-white border border-[#CADCE0] p-4 sm:p-6 rounded-xs shadow-xl space-y-6">
+                <div className="overflow-hidden rounded-xs border border-[#E5EEF0]">
+                  <CampaignImage
+                    src="assets/accessories/ikla-water/ikla-water-hydration-service.webp"
+                    alt="IKLA Water hydration and table service collection featuring minimalist glass carafes, water tumblers, reusable glass travel bottles, ice buckets, coaster sets, and serving trays."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full hover:scale-101 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+                  <div className="lg:col-span-8 space-y-3">
+                    <span className="text-[10px] uppercase tracking-widest text-[#5E8896] font-semibold block">
+                      Residential Dining & Hospitality Accoutrements
+                    </span>
+                    <h4 className="text-xl font-cormorant font-normal text-[#111215]">
+                      Flint Glass Carafes, Mineral Tumblers & Travertine Coaster Suites
+                    </h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope leading-relaxed">
+                      Hand-blown architectural flint glass carafes with precision stoppers, crystal mineral tumblers, solid travertine coaster sets, and leather-trimmed insulated canvas carriers designed for dining salons and gallery terraces.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Glass carafes', 'Water tumblers', 'Insulated bottles', 'Reusable glass travel bottles', 'Ice buckets', 'Tongs', 'Coaster sets', 'Bottle carriers', 'Picnic coolers', 'Serving trays'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-[#F5F8F9] border border-[#CADCE0] text-[#5E8896] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full space-y-4 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-[#CADCE0] lg:pl-6">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono block">Status</span>
+                      <span className="text-sm font-cormorant text-[#111215] font-semibold">Collection Preview</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'ikla-water-hydration-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="px-6 py-3 bg-[#1A2830] text-[#FAFBFB] hover:bg-[#283C48] text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shadow-md"
+                    >
+                      <span>Register Interest</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         )}
 
@@ -974,6 +1437,134 @@ export default function BrandPage({
                   <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
                     Conceived alongside MyMosa, the celebrated Premium Wine Cocktail. Blending ceremonial toasts with casual luxury apparel.
                   </p>
+                </div>
+              </div>
+            </section>
+
+            {/* The Art of the Serve — Hospitality & Entertaining Master Suite */}
+            <section id="hospitality" className="space-y-12 border-t border-[#E2DCBE] pt-20">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#E06D38] font-semibold block">
+                  Master Hospitality Universe
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                  The Art of the Serve.
+                </h2>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Objects designed for gathering—across the bar, beside the pool, and throughout the seventeen-house hospitality universe.
+                </p>
+              </div>
+
+              {/* Side by Side on Desktop, Stacked on Mobile */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* 1. Glassware & Barware */}
+                <div id="glassware-barware" className="bg-white border border-[#E2DCBE] p-4 sm:p-6 rounded-xs shadow-xl flex flex-col justify-between group">
+                  <div className="space-y-4">
+                    <div className="overflow-hidden rounded-xs">
+                      <CampaignImage
+                        src="assets/accessories/my-drink-family/my-drink-family-glassware-barware.webp"
+                        alt="My Drink Family glassware and barware suite featuring crystal coupes, champagne flutes, rocks glasses, cocktail shaker, jigger, strainer, and gold serving tray."
+                        aspectRatio="16/9"
+                        position="center center"
+                        className="rounded-xs w-full group-hover:scale-102 transition-transform duration-500"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-semibold">
+                          Glassware & Barware
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                          Collection Preview
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-cormorant font-normal text-[#111215] mt-1">
+                        Crystalline Stemware & Barware Suite
+                      </h3>
+                      <p className="text-xs text-[#50545E] font-light mt-2 leading-relaxed font-manrope">
+                        Lead-free European crystalline coupes, flutes, and rocks glasses paired with brushed brass 18/10 stainless steel shakers, jiggers, strainers, and gilded rectangular serving plinths.
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#EAE5DC] flex flex-wrap gap-1.5">
+                      {['Champagne flutes', 'Coupes', 'Wine goblets', 'Stemless tumblers', 'Rocks glasses', 'Highball glasses', 'Mixing glasses', 'Shakers', 'Jiggers', 'Strainers', 'Ice buckets', 'Serving trays'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-[#FAF7F2] border border-[#E2DDD3] text-[#555] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-6 mt-4 border-t border-[#EAE5DC] flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono">
+                      Allocation Window
+                    </span>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'mdf-glassware-barware-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#E06D38] hover:text-[#111215] font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <span>Register Interest</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* 2. Poolside Hospitality */}
+                <div id="poolside-hospitality" className="bg-white border border-[#E2DCBE] p-4 sm:p-6 rounded-xs shadow-xl flex flex-col justify-between group">
+                  <div className="space-y-4">
+                    <div className="overflow-hidden rounded-xs">
+                      <CampaignImage
+                        src="assets/accessories/my-drink-family/my-drink-family-poolside-hospitality.webp"
+                        alt="My Drink Family poolside hospitality collection featuring floating bar stations, luxury pool floats, beach towels, tumblers, and outdoor entertaining pieces."
+                        aspectRatio="16/9"
+                        position="center center"
+                        className="rounded-xs w-full group-hover:scale-102 transition-transform duration-500"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-semibold">
+                          Poolside Hospitality
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                          Collection Preview
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-cormorant font-normal text-[#111215] mt-1">
+                        Floating Stations & Outdoor Leisure
+                      </h3>
+                      <p className="text-xs text-[#50545E] font-light mt-2 leading-relaxed font-manrope">
+                        Marine-grade floating serving stations, heavy UV-resistant resort floats, jacquard cabana towels, and double-walled insulated tumblers designed for golden hour entertaining.
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#EAE5DC] flex flex-wrap gap-1.5">
+                      {['Floating serving stations', 'Resort floats', 'Beach balls', 'Towels', 'Coolers', 'Tumblers', 'Serving caddies', 'Outdoor entertainment accessories'].map((item) => (
+                        <span key={item} className="text-[10px] font-mono px-2 py-0.5 bg-[#FAF7F2] border border-[#E2DDD3] text-[#555] rounded-2xs">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-6 mt-4 border-t border-[#EAE5DC] flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-mono">
+                      Allocation Window
+                    </span>
+                    <button
+                      onClick={() => {
+                        const prod = PRODUCTS.find((p) => p.id === 'mdf-poolside-hospitality-suite');
+                        if (prod) onSelectProduct(prod);
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#E06D38] hover:text-[#111215] font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <span>Register Interest</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </section>

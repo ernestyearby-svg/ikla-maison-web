@@ -913,6 +913,153 @@ export default function CollectionPage({
                 </section>
 
                 {/* ========================================================================= */}
+                {/* 9.5 BEYOND THE WARDROBE — LIFESTYLE & ACCESSORIES DISCOVERY */}
+                {/* ========================================================================= */}
+                <section id="beyond-the-wardrobe" className="space-y-12 bg-[#F6F3EC] border border-[#DDD7CB] p-6 sm:p-10 rounded-xs shadow-md">
+                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#D8D2C4]">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
+                        Lifestyle & Personal Rituals
+                      </span>
+                      <h3 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
+                        Beyond the Wardrobe.
+                      </h3>
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-xl font-manrope leading-relaxed">
+                      The world of IKLA Maison extends into private living, hospitality, movement, travel, and daily ritual—each house expressed through objects designed for its own environment.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                    {[
+                      {
+                        id: 'ikla-maison-living',
+                        brandId: 'ikla-maison',
+                        anchorId: 'home-living',
+                        title: 'Maison Living',
+                        badge: 'Home & Living',
+                        territory: 'Elevated living, bedroom, bath, and personal rituals',
+                        image: 'assets/accessories/ikla-maison/ikla-maison-bedroom-collection.webp',
+                        alt: 'IKLA Maison bedroom collection featuring bedding, pillows, throws, slippers, a sleep mask, candle, and leather valet tray.',
+                        accent: '#8C6D3F'
+                      },
+                      {
+                        id: 'mdf-hospitality',
+                        brandId: 'my-drink-family',
+                        anchorId: 'hospitality',
+                        title: 'My Drink Family Hospitality',
+                        badge: 'Hospitality',
+                        territory: 'Hospitality, glassware, barware, and poolside entertaining',
+                        image: 'assets/accessories/my-drink-family/my-drink-family-glassware-barware.webp',
+                        alt: 'My Drink Family glassware and barware suite featuring crystal coupes, champagne flutes, rocks glasses, cocktail shaker, jigger, strainer, and gold serving tray.',
+                        accent: '#E06D38'
+                      },
+                      {
+                        id: 'ktse-training',
+                        brandId: 'ktse',
+                        anchorId: 'training-carry',
+                        title: 'KTSE Training & Carry',
+                        badge: 'Discipline',
+                        territory: 'Training duffels, recovery mats, and movement discipline',
+                        image: 'assets/accessories/ktse/ktse-training-everyday-carry.webp',
+                        alt: 'KTSE training and everyday carry collection featuring heavyweight training duffels, technical backpacks, exercise mats, insulated bottles, lifting straps, and performance accessories.',
+                        accent: '#8C7A6B'
+                      },
+                      {
+                        id: 'moteon-travel',
+                        brandId: 'moteon',
+                        anchorId: 'resort-travel',
+                        title: 'Motéon Resort & Travel',
+                        badge: 'Resort Movement',
+                        territory: 'Weekender bags, carryall totes, sunglasses, and coastal travel',
+                        image: 'assets/accessories/moteon/moteon-resort-travel-collection.webp',
+                        alt: 'Motéon resort and travel collection featuring weekender luggage, carryall totes, leather toiletry cases, passport wallets, designer sunglasses, and leisure accessories.',
+                        accent: '#B85D3B'
+                      },
+                      {
+                        id: 'moral-compass-leather',
+                        brandId: 'moral-compass',
+                        anchorId: 'executive-leather',
+                        title: 'Moral Compass Leather',
+                        badge: 'Executive Saddlery',
+                        territory: 'Briefcases, document portfolios, journals, and private office instruments',
+                        image: 'assets/accessories/moral-compass/moral-compass-executive-leather.webp',
+                        alt: 'Moral Compass executive leather goods collection featuring architectural briefcases, document portfolios, leather journals, card holders, watch rolls, and refined brass keepsakes.',
+                        accent: '#7A828A'
+                      },
+                      {
+                        id: 'wnnr-travel',
+                        brandId: 'wnnr',
+                        anchorId: 'executive-travel',
+                        title: 'WNNR Executive Travel',
+                        badge: 'WIN WITHIN',
+                        territory: 'Discipline weekender duffels, executive backpacks, and travel organizers',
+                        image: 'assets/accessories/wnnr/wnnr-executive-travel.webp',
+                        alt: 'WNNR executive travel and everyday-carry collection featuring obsidian leather totes, weekender duffels, executive backpacks, headwear, card holders, and discipline travel accessories.',
+                        accent: '#C5A869'
+                      },
+                      {
+                        id: 'ikla-water-service',
+                        brandId: 'ikla-water',
+                        anchorId: 'hydration-service',
+                        title: 'IKLA Water Table Service',
+                        badge: 'Table Ceremony',
+                        territory: 'Flint glass carafes, mineral tumblers, and travertine coaster suites',
+                        image: 'assets/accessories/ikla-water/ikla-water-hydration-service.webp',
+                        alt: 'IKLA Water hydration and table service collection featuring minimalist glass carafes, water tumblers, reusable glass travel bottles, ice buckets, coaster sets, and serving trays.',
+                        accent: '#5E8896'
+                      }
+                    ].map((col) => (
+                      <a
+                        key={col.id}
+                        href={`#/brand/${col.brandId}#${col.anchorId}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.hash = `/brand/${col.brandId}#${col.anchorId}`;
+                        }}
+                        className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                      >
+                        <div>
+                          <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                            <CampaignImage
+                              src={col.image}
+                              alt={col.alt}
+                              aspectRatio="16/9"
+                              position="center center"
+                              className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                            />
+                          </div>
+                          <div className="p-5 space-y-2">
+                            <div className="flex items-center justify-between">
+                              <span
+                                className="text-[10px] uppercase tracking-[0.25em] font-semibold"
+                                style={{ color: col.accent }}
+                              >
+                                {col.badge}
+                              </span>
+                              <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                                Preview
+                              </span>
+                            </div>
+                            <h4 className="text-xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                              {col.title}
+                            </h4>
+                            <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                              {col.territory}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="p-5 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#8C6D3F] group-hover:text-[#111215]">
+                          <span>Explore Collection</span>
+                          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </section>
+
+                {/* ========================================================================= */}
                 {/* 10. RELATED IKLA MAISON COLLECTIONS */}
                 {/* ========================================================================= */}
                 <section id="related-fashion-collections" className="space-y-8">
