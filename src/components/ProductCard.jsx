@@ -1,23 +1,34 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Eye, Check } from 'lucide-react';
+import { ShoppingBag, Eye, Check, Bookmark, Clock } from 'lucide-react';
 import { BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
 export default function ProductCard({ product, onSelectProduct, onSelectBrand }) {
-  const { addToCart } = useCart();
+  const { addToCart, showToast } = useCart();
   const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : 'One Size');
   const [selectedColor, setSelectedColor] = useState(product.colors ? product.colors[0].name : 'Standard');
   const [isAdded, setIsAdded] = useState(false);
+  const [isReserved, setIsReserved] = useState(false);
 
   const brand = BRANDS[product.brandId];
   const brandAccent = brand ? brand.palette.accent : '#C8A97E';
   const brandGlow = brand ? brand.glowColor : 'rgba(200,169,126,0.3)';
 
-  const handleQuickAdd = (e) => {
+  const isProductionPreview = product.isReserve || product.status;
+
+  const handleQuickAction = (e) => {
     e.stopPropagation();
-    addToCart(product, selectedSize, selectedColor, 1);
-    setIsAdded(true);
-    setTimeout(() => setIsAdded(false), 2000);
+    if (isProductionPreview) {
+      setIsReserved(true);
+      if (showToast) {
+        showToast(`Interest reserved for ${product.name} (${selectedColor})`);
+      }
+      setTimeout(() => setIsReserved(false), 2500);
+    } else {
+      addToCart(product, selectedSize, selectedColor, 1);
+      setIsAdded(true);
+      setTimeout(() => setIsAdded(false), 2000);
+    }
   };
 
   return (
@@ -86,12 +97,24 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
 
           <div className="flex items-center gap-2">
             <button
-              onClick={handleQuickAdd}
+              onClick={handleQuickAction}
               className={`flex-1 py-2.5 px-3 text-[11px] uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer rounded-xs shadow-lg ${
                 brand ? brand.buttonStyle : 'bg-[#0F172A] text-white hover:bg-[#1E293B]'
               }`}
             >
-              {isAdded ? (
+              {isProductionPreview ? (
+                isReserved ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-emerald-300" />
+                    <span>Interest Recorded</span>
+                  </>
+                ) : (
+                  <>
+                    <Bookmark className="w-3.5 h-3.5" />
+                    <span>Reserve Interest</span>
+                  </>
+                )
+              ) : isAdded ? (
                 <>
                   <Check className="w-3.5 h-3.5 text-emerald-300" />
                   <span>Added</span>
@@ -124,20 +147,39 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
         <div>
           <div className="flex items-center justify-between text-xs text-neutral-500 font-light mb-1 font-manrope">
             <span>{product.category}</span>
-            <span className="text-emerald-700 text-[10px] tracking-wider uppercase font-semibold">
-              {product.inventory > 5 ? 'In Stock' : `Low: ${product.inventory} left`}
-            </span>
+            {isProductionPreview ? (
+              <span className="text-[#8C6D3F] text-[10px] tracking-wider uppercase font-semibold flex items-center gap-1">
+                <Clock className="w-2.5 h-2.5" />
+                <span>{product.status || 'Production Preview'}</span>
+              </span>
+            ) : (
+              <span className="text-emerald-700 text-[10px] tracking-wider uppercase font-semibold">
+                {product.inventory > 5 ? 'In Stock' : `Low: ${product.inventory} left`}
+              </span>
+            )}
           </div>
 
           <h3 className="text-sm font-medium text-[#16171A] group-hover:text-black transition-colors line-clamp-1 font-manrope tracking-wide">
             {product.name}
           </h3>
+
+          {product.material && (
+            <p className="text-[11px] text-neutral-500 font-light truncate mt-0.5 font-manrope">
+              {product.material}
+            </p>
+          )}
         </div>
 
         <div className="flex items-center justify-between pt-2.5 border-t border-[#EAE5DC]">
-          <span className="text-sm font-semibold text-[#0E0F12] tracking-wider font-manrope">
-            ${product.price} <span className="text-[10px] text-neutral-500 font-normal">USD</span>
-          </span>
+          {isProductionPreview ? (
+            <span className="text-xs uppercase tracking-wider text-[#8C6D3F] font-semibold font-manrope flex items-center gap-1">
+              <span>Reserve Allocation</span>
+            </span>
+          ) : (
+            <span className="text-sm font-semibold text-[#0E0F12] tracking-wider font-manrope">
+              ${product.price} <span className="text-[10px] text-neutral-500 font-normal">USD</span>
+            </span>
+          )}
 
           {/* Color preview dots */}
           {product.colors && (

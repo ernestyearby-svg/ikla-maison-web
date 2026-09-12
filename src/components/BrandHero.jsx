@@ -92,6 +92,20 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos }
                 Discipline. Ambition. Execution.
               </p>
             </div>
+          ) : brand.isBeverageHouse ? (
+            <div className="mb-4">
+              <div className="flex flex-wrap items-baseline gap-3 mb-2">
+                <h1 className="text-4xl sm:text-6xl font-cormorant font-light text-white tracking-[0.12em] leading-none">
+                  {name}
+                </h1>
+                <span className="text-[10px] uppercase tracking-[0.2em] px-2.5 py-0.5 border border-white/30 text-white/90 rounded-xs font-mono">
+                  Sports-Fashion House
+                </span>
+              </div>
+              <p className="text-xs uppercase tracking-[0.25em] text-[#DFBF95] font-light mt-1">
+                A House of My Drink Family
+              </p>
+            </div>
           ) : (
             <div className="mb-4 max-w-sm">
               <img

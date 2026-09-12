@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, ChevronRight, ShoppingBag, Globe, PhoneCall, Droplets } from 'lucide-react';
-import { BRAND_LIST } from '../data/brands';
+import { BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES, BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
 export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, currentBrandId }) {
@@ -65,29 +65,42 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
             >
               Shop All Collections
             </button>
+
+            <button
+              onClick={() => {
+                onNavigate('collection');
+                onClose();
+              }}
+              className="w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium text-neutral-300 hover:text-white transition-colors"
+            >
+              Accessories Collection
+            </button>
           </div>
 
-          {/* The Houses */}
+          {/* Fashion Houses */}
           <div className="border-t border-neutral-800/80 pt-4">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] block mb-3 px-3 font-medium">
-              The Houses
-            </span>
-            <div className="space-y-1.5">
-              {BRAND_LIST.map((brand) => (
+            <div className="flex items-center justify-between px-3 mb-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium">
+                Fashion Houses
+              </span>
+              <span className="text-[9px] text-neutral-500 font-mono">5 Houses</span>
+            </div>
+            <div className="space-y-1">
+              {FASHION_HOUSES.map((brand) => (
                 <button
                   key={brand.id}
                   onClick={() => {
                     onNavigate('brand', brand.id);
                     onClose();
                   }}
-                  className={`w-full text-left p-3 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
+                  className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
                     currentView === 'brand' && currentBrandId === brand.id
                       ? 'bg-white/10 text-white border-l-2 border-[#C8A97E]'
                       : 'hover:bg-white/5 text-neutral-300'
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1">
+                    <div className="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1">
                       <img
                         src={brand.logos.crestLight}
                         alt=""
@@ -96,46 +109,94 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                       />
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-white group-hover:text-[#C8A97E] transition-colors tracking-wide">
+                      <div className="text-xs font-medium text-white group-hover:text-[#C8A97E] transition-colors tracking-wide">
                         {brand.name}
                       </div>
-                      <div className="text-[11px] text-neutral-400 font-light truncate max-w-[190px]">
+                      <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
                         {brand.tagline}
                       </div>
                     </div>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
                 </button>
               ))}
+            </div>
+          </div>
 
-              {/* Extension: IKLA Water */}
-              <button
-                onClick={() => {
-                  onNavigate('brand', 'ikla-water');
-                  onClose();
-                }}
-                className={`w-full text-left p-3 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
-                  currentView === 'brand' && currentBrandId === 'ikla-water'
-                    ? 'bg-white/10 text-white border-l-2 border-[#5E8896]'
-                    : 'hover:bg-white/5 text-neutral-300'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
-                    <Droplets className="w-4 h-4" />
+          {/* Beverage Houses & Hospitality */}
+          <div className="border-t border-neutral-800/80 pt-4">
+            <div className="flex items-center justify-between px-3 mb-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#E26D35] font-medium">
+                Beverage & Hospitality
+              </span>
+              <span className="text-[9px] text-neutral-500 font-mono">6 Houses</span>
+            </div>
+            <div className="space-y-1">
+              {[BRANDS['my-drink-family'], ...BEVERAGE_HOUSES].map((brand) => (
+                <button
+                  key={brand.id}
+                  onClick={() => {
+                    onNavigate('brand', brand.id);
+                    onClose();
+                  }}
+                  className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
+                    currentView === 'brand' && currentBrandId === brand.id
+                      ? 'bg-white/10 text-white border-l-2 border-[#E26D35]'
+                      : 'hover:bg-white/5 text-neutral-300'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1">
+                      <img
+                        src={brand.logos.crestLight}
+                        alt=""
+                        className="w-full h-full object-contain filter brightness-110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <div className="text-xs font-medium text-white group-hover:text-[#E26D35] transition-colors tracking-wide">
+                        {brand.name}
+                      </div>
+                      <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
+                        {brand.tagline}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-sm font-medium text-white group-hover:text-[#5E8896] transition-colors tracking-wide">
-                      IKLA Water
-                    </div>
-                    <div className="text-[11px] text-neutral-400 font-light truncate max-w-[190px]">
-                      Pure Mineral Glass Extension
-                    </div>
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Extension: IKLA Water */}
+          <div className="border-t border-neutral-800/80 pt-3">
+            <button
+              onClick={() => {
+                onNavigate('brand', 'ikla-water');
+                onClose();
+              }}
+              className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
+                currentView === 'brand' && currentBrandId === 'ikla-water'
+                  ? 'bg-white/10 text-white border-l-2 border-[#5E8896]'
+                  : 'hover:bg-white/5 text-neutral-300'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-7 h-7 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
+                  <Droplets className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <div className="text-xs font-medium text-white group-hover:text-[#5E8896] transition-colors tracking-wide">
+                    IKLA Water
+                  </div>
+                  <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
+                    Pure Mineral Glass Extension
                   </div>
                 </div>
-                <ChevronRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
+              </div>
+              <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
+            </button>
           </div>
 
           {/* Company Links */}

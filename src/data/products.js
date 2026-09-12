@@ -720,6 +720,559 @@ export const PRODUCTS = [
     ],
     fabricCare: 'Wipe slides clean with damp cloth; machine wash socks warm.',
     fitNotes: 'True to European size standard.'
+  },
+
+  // =========================================================================
+  // MY DRINK FAMILY — HOSPITALITY, BARWARE & SERVING PIECES
+  // =========================================================================
+  {
+    id: 'mdf-crystal-glassware-set',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'My Drink Family Master Flint Glass Highball & Coupe Set',
+    category: 'Accessories',
+    image: '/assets/my-drink-family/collection.webp',
+    imageAlt: 'My Drink Family Master Flint Glass Highball and Coupe Set in collection display',
+    sizes: ['Set of 4 Glasses'],
+    colors: [
+      { name: 'Crystal Clear & Gilded Rim', hex: '#D4AF37' }
+    ],
+    material: 'Lead-Free Heavyweight Crystalline Glass',
+    status: 'Production Preview',
+    isReserve: true,
+    isFeatured: true,
+    description: 'Set of four mouth-blown crystalline highballs and coupe glasses engraved with the gilded My Drink Family circular crest for elevated celebratory hospitality.',
+    details: [
+      'Lead-free heavyweight European crystal glass',
+      'Discreet acid-etched circular family crest on base',
+      'Refined fine-beveled rim with gilded accent line',
+      'Designed for celebratory cocktails and craft beverages'
+    ],
+    fabricCare: 'Hand wash with warm water and soft cloth recommended.',
+    fitNotes: 'Standard cocktail lounge volume: 12oz highball, 8oz coupe.'
+  },
+  {
+    id: 'mdf-gold-barware-kit',
+    brandId: 'my-drink-family',
+    brandName: 'My Drink Family',
+    name: 'My Drink Family Gilded Cocktail Shaker & Bar Tool Kit',
+    category: 'Accessories',
+    image: '/assets/my-drink-family/collection.webp',
+    imageAlt: 'My Drink Family Gilded Cocktail Shaker and Bar Tool Kit in collection display',
+    sizes: ['5-Piece Tool Set'],
+    colors: [
+      { name: 'Satin Brass Gold', hex: '#C5A869' }
+    ],
+    material: 'Brushed Brass & Heavyweight Stainless Steel',
+    status: 'Production Preview',
+    isReserve: true,
+    isFeatured: true,
+    description: 'Professional five-piece cocktail shaker, precision jigger, hawthorne strainer, weighted bar spoon, and ice tongs finished in brushed satin brass and engraved with the family emblem.',
+    details: [
+      'Heavyweight 18/8 food-grade stainless steel with brushed brass PVD finish',
+      '550ml cobbler shaker with tight silicone seal',
+      'Laser-engraved My Drink Family circular crest on shaker cap',
+      'Comes in archival wooden storage box with velvet interior'
+    ],
+    fabricCare: 'Hand wash only; dry immediately with lint-free towel.',
+    fitNotes: 'Complete professional barware setup.'
+  },
+
+  // =========================================================================
+  // MYMOSA SPORTS-FASHION FLAGSHIP
+  // =========================================================================
+  {
+    id: 'mymosa-four-flavor-tracksuits',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Four-Flavor Heavyweight Tracksuit',
+    category: 'Sets',
+    image: 'assets/products/mymosa/mymosa-four-flavor-tracksuits.webp',
+    imageAlt: 'MyMosa four-flavor sports-fashion tracksuits collection in Classic Orange, Pineapple, Strawberry, and Watermelon colorways',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: '520 GSM Brushed Loopback Cotton Fleece',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Coordinated zip track jacket and athletic track pant engineered from 520 GSM custom loopback fleece with branded brass zippers, available across all four signature flavor colorways.',
+    details: [
+      '520 GSM dense loopback fleece with brushed interior',
+      'Custom engraved gilded brass two-way zipper',
+      'Elasticated track waistband with brass aglets',
+      'Direct embroidered MyMosa script on chest and left thigh'
+    ],
+    fabricCare: 'Machine wash delicate inside-out cold. Hang dry in shade.',
+    fitNotes: 'Relaxed athletic silhouette with articulated knees.'
+  },
+  {
+    id: 'mymosa-four-flavor-heavyweight-sweats',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Coordinated Crew & Sweatpant Set',
+    category: 'Sets',
+    image: 'assets/products/mymosa/mymosa-four-flavor-heavyweight-sweats.webp',
+    imageAlt: 'MyMosa heavyweight sweats and hoodies collection in Classic Orange, Pineapple, Strawberry, and Watermelon colorways',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: '460 GSM Organic Cotton Fleece',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Substantial two-piece leisure sweat set featuring drop-shoulder crewneck and tapered cuffed sweatpants in four flavor colorways.',
+    details: [
+      '460 GSM organic combed cotton loopback fleece',
+      'Ribbed triangle neck gusset and side panels',
+      'Deep jersey-lined pockets with reinforced bar-tacks',
+      'Tonal embroidered flavor identity emblems'
+    ],
+    fabricCare: 'Gentle wash cold with mild detergent. Flat dry.',
+    fitNotes: 'Comfortable relaxed fit with gentle taper at ankle.'
+  },
+  {
+    id: 'mymosa-hoodies-four-flavors',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Flagship Heavyweight Pullover Hoodie',
+    category: 'Tops',
+    image: 'assets/products/mymosa/mymosa-hoodies-four-flavors.webp',
+    imageAlt: 'MyMosa heavyweight loopback fleece hoodies in Classic Orange, Pineapple, Strawberry, and Watermelon colorways',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: '480 GSM Heavy French Terry',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Architectural pullover hoodie featuring double-layered hood without drawcords for clean structure, kangaroo pouch, and tonal embroidery.',
+    details: [
+      '480 GSM heavy loopback French terry',
+      'Seamless double-walled structured hood',
+      'Discreet tone-on-tone MyMosa chest seal',
+      'Heavy rib cuffs and bottom hem band'
+    ],
+    fabricCare: 'Machine wash cold delicate. Reshape and flat dry.',
+    fitNotes: 'Boxy contemporary drop-shoulder cut.'
+  },
+  {
+    id: 'mymosa-tshirts-four-flavors',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Four-Flavor Heavyweight Boxy Tee',
+    category: 'Tops',
+    image: 'assets/products/mymosa/mymosa-tshirts-four-flavors.webp',
+    imageAlt: 'MyMosa heavyweight combed cotton T-shirts displayed in four flagship colorways: Classic Orange, Pineapple, Strawberry, and Watermelon',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: '280 GSM Mercerized Combed Jersey',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: false,
+    description: 'Custom-milled heavyweight combed jersey tee with high-rib collar and blind stitch hem, available in all four flagship colorways.',
+    details: [
+      '280 GSM premium long-staple cotton jersey',
+      '1-inch bound rib crew collar that retains shape',
+      'Blind-stitched sleeve openings and bottom hem',
+      'Silicone heat-pressed rear neck logo'
+    ],
+    fabricCare: 'Machine wash cold inside-out, tumble dry low.',
+    fitNotes: 'Generous boxy cut with drop shoulder.'
+  },
+  {
+    id: 'mymosa-athletic-shorts',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Athletic Court Shorts',
+    category: 'Bottoms',
+    image: 'assets/products/mymosa/mymosa-athletic-shorts.webp',
+    imageAlt: 'MyMosa athletic court and training shorts in four flagship flavor colorways',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: '380 GSM Loopback Terry with Breathable Mesh Lining',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: false,
+    description: 'Athletic court shorts featuring deep side welt pockets, concealed zip coin pocket, and elongated braided drawcords.',
+    details: [
+      '380 GSM breathable loopback terry',
+      'Encased elastic waistband with braided drawcords and brass tips',
+      '7-inch inseam tailored for mobility',
+      'Concealed waterproof zip pocket on right hip'
+    ],
+    fabricCare: 'Cold wash gentle cycle. Air dry.',
+    fitNotes: 'Above-the-knee athletic length.'
+  },
+  {
+    id: 'mymosa-hats-beanies-visors',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Headwear Assortment (Cap, Beanie & Visor)',
+    category: 'Accessories',
+    image: 'assets/products/mymosa/mymosa-hats-beanies-visors.webp',
+    imageAlt: 'MyMosa athletic headwear collection featuring six-panel caps, ribbed beanies, and sports visors in four signature flavor colorways',
+    sizes: ['One Size Adjustable'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: 'Garment-Washed Cotton Twill & Merino Rib Knit',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Structured six-panel baseball cap, ribbed cuff merino beanie, and athletic court visor bearing embroidered MyMosa crest insignia.',
+    details: [
+      '100% garment-washed heavyweight cotton twill on caps',
+      'Double-layer extrafine merino wool on beanies',
+      'Embroidered 3D puff MyMosa crest insignia',
+      'Antique brass buckle strap closure'
+    ],
+    fabricCare: 'Spot clean caps; hand wash beanies in cold water.',
+    fitNotes: 'Unisex fit with versatile adjustment range.'
+  },
+  {
+    id: 'mymosa-slides-socks',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Recovery Slide & Cushioned Sock Set',
+    category: 'Accessories',
+    image: 'assets/products/mymosa/mymosa-slides-socks.webp',
+    imageAlt: 'MyMosa athletic slides and cushioned crew socks featuring branded insignia in four flavor colorways',
+    sizes: ['38-39', '40-41', '42-43', '44-45'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: 'Dual-Density EVA Foam & Combed Cotton Rib',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: false,
+    description: 'Ergonomic recovery slide with textured footbed paired with arch-band cushioned crew socks in coordinated flavor palettes.',
+    details: [
+      'Dual-density molded EVA foam footbed with arch cradle',
+      'Embossed tonal MyMosa brand strap',
+      'Heavyweight combed cotton crew socks with compression arch',
+      'Packaged in reusable branded canvas storage bag'
+    ],
+    fabricCare: 'Wipe slides with damp cloth; machine wash socks warm.',
+    fitNotes: 'Standard European sizing.'
+  },
+  {
+    id: 'mymosa-gym-travel-bags',
+    brandId: 'mymosa',
+    brandName: 'MyMosa',
+    name: 'MyMosa Gym Holdall & Travel Duffel Bag',
+    category: 'Accessories',
+    image: 'assets/products/mymosa/mymosa-gym-travel-bags.webp',
+    imageAlt: 'MyMosa sports carry collection including gym duffels, weekenders, and crossbody bags in four flavor colorways',
+    sizes: ['One Size (45L)'],
+    colors: [
+      { name: 'Classic Orange', hex: '#E26D35' },
+      { name: 'Pineapple', hex: '#E5A93C' },
+      { name: 'Strawberry', hex: '#D93848' },
+      { name: 'Watermelon', hex: '#317F55' }
+    ],
+    material: '24oz Water-Repellent Duck Canvas & Bridle Leather',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Spacious athletic travel holdall featuring separate ventilated sneaker pocket, water-repellent zipper, and detachable padded shoulder strap.',
+    details: [
+      '24oz water-resistant coated cotton duck canvas',
+      'Isolated side ventilated shoe and gear compartment',
+      'Full-grain leather handle wrap and zip pulls',
+      'TSA cabin luggage approved dimensions'
+    ],
+    fabricCare: 'Spot clean canvas; treat leather with leather balm.',
+    fitNotes: '45-liter weekend capacity.'
+  },
+
+  // =========================================================================
+  // MYTAI SPORTS-FASHION
+  // =========================================================================
+  {
+    id: 'mytai-apparel-collection',
+    brandId: 'mytai',
+    brandName: 'MyTai',
+    name: 'MyTai Island Athletic Apparel Suite',
+    category: 'Sets',
+    image: 'assets/products/mytai/mytai-apparel-products.webp',
+    imageAlt: 'MyTai island-inspired sports-fashion apparel collection featuring T-shirts, hoodies, track jackets, and sweatpants in black, ivory, teal, coral, and restrained gold',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Island Teal', hex: '#2A7B88' },
+      { name: 'Sunset Coral', hex: '#E06D53' },
+      { name: 'Raw Ivory', hex: '#F4F0E6' },
+      { name: 'Volcanic Black', hex: '#121516' }
+    ],
+    material: '480 GSM Loopback French Terry & Combed Cotton',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Island-inspired athletic collection balancing coastal leisure and court mobility in volcanic black, raw ivory, deep teal, and coral.',
+    details: [
+      'Complete suite: Track jacket, pullover hoodie, heavyweight tee, and sweatpants',
+      'Contrast piping and gilded zipper pullers',
+      'Gilded MyTai sunburst crest embroidery',
+      'Breathable double-face knit construction'
+    ],
+    fabricCare: 'Machine wash cold inside-out. Hang dry in shade.',
+    fitNotes: 'Relaxed athletic drape.'
+  },
+  {
+    id: 'mytai-accessories-collection',
+    brandId: 'mytai',
+    brandName: 'MyTai',
+    name: 'MyTai Coastal Carry & Court Accessories Suite',
+    category: 'Accessories',
+    image: 'assets/products/mytai/mytai-accessories-products.webp',
+    imageAlt: 'MyTai accessories collection featuring caps, beanies, visors, crew socks, slides, duffel bags, and belt bags in teal, coral, ivory, and black',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Island Teal', hex: '#2A7B88' },
+      { name: 'Sunset Coral', hex: '#E06D53' },
+      { name: 'Raw Ivory', hex: '#F4F0E6' },
+      { name: 'Volcanic Black', hex: '#121516' }
+    ],
+    material: 'Ballistic Canvas, Washed Cotton Twill & Molded EVA',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Comprehensive sports-fashion accessories suite featuring athletic caps, visors, cushioned crew socks, recovery slides, and travel holdalls.',
+    details: [
+      'Caps, visors, and ribbed beanies in signature island palette',
+      'Dual-density recovery slides with contoured footbed',
+      'Heavy-duty travel duffel and modular crossbody belt bag',
+      'Breathable terry sport socks with arch support'
+    ],
+    fabricCare: 'Spot clean accessories.',
+    fitNotes: 'Universal adjustable fit.'
+  },
+
+  // =========================================================================
+  // MYTINI SPORTS-FASHION
+  // =========================================================================
+  {
+    id: 'mytini-apparel-collection',
+    brandId: 'mytini',
+    brandName: 'MyTini',
+    name: 'MyTini Nocturnal Lounge Athletic Suite',
+    category: 'Sets',
+    image: 'assets/products/mytini/mytini-apparel-products.webp',
+    imageAlt: 'MyTini nocturnal lounge sports-fashion apparel collection featuring T-shirts, hoodies, and tailored warmups in black, espresso, ivory, and restrained gold',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Midnight Black', hex: '#0E1011' },
+      { name: 'Roast Espresso', hex: '#382B24' },
+      { name: 'Warm Ivory', hex: '#F5F2EA' }
+    ],
+    material: '500 GSM Heavy French Terry & Mercerized Cotton',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Sleek monochromatic athletic silhouettes engineered for evening lounges, private clubrooms, and late-night movement.',
+    details: [
+      'Monochromatic tees, minimalist hoodies, and tailored warmups',
+      'Custom matte black and restrained gold hardware accents',
+      'Micro-embroidered cocktail stem silhouette insignia',
+      'Heavyweight mercerized cotton with liquid drape'
+    ],
+    fabricCare: 'Dry clean recommended or delicate cold wash.',
+    fitNotes: 'Tailored modern lounge silhouette.'
+  },
+  {
+    id: 'mytini-accessories-collection',
+    brandId: 'mytini',
+    brandName: 'MyTini',
+    name: 'MyTini Nocturnal Travel & Lounge Accessories Suite',
+    category: 'Accessories',
+    image: 'assets/products/mytini/mytini-accessories-products.webp',
+    imageAlt: 'MyTini accessories collection featuring structured caps, beanies, socks, slides, weekender duffels, and belt bags in black, espresso, ivory, and restrained gold',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Midnight Black', hex: '#0E1011' },
+      { name: 'Roast Espresso', hex: '#382B24' },
+      { name: 'Warm Ivory', hex: '#F5F2EA' }
+    ],
+    material: 'Reinforced Coated Canvas & Full-Grain Leather',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Minimalist carry accessories including structured ball caps, ribbed merino beanies, leather-trimmed weekenders, and recovery slides.',
+    details: [
+      'Structured six-panel caps and double-layer knit beanies',
+      'Architectural weekender duffel with leather base trim',
+      'Ergonomic matte black recovery slides',
+      'High-gauge combed cotton lounge socks'
+    ],
+    fabricCare: 'Professional leather and canvas specialist care.',
+    fitNotes: 'Unisex sizing.'
+  },
+
+  // =========================================================================
+  // MYJITO SPORTS-FASHION (NEVER MOJITO)
+  // =========================================================================
+  {
+    id: 'myjito-apparel-collection',
+    brandId: 'myjito',
+    brandName: 'MyJito',
+    name: 'MyJito Botanical Court Athletic Suite',
+    category: 'Sets',
+    image: 'assets/products/myjito/myjito-apparel-products.webp',
+    imageAlt: 'MyJito mint and navy sports-fashion apparel collection featuring T-shirts, hoodies, a track jacket, and sweatpants in botanical mint, deep navy, lime, ivory, and gold',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Botanical Mint', hex: '#2D7F67' },
+      { name: 'Deep Navy', hex: '#13213B' },
+      { name: 'Fresh Lime', hex: '#85B832' },
+      { name: 'Raw Ivory', hex: '#F4F6F2' }
+    ],
+    material: '480 GSM Loopback Terry & Breathable Combed Cotton',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Energized athletic apparel collection inspired by botanical mint and citrus rituals, crafted for outdoor courts and vibrant warmups.',
+    details: [
+      'Mint and navy track jackets, hoodies, tees, and athletic joggers',
+      'High-density embroidery and fresh lime piping details',
+      'Engineered ventilation panels in track jackets',
+      'Custom dipped drawcords with gold aglets'
+    ],
+    fabricCare: 'Machine wash delicate cold. Hang dry.',
+    fitNotes: 'Athletic tailored fit designed for active movement.'
+  },
+  {
+    id: 'myjito-accessories-collection',
+    brandId: 'myjito',
+    brandName: 'MyJito',
+    name: 'MyJito Court Carry & Athletic Accessories Suite',
+    category: 'Accessories',
+    image: 'assets/products/myjito/myjito-accessories-products.webp',
+    imageAlt: 'MyJito accessories collection featuring dual-tone caps, athletic visors, technical crew socks, slides, and gym travel bags in mint, navy, lime, and ivory',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Botanical Mint', hex: '#2D7F67' },
+      { name: 'Deep Navy', hex: '#13213B' },
+      { name: 'Fresh Lime', hex: '#85B832' },
+      { name: 'Raw Ivory', hex: '#F4F6F2' }
+    ],
+    material: 'Water-Resistant Technical Canvas & Pima Cotton',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Dual-tone athletic caps, court visors, cushioned athletic crew socks, slides, and ventilated training gym sacks.',
+    details: [
+      'Dual-tone court caps and open-top tennis visors',
+      'Molded recovery slides with textured footbed',
+      'Ventilated gym travel duffel with moisture-wicking lining',
+      'Cushioned athletic crew socks with rib compression'
+    ],
+    fabricCare: 'Spot clean headwear and bags; wash socks cold.',
+    fitNotes: 'Standard adjustable unisex sizing.'
+  },
+
+  // =========================================================================
+  // MYGARITA SPORTS-FASHION (NEVER MARGARITA)
+  // =========================================================================
+  {
+    id: 'mygarita-apparel-collection',
+    brandId: 'mygarita',
+    brandName: 'MyGarita',
+    name: 'MyGarita Agave Horizon Athletic Apparel Suite',
+    category: 'Sets',
+    image: 'assets/products/mygarita/mygarita-apparel-products.webp',
+    imageAlt: 'MyGarita agave sage and warm sand sports-fashion apparel collection featuring hoodies, track jackets, tees, and sweatpants in agave sage, sand, cream, black, and gold',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Agave Sage', hex: '#7A8C74' },
+      { name: 'Warm Sand', hex: '#C9B18F' },
+      { name: 'Pueblo Cream', hex: '#F8F5ED' },
+      { name: 'Obsidian Black', hex: '#161817' }
+    ],
+    material: '460 GSM Heavy Organic Fleece & Stone-Washed Jersey',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Southwestern-inspired sports-fashion apparel in tranquil agave sage, warm sand, and cream, designed for effortless all-day movement.',
+    details: [
+      'Agave sage and sand fleece hoodies, track jackets, and easy tees',
+      'Stone-washed finish for soft weathered tactile hand',
+      'Antique brass zipper hardware and embroidered agave insignias',
+      'Gently tapered sweatpants with reinforced gussets'
+    ],
+    fabricCare: 'Machine wash cold with like colors. Tumble dry low.',
+    fitNotes: 'Relaxed southwestern lounge fit.'
+  },
+  {
+    id: 'mygarita-accessories-collection',
+    brandId: 'mygarita',
+    brandName: 'MyGarita',
+    name: 'MyGarita Desert Carry & Headwear Accessories Suite',
+    category: 'Accessories',
+    image: 'assets/products/mygarita/mygarita-accessories-products.webp',
+    imageAlt: 'MyGarita accessories collection featuring washed caps, beanies, visors, crew socks, slides, and travel duffel bags in agave sage, warm sand, and cream',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Agave Sage', hex: '#7A8C74' },
+      { name: 'Warm Sand', hex: '#C9B18F' },
+      { name: 'Pueblo Cream', hex: '#F8F5ED' }
+    ],
+    material: 'Washed Cotton Twill, Ribbed Wool & Molded EVA',
+    status: 'Production Preview',
+    isReserve: true,
+    isNew: true,
+    isFeatured: true,
+    description: 'Washed twill caps, bucket hats, ribbed beanies, recovery slides, and travel duffels reflecting desert sunset warmth.',
+    details: [
+      'Washed twill unstructured caps and bucket hats',
+      'Heavyweight ribbed merino knit beanies',
+      'Molded EVA slides in desert stone hues',
+      'Heavy canvas travel holdall with brass hardware'
+    ],
+    fabricCare: 'Spot clean bags and hats.',
+    fitNotes: 'Unisex one-size adjustable.'
   }
 ];
 

@@ -18,6 +18,7 @@ export default function BrandPage({
   const otherBrands = BRAND_LIST.filter((b) => b.id !== brand.id);
 
   const [filterCategory, setFilterCategory] = useState('All');
+  const [activeMymosaColor, setActiveMymosaColor] = useState('classic-orange');
 
   const categories = ['All', ...new Set(brandProducts.map((p) => p.category))];
   const filteredProducts = filterCategory === 'All'
@@ -973,6 +974,1143 @@ export default function BrandPage({
                   <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
                     Conceived alongside MyMosa, the celebrated Premium Wine Cocktail. Blending ceremonial toasts with casual luxury apparel.
                   </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* H. MYMOSA DEDICATED FLAGSHIP SPORTS-FASHION SHOWCASE */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'mymosa' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* 1. Flagship Manifesto Statement */}
+            <section className="bg-gradient-to-br from-[#1C130D] via-[#241710] to-[#120C08] text-[#FAF7F2] p-8 sm:p-14 rounded-xs border border-[#E26D35]/30 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-[#E26D35]/15 via-transparent to-transparent pointer-events-none" />
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#E26D35] font-semibold block">
+                    Flagship Sports-Fashion House
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#E26D35]/40 text-[#E26D35] rounded-xs font-mono">
+                    My Drink Family Universe
+                  </span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
+                  The Art of Celebration, Worn.
+                </h2>
+                <div className="text-base sm:text-xl font-cormorant text-[#E26D35] tracking-[0.2em] uppercase font-light">
+                  Four Flagship Colorways · Architectural Athleisure
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
+                  {brand.manifesto}
+                </p>
+                <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-mono tracking-widest uppercase">
+                  <span>Classic Orange</span>
+                  <span>•</span>
+                  <span>Pineapple</span>
+                  <span>•</span>
+                  <span>Strawberry</span>
+                  <span>•</span>
+                  <span>Watermelon</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Flagship Tracksuits Feature (16:9) */}
+            <section className="space-y-8">
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src="assets/products/mymosa/mymosa-four-flavor-tracksuits.webp"
+                  alt="MyMosa four-flavor sports-fashion tracksuits collection in Classic Orange, Pineapple, Strawberry, and Watermelon colorways"
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 rounded-xs">
+                  <span className="text-sm font-cormorant text-[#111215] font-normal text-base">
+                    The Four-Flavor Tracksuit Suite · Classic Orange, Pineapple, Strawberry, Watermelon
+                  </span>
+                  <span className="text-[11px] font-mono text-[#E26D35] uppercase tracking-widest font-medium">
+                    500 GSM Heavyweight Loopback Terry
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Interactive Four-Colorway System */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#E26D35] font-semibold block mb-1">
+                  Signature Chromatics
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The Four Flagship Colorway Identities
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Four coordinated colorways calibrated across every silhouette in the collection.
+                </p>
+              </div>
+
+              {/* Colorway Switcher Buttons */}
+              <div className="flex flex-wrap justify-center gap-3">
+                {brand.flagshipColorways && brand.flagshipColorways.map((cw) => {
+                  const isActive = activeMymosaColor === cw.id;
+                  return (
+                    <button
+                      key={cw.id}
+                      onClick={() => setActiveMymosaColor(cw.id)}
+                      className={`px-5 py-2.5 rounded-xs text-xs uppercase tracking-[0.16em] font-medium transition-all flex items-center gap-2.5 cursor-pointer ${
+                        isActive
+                          ? 'bg-[#16171A] text-white shadow-md'
+                          : 'bg-white border border-[#DDD7CB] text-[#555A64] hover:text-[#111215]'
+                      }`}
+                    >
+                      <span
+                        className="w-3 h-3 rounded-full border border-black/10 shrink-0"
+                        style={{ backgroundColor: cw.hex }}
+                      />
+                      <span>{cw.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Colorway Detail Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {brand.flagshipColorways && brand.flagshipColorways.map((cw) => {
+                  const isActive = activeMymosaColor === cw.id;
+                  return (
+                    <div
+                      key={cw.id}
+                      onClick={() => setActiveMymosaColor(cw.id)}
+                      className={`bg-white border p-5 rounded-xs transition-all cursor-pointer flex flex-col justify-between ${
+                        isActive
+                          ? 'border-[#E26D35] ring-1 ring-[#E26D35]/30 shadow-md'
+                          : 'border-[#DDD7CB] hover:border-[#C8A97E] shadow-xs'
+                      }`}
+                    >
+                      <div>
+                        <div
+                          className="w-full h-20 rounded-xs mb-3 shadow-inner border border-black/10 flex items-end justify-between p-2.5"
+                          style={{ backgroundColor: cw.hex }}
+                        >
+                          <span className="text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs bg-black/75 text-white">
+                            {cw.hex}
+                          </span>
+                          {cw.secondaryHex && (
+                            <span className="text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs bg-black/75 text-white">
+                              {cw.secondaryHex}
+                            </span>
+                          )}
+                        </div>
+                        <h4 className="text-base font-cormorant font-normal text-[#111215]">
+                          {cw.name}
+                        </h4>
+                        <p className="text-xs text-[#50545E] font-light mt-1.5 font-manrope leading-relaxed">
+                          {cw.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* 4. Heavyweight Sweats & Hoodies (16:9) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#E26D35] font-semibold block">
+                    Heavyweight Fleece
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Structured Coordinated Sweatsuits
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Dense loopback fleece engineered for relaxed posture and architectural silhouette retention. Dual-layer hood construction, heavyweight ribbed cuffs, and discreet tonal chest embroidery across all four flagship colorways.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#E26D35] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1.5"
+                    >
+                      <span>Explore Sweats Catalog</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-four-flavor-heavyweight-sweats.webp"
+                    alt="MyMosa heavyweight sweats and hoodies collection in Classic Orange, Pineapple, Strawberry, and Watermelon colorways"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 5. Complete Category Showcase Grid (16:9 assets) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#E26D35] font-semibold block mb-1">
+                  Assortment Breadth
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The Complete MyMosa Sports-Fashion Taxonomy
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Spanning court-ready athletic shorts, drop-shoulder tees, structured headwear, recovery slides, and travel bags.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* T-Shirts */}
+                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-xs space-y-3">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-tshirts-four-flavors.webp"
+                    alt="MyMosa heavyweight T-shirts across four flagship colorways"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                  <div className="p-2">
+                    <h4 className="text-base font-cormorant font-normal text-[#111215]">Heavyweight T-Shirts</h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
+                      320 GSM drop-shoulder boxy tees in Classic Orange, Pineapple, Strawberry, and Watermelon.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hoodies */}
+                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-xs space-y-3">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-hoodies-four-flavors.webp"
+                    alt="MyMosa pullover and zip hoodies in four colorways"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                  <div className="p-2">
+                    <h4 className="text-base font-cormorant font-normal text-[#111215]">Pullover & Zip Hoodies</h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
+                      Custom brass zippers, kangaroo pockets, and high-density rib cuffs with double-needle hems.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Athletic Shorts */}
+                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-xs space-y-3">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-athletic-shorts.webp"
+                    alt="MyMosa athletic shorts in four flagship colorways"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                  <div className="p-2">
+                    <h4 className="text-base font-cormorant font-normal text-[#111215]">Court & Athletic Shorts</h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
+                      Breathable mesh lining, braided drawstring waist, and relaxed 6-inch inseam for court mobility.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Headwear */}
+                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-xs space-y-3">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-hats-beanies-visors.webp"
+                    alt="MyMosa caps, beanies, and athletic visors"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                  <div className="p-2">
+                    <h4 className="text-base font-cormorant font-normal text-[#111215]">Caps, Beanies & Visors</h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
+                      Unstructured washed twill dad caps, ribbed merino beanies, and court athletic visors.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Footwear */}
+                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-xs space-y-3">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-slides-socks.webp"
+                    alt="MyMosa molded recovery slides and ribbed crew socks"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                  <div className="p-2">
+                    <h4 className="text-base font-cormorant font-normal text-[#111215]">Slides & Ribbed Crew Socks</h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
+                      Molded dual-density EVA recovery slides paired with cushioned combed pima crew socks.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bags */}
+                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-xs space-y-3">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-gym-travel-bags.webp"
+                    alt="MyMosa gym duffels and travel bags in four colorways"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                  <div className="p-2">
+                    <h4 className="text-base font-cormorant font-normal text-[#111215]">Gym Duffels & Travel Bags</h4>
+                    <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
+                      Water-repellent nylon canvas, separated shoe compartment, and padded shoulder strap.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 6. Sports Accessories Feature (16:9) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mymosa/mymosa-sports-accessories.webp"
+                    alt="MyMosa sports accessories collection featuring caps, beanies, socks, slides, and gym duffel bags across four signature colorways"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#E26D35] font-semibold block">
+                    Sports Accoutrements
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Everyday Athletic Movement
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Curated accessories designed to accompany high-energy clubhouse celebrations, morning workouts, and weekend travel across all four flavor expressions.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="px-6 py-3 bg-[#E26D35] text-white hover:bg-[#CA5B26] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-md inline-flex items-center gap-2"
+                    >
+                      <span>Explore Products Below</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 7. Honest Production Preview & Allocation CTA */}
+            <section className="bg-[#1C130D] border border-[#E26D35]/40 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+              <div className="max-w-2xl mx-auto relative z-10 space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#E26D35] font-semibold block">
+                  Production Preview · Allocation Window
+                </span>
+                <h3 className="text-3xl sm:text-5xl font-cormorant font-light tracking-tight text-white">
+                  Join the MyMosa Allocation Ledger
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope max-w-xl mx-auto">
+                  The MyMosa sports-fashion collection is currently in final production preview. Express interest below to secure priority allocation upon release.
+                </p>
+                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('brand-collection-grid');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 bg-[#E26D35] text-white hover:bg-[#CA5B26] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-lg"
+                  >
+                    View Product Catalogue
+                  </button>
+                  <button
+                    onClick={() => onSelectBrand('my-drink-family')}
+                    className="px-8 py-4 border border-[#E26D35] text-[#E26D35] hover:bg-[#E26D35] hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs"
+                  >
+                    Explore My Drink Family
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* I. MYTAI DEDICATED SPORTS-FASHION SHOWCASE */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'mytai' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* 1. Manifesto / Positioning Statement */}
+            <section className="bg-gradient-to-br from-[#0F1B1E] via-[#16272B] to-[#0A1214] text-[#FAF7F2] p-8 sm:p-14 rounded-xs border border-[#2A7B88]/40 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-[#2A7B88]/20 via-transparent to-transparent pointer-events-none" />
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#2A7B88] font-semibold block">
+                    Island Sports-Fashion House
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#2A7B88]/40 text-[#2A7B88] rounded-xs font-mono">
+                    My Drink Family Universe
+                  </span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
+                  Island Leisure & Athletic Poise.
+                </h2>
+                <div className="text-base sm:text-xl font-cormorant text-[#2A7B88] tracking-[0.2em] uppercase font-light">
+                  Black · Ivory · Deep Teal · Sunset Coral · Restrained Gold
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
+                  {brand.manifesto}
+                </p>
+                <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-mono tracking-widest uppercase">
+                  <span>Poolside Tracksuits</span>
+                  <span>•</span>
+                  <span>Court Caps</span>
+                  <span>•</span>
+                  <span>Weekender Duffels</span>
+                  <span>•</span>
+                  <span>Resort Slides</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Apparel Collection Feature (16:9) */}
+            <section className="space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#2A7B88] font-semibold block">
+                    Apparel Collection
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Island-Inspired Warmups & Tops
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    High-density cotton tees, technical track jackets, zip hoodies, and coordinated sweatpants rendered in rich oceanic teal, sunlit coral, raw ivory, and obsidian black.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#2A7B88] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1.5"
+                    >
+                      <span>Explore Apparel Catalog</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mytai/mytai-apparel-products.webp"
+                    alt="MyTai island-inspired sports-fashion apparel collection featuring T-shirts, hoodies, track jackets, and sweatpants in black, ivory, teal, coral, and restrained gold"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Accessories Collection Feature (16:9) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mytai/mytai-accessories-products.webp"
+                    alt="MyTai accessories collection featuring caps, beanies, visors, crew socks, slides, duffel bags, and belt bags in teal, coral, ivory, and black"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#2A7B88] font-semibold block">
+                    Resort & Court Accoutrements
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Accessories Architecture
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Dual-tone athletic caps, visors, technical crew socks, molded recovery slides, water-repellent duffels, and crossbody belt bags designed for coastal movement.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="px-6 py-3 bg-[#2A7B88] text-white hover:bg-[#20606B] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-md inline-flex items-center gap-2"
+                    >
+                      <span>Explore Accessories</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 4. Color Story Palette */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#2A7B88] font-semibold block mb-1">
+                  Atelier Chromatics
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The MyTai Chromatic Spectrum
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Oceanic lagoon tones balanced with sun-drenched coral and restrained gold insignia.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                {brand.paletteColors && brand.paletteColors.map((color) => (
+                  <div key={color.name} className="bg-white border border-[#DDD7CB] p-5 rounded-xs shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div
+                        className="w-full h-20 rounded-xs mb-3 shadow-inner border border-black/10 flex items-end p-2.5"
+                        style={{ backgroundColor: color.hex }}
+                      >
+                        <span
+                          className={`text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs ${
+                            color.hex === '#F4F0E6' ? 'bg-black/80 text-white' : 'bg-white/90 text-black'
+                          }`}
+                        >
+                          {color.hex}
+                        </span>
+                      </div>
+                      <h4 className="text-base font-cormorant font-normal text-[#111215]">
+                        {color.name}
+                      </h4>
+                      <p className="text-xs text-[#50545E] font-light mt-1 font-manrope leading-relaxed">
+                        {color.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 5. Honest Allocation CTA */}
+            <section className="bg-[#0F1B1E] border border-[#2A7B88]/40 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+              <div className="max-w-2xl mx-auto relative z-10 space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#2A7B88] font-semibold block">
+                  Production Preview · Allocation Window
+                </span>
+                <h3 className="text-3xl sm:text-5xl font-cormorant font-light tracking-tight text-white">
+                  Reserve MyTai Allocation
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope max-w-xl mx-auto">
+                  Experience island ritual through athletic poise. Inquire below to join the private release ledger for the upcoming capsule drop.
+                </p>
+                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('brand-collection-grid');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 bg-[#2A7B88] text-white hover:bg-[#20606B] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-lg"
+                  >
+                    Explore Products Below
+                  </button>
+                  <button
+                    onClick={() => onSelectBrand('my-drink-family')}
+                    className="px-8 py-4 border border-[#2A7B88] text-[#2A7B88] hover:bg-[#2A7B88] hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs"
+                  >
+                    Explore My Drink Family
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* J. MYTINI DEDICATED SPORTS-FASHION SHOWCASE */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'mytini' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* 1. Manifesto Statement */}
+            <section className="bg-gradient-to-br from-[#120F0D] via-[#1C1613] to-[#0D0B0A] text-[#FAF7F2] p-8 sm:p-14 rounded-xs border border-[#382B24]/50 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-[#382B24]/30 via-transparent to-transparent pointer-events-none" />
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A869] font-semibold block">
+                    Nocturnal Sports-Fashion House
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#C5A869]/40 text-[#C5A869] rounded-xs font-mono">
+                    My Drink Family Universe
+                  </span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
+                  Nocturnal Poise & Lounge Tailoring.
+                </h2>
+                <div className="text-base sm:text-xl font-cormorant text-[#C5A869] tracking-[0.2em] uppercase font-light">
+                  Midnight Black · Roast Espresso · Warm Ivory · Restrained Gold
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
+                  {brand.manifesto}
+                </p>
+                <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-mono tracking-widest uppercase">
+                  <span>Clubroom Warmups</span>
+                  <span>•</span>
+                  <span>Cashmere Beanies</span>
+                  <span>•</span>
+                  <span>Leather Duffels</span>
+                  <span>•</span>
+                  <span>Late-Night Transit</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Apparel Collection Feature (16:9) */}
+            <section className="space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#382B24] font-semibold block">
+                    Apparel Collection
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Nocturnal Lounge Warmups & Tops
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Monochromatic drop-shoulder tees, minimalist hoodies, and tailored warmups crafted in heavyweight combed cottons and fine-rib trims with gilded barware emblems.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#382B24] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1.5"
+                    >
+                      <span>Explore Apparel Catalog</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mytini/mytini-apparel-products.webp"
+                    alt="MyTini nocturnal lounge sports-fashion apparel collection featuring T-shirts, hoodies, and tailored warmups in black, espresso, ivory, and restrained gold"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Accessories Collection Feature (16:9) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mytini/mytini-accessories-products.webp"
+                    alt="MyTini accessories collection featuring structured caps, beanies, socks, slides, weekender duffels, and belt bags in black, espresso, ivory, and restrained gold"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#382B24] font-semibold block">
+                    Clubroom & Transit Accoutrements
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Understated Accoutrements
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Structured low-profile caps, cashmere-blend ribbed beanies, pima crew socks, molded recovery slides, and pebble-grain weekender duffels with solid gold-tone hardware.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="px-6 py-3 bg-[#211B17] text-white hover:bg-[#382B24] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-md inline-flex items-center gap-2"
+                    >
+                      <span>Explore Accessories</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 4. Color Story Palette */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#382B24] font-semibold block mb-1">
+                  Atelier Chromatics
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The MyTini Chromatic Discipline
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Nocturnal lounge tones crafted for private salon environments and evening movement.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {brand.paletteColors && brand.paletteColors.map((color) => (
+                  <div key={color.name} className="bg-white border border-[#DDD7CB] p-5 rounded-xs shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div
+                        className="w-full h-20 rounded-xs mb-3 shadow-inner border border-black/10 flex items-end p-2.5"
+                        style={{ backgroundColor: color.hex }}
+                      >
+                        <span
+                          className={`text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs ${
+                            color.hex === '#F5F2EA' ? 'bg-black/80 text-white' : 'bg-white/90 text-black'
+                          }`}
+                        >
+                          {color.hex}
+                        </span>
+                      </div>
+                      <h4 className="text-base font-cormorant font-normal text-[#111215]">
+                        {color.name}
+                      </h4>
+                      <p className="text-xs text-[#50545E] font-light mt-1 font-manrope leading-relaxed">
+                        {color.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 5. Honest Allocation CTA */}
+            <section className="bg-[#120F0D] border border-[#382B24]/50 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+              <div className="max-w-2xl mx-auto relative z-10 space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A869] font-semibold block">
+                  Production Preview · Allocation Window
+                </span>
+                <h3 className="text-3xl sm:text-5xl font-cormorant font-light tracking-tight text-white">
+                  Reserve MyTini Allocation
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope max-w-xl mx-auto">
+                  Precision evening sports-fashion. Register your interest below to join the private release ledger.
+                </p>
+                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('brand-collection-grid');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 bg-[#211B17] text-white hover:bg-[#382B24] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-lg"
+                  >
+                    Explore Products Below
+                  </button>
+                  <button
+                    onClick={() => onSelectBrand('my-drink-family')}
+                    className="px-8 py-4 border border-[#C5A869] text-[#C5A869] hover:bg-[#C5A869] hover:text-black transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs"
+                  >
+                    Explore My Drink Family
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* K. MYJITO DEDICATED SPORTS-FASHION SHOWCASE (STRICT: NEVER MOJITO) */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'myjito' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* 1. Manifesto Statement */}
+            <section className="bg-gradient-to-br from-[#0B1A14] via-[#10241C] to-[#07100D] text-[#FAF7F2] p-8 sm:p-14 rounded-xs border border-[#2D7F67]/40 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-[#2D7F67]/20 via-transparent to-transparent pointer-events-none" />
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#2D7F67] font-semibold block">
+                    Botanical Sports-Fashion House
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#2D7F67]/40 text-[#2D7F67] rounded-xs font-mono">
+                    My Drink Family Universe
+                  </span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
+                  Botanical Vitality & Court Agility.
+                </h2>
+                <div className="text-base sm:text-xl font-cormorant text-[#2D7F67] tracking-[0.2em] uppercase font-light">
+                  Mint · Ivory · Deep Navy · Fresh Lime · Restrained Gold
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
+                  {brand.manifesto}
+                </p>
+                <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-mono tracking-widest uppercase">
+                  <span>Court Tracksuits</span>
+                  <span>•</span>
+                  <span>Ventilated Hoodies</span>
+                  <span>•</span>
+                  <span>Technical Visors</span>
+                  <span>•</span>
+                  <span>Garden Terrace Pacing</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Apparel Collection Feature (16:9) */}
+            <section className="space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#2D7F67] font-semibold block">
+                    Apparel Collection
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Botanical Court & Warmup Uniforms
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Mint and navy sports-fashion track jackets, athletic hoodies, breathable court tees, and sweatpants rendered in crushed botanical mint, structured navy, fresh lime accents, and restrained gold details.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#2D7F67] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1.5"
+                    >
+                      <span>Explore Apparel Catalog</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/myjito/myjito-apparel-products.webp"
+                    alt="MyJito mint and navy sports-fashion apparel collection featuring T-shirts, hoodies, a track jacket, and sweatpants in botanical mint, deep navy, lime, ivory, and gold"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Accessories Collection Feature (16:9) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/myjito/myjito-accessories-products.webp"
+                    alt="MyJito accessories collection featuring dual-tone caps, athletic visors, technical crew socks, slides, and gym travel bags in mint, navy, lime, and ivory"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#2D7F67] font-semibold block">
+                    Court & Outdoor Accoutrements
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Outdoor Vitality Gear
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Dual-tone athletic caps, performance visors, technical crew socks with arch compression, molded court slides, and lightweight gym travel bags engineered for energetic court routines.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="px-6 py-3 bg-[#1D5E4C] text-white hover:bg-[#154639] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-md inline-flex items-center gap-2"
+                    >
+                      <span>Explore Accessories</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 4. Color Story Palette */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#2D7F67] font-semibold block mb-1">
+                  Atelier Chromatics
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The MyJito Chromatic Vitality
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Botanical freshness inspired by crushed garden herbs and crisp athletic court contrast.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                {brand.paletteColors && brand.paletteColors.map((color) => (
+                  <div key={color.name} className="bg-white border border-[#DDD7CB] p-5 rounded-xs shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div
+                        className="w-full h-20 rounded-xs mb-3 shadow-inner border border-black/10 flex items-end p-2.5"
+                        style={{ backgroundColor: color.hex }}
+                      >
+                        <span
+                          className={`text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs ${
+                            color.hex === '#F4F6F2' ? 'bg-black/80 text-white' : 'bg-white/90 text-black'
+                          }`}
+                        >
+                          {color.hex}
+                        </span>
+                      </div>
+                      <h4 className="text-base font-cormorant font-normal text-[#111215]">
+                        {color.name}
+                      </h4>
+                      <p className="text-xs text-[#50545E] font-light mt-1 font-manrope leading-relaxed">
+                        {color.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 5. Honest Allocation CTA */}
+            <section className="bg-[#0B1A14] border border-[#2D7F67]/40 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+              <div className="max-w-2xl mx-auto relative z-10 space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#2D7F67] font-semibold block">
+                  Production Preview · Allocation Window
+                </span>
+                <h3 className="text-3xl sm:text-5xl font-cormorant font-light tracking-tight text-white">
+                  Reserve MyJito Allocation
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope max-w-xl mx-auto">
+                  Botanical athletic poise. Inquire below to register your allocation interest for the upcoming court capsule.
+                </p>
+                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('brand-collection-grid');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 bg-[#1D5E4C] text-white hover:bg-[#154639] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-lg"
+                  >
+                    Explore Products Below
+                  </button>
+                  <button
+                    onClick={() => onSelectBrand('my-drink-family')}
+                    className="px-8 py-4 border border-[#2D7F67] text-[#2D7F67] hover:bg-[#2D7F67] hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs"
+                  >
+                    Explore My Drink Family
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* L. MYGARITA DEDICATED SPORTS-FASHION SHOWCASE (STRICT: NEVER MARGARITA) */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'mygarita' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* 1. Manifesto Statement */}
+            <section className="bg-gradient-to-br from-[#161511] via-[#211E18] to-[#0E0D0B] text-[#FAF7F2] p-8 sm:p-14 rounded-xs border border-[#7A8C74]/40 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-[#7A8C74]/20 via-transparent to-transparent pointer-events-none" />
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#7A8C74] font-semibold block">
+                    Desert Horizon Sports-Fashion House
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#7A8C74]/40 text-[#7A8C74] rounded-xs font-mono">
+                    My Drink Family Universe
+                  </span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
+                  Agave Horizon & Desert Warmth.
+                </h2>
+                <div className="text-base sm:text-xl font-cormorant text-[#7A8C74] tracking-[0.2em] uppercase font-light">
+                  Agave Sage · Warm Sand · Cream · Black · Restrained Gold
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
+                  {brand.manifesto}
+                </p>
+                <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-mono tracking-widest uppercase">
+                  <span>Desert Fleece Sets</span>
+                  <span>•</span>
+                  <span>Washed Twill Caps</span>
+                  <span>•</span>
+                  <span>Utility Duffels</span>
+                  <span>•</span>
+                  <span>Twilight Terrace Poise</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Apparel Collection Feature (16:9) */}
+            <section className="space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C74] font-semibold block">
+                    Apparel Collection
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Desert Horizon Sports-Fashion Apparel
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Heavyweight hoodies, relaxed track jackets, easy tees, and sweatpants rendered in calming agave sage, warm desert sand, pueblo cream, and volcanic black.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="text-xs uppercase tracking-widest text-[#7A8C74] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1.5"
+                    >
+                      <span>Explore Apparel Catalog</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mygarita/mygarita-apparel-products.webp"
+                    alt="MyGarita agave sage and warm sand sports-fashion apparel collection featuring hoodies, track jackets, tees, and sweatpants in agave sage, sand, cream, black, and gold"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Accessories Collection Feature (16:9) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/products/mygarita/mygarita-accessories-products.webp"
+                    alt="MyGarita accessories collection featuring washed caps, beanies, visors, crew socks, slides, and travel duffel bags in agave sage, warm sand, and cream"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C74] font-semibold block">
+                    Desert Transit & Poolside Accoutrements
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Warm Sand & Sage Accoutrements
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Washed twill caps, bucket hats, ribbed knit beanies, cushioned crew socks, recovery slides, and durable travel duffels designed for sunlit weekend escapes.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('brand-collection-grid');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="px-6 py-3 bg-[#53654E] text-white hover:bg-[#3F4F3B] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-md inline-flex items-center gap-2"
+                    >
+                      <span>Explore Accessories</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 4. Color Story Palette */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C74] font-semibold block mb-1">
+                  Atelier Chromatics
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The MyGarita Chromatic Landscape
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Southwestern desert hues evoking agave flora, warm dunes, and twilight tranquility.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                {brand.paletteColors && brand.paletteColors.map((color) => (
+                  <div key={color.name} className="bg-white border border-[#DDD7CB] p-5 rounded-xs shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div
+                        className="w-full h-20 rounded-xs mb-3 shadow-inner border border-black/10 flex items-end p-2.5"
+                        style={{ backgroundColor: color.hex }}
+                      >
+                        <span
+                          className={`text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs ${
+                            color.hex === '#F8F5ED' ? 'bg-black/80 text-white' : 'bg-white/90 text-black'
+                          }`}
+                        >
+                          {color.hex}
+                        </span>
+                      </div>
+                      <h4 className="text-base font-cormorant font-normal text-[#111215]">
+                        {color.name}
+                      </h4>
+                      <p className="text-xs text-[#50545E] font-light mt-1 font-manrope leading-relaxed">
+                        {color.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 5. Honest Allocation CTA */}
+            <section className="bg-[#161511] border border-[#7A8C74]/40 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+              <div className="max-w-2xl mx-auto relative z-10 space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#7A8C74] font-semibold block">
+                  Production Preview · Allocation Window
+                </span>
+                <h3 className="text-3xl sm:text-5xl font-cormorant font-light tracking-tight text-white">
+                  Reserve MyGarita Allocation
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope max-w-xl mx-auto">
+                  Desert athletic poise. Register your interest below to join the private release ledger.
+                </p>
+                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('brand-collection-grid');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 bg-[#53654E] text-white hover:bg-[#3F4F3B] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-lg"
+                  >
+                    Explore Products Below
+                  </button>
+                  <button
+                    onClick={() => onSelectBrand('my-drink-family')}
+                    className="px-8 py-4 border border-[#7A8C74] text-[#7A8C74] hover:bg-[#7A8C74] hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs"
+                  >
+                    Explore My Drink Family
+                  </button>
                 </div>
               </div>
             </section>

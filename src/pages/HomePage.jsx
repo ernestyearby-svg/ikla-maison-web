@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Compass, Sparkles, Layers, Shield, ChevronRight, Gem, Droplets, Wine, Check, Scissors, Plane, PackageCheck } from 'lucide-react';
-import { BRAND_LIST, FASHION_HOUSES, BRANDS } from '../data/brands';
+import { BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES, BRANDS } from '../data/brands';
 import { PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
@@ -695,6 +695,137 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
                 className="rounded-xs w-full"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 11.5. THE HOUSES, WORN: SPORTS-FASHION EXPRESSION OF MY DRINK FAMILY */}
+      {/* ========================================================================= */}
+      <section id="the-houses-worn" className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F3EFE6] border-y border-[#DFDBD0]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#D8D3C5]">
+            <div className="max-w-2xl space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs shadow-2xs">
+                <span>Sports-Fashion Universe</span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                The Houses, Worn.
+              </h2>
+              <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                A sports-fashion expression of the My Drink Family universe—built through five distinct houses, each carrying its own color, character, and ritual.
+              </p>
+            </div>
+
+            <button
+              onClick={onNavigateCollection}
+              className="px-6 py-3 border border-[#111215] text-[#111215] hover:bg-[#111215] hover:text-white transition-colors text-xs uppercase tracking-widest font-medium rounded-xs cursor-pointer flex items-center gap-2 self-start md:self-end shrink-0"
+            >
+              <span>Shop All Houses</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          {/* 5 Linked Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                id: 'mymosa',
+                name: 'MyMosa',
+                tagline: 'Four-Flavor Sports-Fashion Flagship',
+                subtitle: 'Classic Orange · Pineapple · Strawberry · Watermelon',
+                image: 'assets/products/mymosa/mymosa-four-flavor-tracksuits.webp',
+                alt: 'MyMosa four-flavor sports-fashion tracksuits collection in Classic Orange, Pineapple, Strawberry, and Watermelon colorways',
+                accent: '#E26D35',
+                badge: 'Flagship House'
+              },
+              {
+                id: 'mytai',
+                name: 'MyTai',
+                tagline: 'Island Leisure & Tropical Sports-Fashion',
+                subtitle: 'Black · Ivory · Deep Teal · Sunset Coral · Gold',
+                image: 'assets/products/mytai/mytai-apparel-products.webp',
+                alt: 'MyTai island-inspired sports-fashion apparel collection in black, ivory, teal, coral, and restrained gold',
+                accent: '#2A7B88',
+                badge: 'Island House'
+              },
+              {
+                id: 'mytini',
+                name: 'MyTini',
+                tagline: 'Nocturnal Poise & Lounge Sports-Fashion',
+                subtitle: 'Midnight Black · Roast Espresso · Ivory · Gold',
+                image: 'assets/products/mytini/mytini-apparel-products.webp',
+                alt: 'MyTini nocturnal lounge sports-fashion apparel collection in black, espresso, ivory, and restrained gold',
+                accent: '#382B24',
+                badge: 'Nocturnal House'
+              },
+              {
+                id: 'myjito',
+                name: 'MyJito',
+                tagline: 'Botanical Vitality & Crisp Sports-Fashion',
+                subtitle: 'Botanical Mint · Deep Navy · Fresh Lime · Gold',
+                image: 'assets/products/myjito/myjito-apparel-products.webp',
+                alt: 'MyJito mint and navy sports-fashion apparel collection featuring T-shirts, hoodies, a track jacket, and sweatpants',
+                accent: '#2D7F67',
+                badge: 'Botanical House'
+              },
+              {
+                id: 'mygarita',
+                name: 'MyGarita',
+                tagline: 'Agave Horizon & Warm Desert Sports-Fashion',
+                subtitle: 'Agave Sage · Warm Sand · Cream · Black · Gold',
+                image: 'assets/products/mygarita/mygarita-apparel-products.webp',
+                alt: 'MyGarita agave sage and warm sand sports-fashion apparel collection featuring hoodies, track jackets, tees, and sweatpants',
+                accent: '#7A8C74',
+                badge: 'Desert Horizon'
+              }
+            ].map((house, idx) => (
+              <div
+                key={house.id}
+                onClick={() => onSelectBrand(house.id)}
+                className={`group bg-white border border-[#DDD7CB] hover:border-[#C8A97E] p-4 rounded-xs shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between ${
+                  idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''
+                }`}
+              >
+                <div>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xs mb-4 bg-neutral-100">
+                    <CampaignImage
+                      src={house.image}
+                      alt={house.alt}
+                      aspectRatio="16/9"
+                      position="center center"
+                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
+                    />
+                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-black/70 backdrop-blur-xs text-white text-[9px] font-mono uppercase tracking-widest rounded-2xs border border-white/20">
+                      {house.badge}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 px-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-[#8C6D3F] transition-colors">
+                        {house.name}
+                      </h3>
+                      <span
+                        className="w-2.5 h-2.5 rounded-full border border-black/10 shrink-0"
+                        style={{ backgroundColor: house.accent }}
+                      />
+                    </div>
+                    <p className="text-xs text-[#50545E] font-medium font-manrope">
+                      {house.tagline}
+                    </p>
+                    <p className="text-[11px] text-[#7A828A] font-light font-manrope">
+                      {house.subtitle}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-[#EAE5DC] px-1 flex items-center justify-between text-xs text-[#8C6D3F] font-semibold uppercase tracking-wider">
+                  <span>Explore House Collection</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

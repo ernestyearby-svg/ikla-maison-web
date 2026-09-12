@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ShoppingBag, ShieldCheck, Truck, RefreshCw, ChevronDown, ChevronUp, Check, ArrowRight } from 'lucide-react';
+import { X, ShoppingBag, ShieldCheck, Truck, RefreshCw, ChevronDown, ChevronUp, Check, ArrowRight, Bookmark, Clock } from 'lucide-react';
 import { BRANDS } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
@@ -109,24 +109,39 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
                 <span className="text-xs uppercase tracking-[0.25em] text-[#C8A97E] font-medium">
                   {product.brandName}
                 </span>
-                <span className="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  {product.inventory > 5 ? 'Guaranteed In Stock' : `Limited: ${product.inventory} Units Left`}
-                </span>
+                {product.isReserve || product.status ? (
+                  <span className="inline-flex items-center gap-1.5 text-[11px] text-[#DFBF95] font-medium font-mono">
+                    <Clock className="w-3.5 h-3.5 text-[#DFBF95]" />
+                    <span>{product.status || 'Production Preview'} · Allocation Window</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    {product.inventory > 5 ? 'Guaranteed In Stock' : `Limited: ${product.inventory} Units Left`}
+                  </span>
+                )}
               </div>
 
-              {/* Title & Price */}
+              {/* Title & Price/Status */}
               <h2 id="pdp-modal-title" className="text-2xl sm:text-3xl font-light text-white mb-3">
                 {product.name}
               </h2>
 
-              <div className="text-xl font-light text-white mb-6">
-                ${product.price}{' '}
-                <span className="text-xs text-neutral-400 font-normal uppercase tracking-wider">USD (Taxes included)</span>
-              </div>
+              {product.isReserve || product.status ? (
+                <div className="text-sm uppercase tracking-[0.2em] text-[#C8A97E] font-medium mb-6 flex items-center gap-2 font-mono">
+                  <span>Private Production Preview</span>
+                  <span>•</span>
+                  <span>Reserve Interest Below</span>
+                </div>
+              ) : (
+                <div className="text-xl font-light text-white mb-6">
+                  ${product.price}{' '}
+                  <span className="text-xs text-neutral-400 font-normal uppercase tracking-wider">USD (Taxes included)</span>
+                </div>
+              )}
 
               {/* Short description */}
-              <p className="text-sm text-neutral-300 font-light leading-relaxed mb-6 border-b border-neutral-800 pb-6">
+              <p className="text-sm text-neutral-300 font-light leading-relaxed mb-6 border-b border-neutral-800 pb-6 font-manrope">
                 {product.description}
               </p>
 
@@ -137,14 +152,14 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
                     <span className="uppercase tracking-widest text-neutral-400">Color Palette</span>
                     <span className="text-neutral-200 font-medium">{selectedColor}</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-2.5">
                     {product.colors.map((color) => (
                       <button
                         key={color.name}
                         onClick={() => setSelectedColor(color.name)}
-                        className={`flex items-center gap-2 px-3 py-1.5 border text-xs transition-all ${
+                        className={`flex items-center gap-2 px-3 py-1.5 border text-xs transition-all cursor-pointer rounded-xs ${
                           selectedColor === color.name
-                            ? 'border-[#C8A97E] bg-white/5 text-white'
+                            ? 'border-[#C8A97E] bg-white/10 text-white'
                             : 'border-neutral-800 text-neutral-400 hover:border-neutral-700'
                         }`}
                       >
@@ -173,7 +188,7 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
                       <button
                         key={size}
                         onClick={() => setSelectedSize(size)}
-                        className={`py-2.5 text-xs font-medium border transition-all ${
+                        className={`py-2.5 text-xs font-medium border transition-all cursor-pointer rounded-xs ${
                           selectedSize === size
                             ? 'border-[#C8A97E] bg-[#C8A97E] text-black font-semibold'
                             : 'border-neutral-800 bg-neutral-900/60 text-neutral-300 hover:border-neutral-600 hover:text-white'
@@ -186,47 +201,79 @@ export default function ProductDetailModal({ product, onClose, onSelectBrand, on
                 </div>
               )}
 
-              {/* Quantity & Add to Bag */}
-              <div className="flex items-center gap-4 mb-8">
-                {/* Quantity modifier */}
-                <div className="flex items-center border border-neutral-800 bg-neutral-900/80">
+              {/* Action Buttons: Add to Bag vs Reserve Allocation */}
+              {product.isReserve || product.status ? (
+                <div className="mb-8 space-y-3">
                   <button
-                    onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                    disabled={quantity <= 1}
-                    className="px-3.5 py-3 text-neutral-400 hover:text-white disabled:opacity-30"
+                    onClick={() => {
+                      setIsAdded(true);
+                      setTimeout(() => {
+                        setIsAdded(false);
+                        onClose();
+                      }, 1200);
+                    }}
+                    className={`w-full py-3.5 px-6 rounded-xs flex items-center justify-center gap-2.5 active:scale-[0.99] shadow-lg cursor-pointer ${
+                      brand ? brand.buttonStyle : 'bg-[#C8A97E] hover:bg-[#DFBF95] text-black text-xs uppercase tracking-[0.2em] font-semibold'
+                    }`}
                   >
-                    -
+                    {isAdded ? (
+                      <>
+                        <Check className="w-4 h-4 text-emerald-300" />
+                        <span>Interest Recorded — Allocation Ledger</span>
+                      </>
+                    ) : (
+                      <>
+                        <Bookmark className="w-4 h-4" />
+                        <span>Reserve Allocation Interest ({selectedColor})</span>
+                      </>
+                    )}
                   </button>
-                  <span className="px-3 text-xs font-medium text-white">{quantity}</span>
+                  <p className="text-[11px] text-neutral-400 font-light text-center font-manrope">
+                    Production preview curation. No advance payment required. You will receive priority notification upon capsule release.
+                  </p>
+                </div>
+              ) : (
+                <div className="flex items-center gap-4 mb-8">
+                  {/* Quantity modifier */}
+                  <div className="flex items-center border border-neutral-800 bg-neutral-900/80">
+                    <button
+                      onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                      disabled={quantity <= 1}
+                      className="px-3.5 py-3 text-neutral-400 hover:text-white disabled:opacity-30 cursor-pointer"
+                    >
+                      -
+                    </button>
+                    <span className="px-3 text-xs font-medium text-white">{quantity}</span>
+                    <button
+                      onClick={() => setQuantity((q) => Math.min(product.inventory, q + 1))}
+                      disabled={quantity >= product.inventory}
+                      className="px-3.5 py-3 text-neutral-400 hover:text-white disabled:opacity-30 cursor-pointer"
+                    >
+                      +
+                    </button>
+                  </div>
+
+                  {/* Primary Add Button */}
                   <button
-                    onClick={() => setQuantity((q) => Math.min(product.inventory, q + 1))}
-                    disabled={quantity >= product.inventory}
-                    className="px-3.5 py-3 text-neutral-400 hover:text-white disabled:opacity-30"
+                    onClick={handleAdd}
+                    className={`flex-1 py-3.5 px-6 rounded-xs flex items-center justify-center gap-2.5 active:scale-[0.99] shadow-lg cursor-pointer ${
+                      brand ? brand.buttonStyle : 'bg-[#C8A97E] hover:bg-[#DFBF95] text-black text-xs uppercase tracking-[0.2em] font-semibold'
+                    }`}
                   >
-                    +
+                    {isAdded ? (
+                      <>
+                        <Check className="w-4 h-4 text-emerald-900" />
+                        <span>Added to Bag</span>
+                      </>
+                    ) : (
+                      <>
+                        <ShoppingBag className="w-4 h-4" />
+                        <span>Add to Bag — ${product.price * quantity}</span>
+                      </>
+                    )}
                   </button>
                 </div>
-
-                {/* Primary Add Button */}
-                <button
-                  onClick={handleAdd}
-                  className={`flex-1 py-3.5 px-6 rounded-xs flex items-center justify-center gap-2.5 active:scale-[0.99] shadow-lg cursor-pointer ${
-                    brand ? brand.buttonStyle : 'bg-[#C8A97E] hover:bg-[#DFBF95] text-black text-xs uppercase tracking-[0.2em] font-semibold'
-                  }`}
-                >
-                  {isAdded ? (
-                    <>
-                      <Check className="w-4 h-4 text-emerald-900" />
-                      <span>Added to Bag</span>
-                    </>
-                  ) : (
-                    <>
-                      <ShoppingBag className="w-4 h-4" />
-                      <span>Add to Bag — ${product.price * quantity}</span>
-                    </>
-                  )}
-                </button>
-              </div>
+              )}
 
               {/* Collapsible Accordions */}
               <div className="border-t border-neutral-800 divide-y divide-neutral-800/80 text-xs">

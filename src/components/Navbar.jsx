@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, ShoppingBag, Search, ChevronDown, ArrowRight, X, Droplets } from 'lucide-react';
-import { BRANDS, BRAND_LIST } from '../data/brands';
+import { BRANDS, BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES } from '../data/brands';
 import { useCart } from '../context/CartContext';
 
 export default function Navbar({
@@ -83,47 +83,96 @@ export default function Navbar({
               {isBrandsDropdownOpen && (
                 <div
                   onMouseLeave={() => setIsBrandsDropdownOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-[520px] bg-[#0e1014]/98 backdrop-blur-xl border border-neutral-800/90 shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-4.5 grid grid-cols-1 gap-2.5 animate-fade-in z-50 rounded-xs"
+                  className="absolute top-full left-0 mt-2 w-[760px] bg-[#0e1014]/98 backdrop-blur-xl border border-neutral-800/90 shadow-[0_25px_60px_rgba(0,0,0,0.85)] p-5 animate-fade-in z-50 rounded-xs"
                 >
-                  <div className="flex items-center justify-between px-3 pt-1 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#C8A97E] font-medium">
-                    <span>Curated Luxury Houses</span>
-                    <span className="text-[9px] text-neutral-500 font-normal">6 Houses</span>
-                  </div>
-                  {BRAND_LIST.map((b) => (
-                    <button
-                      key={b.id}
-                      onClick={() => {
-                        onNavigate('brand', b.id);
-                        setIsBrandsDropdownOpen(false);
-                      }}
-                      className="w-full text-left p-2.5 hover:bg-white/[0.04] border border-transparent hover:border-neutral-700/60 rounded-xs transition-all flex items-center justify-between group cursor-pointer"
-                    >
-                      <div className="flex items-center gap-3.5">
-                        <div className="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1 group-hover:border-[#C8A97E]/50 transition-colors">
-                          <img
-                            src={b.logos.crestLight}
-                            alt=""
-                            className="w-full h-full object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div>
-                          <div className="text-xs font-medium text-white group-hover:text-[#C8A97E] transition-colors tracking-[0.08em]">
-                            {b.name}
-                          </div>
-                          <div className="text-[11px] text-neutral-400 font-light truncate max-w-[320px]">
-                            {b.tagline}
-                          </div>
-                        </div>
+                  <div className="grid grid-cols-2 gap-6">
+                    {/* Column 1: Fashion Houses */}
+                    <div>
+                      <div className="flex items-center justify-between px-2 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#C8A97E] font-medium">
+                        <span>Fashion Houses</span>
+                        <span className="text-[9px] text-neutral-500 font-normal">5 Houses</span>
                       </div>
-                      <span className="text-[10px] text-neutral-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1">
-                        Enter <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </button>
-                  ))}
+                      <div className="mt-2 space-y-1">
+                        {FASHION_HOUSES.map((b) => (
+                          <button
+                            key={b.id}
+                            onClick={() => {
+                              onNavigate('brand', b.id);
+                              setIsBrandsDropdownOpen(false);
+                            }}
+                            className="w-full text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-neutral-700/60 rounded-xs transition-all flex items-center justify-between group cursor-pointer"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1 group-hover:border-[#C8A97E]/50 transition-colors">
+                                <img
+                                  src={b.logos.crestLight}
+                                  alt=""
+                                  className="w-full h-full object-contain filter brightness-110 group-hover:scale-105 transition-transform"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div>
+                                <div className="text-xs font-medium text-white group-hover:text-[#C8A97E] transition-colors tracking-[0.06em]">
+                                  {b.name}
+                                </div>
+                                <div className="text-[10px] text-neutral-400 font-light truncate max-w-[220px]">
+                                  {b.tagline}
+                                </div>
+                              </div>
+                            </div>
+                            <span className="text-[10px] text-neutral-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1">
+                              <ArrowRight className="w-3 h-3" />
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Column 2: Beverage Houses & Hospitality */}
+                    <div>
+                      <div className="flex items-center justify-between px-2 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#E26D35] font-medium">
+                        <span>Beverage Houses & Hospitality</span>
+                        <span className="text-[9px] text-neutral-500 font-normal">6 Houses</span>
+                      </div>
+                      <div className="mt-2 space-y-1">
+                        {[BRANDS['my-drink-family'], ...BEVERAGE_HOUSES].map((b) => (
+                          <button
+                            key={b.id}
+                            onClick={() => {
+                              onNavigate('brand', b.id);
+                              setIsBrandsDropdownOpen(false);
+                            }}
+                            className="w-full text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-neutral-700/60 rounded-xs transition-all flex items-center justify-between group cursor-pointer"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1 group-hover:border-[#E26D35]/50 transition-colors">
+                                <img
+                                  src={b.logos.crestLight}
+                                  alt=""
+                                  className="w-full h-full object-contain filter brightness-110 group-hover:scale-105 transition-transform"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div>
+                                <div className="text-xs font-medium text-white group-hover:text-[#E26D35] transition-colors tracking-[0.06em]">
+                                  {b.name}
+                                </div>
+                                <div className="text-[10px] text-neutral-400 font-light truncate max-w-[220px]">
+                                  {b.tagline}
+                                </div>
+                              </div>
+                            </div>
+                            <span className="text-[10px] text-neutral-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1">
+                              <ArrowRight className="w-3 h-3" />
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Extension Concept: IKLA Water */}
-                  <div className="pt-2 border-t border-neutral-800/80 mt-1">
+                  <div className="pt-3 border-t border-neutral-800/80 mt-3">
                     <button
                       onClick={() => {
                         onNavigate('brand', 'ikla-water');
@@ -131,15 +180,15 @@ export default function Navbar({
                       }}
                       className="w-full text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#5E8896]/40 rounded-xs transition-all flex items-center justify-between group cursor-pointer"
                     >
-                      <div className="flex items-center gap-3.5">
-                        <div className="w-8 h-8 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
-                          <Droplets className="w-4 h-4" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-7 h-7 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
+                          <Droplets className="w-3.5 h-3.5" />
                         </div>
                         <div>
-                          <div className="text-xs font-medium text-white group-hover:text-[#5E8896] transition-colors tracking-[0.08em]">
+                          <div className="text-xs font-medium text-white group-hover:text-[#5E8896] transition-colors tracking-[0.06em]">
                             IKLA Water
                           </div>
-                          <div className="text-[11px] text-neutral-400 font-light truncate max-w-[320px]">
+                          <div className="text-[10px] text-neutral-400 font-light truncate max-w-[450px]">
                             Pure Mineral Hydration & Sculptural Monolithic Vessels
                           </div>
                         </div>
@@ -154,14 +203,20 @@ export default function Navbar({
             </div>
 
             {/* Desktop Direct Links */}
-            <div className="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.2em]">
+            <div className="hidden lg:flex items-center gap-6 text-xs uppercase tracking-[0.2em]">
               <button
                 onClick={() => onNavigate('collection')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
                   currentView === 'collection' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
-                Collections
+                Shop
+              </button>
+              <button
+                onClick={() => onNavigate('collection')}
+                className="relative py-2 text-neutral-300 hover:text-white transition-colors cursor-pointer"
+              >
+                Accessories
               </button>
               <button
                 onClick={() => onNavigate('about')}
