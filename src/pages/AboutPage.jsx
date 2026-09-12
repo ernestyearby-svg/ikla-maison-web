@@ -15,7 +15,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
             The Philosophy of IKLA MAISON
           </h1>
           <p className="text-sm sm:text-lg text-[#4A4E57] font-light max-w-2xl mx-auto leading-relaxed font-manrope">
-            An architectural luxury collective uniting five independent design houses under a singular standard of uncompromising materiality, disciplined construction, and cultural resonance.
+            An architectural luxury collective uniting independent design houses under a singular standard of uncompromising materiality, disciplined construction, and cultural resonance.
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
               A Multi-Disciplinary Union
             </h2>
             <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed mb-4 font-manrope">
-              IKLA MAISON was founded to create an autonomous ecosystem for five complementary design viewpoints. Rather than homogenizing individual brand voices into a singular corporate aesthetic, we preserve the distinct signature of each house while providing shared master-atelier resources and white-glove global client services.
+              IKLA MAISON was founded to create an autonomous ecosystem for distinct complementary design viewpoints. Rather than homogenizing individual brand voices into a singular corporate aesthetic, we preserve the distinct signature of each house while providing shared master-atelier resources and white-glove global client services.
             </p>
             <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
               From the monolithic concrete spaces of modern metropolitan centers to sunlit Mediterranean villas, each collection exists in dialogue with physical architecture and contemporary living.
@@ -47,14 +47,14 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
           </div>
         </div>
 
-        {/* The Five Houses Detailed Profiles */}
+        {/* The Houses Detailed Profiles */}
         <div className="border-t border-[#E5DFD5] pt-16">
           <div className="text-center mb-14">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
               The Collectives
             </span>
             <h2 className="text-3xl font-cormorant font-normal text-[#111215]">
-              Five Houses, Five Distinct Signatures
+              Distinct Houses. One Standard.
             </h2>
           </div>
 
@@ -167,7 +167,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
         {/* Client Concierge CTA */}
         <div className="border-t border-[#E5DFD5] pt-16 text-center space-y-6">
           <h3 className="text-2xl font-cormorant text-[#111215] font-normal">
-            Experience the Five Houses in Person
+            Experience the Houses in Person
           </h3>
           <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-md mx-auto font-manrope">
             Schedule a private salon appointment or consult with our master stylists for bespoke sizing and wardrobe curation.

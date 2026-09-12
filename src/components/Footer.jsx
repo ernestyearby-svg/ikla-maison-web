@@ -30,7 +30,7 @@ export default function Footer({ onNavigate }) {
               Join the Maison Gazette
             </h3>
             <p className="text-sm text-neutral-400 font-light max-w-md leading-relaxed">
-              Receive private preview access to seasonal capsule releases, archival monographs, and private salon appointments across all five houses.
+              Receive private preview access to seasonal capsule releases, archival monographs, and private salon appointments across all houses.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer({ onNavigate }) {
           </div>
         </div>
 
-        {/* Multi-Brand Five Houses Directory */}
+        {/* Multi-Brand Houses Directory */}
         <div className="py-14 border-b border-neutral-800/80 relative">
           {/* Subtle Collective Watermark in Footer (pointer-events: none) */}
           <div className="absolute right-0 bottom-4 w-72 h-72 pointer-events-none select-none opacity-[0.03] overflow-hidden">
@@ -74,14 +74,14 @@ export default function Footer({ onNavigate }) {
 
           <div className="flex items-center justify-between mb-8">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8A97E] font-medium block">
-              The Five Houses Directory
+              The Houses Directory
             </span>
             <span className="text-[10px] text-neutral-500 uppercase tracking-widest hidden sm:inline">
               Independent Ateliers · One Maison
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {BRAND_LIST.map((brand) => (
               <div key={brand.id} className="space-y-3 relative group">
                 {/* Brand-specific accent line */}
@@ -139,7 +139,7 @@ export default function Footer({ onNavigate }) {
               </li>
               <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
-                  The Five Houses Ethos
+                  The Maison Houses Ethos
                 </button>
               </li>
               <li>
@@ -198,7 +198,8 @@ export default function Footer({ onNavigate }) {
             <span className="text-neutral-300 font-medium">IKLA Maison</span>,{' '}
             <span className="text-neutral-300 font-medium">KTSE</span>,{' '}
             <span className="text-neutral-300 font-medium">Motéon</span>,{' '}
-            <span className="text-neutral-300 font-medium">Moral Compass</span>, and{' '}
+            <span className="text-neutral-300 font-medium">Moral Compass</span>,{' '}
+            <span className="text-neutral-300 font-medium">WNNR</span>, and{' '}
             <span className="text-neutral-300 font-medium">My Drink Family</span>. All rights reserved.
           </div>
           <div className="flex items-center gap-6">

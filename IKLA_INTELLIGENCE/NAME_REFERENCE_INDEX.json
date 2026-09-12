@@ -1,0 +1,2931 @@
+{
+  "scope": "Original source text and implementation documentation plus original relative filenames, excluding dependencies/Git/dist; generated intelligence excluded",
+  "hits": {
+    "IKLA Maison": [
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 1,
+        "text": "# IKLA MAISON \u2014 Five Luxury Houses Digital Flagship"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 5,
+        "text": "* **IKLA Maison** \u2014 Architectural elegance, structured tailoring, and quiet travertine luxury."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 35,
+        "text": "git clone https://github.com/ernestyearby-svg/ikla-maison-web.git"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 36,
+        "text": "cd ikla-maison-web"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 101,
+        "text": "1. Import the repository `ikla-maison-web` into your [Vercel Dashboard](https://vercel.com/dashboard)."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 115,
+        "text": "ikla-maison-web/"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 118,
+        "text": "\u2502       \u251c\u2500\u2500 ikla-maison/"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+        "line": 7,
+        "text": "<meta name=\"description\" content=\"IKLA Maison \u2014 Curated luxury fashion and lifestyle houses: IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and My Drink Family.\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+        "line": 8,
+        "text": "<title>IKLA MAISON | Five Luxury Houses</title>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\package.json",
+        "line": 2,
+        "text": "\"name\": \"ikla-maison\","
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\App.jsx",
+        "line": 22,
+        "text": "const [currentBrandId, setCurrentBrandId] = useState('ikla-maison');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\CartDrawer.jsx",
+        "line": 45,
+        "text": "src={BRANDS['ikla-maison'].logos.crestLight}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\CheckoutModal.jsx",
+        "line": 54,
+        "text": "src={BRANDS['ikla-maison'].logos.crestLight}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 72,
+        "text": "<img src={BRANDS['ikla-maison'].logos.crestLight} alt=\"\" className=\"w-full h-full object-contain\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 197,
+        "text": "\u00a9 {new Date().getFullYear()} IKLA MAISON Collective. Representing{' '}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 198,
+        "text": "<span className=\"text-neutral-300 font-medium\">IKLA Maison</span>,{' '}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\MobileMenu.jsx",
+        "line": 30,
+        "text": "<span className=\"text-base font-serif tracking-widest text-white\">IKLA MAISON</span>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Navbar.jsx",
+        "line": 188,
+        "text": "IKLA MAISON"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 4,
+        "text": "'ikla-maison': {"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 5,
+        "text": "id: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 6,
+        "text": "name: 'IKLA Maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 28,
+        "text": "wordmarkDark: '/assets/ikla-maison/logos/wordmark-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 29,
+        "text": "wordmarkLight: '/assets/ikla-maison/logos/wordmark-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 30,
+        "text": "crestLight: '/assets/ikla-maison/logos/crest-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 31,
+        "text": "crestDark: '/assets/ikla-maison/logos/crest-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 34,
+        "text": "heroDesktop: '/assets/ikla-maison/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 35,
+        "text": "heroMobile: '/assets/ikla-maison/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 36,
+        "text": "collection: '/assets/ikla-maison/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 37,
+        "text": "editorial: '/assets/ikla-maison/editorial.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 41,
+        "text": "heroMobile: 'Models in marble colonnade wearing IKLA Maison embroidered knitwear',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 42,
+        "text": "collection: 'Flat lay of IKLA Maison collection on travertine marble with gold embroidery',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 45,
+        "text": "manifesto: 'IKLA Maison exists at the convergence of pure architectural geometry and relaxed couture. Each garment is conceived as a habitable silhouette\u2014measured, intentional, and sculpted from world-class natural wools, cashmere, and raw silks.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 279,
+        "text": "wordmarkDark: '/assets/ikla-maison/logos/wordmark-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 280,
+        "text": "wordmarkLight: '/assets/ikla-maison/logos/wordmark-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 281,
+        "text": "crestLight: '/assets/ikla-maison/logos/crest-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 282,
+        "text": "crestDark: '/assets/ikla-maison/logos/crest-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 304,
+        "text": "manifesto: 'Conceived as an architectural extension of the IKLA Maison dining salon. Pure natural mineral water contained in heavyweight reusable flint glass vessels designed to integrate seamlessly into modern living spaces.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 328,
+        "text": "BRANDS['ikla-maison'],"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 9,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 11,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-maison/ikla-business-casual-couple.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 15,
+        "text": "alt: 'IKLA Maison editorial portrait of a sophisticated couple in refined business-casual tailoring with structured trench coats and neutral knitwear',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 22,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 24,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-maison/ikla-dynasty-spectrum-hoodies.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 28,
+        "text": "alt: 'The IKLA Maison Dynasty Spectrum showing five heavyweight organic cotton hoodies in tonal gradient colorways from bone cream to obsidian black',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 35,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 37,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-maison/ikla-mens-golf-flatlay.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 41,
+        "text": "alt: 'IKLA Maison Men\\'s Leisure Golf flat lay featuring technical polo, luxury clubhead cover, bespoke balls, and tailored shorts on clean stone',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 48,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 50,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-maison/ikla-womens-golf-flatlay.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 54,
+        "text": "alt: 'IKLA Maison Women\\'s Leisure Golf flat lay featuring cream pleated skirt, minimalist polo, visor, and tailored accessories',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 136,
+        "text": "alt: 'IKLA Maison \u00d7 MyMosa collaboration editorial celebration with guests toasting with MyMosa Premium Wine Cocktails',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 312,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 314,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 318,
+        "text": "alt: 'IKLA Maison Tennis Club campaign featuring players on clay court in tailored white and cream athletic silhouettes',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 325,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 327,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 331,
+        "text": "alt: 'IKLA Maison cyclist riding along winding Mediterranean coastal highway in disciplined technical outerwear',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 338,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 340,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 344,
+        "text": "alt: 'IKLA Maison family travel portrait walking through private aviation terminal in tailored matching leisurewear',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 351,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 353,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-focus-discipline-purpose.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 357,
+        "text": "alt: 'IKLA Maison Focus, Discipline, Purpose campaign portrait of athlete preparing in monolithic marble training facility',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 364,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 366,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 370,
+        "text": "alt: 'IKLA Maison couple relaxing on yacht deck in tailored leisurewear overlooking azure sea waters',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 377,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 379,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-brand-ambassador-program.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 383,
+        "text": "alt: 'IKLA Maison Brand Ambassador collective portrait showcasing diverse leaders in tailored house silhouettes',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 390,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 392,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-hoodie-sweats.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 396,
+        "text": "alt: 'IKLA Maison Standard fleece hoodie and tailored sweatpants in warm oatmeal limestone fleece',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 403,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 405,
+        "text": "file: 'assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-black-white-basics.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 409,
+        "text": "alt: 'IKLA Maison monochrome essential foundation tees in heavyweight combed cotton',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 5,
+        "text": "// IKLA MAISON"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 9,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 10,
+        "text": "brandName: 'IKLA Maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 14,
+        "text": "image: '/assets/ikla-maison/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 15,
+        "text": "imageAlt: 'Ikla Maison Travertine Gold-Zip Track Jacket featured on collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 28,
+        "text": "'Discreet tonal Ikla Maison bullion chest embroidery',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 36,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 37,
+        "text": "brandName: 'IKLA Maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 41,
+        "text": "image: '/assets/ikla-maison/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 42,
+        "text": "imageAlt: 'Ikla Maison Travertine Wide-Leg Pleated Track Pant in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 63,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 64,
+        "text": "brandName: 'IKLA Maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 68,
+        "text": "image: '/assets/ikla-maison/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 69,
+        "text": "imageAlt: 'Ikla Maison Open-Knit Textured Cabana Polo in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 81,
+        "text": "'Gold Ikla Maison chest script signature',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 89,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 90,
+        "text": "brandName: 'IKLA Maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 94,
+        "text": "image: '/assets/ikla-maison/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 95,
+        "text": "imageAlt: 'Ikla Maison Gilded Signature Heavyweight Hoodie in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 116,
+        "text": "brandId: 'ikla-maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 117,
+        "text": "brandName: 'IKLA Maison',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 121,
+        "text": "image: '/assets/ikla-maison/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 122,
+        "text": "imageAlt: 'Ikla Maison Architectural Longline Double Trench worn in architectural descent',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\AboutPage.jsx",
+        "line": 15,
+        "text": "The Philosophy of IKLA MAISON"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\AboutPage.jsx",
+        "line": 34,
+        "text": "IKLA MAISON was founded to create an autonomous ecosystem for five complementary design viewpoints. Rather than homogenizing individual brand voices into a singular corporate aesthetic, we preserve the distinct signature of each house while providing shared master-atelier resources and white-glove global client services."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\AboutPage.jsx",
+        "line": 43,
+        "text": "src={BRANDS['ikla-maison'].assets.editorial}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\AboutPage.jsx",
+        "line": 44,
+        "text": "alt=\"Ikla Maison architectural terrace overlooking the sea\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 16,
+        "text": "const brand = BRANDS[brandId] || BRANDS['ikla-maison'];"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 67,
+        "text": "{/* A. IKLA MAISON DEDICATED MODULES */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 69,
+        "text": "{brand.id === 'ikla-maison' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 89,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-maison/ikla-mens-golf-flatlay.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 90,
+        "text": "alt=\"IKLA Maison Men's Leisure Golf flat lay with technical polo and accessories\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 111,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-maison/ikla-womens-golf-flatlay.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 112,
+        "text": "alt=\"IKLA Maison Women's Leisure Golf flat lay with cream pleated skirt and visor\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 151,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 152,
+        "text": "alt=\"IKLA Maison Tennis Club editorial\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 167,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 168,
+        "text": "alt=\"IKLA Maison Coastal Cycling editorial\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 197,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 198,
+        "text": "alt=\"IKLA Maison Family Travel editorial\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 213,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 214,
+        "text": "alt=\"IKLA Maison Yacht Coastal Leisure\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 229,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-maison/ikla-business-casual-couple.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 230,
+        "text": "alt=\"IKLA Maison Business Casual Executive Couple\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 586,
+        "text": "IKLA Water is conceived as an architectural extension of the IKLA Maison dining salon. Reusable flint glass bottles engineered with heavy monolithic bases, designed to elevate executive hospitality, residential tables, and gallery spaces."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 60,
+        "text": "<img src={BRANDS['ikla-maison'].logos.wordmarkDark} alt=\"\" className=\"w-[80vw] max-w-[1000px] object-contain\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 10,
+        "text": "const [activeBrandTab, setActiveBrandTab] = useState('ikla-maison');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 13,
+        "text": "const activeBrand = BRANDS[activeBrandTab] || BRANDS['ikla-maison'];"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 58,
+        "text": "{/* Oversized Faded IKLA Maison Wordmark Watermark behind Hero Content */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 61,
+        "text": "src={BRANDS['ikla-maison'].logos.wordmarkDark}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 71,
+        "text": "src={BRANDS['ikla-maison'].logos.crestLight}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 159,
+        "text": "IKLA Maison exists at the convergence of pure architectural geometry and relaxed couture. Each garment is conceived as a habitable silhouette\u2014measured, intentional, and sculpted from world-class natural wools, cashmere, and certified organic textiles."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 167,
+        "text": "\u2014 IKLA Maison Master Atelier"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 173,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 176,
+        "text": "<span>Discover IKLA Maison</span>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 275,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 304,
+        "text": "{/* 5 Distinct Cards for IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 306,
+        "text": "{/* Card 1: IKLA Maison */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 308,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 314,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-hoodie-sweats.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 315,
+        "text": "alt=\"IKLA Maison Tailoring & Leisure\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 323,
+        "text": "<h3 className=\"text-lg font-cormorant font-normal text-[#111215]\">IKLA Maison</h3>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 472,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 477,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 478,
+        "text": "alt=\"IKLA Maison Tennis Club collection on clay court\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 505,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 510,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 511,
+        "text": "alt=\"IKLA Maison coastal road cyclist in technical outerwear\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 538,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 543,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 544,
+        "text": "alt=\"IKLA Maison family walking through private terminal in matching tailored leisurewear\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 571,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 576,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-focus-discipline-purpose.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 577,
+        "text": "alt=\"IKLA Maison Focus, Discipline, Purpose campaign portrait\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 604,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 609,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 610,
+        "text": "alt=\"IKLA Maison couple relaxing on yacht deck overlooking sea\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 637,
+        "text": "onClick={() => onSelectBrand('ikla-maison')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 642,
+        "text": "src=\"assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-black-white-basics.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 643,
+        "text": "alt=\"IKLA Maison monochrome basic foundation tees\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 11,
+        "text": "console.log('--- STARTING IKLA MAISON COMPREHENSIVE E2E VERIFICATION SUITE ---');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 23,
+        "text": "{ id: 'ikla-maison', name: 'IKLA Maison' },"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\vite.config.js",
+        "line": 6,
+        "text": "base: '/ikla-maison-web/',"
+      }
+    ],
+    "KTSE": [
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 6,
+        "text": "* **KTSE** \u2014 Disciplined brutalist streetwear, heavyweight cottons, and monolithic silhouettes."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 119,
+        "text": "\u2502       \u251c\u2500\u2500 ktse/"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+        "line": 7,
+        "text": "<meta name=\"description\" content=\"IKLA Maison \u2014 Curated luxury fashion and lifestyle houses: IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and My Drink Family.\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 199,
+        "text": "<span className=\"text-neutral-300 font-medium\">KTSE</span>,{' '}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 54,
+        "text": "'ktse': {"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 55,
+        "text": "id: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 56,
+        "text": "name: 'KTSE',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 78,
+        "text": "wordmarkDark: '/assets/ktse/logos/wordmark-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 79,
+        "text": "wordmarkLight: '/assets/ktse/logos/wordmark-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 80,
+        "text": "crestLight: '/assets/ktse/logos/crest-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 81,
+        "text": "crestDark: '/assets/ktse/logos/crest-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 84,
+        "text": "heroDesktop: '/assets/ktse/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 85,
+        "text": "heroMobile: '/assets/ktse/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 86,
+        "text": "collection: '/assets/ktse/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 87,
+        "text": "editorial: '/assets/ktse/editorial.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 90,
+        "text": "heroDesktop: 'Four models in KTSE heavyweight washed streetwear sets in brutalist concrete courtyard',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 91,
+        "text": "heroMobile: 'Model walking in monolithic concrete corridor wearing bone cream KTSE hoodie and shorts',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 92,
+        "text": "collection: 'Flat lay of four two-piece KTSE heavyweight raw-hem sweat sets on dark concrete',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 95,
+        "text": "manifesto: 'KTSE approaches streetwear through brutalist discipline. Stripping away unnecessary ornamentation to emphasize density, balance, and tactile gravity through custom heavyweight textiles that hold their structure across time.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 329,
+        "text": "BRANDS['ktse'],"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 142,
+        "text": "id: 'ktse-streetwear-duo',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 143,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 145,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 149,
+        "text": "alt: 'KTSE campaign duo wearing heavyweight raw-hem hoodie and sweatpant sets in a brutalist urban setting',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 151,
+        "text": "theme: 'Keep That Same Energy Streetwear',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 155,
+        "text": "id: 'ktse-multiple-colorways-product-grid',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 156,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 158,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-multiple-colorways-product-grid.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 162,
+        "text": "alt: 'KTSE colorways grid showcasing four signature earth tones across heavyweight loopback cotton sets',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 168,
+        "text": "id: 'ktse-vintage-black-colorways',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 169,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 171,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-vintage-black-colorways.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 175,
+        "text": "alt: 'KTSE vintage washed black hoodie and short colorways display with tonal chest embroidery',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 181,
+        "text": "id: 'ktse-ash-grey-set',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 182,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 184,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-ash-grey-set.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 188,
+        "text": "alt: 'KTSE signature ash grey heavyweight fleece hoodie and matching raw-hem sweat shorts set',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 194,
+        "text": "id: 'ktse-brand-shirt-still-life',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 195,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 197,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-brand-shirt-still-life.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 201,
+        "text": "alt: 'KTSE branded heavyweight tee still life highlighting tactile ribbed collar and dense woven knit',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 207,
+        "text": "id: 'ktse-urban-same-energy',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 208,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 210,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-urban-same-energy.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 214,
+        "text": "alt: 'KTSE urban editorial with Keep That Same Energy typography against textured industrial masonry',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 216,
+        "text": "theme: 'Keep That Same Energy Ethos',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 220,
+        "text": "id: 'ktse-coastal-couple',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 221,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 223,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-coastal-couple.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 227,
+        "text": "alt: 'KTSE lifestyle couple walking along ocean coastline wearing relaxed bone and slate heavyweight fleece',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 233,
+        "text": "id: 'ktse-beach-collection',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 234,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 236,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-beach-collection.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 240,
+        "text": "alt: 'KTSE beach campaign showcasing earth-tone terry garments against ocean surf and golden twilight',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 246,
+        "text": "id: 'ktse-summer-lifestyle-trio',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 247,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 249,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-summer-lifestyle-trio.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 253,
+        "text": "alt: 'Three friends wearing KTSE matching summer loungewear enjoying an elevated outdoor terrace gathering',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 259,
+        "text": "id: 'ktse-collection-collage',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 260,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 262,
+        "text": "file: 'assets/campaigns/02-reference-crops/ktse/ktse-collection-collage.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 266,
+        "text": "alt: 'KTSE collection collage featuring lookbook snapshots of signature silhouettes and tonal colorways',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 143,
+        "text": "// KTSE"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 146,
+        "text": "id: 'ktse-heavy-sweat-set',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 147,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 148,
+        "text": "brandName: 'KTSE',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 152,
+        "text": "image: '/assets/ktse/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 153,
+        "text": "imageAlt: 'Ktse 500GSM Raw-Hem Heavyweight Sweat Set flat lay on concrete',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 172,
+        "text": "fitNotes: 'Oversized streetwear drape. True to Ktse relaxed aesthetic.'"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 175,
+        "text": "id: 'ktse-boxy-tee',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 176,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 177,
+        "text": "brandName: 'KTSE',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 181,
+        "text": "image: '/assets/ktse/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 182,
+        "text": "imageAlt: 'Ktse Heavyweight Drop-Shoulder Boxy Tee shown in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 195,
+        "text": "'Center-chest minimal Ktse stamp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 202,
+        "text": "id: 'ktse-bone-hoodie',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 203,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 204,
+        "text": "brandName: 'KTSE',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 208,
+        "text": "image: '/assets/ktse/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 209,
+        "text": "imageAlt: 'Model wearing Ktse Monolithic Bone Pullover Hoodie in brutalist corridor',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 229,
+        "text": "id: 'ktse-denim-jorts',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 230,
+        "text": "brandId: 'ktse',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 231,
+        "text": "brandName: 'KTSE',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 235,
+        "text": "image: '/assets/ktse/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 236,
+        "text": "imageAlt: 'Models wearing Ktse Raw-Edge Denim Shorts in courtyard',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 248,
+        "text": "{/* B. KTSE DEDICATED EDITORIAL SHOWCASE */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 250,
+        "text": "{brand.id === 'ktse' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 252,
+        "text": "{/* KTSE Headline Statement */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 259,
+        "text": "KEEP THAT SAME ENERGY."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 262,
+        "text": "KTSE strips away extraneous decoration to celebrate raw loopback terry, drop-shoulder volume, and tactile weight. Designed to maintain its structural form across daily wear."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 267,
+        "text": "{/* KTSE Colorways Product Grid */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 284,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-multiple-colorways-product-grid.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 285,
+        "text": "alt=\"KTSE Multiple Colorways Product Grid\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 298,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-vintage-black-colorways.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 299,
+        "text": "alt=\"KTSE Vintage Black Colorways\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 312,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-ash-grey-set.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 313,
+        "text": "alt=\"KTSE Ash Grey Set\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 326,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-brand-shirt-still-life.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 327,
+        "text": "alt=\"KTSE Brand Shirt Still Life\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 340,
+        "text": "{/* KTSE Campaign Photography Gallery */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 347,
+        "text": "Keep That Same Energy Campaign Photography"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 354,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 355,
+        "text": "alt=\"KTSE Streetwear Duo in brutalist setting\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 368,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-urban-same-energy.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 369,
+        "text": "alt=\"KTSE Urban Same Energy\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 382,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-coastal-couple.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 383,
+        "text": "alt=\"KTSE Coastal Couple\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 396,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-beach-collection.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 397,
+        "text": "alt=\"KTSE Beach Collection\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 410,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-summer-lifestyle-trio.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 411,
+        "text": "alt=\"KTSE Summer Lifestyle Trio\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 424,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-collection-collage.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 425,
+        "text": "alt=\"KTSE Collection Collage\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 304,
+        "text": "{/* 5 Distinct Cards for IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 334,
+        "text": "{/* Card 2: KTSE */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 336,
+        "text": "onClick={() => onSelectBrand('ktse')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 342,
+        "text": "src=\"assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 343,
+        "text": "alt=\"KTSE Keep That Same Energy\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 352,
+        "text": "<h3 className=\"text-lg font-cormorant font-normal text-[#111215]\">KTSE</h3>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 354,
+        "text": "Keep That Same Energy: brutalist terry, raw hems, and structural gravity."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 24,
+        "text": "{ id: 'ktse', name: 'KTSE' },"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 109,
+        "text": "const ktseFilter = page.locator('button:has-text(\"KTSE\")').first();"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 113,
+        "text": "console.log('  \u2713 Filtered collection by KTSE.');"
+      }
+    ],
+    "My Dream Family": [],
+    "SmokeSuite": [],
+    "Moral Compass": [
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 8,
+        "text": "* **Moral Compass** \u2014 Directional precision, celestial slate/forest aesthetics, and astronomical navigation."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 121,
+        "text": "\u2502       \u251c\u2500\u2500 moral-compass/"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+        "line": 7,
+        "text": "<meta name=\"description\" content=\"IKLA Maison \u2014 Curated luxury fashion and lifestyle houses: IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and My Drink Family.\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 201,
+        "text": "<span className=\"text-neutral-300 font-medium\">Moral Compass</span>, and{' '}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 154,
+        "text": "'moral-compass': {"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 155,
+        "text": "id: 'moral-compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 156,
+        "text": "name: 'Moral Compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 178,
+        "text": "wordmarkDark: '/assets/moral-compass/logos/wordmark-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 179,
+        "text": "wordmarkLight: '/assets/moral-compass/logos/wordmark-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 180,
+        "text": "crestLight: '/assets/moral-compass/logos/crest-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 181,
+        "text": "crestDark: '/assets/moral-compass/logos/crest-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 184,
+        "text": "heroDesktop: '/assets/moral-compass/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 185,
+        "text": "heroMobile: '/assets/moral-compass/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 186,
+        "text": "collection: '/assets/moral-compass/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 187,
+        "text": "editorial: '/assets/moral-compass/editorial.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 192,
+        "text": "collection: 'Flat lay on black marble showing Moral Compass overcoat with gold celestial lining and star knitwear',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 195,
+        "text": "manifesto: 'Moral Compass is an intellectual exploration of internal direction and structured purpose. Drawing inspiration from classical navigational instruments, astronomical charts, and sharp architectural tailoring that anchors the wearer.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 331,
+        "text": "BRANDS['moral-compass'],"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 298,
+        "text": "id: 'moral-compass-coming-soon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 299,
+        "text": "brandId: 'moral-compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 301,
+        "text": "file: 'assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 305,
+        "text": "alt: 'Moral Compass coming soon preview visual featuring monolithic celestial rotunda and cardinal orientation insignia',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 367,
+        "text": "// MORAL COMPASS"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 370,
+        "text": "id: 'moral-compass-overcoat',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 371,
+        "text": "brandId: 'moral-compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 372,
+        "text": "brandName: 'Moral Compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 376,
+        "text": "image: '/assets/moral-compass/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 377,
+        "text": "imageAlt: 'Moral Compass Celestial Navigation Wool Overcoat flat lay showing compass star lining',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 396,
+        "text": "id: 'moral-compass-star-crewneck',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 397,
+        "text": "brandId: 'moral-compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 398,
+        "text": "brandName: 'Moral Compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 402,
+        "text": "image: '/assets/moral-compass/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 403,
+        "text": "imageAlt: 'Moral Compass Gilded Compass Star French Terry Crewneck in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 422,
+        "text": "id: 'moral-compass-burgundy-knit',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 423,
+        "text": "brandId: 'moral-compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 424,
+        "text": "brandName: 'Moral Compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 428,
+        "text": "image: '/assets/moral-compass/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 429,
+        "text": "imageAlt: 'Moral Compass Cardinal Heavyweight Ribbed Wool Sweater in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 448,
+        "text": "id: 'moral-compass-trousers',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 449,
+        "text": "brandId: 'moral-compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 450,
+        "text": "brandName: 'Moral Compass',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 454,
+        "text": "image: '/assets/moral-compass/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 455,
+        "text": "imageAlt: 'Moral Compass Pleated Wool Trousers with Compass Key Fob on black marble flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 527,
+        "text": "{/* D. MORAL COMPASS DEDICATED PREVIEW SHOWCASE */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 529,
+        "text": "{brand.id === 'moral-compass' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 538,
+        "text": "MORAL COMPASS \u2014 CARDINAL INCEPTION"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 547,
+        "text": "src=\"assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 548,
+        "text": "alt=\"Moral Compass Coming Soon Preview Visual\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 743,
+        "text": "{!brand.isExtension && brand.id !== 'moral-compass' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 304,
+        "text": "{/* 5 Distinct Cards for IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 392,
+        "text": "{/* Card 4: Moral Compass */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 394,
+        "text": "onClick={() => onSelectBrand('moral-compass')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 400,
+        "text": "src=\"assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 401,
+        "text": "alt=\"Moral Compass Coming Soon Preview\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 410,
+        "text": "<h3 className=\"text-lg font-cormorant font-normal text-[#111215]\">Moral Compass</h3>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 26,
+        "text": "{ id: 'moral-compass', name: 'Moral Compass' },"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 257,
+        "text": "// Navigate to Moral Compass via Mobile Menu"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 258,
+        "text": "await mobilePage.locator('div[role=\"dialog\"] button:has-text(\"Moral Compass\")').first().click();"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 260,
+        "text": "console.log('  \u2713 Mobile navigation to Moral Compass successful.');"
+      }
+    ],
+    "Mot\u00e9on": [
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 7,
+        "text": "* **Mot\u00e9on** \u2014 Mediterranean resort leisure, fluid woven linens, and sunlit terracotta warmth."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 120,
+        "text": "\u2502       \u251c\u2500\u2500 moteon/"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+        "line": 7,
+        "text": "<meta name=\"description\" content=\"IKLA Maison \u2014 Curated luxury fashion and lifestyle houses: IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and My Drink Family.\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 200,
+        "text": "<span className=\"text-neutral-300 font-medium\">Mot\u00e9on</span>,{' '}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 104,
+        "text": "'moteon': {"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 105,
+        "text": "id: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 106,
+        "text": "name: 'Mot\u00e9on',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 128,
+        "text": "wordmarkDark: '/assets/moteon/logos/wordmark-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 129,
+        "text": "wordmarkLight: '/assets/moteon/logos/wordmark-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 130,
+        "text": "crestLight: '/assets/moteon/logos/crest-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 131,
+        "text": "crestDark: '/assets/moteon/logos/crest-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 134,
+        "text": "heroDesktop: '/assets/moteon/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 135,
+        "text": "heroMobile: '/assets/moteon/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 136,
+        "text": "collection: '/assets/moteon/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 137,
+        "text": "editorial: '/assets/moteon/editorial.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 140,
+        "text": "heroDesktop: 'Couple lounging on terrace daybed overlooking sea with embroidered Mot\u00e9on cushion and book',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 141,
+        "text": "heroMobile: 'Man walking down travertine villa steps in cream Mot\u00e9on open-knit shirt and linen pants',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 142,
+        "text": "collection: 'Flat lay of Mot\u00e9on resort collection on travertine marble featuring halter top and crochet polo',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 145,
+        "text": "manifesto: 'Mot\u00e9on embodies the poetic rhythm of coastal living. Crafted for unhurried days along the Mediterranean basin, marrying breathable hand-woven linens with open-gauge knitwear designed to move seamlessly from seaside to twilight dining.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 330,
+        "text": "BRANDS['moteon'],"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 60,
+        "text": "id: 'moteon-launching-april-first',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 61,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 63,
+        "text": "file: 'assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 67,
+        "text": "alt: 'Mot\u00e9on luxury resort editorial campaign launching April 1 with fluid linen silhouettes against Mediterranean stone walls',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 272,
+        "text": "id: 'moteon-not-a-trend',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 273,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 275,
+        "text": "file: 'assets/campaigns/02-reference-crops/moteon/moteon-not-a-trend.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 279,
+        "text": "alt: 'Mot\u00e9on campaign visual bearing the manifesto Not A Trend with effortless woven resort silhouettes',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 285,
+        "text": "id: 'moteon-designed-to-move',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 286,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 288,
+        "text": "file: 'assets/campaigns/02-reference-crops/moteon/moteon-designed-to-move.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 292,
+        "text": "alt: 'Mot\u00e9on performance lifestyle campaign bearing the headline Designed To Move with relaxed linen apparel',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 257,
+        "text": "// MOTEON"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 260,
+        "text": "id: 'moteon-halter-set',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 261,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 262,
+        "text": "brandName: 'Mot\u00e9on',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 266,
+        "text": "image: '/assets/moteon/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 267,
+        "text": "imageAlt: 'Mot\u00e9on Riviera Halter Wrap Top & Palazzo Pant on travertine flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 286,
+        "text": "id: 'moteon-crochet-shirt',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 287,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 288,
+        "text": "brandName: 'Mot\u00e9on',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 292,
+        "text": "image: '/assets/moteon/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 293,
+        "text": "imageAlt: 'Mot\u00e9on Open-Knit Short-Sleeve Resort Polo on travertine flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 307,
+        "text": "'Hem woven with subtle Mot\u00e9on brand tab'"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 313,
+        "text": "id: 'moteon-linen-trousers',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 314,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 315,
+        "text": "brandName: 'Mot\u00e9on',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 319,
+        "text": "image: '/assets/moteon/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 320,
+        "text": "imageAlt: 'Mot\u00e9on Pleated Mediterranean Linen Trousers on travertine flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 340,
+        "text": "id: 'moteon-villa-shirt',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 341,
+        "text": "brandId: 'moteon',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 342,
+        "text": "brandName: 'Mot\u00e9on',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 346,
+        "text": "image: '/assets/moteon/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 347,
+        "text": "imageAlt: 'Model wearing Mot\u00e9on Embroidered Open-Collar Knit Shirt descending villa stairs',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 358,
+        "text": "'Subtle tonal Mot\u00e9on hem embroidery',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 441,
+        "text": "{/* C. MOT\u00c9ON DEDICATED EDITORIAL SHOWCASE */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 443,
+        "text": "{brand.id === 'moteon' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 453,
+        "text": "Mot\u00e9on \u2014 Riviera Freedom & Elevated Movement"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 468,
+        "text": "src=\"assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 469,
+        "text": "alt=\"Mot\u00e9on Launching April 1 Campaign Visual\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 479,
+        "text": "{/* Mot\u00e9on Ethos: Not A Trend & Designed To Move */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 483,
+        "text": "src=\"assets/campaigns/02-reference-crops/moteon/moteon-not-a-trend.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 484,
+        "text": "alt=\"Mot\u00e9on Not A Trend campaign visual\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 497,
+        "text": "Mot\u00e9on avoids momentary resort hype. We prioritize natural flax fibres, horn buttons, and breathable open-stitch crochet designed to age with distinguished grace."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 504,
+        "text": "src=\"assets/campaigns/02-reference-crops/moteon/moteon-designed-to-move.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 505,
+        "text": "alt=\"Mot\u00e9on Designed To Move campaign visual\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 304,
+        "text": "{/* 5 Distinct Cards for IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 363,
+        "text": "{/* Card 3: Mot\u00e9on */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 365,
+        "text": "onClick={() => onSelectBrand('moteon')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 371,
+        "text": "src=\"assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 372,
+        "text": "alt=\"Mot\u00e9on Riviera Resort\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 381,
+        "text": "<h3 className=\"text-lg font-cormorant font-normal text-[#111215]\">Mot\u00e9on</h3>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 25,
+        "text": "{ id: 'moteon', name: 'Mot\u00e9on' },"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 204,
+        "text": "await page.fill('textarea', 'Requesting private salon consultation for the upcoming Mot\u00e9on resort capsule.');"
+      }
+    ],
+    "My Drink Family": [
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 9,
+        "text": "* **My Drink Family** \u2014 Celebratory lounge, emerald velvet textures, and evening golden-hour silhouettes."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+        "line": 122,
+        "text": "\u2502       \u2514\u2500\u2500 my-drink-family/"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+        "line": 7,
+        "text": "<meta name=\"description\" content=\"IKLA Maison \u2014 Curated luxury fashion and lifestyle houses: IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and My Drink Family.\" />"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+        "line": 202,
+        "text": "<span className=\"text-neutral-300 font-medium\">My Drink Family</span>. All rights reserved."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 204,
+        "text": "'my-drink-family': {"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 205,
+        "text": "id: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 206,
+        "text": "name: 'My Drink Family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 228,
+        "text": "wordmarkDark: '/assets/my-drink-family/logos/wordmark-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 229,
+        "text": "wordmarkLight: '/assets/my-drink-family/logos/wordmark-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 230,
+        "text": "crestLight: '/assets/my-drink-family/logos/crest-light.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 231,
+        "text": "crestDark: '/assets/my-drink-family/logos/crest-dark.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 234,
+        "text": "heroDesktop: '/assets/my-drink-family/hero-desktop.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 235,
+        "text": "heroMobile: '/assets/my-drink-family/hero-mobile.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 236,
+        "text": "collection: '/assets/my-drink-family/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 237,
+        "text": "editorial: '/assets/my-drink-family/editorial.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 240,
+        "text": "heroDesktop: 'Rooftop sunset banquet with friends toasting with cocktails and My Drink Family apparel',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 241,
+        "text": "heroMobile: 'Golden hour rooftop party portrait of smiling friends in My Drink Family crest apparel',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 242,
+        "text": "collection: 'Flat lay of My Drink Family circular crest hoodie, tee, ball cap, and satin varsity jacket',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 245,
+        "text": "manifesto: 'My Drink Family celebrates togetherness, hospitality, and shared moments under golden hour skies. Bridging contemporary lounge lifestyle with elevated club silhouettes that embody community and good company.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 332,
+        "text": "BRANDS['my-drink-family']"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 415,
+        "text": "id: 'my-drink-family-rep-the-legacy-merch',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 416,
+        "text": "brandId: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 418,
+        "text": "file: 'assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 422,
+        "text": "alt: 'My Drink Family Rep The Legacy campaign featuring circular crest fleece and lifestyle clubhouse merchandise',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 429,
+        "text": "brandId: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 431,
+        "text": "file: 'assets/campaigns/02-reference-crops/my-drink-family/mymosa-family-merch.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 435,
+        "text": "alt: 'My Drink Family and MyMosa collaborative merch collection celebrating rooftop celebrations and good spirits',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 475,
+        "text": "// MY DRINK FAMILY"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 479,
+        "text": "brandId: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 480,
+        "text": "brandName: 'My Drink Family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 484,
+        "text": "image: '/assets/my-drink-family/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 485,
+        "text": "imageAlt: 'My Drink Family Circular Crest Heavyweight Club Hoodie in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 494,
+        "text": "description: 'Heavyweight fleece hoodie celebrating unity and community, featuring the circular My Drink Family emblem embossed and embroidered on the chest.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 506,
+        "text": "brandId: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 507,
+        "text": "brandName: 'My Drink Family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 511,
+        "text": "image: '/assets/my-drink-family/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 512,
+        "text": "imageAlt: 'My Drink Family Emerald Satin Varsity Jacket with crest in flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 532,
+        "text": "brandId: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 533,
+        "text": "brandName: 'My Drink Family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 537,
+        "text": "image: '/assets/my-drink-family/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 538,
+        "text": "imageAlt: 'My Drink Family Sunset Orange Crest Twill Ball Cap on collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 547,
+        "text": "description: 'Six-panel washed cotton twill cap featuring the My Drink Family circular emblem patch and an adjustable brass buckle strap.',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 559,
+        "text": "brandId: 'my-drink-family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 560,
+        "text": "brandName: 'My Drink Family',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 564,
+        "text": "image: '/assets/my-drink-family/collection.webp',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+        "line": 565,
+        "text": "imageAlt: 'My Drink Family Golden Hour Heritage Crest Tee in collection flat lay',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 687,
+        "text": "{/* F. MY DRINK FAMILY DEDICATED COMMUNITY & COLLABORATION SHOWCASE */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 689,
+        "text": "{brand.id === 'my-drink-family' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 695,
+        "text": "src=\"assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 696,
+        "text": "alt=\"My Drink Family Rep The Legacy campaign\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 717,
+        "text": "src=\"assets/campaigns/02-reference-crops/my-drink-family/mymosa-family-merch.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 767,
+        "text": "onClick={() => onSelectBrand('my-drink-family')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 791,
+        "text": "Celebrated moments with MyMosa Premium Wine Cocktail and My Drink Family apparel."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+        "line": 27,
+        "text": "{ id: 'my-drink-family', name: 'My Drink Family' }"
+      }
+    ],
+    "IKLA Water": [
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\MobileMenu.jsx",
+        "line": 111,
+        "text": "{/* Extension: IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\MobileMenu.jsx",
+        "line": 114,
+        "text": "onNavigate('brand', 'ikla-water');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\MobileMenu.jsx",
+        "line": 118,
+        "text": "currentView === 'brand' && currentBrandId === 'ikla-water'"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\MobileMenu.jsx",
+        "line": 129,
+        "text": "IKLA Water"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Navbar.jsx",
+        "line": 125,
+        "text": "{/* Extension Concept: IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Navbar.jsx",
+        "line": 129,
+        "text": "onNavigate('brand', 'ikla-water');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Navbar.jsx",
+        "line": 140,
+        "text": "IKLA Water"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 254,
+        "text": "'ikla-water': {"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 255,
+        "text": "id: 'ikla-water',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 256,
+        "text": "name: 'IKLA Water',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 285,
+        "text": "heroDesktop: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 286,
+        "text": "heroMobile: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 287,
+        "text": "collection: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 288,
+        "text": "editorial: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 289,
+        "text": "roundedBottles: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 290,
+        "text": "cylinderBottles: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 291,
+        "text": "pedestal: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 292,
+        "text": "diningTable: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 295,
+        "text": "heroDesktop: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 296,
+        "text": "heroMobile: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 297,
+        "text": "collection: 'Three minimalist IKLA Water bottles displayed on architectural travertine pedestal',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 298,
+        "text": "editorial: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 299,
+        "text": "roundedBottles: 'Trio of rounded glass IKLA Water bottles against clean studio backdrop',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 300,
+        "text": "cylinderBottles: 'Trio of tall cylindrical glass IKLA Water bottles against clean studio backdrop',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 301,
+        "text": "pedestal: 'Three minimalist IKLA Water bottles displayed on architectural travertine pedestal',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+        "line": 302,
+        "text": "diningTable: 'IKLA Water sculptural bottle placed beside fine crystal glassware on a formal dining table',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 73,
+        "text": "id: 'ikla-water-dining-table',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 74,
+        "text": "brandId: 'ikla-water',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 76,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 80,
+        "text": "alt: 'IKLA Water monolithic glass bottle arranged on a formal dining table beside fine crystal glassware and architectural tableware',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 86,
+        "text": "id: 'ikla-water-trio-pedestal',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 87,
+        "text": "brandId: 'ikla-water',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 89,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 93,
+        "text": "alt: 'Trio of sculptural IKLA Water glass bottles showcased atop a natural travertine pedestal in a serene minimalist gallery',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 99,
+        "text": "id: 'ikla-water-trio-rounded-bottles',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 100,
+        "text": "brandId: 'ikla-water',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 102,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 106,
+        "text": "alt: 'Clean product profile of three rounded IKLA Water glass bottles with silver foil typographic seal and pristine mineral clarity',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 112,
+        "text": "id: 'ikla-water-trio-cylinder-bottles',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 113,
+        "text": "brandId: 'ikla-water',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 115,
+        "text": "file: 'assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+        "line": 119,
+        "text": "alt: 'Clean product profile of three tall cylindrical IKLA Water glass bottles with architectural cap closures',"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 568,
+        "text": "{/* E. IKLA WATER DEDICATED HOUSE EXTENSION SHOWCASE */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 570,
+        "text": "{brand.id === 'ikla-water' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 586,
+        "text": "IKLA Water is conceived as an architectural extension of the IKLA Maison dining salon. Reusable flint glass bottles engineered with heavy monolithic bases, designed to elevate executive hospitality, residential tables, and gallery spaces."
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 600,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 601,
+        "text": "alt=\"IKLA Water Dining Table Setting\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 616,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 617,
+        "text": "alt=\"IKLA Water Trio Pedestal Display\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 639,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 640,
+        "text": "alt=\"IKLA Water Rounded Bottles Profile\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 663,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+        "line": 664,
+        "text": "alt=\"IKLA Water Cylinder Bottles Profile\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 22,
+        "text": "if (selectedBrand === 'ikla-water') return [];"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 75,
+        "text": "{/* Brand Tabs Bar with Authentic House Crests + IKLA Water Extension */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 108,
+        "text": "{/* IKLA Water Concept Tab */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 110,
+        "text": "onClick={() => setSelectedBrand('ikla-water')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 112,
+        "text": "selectedBrand === 'ikla-water'"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 120,
+        "text": "<span>IKLA Water (Concept)</span>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 125,
+        "text": "{activeHouseData && selectedBrand !== 'ikla-water' && ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 154,
+        "text": "{/* IKLA WATER DEDICATED CONCEPT PRODUCT-STORY LAYOUT */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 156,
+        "text": "{selectedBrand === 'ikla-water' ? ("
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 166,
+        "text": "IKLA Water \u2014 Sculptural Mineral Vessels"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 178,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 179,
+        "text": "alt=\"IKLA Water Dining Table Setting\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 193,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 194,
+        "text": "alt=\"IKLA Water Pedestal Curation\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 215,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 216,
+        "text": "alt=\"IKLA Water Rounded Bottles Silhouette\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 238,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+        "line": 239,
+        "text": "alt=\"IKLA Water Cylinder Bottles Silhouette\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 19,
+        "text": "const waterDiningAsset = getCampaignAsset('ikla-water-dining-table');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 20,
+        "text": "const waterPedestalAsset = getCampaignAsset('ikla-water-trio-pedestal');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 21,
+        "text": "const waterRoundedAsset = getCampaignAsset('ikla-water-trio-rounded-bottles');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 22,
+        "text": "const waterCylinderAsset = getCampaignAsset('ikla-water-trio-cylinder-bottles');"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 304,
+        "text": "{/* 5 Distinct Cards for IKLA Maison, KTSE, Mot\u00e9on, Moral Compass, and IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 421,
+        "text": "{/* Card 5: IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 423,
+        "text": "onClick={() => onSelectBrand('ikla-water')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 429,
+        "text": "src=\"assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 430,
+        "text": "alt=\"IKLA Water Dining Table Vessel\""
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 439,
+        "text": "<h3 className=\"text-lg font-cormorant font-normal text-[#111215]\">IKLA Water</h3>"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 799,
+        "text": "{/* 8. SEQUENCE STEP 7: IKLA WATER (PREMIUM PRODUCT/STORY SECTION) */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 801,
+        "text": "<section id=\"ikla-water\" className=\"relative py-28 px-6 sm:px-8 lg:px-12 bg-[#F6F9FA] border-b border-[#CADCE0]\">"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 810,
+        "text": "IKLA Water \u2014 Sculptural Mineral Vessels"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 921,
+        "text": "{/* Action to Explore IKLA Water */}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 924,
+        "text": "onClick={() => onSelectBrand('ikla-water')}"
+      },
+      {
+        "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+        "line": 927,
+        "text": "<span>Explore Complete IKLA Water Showcase</span>"
+      }
+    ]
+  },
+  "filename_hits": {
+    "IKLA Maison": [
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\IKLA-Maison-Full-Site-Review.zip",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-business-casual-couple.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-dynasty-spectrum-hoodies.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-mens-golf-flatlay.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-womens-golf-flatlay.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-brand-ambassador-program.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-coastal-cycling.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-family-airport-travel.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-focus-discipline-purpose.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-luxury-coastal-couple.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-standard-black-white-basics.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-standard-hoodie-sweats.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-tennis-collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\collection.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\editorial.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\editorial.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-desktop.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-desktop.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-mobile.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-mobile.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_ikla-maison.png"
+    ],
+    "KTSE": [
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-ash-grey-set.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-beach-collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-brand-shirt-still-life.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-coastal-couple.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-collection-collage.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-multiple-colorways-product-grid.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-streetwear-duo.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-summer-lifestyle-trio.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-urban-same-energy.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-vintage-black-colorways.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\collection.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\editorial.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\editorial.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-desktop.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-desktop.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-mobile.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-mobile.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-light.webp"
+    ],
+    "My Dream Family": [],
+    "SmokeSuite": [],
+    "Moral Compass": [
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\moral-compass\\moral-compass-coming-soon.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\collection.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\editorial.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\editorial.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-desktop.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-desktop.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-mobile.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-mobile.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\05_brand_moral_compass.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_moral-compass.png"
+    ],
+    "Mot\u00e9on": [
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\moteon\\moteon-launching-april-first.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\moteon\\moteon-designed-to-move.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\moteon\\moteon-not-a-trend.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\collection.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\editorial.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\editorial.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-desktop.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-desktop.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-mobile.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-mobile.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\04_brand_moteon.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_moteon.png"
+    ],
+    "My Drink Family": [
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\my-drink-family\\my-drink-family-rep-the-legacy-merch.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\my-drink-family\\mymosa-family-merch.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\collection.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\collection.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\editorial.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\editorial.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-desktop.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-desktop.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-mobile.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-mobile.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-dark.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-dark.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-light.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-light.webp",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\06_brand_my_drink_family.png",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_my-drink-family.png"
+    ],
+    "IKLA Water": [
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-dining-table.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-cylinder-bottles.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-pedestal.jpg",
+      "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-rounded-bottles.jpg"
+    ]
+  },
+  "absence_caveat": "No matches does not prove no historic work exists elsewhere"
+}

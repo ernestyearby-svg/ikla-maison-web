@@ -1,0 +1,1578 @@
+{
+  "products": [
+    {
+      "brandId": "ikla-maison",
+      "name": "[Placeholder] Travertine Gold-Zip Track Jacket",
+      "category": "Outerwear",
+      "image": "/assets/ikla-maison/collection.webp"
+    },
+    {
+      "brandId": "ikla-maison",
+      "name": "[Placeholder] Travertine Wide-Leg Pleated Track Pant",
+      "category": "Bottoms",
+      "image": "/assets/ikla-maison/collection.webp"
+    },
+    {
+      "brandId": "ikla-maison",
+      "name": "[Placeholder] Open-Knit Textured Cabana Polo",
+      "category": "Tops",
+      "image": "/assets/ikla-maison/collection.webp"
+    },
+    {
+      "brandId": "ikla-maison",
+      "name": "[Placeholder] Gilded Signature Heavyweight Hoodie",
+      "category": "Tops",
+      "image": "/assets/ikla-maison/collection.webp"
+    },
+    {
+      "brandId": "ikla-maison",
+      "name": "[Placeholder] Architectural Longline Double Trench",
+      "category": "Outerwear",
+      "image": "/assets/ikla-maison/hero-desktop.webp"
+    },
+    {
+      "brandId": "ktse",
+      "name": "[Placeholder] 500GSM Raw-Hem Heavyweight Sweat Set",
+      "category": "Sets",
+      "image": "/assets/ktse/collection.webp"
+    },
+    {
+      "brandId": "ktse",
+      "name": "[Placeholder] Heavyweight Drop-Shoulder Boxy Tee",
+      "category": "Tops",
+      "image": "/assets/ktse/collection.webp"
+    },
+    {
+      "brandId": "ktse",
+      "name": "[Placeholder] Monolithic Bone Pullover Hoodie",
+      "category": "Tops",
+      "image": "/assets/ktse/hero-mobile.webp"
+    },
+    {
+      "brandId": "ktse",
+      "name": "[Placeholder] Raw-Edge Heavyweight Denim Short",
+      "category": "Bottoms",
+      "image": "/assets/ktse/hero-desktop.webp"
+    },
+    {
+      "brandId": "moteon",
+      "name": "[Placeholder] Riviera Halter Wrap Top & Palazzo Pant",
+      "category": "Sets",
+      "image": "/assets/moteon/collection.webp"
+    },
+    {
+      "brandId": "moteon",
+      "name": "[Placeholder] Open-Knit Short-Sleeve Resort Polo",
+      "category": "Tops",
+      "image": "/assets/moteon/collection.webp"
+    },
+    {
+      "brandId": "moteon",
+      "name": "[Placeholder] Pleated Mediterranean Linen Trousers",
+      "category": "Bottoms",
+      "image": "/assets/moteon/collection.webp"
+    },
+    {
+      "brandId": "moteon",
+      "name": "[Placeholder] Embroidered Open-Collar Knit Shirt",
+      "category": "Tops",
+      "image": "/assets/moteon/hero-mobile.webp"
+    },
+    {
+      "brandId": "moral-compass",
+      "name": "[Placeholder] Celestial Navigation Wool Overcoat",
+      "category": "Outerwear",
+      "image": "/assets/moral-compass/collection.webp"
+    },
+    {
+      "brandId": "moral-compass",
+      "name": "[Placeholder] Gilded Compass Star French Terry Crewneck",
+      "category": "Tops",
+      "image": "/assets/moral-compass/collection.webp"
+    },
+    {
+      "brandId": "moral-compass",
+      "name": "[Placeholder] Cardinal Heavyweight Ribbed Wool Sweater",
+      "category": "Tops",
+      "image": "/assets/moral-compass/collection.webp"
+    },
+    {
+      "brandId": "moral-compass",
+      "name": "[Placeholder] Pleated Wool Trousers with Compass Key Fob",
+      "category": "Bottoms",
+      "image": "/assets/moral-compass/collection.webp"
+    },
+    {
+      "brandId": "my-drink-family",
+      "name": "[Placeholder] Circular Crest Heavyweight Club Hoodie",
+      "category": "Tops",
+      "image": "/assets/my-drink-family/collection.webp"
+    },
+    {
+      "brandId": "my-drink-family",
+      "name": "[Placeholder] Emerald Satin Embroidered Varsity Jacket",
+      "category": "Outerwear",
+      "image": "/assets/my-drink-family/collection.webp"
+    },
+    {
+      "brandId": "my-drink-family",
+      "name": "[Placeholder] Sunset Orange Crest Twill Ball Cap",
+      "category": "Accessories",
+      "image": "/assets/my-drink-family/collection.webp"
+    },
+    {
+      "brandId": "my-drink-family",
+      "name": "[Placeholder] Golden Hour Heritage Crest Tee",
+      "category": "Tops",
+      "image": "/assets/my-drink-family/collection.webp"
+    }
+  ],
+  "campaigns": [
+    {
+      "brandId": "ikla-maison",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-business-casual-couple.jpg",
+      "category": "business-casual",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        1024,
+        1536
+      ],
+      "actual_dimensions": [
+        1024,
+        1536
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-dynasty-spectrum-hoodies.jpg",
+      "category": "dynasty-spectrum",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        706,
+        711
+      ],
+      "actual_dimensions": [
+        706,
+        711
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-mens-golf-flatlay.jpg",
+      "category": "leisure-golf",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        706,
+        711
+      ],
+      "actual_dimensions": [
+        706,
+        711
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-womens-golf-flatlay.jpg",
+      "category": "leisure-golf",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        706,
+        711
+      ],
+      "actual_dimensions": [
+        706,
+        711
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "moteon",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg",
+      "category": "launch",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        1024,
+        1365
+      ],
+      "actual_dimensions": [
+        1024,
+        1365
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-water",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "category": "hospitality",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        1024,
+        1536
+      ],
+      "actual_dimensions": [
+        1024,
+        1536
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-water",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg",
+      "category": "pedestal",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        1024,
+        1024
+      ],
+      "actual_dimensions": [
+        1024,
+        1024
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-water",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg",
+      "category": "vessels",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        710,
+        711
+      ],
+      "actual_dimensions": [
+        710,
+        711
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-water",
+      "status": "ready",
+      "file": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg",
+      "category": "vessels",
+      "notes": "Clean crop; approved for placement",
+      "declared_dimensions": [
+        710,
+        711
+      ],
+      "actual_dimensions": [
+        710,
+        711
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "collaborations",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/collaborations/ikla-x-mymosa-lifestyle.jpg",
+      "category": "collaborations",
+      "notes": "MyMosa is a Premium Wine Cocktail.",
+      "declared_dimensions": [
+        706,
+        944
+      ],
+      "actual_dimensions": [
+        706,
+        944
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg",
+      "category": "editorial-duo",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        1191
+      ],
+      "actual_dimensions": [
+        706,
+        1191
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-multiple-colorways-product-grid.jpg",
+      "category": "colorways",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        948
+      ],
+      "actual_dimensions": [
+        706,
+        948
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-vintage-black-colorways.jpg",
+      "category": "colorways",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        948
+      ],
+      "actual_dimensions": [
+        706,
+        948
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-ash-grey-set.jpg",
+      "category": "colorways",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        948
+      ],
+      "actual_dimensions": [
+        706,
+        948
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-brand-shirt-still-life.jpg",
+      "category": "still-life",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        1011
+      ],
+      "actual_dimensions": [
+        706,
+        1011
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-urban-same-energy.jpg",
+      "category": "campaign-manifesto",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        964
+      ],
+      "actual_dimensions": [
+        706,
+        964
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-coastal-couple.jpg",
+      "category": "lifestyle",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        941
+      ],
+      "actual_dimensions": [
+        706,
+        941
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-beach-collection.jpg",
+      "category": "lifestyle",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        964
+      ],
+      "actual_dimensions": [
+        706,
+        964
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-summer-lifestyle-trio.jpg",
+      "category": "lifestyle",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        941
+      ],
+      "actual_dimensions": [
+        706,
+        941
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ktse",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ktse/ktse-collection-collage.jpg",
+      "category": "collage",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        964
+      ],
+      "actual_dimensions": [
+        706,
+        964
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "moteon",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/moteon/moteon-not-a-trend.jpg",
+      "category": "ethos",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        932
+      ],
+      "actual_dimensions": [
+        706,
+        932
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "moteon",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/moteon/moteon-designed-to-move.jpg",
+      "category": "ethos",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        900
+      ],
+      "actual_dimensions": [
+        706,
+        900
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "moral-compass",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg",
+      "category": "preview",
+      "notes": "Keep minimal and intentional. Coming soon private preview.",
+      "declared_dimensions": [
+        706,
+        912
+      ],
+      "actual_dimensions": [
+        706,
+        912
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg",
+      "category": "movement",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        911
+      ],
+      "actual_dimensions": [
+        706,
+        911
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg",
+      "category": "movement",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        943
+      ],
+      "actual_dimensions": [
+        706,
+        943
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg",
+      "category": "travel-family",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        939
+      ],
+      "actual_dimensions": [
+        706,
+        939
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-focus-discipline-purpose.jpg",
+      "category": "discipline",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        952
+      ],
+      "actual_dimensions": [
+        706,
+        952
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg",
+      "category": "leisure",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        782
+      ],
+      "actual_dimensions": [
+        706,
+        782
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-brand-ambassador-program.jpg",
+      "category": "community",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        950
+      ],
+      "actual_dimensions": [
+        706,
+        950
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-hoodie-sweats.jpg",
+      "category": "foundations",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        941
+      ],
+      "actual_dimensions": [
+        706,
+        941
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "ikla-maison",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-black-white-basics.jpg",
+      "category": "foundations",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        935
+      ],
+      "actual_dimensions": [
+        706,
+        935
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "my-drink-family",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg",
+      "category": "community",
+      "notes": "Cropped from social screenshot; use with deliberate framing",
+      "declared_dimensions": [
+        706,
+        943
+      ],
+      "actual_dimensions": [
+        706,
+        943
+      ],
+      "dimensions_match": true
+    },
+    {
+      "brandId": "my-drink-family",
+      "status": "reference",
+      "file": "assets/campaigns/02-reference-crops/my-drink-family/mymosa-family-merch.jpg",
+      "category": "collaborations",
+      "notes": "MyMosa is a Premium Wine Cocktail.",
+      "declared_dimensions": [
+        706,
+        952
+      ],
+      "actual_dimensions": [
+        706,
+        952
+      ],
+      "dimensions_match": true
+    }
+  ],
+  "literal_references": [
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/wordmark-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/wordmark-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/crest-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/crest-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/editorial.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/logos/wordmark-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/logos/wordmark-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/logos/crest-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/logos/crest-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ktse/editorial.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/logos/wordmark-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/logos/wordmark-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/logos/crest-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/logos/crest-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moteon/editorial.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/logos/wordmark-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/logos/wordmark-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/logos/crest-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/logos/crest-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/moral-compass/editorial.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/logos/wordmark-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/logos/wordmark-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/logos/crest-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/logos/crest-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/my-drink-family/editorial.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/wordmark-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/wordmark-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/crest-light.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "/assets/ikla-maison/logos/crest-dark.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-business-casual-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-dynasty-spectrum-hoodies.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-mens-golf-flatlay.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-womens-golf-flatlay.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/collaborations/ikla-x-mymosa-lifestyle.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-multiple-colorways-product-grid.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-vintage-black-colorways.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-ash-grey-set.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-brand-shirt-still-life.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-urban-same-energy.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-coastal-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-beach-collection.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-summer-lifestyle-trio.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-collection-collage.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/moteon/moteon-not-a-trend.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/moteon/moteon-designed-to-move.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-focus-discipline-purpose.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-brand-ambassador-program.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-hoodie-sweats.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-black-white-basics.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "reference": "assets/campaigns/02-reference-crops/my-drink-family/mymosa-family-merch.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ikla-maison/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ikla-maison/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ikla-maison/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ikla-maison/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ikla-maison/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ktse/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ktse/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ktse/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/ktse/hero-desktop.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moteon/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moteon/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moteon/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moteon/hero-mobile.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moral-compass/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moral-compass/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moral-compass/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/moral-compass/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/my-drink-family/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/my-drink-family/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/my-drink-family/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "reference": "/assets/my-drink-family/collection.webp",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-mens-golf-flatlay.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-womens-golf-flatlay.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-maison/ikla-business-casual-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-multiple-colorways-product-grid.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-vintage-black-colorways.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-ash-grey-set.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-brand-shirt-still-life.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-urban-same-energy.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-coastal-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-beach-collection.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-summer-lifestyle-trio.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-collection-collage.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/moteon/moteon-not-a-trend.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/moteon/moteon-designed-to-move.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/my-drink-family/mymosa-family-merch.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-hoodie-sweats.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-focus-discipline-purpose.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg",
+      "exists": true
+    },
+    {
+      "source": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "reference": "assets/campaigns/02-reference-crops/ikla-maison/ikla-standard-black-white-basics.jpg",
+      "exists": true
+    }
+  ],
+  "missing": [],
+  "dimension_mismatches": [],
+  "read_governance_fingerprints": [
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\AGENTS.md",
+      "sha256": "4f586c3bd2cdd3f304089327cd826821c0a729bf705671d7ea2c1e633d7b8456"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\AGENTS.md",
+      "sha256": "430de9ea8d60c00c624a23859a041c9dc1db6a7894feb7516cda1854aabd3cae"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\My drink family\\AGENTS.md",
+      "sha256": "e7ad66b3e5c87ead5c3d2572700de1f75c77cae08c1e4d337ad109c0d1e52b87"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\My drink family\\MDF_INTELLIGENCE\\01_BRAND_CANON.md",
+      "sha256": "37967834d02e452f1fe2e82f5d8fe9732422d3dfbb7bc859caa0fe411c25843f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\00_DWS_MASTER_DOCTRINE.md",
+      "sha256": "51a19b4189ab5e3b749c8fa21880490e17a7aee10e4aea730052a2d27275f6f7"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\01_FOUR_PILLARS.md",
+      "sha256": "27386b462ca3be75a02abbde741138c8c1ee3def13a00a9d3748a518deaccbf1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\02_UNIVERSAL_VISUAL_STANDARD.md",
+      "sha256": "097a8e3d2e3e71a3c30d5e440b39eba4ab47ae3b78d130ff4b9bc566fbc01b9e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\03_DYNASTY_RENDER_DNA.md",
+      "sha256": "c3ef0456871c9f96c4f5287703744224d8c9de9e0e5ac3c45a20f691c2d2a07e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\04_COPY_COMMUNICATION_STANDARD.md",
+      "sha256": "539b11228909ce8a796171384969274c90f33bf473b1fd9a9a7c316fa1149824"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\05_ASSET_GOVERNANCE.md",
+      "sha256": "2a778297ac0921cc523965d0477b2d570a5f73d81fd615e9ffc809439e99c6b9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\06_PROJECT_ARCHITECTURE.md",
+      "sha256": "472173efbe861862e2eb415e24fe0d86ecefbd7455391b3623aa2f3092fdfae0"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\07_DYNASTY_SECURITY.md",
+      "sha256": "d4ff6bb752d5472239016e9fb66538016153894de1fdf31841e984e1c4b878d6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\08_SOURCE_OF_TRUTH_PROTOCOL.md",
+      "sha256": "b3b14f9d1914ef4ecc155599a18ec22c0204c82eac3c651a09700b79483ca185"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\09_APPROVAL_GATES.md",
+      "sha256": "9b1fef9302611b9078f23a6b70919457baf97fe39fc92ed59bcfeea6d6629900"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\10_WEB_APP_PRODUCT_STANDARD.md",
+      "sha256": "2415f2f2b957d6ecf3a13c1ef327d1ff7dc2d13b91bde22f256228b4e99a2d12"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\11_3D_RENDER_PRODUCT_STANDARD.md",
+      "sha256": "0b8cdec6ebddd6b7610f78b7db625e3550d21c782b4604a377d634464e319c1e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\12_CLIENT_PROJECT_STANDARD.md",
+      "sha256": "641be8f3dd58c97601aec8d3776d7a7b851100fdae14c82d357badce4d9be2ad"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\13_FILE_NAMING_VERSION_CONTROL.md",
+      "sha256": "0f48b0ced3a58faab3ddb9a78fccad56072d3e2d6f0ca49edf08e6b24e5b65f6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\14_RESEARCH_EVIDENCE_STANDARD.md",
+      "sha256": "ea4e3a9228c0df105017ef379ef11c5371c7b18abece0bdb9c98ad236fe0ba34"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\15_AUTOMATION_AGENT_STANDARD.md",
+      "sha256": "c4c620dac7bfa1190746d332caa39e113662ed89ba81e197782187d879c2fe9d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\16_DECISION_LOG_PROTOCOL.md",
+      "sha256": "5ae0f8671e79ac539dd4654da6a21a08a2ec5231bbd88c0eefb8950e6dae9fd1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\17_DO_NOT_DRIFT.md",
+      "sha256": "ed27dc0f627b58d9c7159bec5d67246945e9ea2cb5eb8be667dce15d85581665"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\18_PROJECT_REGISTRY.md",
+      "sha256": "e3aaa7a3eda0e8b8850ef625eb8ee34927b3a8ff0342d7341806704d1507317d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\19_ACTIVE_PORTFOLIO.md",
+      "sha256": "d61953730dfe3eef9fa92804aba59cb6da531933da9ddda5fd4ee26e54716f48"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\20_PROJECT_BOOTSTRAP_TEMPLATE.md",
+      "sha256": "99d8043dcde7d320a3369c7a1fdb09522d1b84b672965f6c5ceeb520ce93cd6b"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\21_PROMPT_STARTER.md",
+      "sha256": "3f72bf33b75f3ddd09ced16be43a0a136a79fd4fa2d4b1153da325bc5704e4b9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\AGENTS.md",
+      "sha256": "ef56245a6c4594817a190cc065dadaa6159054e512ddf6d298b860b628f1ed06"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\IKLA_ONBOARDING_REPORT_ROUND1.md",
+      "sha256": "d7574eba910a99534cf99f09751dca369b94554ac5277c63572be9be1a613039"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\ROUND1_FOUNDER_DECISIONS.md",
+      "sha256": "52b742a4f3350c6d8b0ffb528d1556bdadd3435b4e4b3f6099cf15e70ff2a7c3"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\ROUND1_VALIDATION_REPORT.md",
+      "sha256": "97f6c34f6d74e6e9e7a2c6e094c363046b745c62d5f830a90f2f3dac85626312"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\DYNASTY_WORKS_INTELLIGENCE\\VALIDATION_REPORT.md",
+      "sha256": "17e611cf470ad99457fd85102b6fa4c2dc32e5c526c5f27edaedde42ca95c622"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\00_MASTER_DOCTRINE.md",
+      "sha256": "2b0626eafa8048f2e587edb55fbc70196ee6df86e8b2c201876361c3e308b955"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\01_PRODUCT_CANON.md",
+      "sha256": "b78d3f7c5a94fe7f79c4ae2e7eedcf4c658ed38c5ad57c00531ab3d66ab4f9b6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\02_VISUAL_DNA.md",
+      "sha256": "c15151673ff9928cb5b3cfc659b8bc76ac80a01cfdeb7cfb738dc441a8000d78"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\03_PRODUCT_ARCHITECTURE.md",
+      "sha256": "01959824880e18fe95b3d448bc6c637849d3f80bbaed29750f5c37c07a9dcbe8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\04_ENGINEERING_STATUS.md",
+      "sha256": "7e005004178b0e8d8472f2c71601fb0bbc5e72aca99816424e684e2929c4b902"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\05_COST_COMMERCIAL_STATUS.md",
+      "sha256": "e6c80dd355821b169cfa17de19487f2a4cc9c2e2a51d0dc31c72052d7d167e4b"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\06_SOURCE_OF_TRUTH_REGISTER.md",
+      "sha256": "a1eaf0239ff63c984f5f72be1b6b872cb1c2ed964a0d0c996b7c103e2e465eaf"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\07_DECISION_LOG.md",
+      "sha256": "13ac22856e6712fd363c15a099bd8d0c824372219d9684dbc5996373bf6becbe"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\08_ACTIVE_PRIORITIES.md",
+      "sha256": "d3649ca787ed2f2ca83e3b202fb7c87a94742d604fb7397f9b5671f089ee7b91"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\09_EXTERNAL_VALIDATION_STATUS.md",
+      "sha256": "5e4f19dbbd555ffc84f75e688151fc949732884d7d146e047251f09845a4395f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\10_DYNASTY_SECURITY.md",
+      "sha256": "be135519e53ddd79479f40a9d62dc6ccb5ede226a4e87b61a43e24d21da24a5c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\ChatGPT\\smokesuite-3d\\SMOKESUITE_INTELLIGENCE\\11_DO_NOT_DRIFT.md",
+      "sha256": "421cb31904ea77ab141ea11a91e3a699b8ef408a988ab5f8f9f68d4a40191cf0"
+    }
+  ]
+}

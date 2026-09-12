@@ -34,7 +34,7 @@ export default function Navbar({
         <span className="hidden sm:inline text-[#C8A97E]">•</span>
         <span>Complimentary White-Glove Shipping On Orders Over $350</span>
         <span className="hidden sm:inline text-[#C8A97E]">•</span>
-        <span className="hidden md:inline text-neutral-300">Five Independent Houses · One Disciplined Maison</span>
+        <span className="hidden md:inline text-neutral-300">Independent Houses · One Disciplined Maison</span>
         <span className="hidden md:inline text-[#C8A97E]">•</span>
       </div>
 
@@ -87,7 +87,7 @@ export default function Navbar({
                 >
                   <div className="flex items-center justify-between px-3 pt-1 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#C8A97E] font-medium">
                     <span>Curated Luxury Houses</span>
-                    <span className="text-[9px] text-neutral-500 font-normal">5 Houses</span>
+                    <span className="text-[9px] text-neutral-500 font-normal">6 Houses</span>
                   </div>
                   {BRAND_LIST.map((b) => (
                     <button
@@ -188,7 +188,7 @@ export default function Navbar({
               IKLA MAISON
             </span>
             <span className="block text-[8px] tracking-[0.45em] text-[#C8A97E] uppercase font-light -mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
-              Les Cinq Maisons
+              The Houses & Collective
             </span>
           </div>
 
@@ -232,7 +232,7 @@ export default function Navbar({
                   onSearchChange(e.target.value);
                   if (currentView !== 'collection') onNavigate('collection');
                 }}
-                placeholder="Search across all five houses (e.g. trench, linen, hoodie, overcoat)..."
+                placeholder="Search across all houses (e.g. trench, linen, hoodie, overcoat, WNNR)..."
                 autoFocus
                 className="w-full bg-transparent text-sm text-white placeholder-neutral-500 focus:outline-none"
               />

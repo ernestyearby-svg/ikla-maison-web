@@ -131,14 +131,14 @@ export const BRANDS = {
       crestDark: '/assets/moteon/logos/crest-dark.webp',
     },
     assets: {
-      heroDesktop: '/assets/moteon/hero-desktop.webp',
-      heroMobile: '/assets/moteon/hero-mobile.webp',
+      heroDesktop: 'assets/campaigns/round-one/moteon-performance-hero.webp',
+      heroMobile: 'assets/campaigns/round-one/moteon-performance-hero.webp',
       collection: '/assets/moteon/collection.webp',
       editorial: '/assets/moteon/editorial.webp',
     },
     alt: {
-      heroDesktop: 'Couple lounging on terrace daybed overlooking sea with embroidered Motéon cushion and book',
-      heroMobile: 'Man walking down travertine villa steps in cream Motéon open-knit shirt and linen pants',
+      heroDesktop: 'Adult male and female models wearing black and ivory Motéon performance apparel at a Mediterranean villa',
+      heroMobile: 'Adult male and female models wearing black and ivory Motéon performance apparel at a Mediterranean villa',
       collection: 'Flat lay of Motéon resort collection on travertine marble featuring halter top and crochet polo',
       editorial: 'Guests arriving by wooden motorboat at Mediterranean rocky cove at golden hour',
     },
@@ -181,14 +181,14 @@ export const BRANDS = {
       crestDark: '/assets/moral-compass/logos/crest-dark.webp',
     },
     assets: {
-      heroDesktop: '/assets/moral-compass/hero-desktop.webp',
-      heroMobile: '/assets/moral-compass/hero-mobile.webp',
+      heroDesktop: 'assets/campaigns/round-one/moral-compass-hero.webp',
+      heroMobile: 'assets/campaigns/round-one/moral-compass-hero.webp',
       collection: '/assets/moral-compass/collection.webp',
       editorial: '/assets/moral-compass/editorial.webp',
     },
     alt: {
-      heroDesktop: 'Models standing in neoclassical stone colonnade with compass floor medallions and star brooches',
-      heroMobile: 'Tailored woman standing under sunlit rotunda oculus on celestial compass floor medallion',
+      heroDesktop: 'Adult couple in bone and deep forest Moral Compass tailoring inside a dramatic stone corridor',
+      heroMobile: 'Adult couple in bone and deep forest Moral Compass tailoring inside a dramatic stone corridor',
       collection: 'Flat lay on black marble showing Moral Compass overcoat with gold celestial lining and star knitwear',
       editorial: 'Three figures in stone circular rotunda with compass floor looking toward mountain vista',
     },
@@ -248,6 +248,79 @@ export const BRANDS = {
       'Lustrous satin varsity outerwear and heavyweight cottons',
       'Vibrant sunset orange, rich emerald, and warm cream palette',
       'Seamless transition from day celebration to evening lounge'
+    ]
+  },
+
+  'wnnr': {
+    id: 'wnnr',
+    name: 'WNNR',
+    spokenName: 'winner',
+    tagline: 'WIN WITHIN',
+    supportingLine: 'Discipline. Ambition. Execution.',
+    description: 'Elevated discipline-led lifestyle essentials; victory begins internally before it is visible externally. Monolithic silhouettes sculpted in obsidian black, bone, deep forest, and restrained metallic gold.',
+    keywords: ['Discipline', 'Ambition', 'Execution', 'Victory', 'Monolithic'],
+    palette: {
+      accent: '#C5A869',
+      accentHover: '#DFBF95',
+      badgeBg: 'rgba(27, 46, 36, 0.20)',
+      badgeBorder: 'rgba(197, 168, 105, 0.45)',
+      cardBg: '#FFFFFF',
+      heroOverlay: 'linear-gradient(to top, rgba(13,15,14,0.96) 0%, rgba(13,15,14,0.45) 60%, rgba(13,15,14,0.18) 100%)',
+      obsidian: '#0D0F0E',
+      bone: '#F4F1EA',
+      forest: '#1B2E24',
+      gold: '#C5A869',
+    },
+    buttonStyle: 'bg-[#0D0F0E] text-[#F4F1EA] hover:bg-[#1B2E24] shadow-md border border-[#C5A869]/40 hover:border-[#C5A869] transition-all duration-300 font-medium tracking-[0.18em] uppercase text-xs cursor-pointer',
+    buttonOutlineStyle: 'border border-[#0D0F0E] text-[#0D0F0E] hover:bg-[#0D0F0E] hover:text-[#F4F1EA] transition-all duration-300 font-medium tracking-[0.18em] uppercase text-xs cursor-pointer',
+    navAccent: '#C5A869',
+    glowColor: 'rgba(197, 168, 105, 0.30)',
+    atmosphereBg: 'bg-[#F6F5F2] bg-radial-[at_top_right] from-[#EDEAE2] via-[#F6F5F2] to-[#E2DFD6]',
+    houseBorder: 'border-[#D2CEBE]',
+    typography: 'font-cormorant',
+    founded: 'Discipline Atelier',
+    origin: 'Internal Sanctuary — Global Ground',
+    logos: {
+      wordmarkDark: '/assets/wnnr/logos/wordmark-dark.webp',
+      wordmarkLight: '/assets/wnnr/logos/wordmark-light.webp',
+      crestLight: '/assets/wnnr/logos/crest-light.webp',
+      crestDark: '/assets/wnnr/logos/crest-dark.webp',
+    },
+    assets: {
+      heroDesktop: 'assets/campaigns/round-one/wnnr-win-within-hero.webp',
+      heroMobile: 'assets/campaigns/round-one/wnnr-win-within-hero.webp',
+      collection: 'assets/campaigns/round-one/wnnr-product-collection.webp',
+      editorial: 'assets/campaigns/round-four/wnnr-discipline-lifestyle.webp',
+      accessories: 'assets/campaigns/round-two/wnnr-accessories-collection.webp',
+      tshirts: 'assets/campaigns/round-two/wnnr-tshirt-colorways.webp',
+      uniform: 'assets/campaigns/round-three/wnnr-hoodie-jogger-colorways.webp',
+      lifestyle: 'assets/campaigns/round-four/wnnr-discipline-lifestyle.webp'
+    },
+    alt: {
+      heroDesktop: 'Adult couple wearing bone and black WNNR tracksuits in a luxury penthouse at sunset',
+      heroMobile: 'Adult couple wearing bone and black WNNR tracksuits in a luxury penthouse at sunset',
+      collection: 'WNNR hoodie T-shirt joggers socks slides cap beanie and weekender in black bone forest and gold',
+      editorial: 'Adult Black man and woman wearing WNNR performance essentials in a penthouse training studio at sunrise',
+      accessories: 'WNNR bags caps beanies socks and slides in black bone forest and gold arranged on architectural plinths',
+      tshirts: 'Six heavyweight WNNR T-shirts in black bone forest oxblood ochre and charcoal',
+      uniform: 'Five WNNR hoodie and jogger sets in black bone forest oxblood and charcoal',
+      lifestyle: 'Adult Black man and woman wearing WNNR performance essentials in a penthouse training studio at sunrise'
+    },
+    manifesto: 'WNNR is founded on the unyielding principle that true victory begins within before it is ever realized externally. We construct elevated discipline-led essentials designed for uncompromising focus, quiet ambition, and flawless execution.',
+    keyAttributes: [
+      'Heavyweight discipline loopback fleeces & drop-tail tees',
+      'Restrained obsidian, bone, forest, and gold color discipline',
+      'Engineered for internal preparation, focus, and recovery',
+      'Discreet WNNR tonal silicon branding & gilded crest tags'
+    ],
+    paletteColors: [
+      { name: 'Obsidian Black', hex: '#0D0F0E', desc: 'Anchor of solitary focus and absolute resolve' },
+      { name: 'Bone Cream', hex: '#F4F1EA', desc: 'Raw limestone purity and quiet tactile balance' },
+      { name: 'Deep Forest', hex: '#1B2E24', desc: 'Grounded vitality, enduring endurance, and discipline' },
+      { name: 'Restrained Gold', hex: '#C5A869', desc: 'Measured victory earned quietly from within' },
+      { name: 'Oxblood Crimson', hex: '#4A1525', desc: 'Internal intensity, pulse, and disciplined determination' },
+      { name: 'Gold Ochre', hex: '#C28B38', desc: 'Warm desert twilight and grounded harvest achievement' },
+      { name: 'Charcoal Patina', hex: '#232528', desc: 'Tactile metropolitan resilience and midnight calm' }
     ]
   },
 
@@ -324,11 +397,20 @@ Object.values(BRANDS).forEach(brand => {
   }
 });
 
+export const FASHION_HOUSES = [
+  BRANDS['ikla-maison'],
+  BRANDS['ktse'],
+  BRANDS['moteon'],
+  BRANDS['moral-compass'],
+  BRANDS['wnnr']
+];
+
 export const BRAND_LIST = [
   BRANDS['ikla-maison'],
   BRANDS['ktse'],
   BRANDS['moteon'],
   BRANDS['moral-compass'],
+  BRANDS['wnnr'],
   BRANDS['my-drink-family']
 ];
 

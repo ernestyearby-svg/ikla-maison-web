@@ -97,7 +97,7 @@ export default function CartDrawer({ onNavigateCollection, onSelectBrand, onRetu
                   <div>
                     <h3 className="text-base text-white font-light">Your Bag is Empty</h3>
                     <p className="text-xs text-neutral-500 max-w-xs mt-1">
-                      Explore the curations of our five luxury houses to discover foundational garments.
+                      Explore the curations of our luxury houses to discover foundational garments.
                     </p>
                   </div>
                   <button

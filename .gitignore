@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 /.pnp
 .pnp.js
@@ -58,3 +58,7 @@ tests/screenshots/
 .stylelintcache
 .vite/
 .turbo/
+
+# Archival Masters & Local Archive Zips
+archival/
+*.zip

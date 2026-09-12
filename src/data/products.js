@@ -580,6 +580,146 @@ export const PRODUCTS = [
     ],
     fabricCare: 'Machine wash cold, turn inside out, tumble dry low.',
     fitNotes: 'Relaxed boxy fit.'
+  },
+
+  // ==========================================
+  // WNNR (WIN WITHIN)
+  // ==========================================
+  {
+    id: 'wnnr-discipline-hoodie',
+    brandId: 'wnnr',
+    brandName: 'WNNR',
+    name: '[Placeholder] WNNR Heavyweight Discipline Loopback Hoodie',
+    price: 320,
+    category: 'Outerwear',
+    image: 'assets/campaigns/round-one/wnnr-product-collection.webp',
+    imageAlt: 'WNNR Heavyweight Discipline Loopback Hoodie displayed on product collection flat lay',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Obsidian Black', hex: '#0D0F0E' },
+      { name: 'Bone Cream', hex: '#F4F1EA' },
+      { name: 'Deep Forest', hex: '#1B2E24' }
+    ],
+    inventory: 14,
+    isNew: true,
+    isFeatured: true,
+    description: 'Sculpted from 520 GSM custom-milled loopback French terry with architectural drop-shoulder balance, double-layer structured hood, and tonal high-density WNNR chest stamp.',
+    details: [
+      '520 GSM dense loopback French terry',
+      'Discreet high-density tonal WNNR chest stamp',
+      'Reinforced rib side gussets and cuffs',
+      'Gilded brass eyelets with tonal braided drawcords'
+    ],
+    fabricCare: 'Dry clean or cold wash gentle inside-out. Lay flat to dry.',
+    fitNotes: 'Structured oversized fit. Fits true to size with athletic volume.'
+  },
+  {
+    id: 'wnnr-tapered-jogger',
+    brandId: 'wnnr',
+    brandName: 'WNNR',
+    name: '[Placeholder] WNNR Monolithic Tapered Jogger',
+    price: 260,
+    category: 'Bottoms',
+    image: 'assets/campaigns/round-one/wnnr-product-collection.webp',
+    imageAlt: 'WNNR Monolithic Tapered Jogger displayed on product collection flat lay',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Obsidian Black', hex: '#0D0F0E' },
+      { name: 'Bone Cream', hex: '#F4F1EA' },
+      { name: 'Deep Forest', hex: '#1B2E24' }
+    ],
+    inventory: 18,
+    isNew: true,
+    isFeatured: true,
+    description: 'Heavyweight organic cotton sweatpants with clean vertical darting, concealed zip pockets, and clean ankle cuff tailored for active transit and focused downtime.',
+    details: [
+      'Encased elastic waistband with braided drawcord',
+      'Concealed waterproof zip utility pockets',
+      'Tonal micro-embroidered WIN WITHIN thigh insignia',
+      'Clean ribbed ankle cuffs'
+    ],
+    fabricCare: 'Machine wash cold gentle. Do not tumble dry.',
+    fitNotes: 'Tailored athletic taper through leg with generous seat.'
+  },
+  {
+    id: 'wnnr-victory-tee',
+    brandId: 'wnnr',
+    brandName: 'WNNR',
+    name: '[Placeholder] WNNR Internal Victory Heavyweight Tee',
+    price: 130,
+    category: 'Tops',
+    image: 'assets/campaigns/round-one/wnnr-product-collection.webp',
+    imageAlt: 'WNNR Internal Victory Heavyweight Tee displayed on product collection flat lay',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    colors: [
+      { name: 'Bone Cream', hex: '#F4F1EA' },
+      { name: 'Obsidian Black', hex: '#0D0F0E' }
+    ],
+    inventory: 24,
+    isNew: true,
+    isFeatured: false,
+    description: '300 GSM combed jersey t-shirt with ribbed high-crew collar and discrete rear neck tonal WIN WITHIN silicon emblem.',
+    details: [
+      '300 GSM dense combed single jersey',
+      'High-rib collar that maintains structure after laundering',
+      'Blind stitched sleeves and hem',
+      'Discreet rear neck silicon WIN WITHIN stamp'
+    ],
+    fabricCare: 'Wash cold, line dry in shade.',
+    fitNotes: 'Drop-shoulder architectural boxy fit.'
+  },
+  {
+    id: 'wnnr-weekender-bag',
+    brandId: 'wnnr',
+    brandName: 'WNNR',
+    name: '[Placeholder] WNNR Execution Canvas & Leather Weekender',
+    price: 490,
+    category: 'Accessories',
+    image: 'assets/campaigns/round-one/wnnr-product-collection.webp',
+    imageAlt: 'WNNR Execution Canvas & Leather Weekender displayed on product collection flat lay',
+    sizes: ['One Size'],
+    colors: [
+      { name: 'Obsidian & Forest', hex: '#0D0F0E' }
+    ],
+    inventory: 8,
+    isNew: true,
+    isFeatured: true,
+    description: 'Architectural travel holdall constructed from 24oz water-repellent cotton duck canvas with full-grain bridle leather handles and brushed brass hardware.',
+    details: [
+      '24oz water-resistant heavyweight canvas',
+      'Full-grain Italian bridle leather straps and base trim',
+      'Separate vented shoe and workout apparel compartment',
+      'Embossed leather luggage tag with gilded WNNR crest'
+    ],
+    fabricCare: 'Professional leather and canvas specialist care only.',
+    fitNotes: 'Generous 48-hour capacity; cabin luggage compliant.'
+  },
+  {
+    id: 'wnnr-slide-sock-set',
+    brandId: 'wnnr',
+    brandName: 'WNNR',
+    name: '[Placeholder] WNNR Recovery Slide & Ribbed Crew Sock Set',
+    price: 140,
+    category: 'Accessories',
+    image: 'assets/campaigns/round-one/wnnr-product-collection.webp',
+    imageAlt: 'WNNR Recovery Slide and Ribbed Crew Sock Set displayed on product collection flat lay',
+    sizes: ['38-39', '40-41', '42-43', '44-45'],
+    colors: [
+      { name: 'Bone Cream', hex: '#F4F1EA' },
+      { name: 'Obsidian Black', hex: '#0D0F0E' }
+    ],
+    inventory: 30,
+    isNew: true,
+    isFeatured: false,
+    description: 'Anatomic recovery slide molded from dual-density EVA foam paired with heavyweight combed cotton ribbed crew socks stamped with WIN WITHIN.',
+    details: [
+      'Ergonomic arch support footbed',
+      'Debossed WNNR bridge logo on slide strap',
+      'High-gauge cushioned cotton socks with arch band',
+      'Packaged in reusable archival cotton dust bag'
+    ],
+    fabricCare: 'Wipe slides clean with damp cloth; machine wash socks warm.',
+    fitNotes: 'True to European size standard.'
   }
 ];
 

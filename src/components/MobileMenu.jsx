@@ -67,10 +67,10 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
             </button>
           </div>
 
-          {/* The Five Brand Houses */}
+          {/* The Houses */}
           <div className="border-t border-neutral-800/80 pt-4">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] block mb-3 px-3 font-medium">
-              The Five Houses
+              The Houses
             </span>
             <div className="space-y-1.5">
               {BRAND_LIST.map((brand) => (

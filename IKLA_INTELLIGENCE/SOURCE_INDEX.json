@@ -1,0 +1,1106 @@
+{
+  "date": "2026-09-08",
+  "root": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison",
+  "count": 183,
+  "scope": "Original non-dependency/Git/cache/dist source/content files; no governance outputs included",
+  "files": [
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\.env.example",
+      "relative": ".env.example",
+      "bytes": 356,
+      "sha256": "94d1db76ad342b14e1d3742144f13a9fcd85be4cb16c81bc08bac11af2395a66"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\.github\\workflows\\deploy.yml",
+      "relative": ".github\\workflows\\deploy.yml",
+      "bytes": 1149,
+      "sha256": "2e8be7869cfa3f0731e18679f550c235af0efafa3b77af1989c4dd13a58d90f6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\.gitignore",
+      "relative": ".gitignore",
+      "bytes": 668,
+      "sha256": "bf0b8fb49f2832e4c52eeb1131dd758371400a190c5ed0db34f50c1f94d0570c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\IKLA-Maison-Full-Site-Review.zip",
+      "relative": "IKLA-Maison-Full-Site-Review.zip",
+      "bytes": 46222413,
+      "sha256": "88bf9a45d1f57ff6e783e4826173380125727c57dd0d266efee0e003a867dcf6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\README.md",
+      "relative": "README.md",
+      "bytes": 4901,
+      "sha256": "b7f3ec4907f75803f32c5460657606ef97e9f2a27a4a90b4fea7ffe4770e9daf"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\index.html",
+      "relative": "index.html",
+      "bytes": 1422,
+      "sha256": "ad4d2dc93f69c66fd804b307c565adfce0bf2db18919268960a5fcbe6f9a98dc"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\package-lock.json",
+      "relative": "package-lock.json",
+      "bytes": 56603,
+      "sha256": "b6e4459da7fbb9842e1b6ada414ec832cc6d4a2317af105fdecc954604fa1fec"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\package.json",
+      "relative": "package.json",
+      "bytes": 556,
+      "sha256": "bbadf95c89e4b20854af54db99e052ce97b27e8fad37ebd410945a8bf6e80bca"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-business-casual-couple.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-business-casual-couple.jpg",
+      "bytes": 536180,
+      "sha256": "57244a2693043bb2a37ac9e542abf167343ecf72b1c0fd813e614950259fa10b"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-dynasty-spectrum-hoodies.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-dynasty-spectrum-hoodies.jpg",
+      "bytes": 99542,
+      "sha256": "19d6d5e720149d8d244538179a5949c220eca8baae38b56c2a200785567d1b59"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-mens-golf-flatlay.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-mens-golf-flatlay.jpg",
+      "bytes": 93672,
+      "sha256": "463ea1dd28f73cfcda67df9a7dfe5961de60958b573c282caa14b95d70cf65c8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-womens-golf-flatlay.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-maison\\ikla-womens-golf-flatlay.jpg",
+      "bytes": 117227,
+      "sha256": "45e22b10f828a92f07c9dc3fafb9b241058a0c61acb320878f980df63e026091"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-dining-table.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-dining-table.jpg",
+      "bytes": 347757,
+      "sha256": "4333cb6281738a81f904b82509cb911d1d8326d2b413e9735029ed8e41b1bffa"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-cylinder-bottles.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-cylinder-bottles.jpg",
+      "bytes": 104826,
+      "sha256": "a968116a6b325725fcd85bf5e65c2278362e2ee378a0487fc2dfb18ae622e9e6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-pedestal.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-pedestal.jpg",
+      "bytes": 249332,
+      "sha256": "c36740044c3a7732051acdac3f56e1b3fcbe018ab74af07a8e85eef78acbf78c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-rounded-bottles.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\ikla-water\\ikla-water-trio-rounded-bottles.jpg",
+      "bytes": 96453,
+      "sha256": "09a3eff19c3c2b1d90a0634ecc61d235f4ea0b46c5659bd61fafeb4af55d065e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\01-ready-to-use\\moteon\\moteon-launching-april-first.jpg",
+      "relative": "public\\assets\\campaigns\\01-ready-to-use\\moteon\\moteon-launching-april-first.jpg",
+      "bytes": 204705,
+      "sha256": "244117bbb5a79928f9577ad1e886d3315dea73f9c5ab167d764a7ec8f2b592b2"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\collaborations\\ikla-x-mymosa-lifestyle.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\collaborations\\ikla-x-mymosa-lifestyle.jpg",
+      "bytes": 208039,
+      "sha256": "4a65432db01354d69ccc8e91174b7f9a5d49c9d2fd2315771be3f3999952f8e0"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-brand-ambassador-program.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-brand-ambassador-program.jpg",
+      "bytes": 154365,
+      "sha256": "191014751826af00e6ed7859a3429350b06f903596781d5a91c355d332dae598"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-coastal-cycling.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-coastal-cycling.jpg",
+      "bytes": 191062,
+      "sha256": "fb04da306a72d32f7d2cc07ffad5aa294e2a5c97a95b8d40f1e9d0695b3aab7c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-family-airport-travel.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-family-airport-travel.jpg",
+      "bytes": 178309,
+      "sha256": "8235e1f85c65895fd12142103b6129fb050495ff5b3a9dadfe1622e56a50b11c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-focus-discipline-purpose.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-focus-discipline-purpose.jpg",
+      "bytes": 188683,
+      "sha256": "313845fddf0c79aef3c62836a3f811d903bf906a4341ec4f6ce39b56064898bd"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-luxury-coastal-couple.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-luxury-coastal-couple.jpg",
+      "bytes": 137708,
+      "sha256": "c575ac89b82273bcdc37079132c53cfb56876bd4db023009d207f55f76bffcb0"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-standard-black-white-basics.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-standard-black-white-basics.jpg",
+      "bytes": 147446,
+      "sha256": "dd25ddd16c5880239d99a004a4eb9983158e379e2b3ecd8d37d0b75718485279"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-standard-hoodie-sweats.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-standard-hoodie-sweats.jpg",
+      "bytes": 145116,
+      "sha256": "eefdeef8dc37d1f930e247fe9d3cc0064531b3b34bf34cf2dbb2ecef299c50ca"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-tennis-collection.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ikla-maison\\ikla-tennis-collection.jpg",
+      "bytes": 169314,
+      "sha256": "ba5228a61c69ab0455672d86c898563a1b38194cadb4192119be95f1d9e55306"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-ash-grey-set.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-ash-grey-set.jpg",
+      "bytes": 162528,
+      "sha256": "689c8836e45bb42b02ccc421fe9d13fba0587d76a9ef8463584301b5db4fab54"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-beach-collection.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-beach-collection.jpg",
+      "bytes": 195526,
+      "sha256": "417fe76b552b8e16dad21fb233cd106e45986d4b6aead1d40da0ffcbaf0fd2f9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-brand-shirt-still-life.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-brand-shirt-still-life.jpg",
+      "bytes": 144188,
+      "sha256": "9981bf76361cc2dfbe650ed5aa1b651c0a2f2ddd83a63a36daa1347cde93adbb"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-coastal-couple.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-coastal-couple.jpg",
+      "bytes": 158797,
+      "sha256": "1eaf0ab185f928adbd860c83887c71f3244fe393f521a8bf584b736828a8c148"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-collection-collage.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-collection-collage.jpg",
+      "bytes": 192814,
+      "sha256": "d001a95679af0326dd53dd1709f80b9a2eeabd0944b197d78c374d8f3f20f1da"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-multiple-colorways-product-grid.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-multiple-colorways-product-grid.jpg",
+      "bytes": 187971,
+      "sha256": "b8ba0fc0e405930d72039b4ebcc30793050fcd5d5ad5cc793c4673b10fbdcd40"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-streetwear-duo.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-streetwear-duo.jpg",
+      "bytes": 195374,
+      "sha256": "ce71c6313a18bdd33d53e669cffda1256a4d986812aa20c34b94ce3cbe6ae57f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-summer-lifestyle-trio.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-summer-lifestyle-trio.jpg",
+      "bytes": 162466,
+      "sha256": "5d2b97c2df5a9b6b09602bf8be374c8967c90580b23017aef893d2fdef4e2294"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-urban-same-energy.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-urban-same-energy.jpg",
+      "bytes": 159595,
+      "sha256": "8c61e02502ce00739877335ce41f2dc366edfd83eb0b92858d1f7a12e910e8d4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-vintage-black-colorways.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\ktse\\ktse-vintage-black-colorways.jpg",
+      "bytes": 188203,
+      "sha256": "175a4c9b98ec70a5b36a8f4559715481203ea32c0cb2c8b71fa768fcdaee14e7"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\moral-compass\\moral-compass-coming-soon.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\moral-compass\\moral-compass-coming-soon.jpg",
+      "bytes": 148944,
+      "sha256": "af2895f4eea9bf2da6e891fab8c82f02a29f7e03c65d9b71988da7715378533a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\moteon\\moteon-designed-to-move.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\moteon\\moteon-designed-to-move.jpg",
+      "bytes": 171963,
+      "sha256": "0e948018e40ef3e53924088f228c987189e497a621539b3e0a248557ec423cad"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\moteon\\moteon-not-a-trend.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\moteon\\moteon-not-a-trend.jpg",
+      "bytes": 192371,
+      "sha256": "1ed6940846f244bf7d3353bc218c5b4147eb54fff98da79ceb38b23603ce6ca6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\my-drink-family\\my-drink-family-rep-the-legacy-merch.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\my-drink-family\\my-drink-family-rep-the-legacy-merch.jpg",
+      "bytes": 196431,
+      "sha256": "d59b488c02e812711dd002e5adafe77fd80838af85a11c1588cf8784785c6e4e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\campaigns\\02-reference-crops\\my-drink-family\\mymosa-family-merch.jpg",
+      "relative": "public\\assets\\campaigns\\02-reference-crops\\my-drink-family\\mymosa-family-merch.jpg",
+      "bytes": 200040,
+      "sha256": "a4951701f0983d41f453dd48ae7ef3910122029868285682a75a9b6eee86f68c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\collection.jpg",
+      "relative": "public\\assets\\ikla-maison\\collection.jpg",
+      "bytes": 531673,
+      "sha256": "662ad3fdb02b1019f5b0aac8a081dda3ee8d85f86d85cb0068f0b41fb1e19e44"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\collection.webp",
+      "relative": "public\\assets\\ikla-maison\\collection.webp",
+      "bytes": 213722,
+      "sha256": "38bdb64bbc7dd781f45baa852ac6ae8a1467e9a5a87d25b8b1a09f6b37383d1a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\editorial.jpg",
+      "relative": "public\\assets\\ikla-maison\\editorial.jpg",
+      "bytes": 259351,
+      "sha256": "a9176d184c1ce418f05d21a784dfc41015355aec470d7cc292d2b807cef4437c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\editorial.webp",
+      "relative": "public\\assets\\ikla-maison\\editorial.webp",
+      "bytes": 103874,
+      "sha256": "ecc42cd7531dd3590c873274c4284addc0f480f1910e8f2f45e9836b2c7cc578"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-desktop.png",
+      "relative": "public\\assets\\ikla-maison\\hero-desktop.png",
+      "bytes": 843456,
+      "sha256": "7ab46b742d723be6aa76b2a8d6d9d26059ed757ed37f86c4a9985dbe112b2cea"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-desktop.webp",
+      "relative": "public\\assets\\ikla-maison\\hero-desktop.webp",
+      "bytes": 53404,
+      "sha256": "ea7d44fe901d0212a24aa467fe0c5529a111fa9262405874697fface5b538f51"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-mobile.jpg",
+      "relative": "public\\assets\\ikla-maison\\hero-mobile.jpg",
+      "bytes": 254114,
+      "sha256": "11174ddaefe2a5375b4c4083460224f3f3000bc8e3fd5ccabe9e599e0e6ce604"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\hero-mobile.webp",
+      "relative": "public\\assets\\ikla-maison\\hero-mobile.webp",
+      "bytes": 93950,
+      "sha256": "34d41cc09e5b5eb8867c067ceec636fe44b20b47acbb8b747eea5f500dc883b0"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-dark.png",
+      "relative": "public\\assets\\ikla-maison\\logos\\crest-dark.png",
+      "bytes": 128755,
+      "sha256": "4b38db15c19183139f589cd580f442a9fca307eb8228157cbc4c5858994294b9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-dark.webp",
+      "relative": "public\\assets\\ikla-maison\\logos\\crest-dark.webp",
+      "bytes": 52050,
+      "sha256": "71553e515d47b07818ad0a107a104bddf225d8997d823521ff190676a02443e9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-light.png",
+      "relative": "public\\assets\\ikla-maison\\logos\\crest-light.png",
+      "bytes": 129638,
+      "sha256": "6af1a53e2c4a77a26ccc20178dd7540805b3ee464be445294e1fc4cdd664eaa1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\crest-light.webp",
+      "relative": "public\\assets\\ikla-maison\\logos\\crest-light.webp",
+      "bytes": 65552,
+      "sha256": "676ebbf682e8a2df0105e9c61ef71ef7331075d1f86ad04bef0b1f7fd18d03ac"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-dark.png",
+      "relative": "public\\assets\\ikla-maison\\logos\\wordmark-dark.png",
+      "bytes": 47820,
+      "sha256": "59acb9a681fac59ae90f1259a2c83455ed5b4316c943c9957cde6c9016ccb12a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-dark.webp",
+      "relative": "public\\assets\\ikla-maison\\logos\\wordmark-dark.webp",
+      "bytes": 20722,
+      "sha256": "16f5b9a6010fcf7be71a99d1d149186c7aab44206cbc835fe4cfe31c253da562"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-light.png",
+      "relative": "public\\assets\\ikla-maison\\logos\\wordmark-light.png",
+      "bytes": 47820,
+      "sha256": "59acb9a681fac59ae90f1259a2c83455ed5b4316c943c9957cde6c9016ccb12a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ikla-maison\\logos\\wordmark-light.webp",
+      "relative": "public\\assets\\ikla-maison\\logos\\wordmark-light.webp",
+      "bytes": 20722,
+      "sha256": "16f5b9a6010fcf7be71a99d1d149186c7aab44206cbc835fe4cfe31c253da562"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\collection.jpg",
+      "relative": "public\\assets\\ktse\\collection.jpg",
+      "bytes": 608459,
+      "sha256": "e88a0471bc63a6e82dd2d4e4063b5b2ff8f2ed85fb46c89aa460ed758c417350"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\collection.webp",
+      "relative": "public\\assets\\ktse\\collection.webp",
+      "bytes": 292376,
+      "sha256": "6676567894de0ddaa356279b638deab8602a4b11125b4d0dd95e49ce4d78169d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\editorial.png",
+      "relative": "public\\assets\\ktse\\editorial.png",
+      "bytes": 822728,
+      "sha256": "a7411cb0ec5b3422462e6bc98741de71893bda1ed53ce2f894ece02d402110e1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\editorial.webp",
+      "relative": "public\\assets\\ktse\\editorial.webp",
+      "bytes": 68662,
+      "sha256": "a9443d5826d48bede966e0f7b81ab987b2ab16360ee31e468095f85e61474927"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-desktop.jpg",
+      "relative": "public\\assets\\ktse\\hero-desktop.jpg",
+      "bytes": 240560,
+      "sha256": "7053f527c3c74ec3617f2587bc46056c5a6b5b5ce692df0e442ebdceb83851ab"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-desktop.webp",
+      "relative": "public\\assets\\ktse\\hero-desktop.webp",
+      "bytes": 84538,
+      "sha256": "8b170471d44d7b780046b678638dfac1117caf34b5360d49da1db1a967ac7a5f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-mobile.jpg",
+      "relative": "public\\assets\\ktse\\hero-mobile.jpg",
+      "bytes": 232847,
+      "sha256": "3cd5ce2707000f5fede90c9e5e90b628feec19db8d6491bb97d87f9c29fa04d4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\hero-mobile.webp",
+      "relative": "public\\assets\\ktse\\hero-mobile.webp",
+      "bytes": 81270,
+      "sha256": "5de499339709182bbd45ba88ca193bf207bd2c7c1fb41711b53fdc91bb08c2fe"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-dark.png",
+      "relative": "public\\assets\\ktse\\logos\\crest-dark.png",
+      "bytes": 143361,
+      "sha256": "da23b30acba4617c9d1e92ee3477eca7f702bd198706a972e9e76e1cebcb489f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-dark.webp",
+      "relative": "public\\assets\\ktse\\logos\\crest-dark.webp",
+      "bytes": 60718,
+      "sha256": "682b743723d93c0b4efcf5a7493270ffc6c7eaf234c38efce91adc381dbc624f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-light.png",
+      "relative": "public\\assets\\ktse\\logos\\crest-light.png",
+      "bytes": 144182,
+      "sha256": "032175b9cd18d35869aca2b636efe6802c1e24dfa47b242697797cbe2a071e12"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\crest-light.webp",
+      "relative": "public\\assets\\ktse\\logos\\crest-light.webp",
+      "bytes": 75244,
+      "sha256": "0734c033948980b4e70ee1ae1ea8b710749d68d5e28af4948fb38a4582acfcd0"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-dark.png",
+      "relative": "public\\assets\\ktse\\logos\\wordmark-dark.png",
+      "bytes": 25250,
+      "sha256": "75125917b8b797903cb82f6dc326cdb235df353ebfc406e944283fbb877d67c1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-dark.webp",
+      "relative": "public\\assets\\ktse\\logos\\wordmark-dark.webp",
+      "bytes": 10388,
+      "sha256": "4db58f5eec5b07f7d74b20302ada15fe2e67107f6ec8e4f590f08679d2f2a340"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-light.png",
+      "relative": "public\\assets\\ktse\\logos\\wordmark-light.png",
+      "bytes": 25427,
+      "sha256": "efe04be139df382f7ab3129caa8d6b42e7a3a6b317a0afc08cd7553e6083efad"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\ktse\\logos\\wordmark-light.webp",
+      "relative": "public\\assets\\ktse\\logos\\wordmark-light.webp",
+      "bytes": 13044,
+      "sha256": "006ac645bcf468bf0915801fab80ffead0967c81a6ea6fd0e5059c6c4b95d66d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\collection.jpg",
+      "relative": "public\\assets\\moral-compass\\collection.jpg",
+      "bytes": 510672,
+      "sha256": "05de4d1dbe83a249ce3b43ade3a7c366a3e0f4794c7f049c8c43ec5b7f53e1e5"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\collection.webp",
+      "relative": "public\\assets\\moral-compass\\collection.webp",
+      "bytes": 210214,
+      "sha256": "5e74e14deb8a30af8e093ecbb95cb29e397bbc61e892d30a0be60689982714f9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\editorial.png",
+      "relative": "public\\assets\\moral-compass\\editorial.png",
+      "bytes": 969724,
+      "sha256": "d4c2f9920a9b853e4cc2f3fad5d0f2b2f340e593180f3410ce80630070001350"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\editorial.webp",
+      "relative": "public\\assets\\moral-compass\\editorial.webp",
+      "bytes": 80120,
+      "sha256": "b96e5b5a1fc58626cf63445e74fb900fc259bb0d3823b2cef190e91c9a16f793"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-desktop.jpg",
+      "relative": "public\\assets\\moral-compass\\hero-desktop.jpg",
+      "bytes": 324050,
+      "sha256": "60253cb0c1ec287699df00176ef79a0ac8483cc5035903fb569d6e1d4cd833f8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-desktop.webp",
+      "relative": "public\\assets\\moral-compass\\hero-desktop.webp",
+      "bytes": 136744,
+      "sha256": "8831431f2ef568977a49ee989c9b273d80ca318bf2c441c07d4c836181787527"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-mobile.jpg",
+      "relative": "public\\assets\\moral-compass\\hero-mobile.jpg",
+      "bytes": 250444,
+      "sha256": "13b8d1345b9a81e8e80188c55a8126e22c3fb849fa052bb3db99c9b6cb79e169"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\hero-mobile.webp",
+      "relative": "public\\assets\\moral-compass\\hero-mobile.webp",
+      "bytes": 84138,
+      "sha256": "aab980b497ec7edc44060e5e6ac29ce2233e17144a2ccb62028b657ab1200585"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-dark.png",
+      "relative": "public\\assets\\moral-compass\\logos\\crest-dark.png",
+      "bytes": 176147,
+      "sha256": "9ea67468d0db42a46ea9991c2c71cec7a2eb607da35d4184071428133301c7ee"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-dark.webp",
+      "relative": "public\\assets\\moral-compass\\logos\\crest-dark.webp",
+      "bytes": 74276,
+      "sha256": "cdfd8eec7c0bb1d6e589fdcc95f7104871a2f61a716148c0a01dece97a973ac8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-light.png",
+      "relative": "public\\assets\\moral-compass\\logos\\crest-light.png",
+      "bytes": 176996,
+      "sha256": "088ecc8be4effcca24a3bfcd58ea49826a01e79eb448c92a1baca042619447d4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\crest-light.webp",
+      "relative": "public\\assets\\moral-compass\\logos\\crest-light.webp",
+      "bytes": 91076,
+      "sha256": "cb4fba25606398939e9c4500db1b7870c3b654b36eb8f42af0620d39e5f2a1be"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-dark.png",
+      "relative": "public\\assets\\moral-compass\\logos\\wordmark-dark.png",
+      "bytes": 53758,
+      "sha256": "d6b265006d11e4c5fadaa3392b3ee5bc374a687e9bbe989bb521ebc3df41e57f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-dark.webp",
+      "relative": "public\\assets\\moral-compass\\logos\\wordmark-dark.webp",
+      "bytes": 24272,
+      "sha256": "170a3a36d176aa386812a9e0ccac8da055c289ca2ea6cd44bb024df3867ea3a1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-light.png",
+      "relative": "public\\assets\\moral-compass\\logos\\wordmark-light.png",
+      "bytes": 53758,
+      "sha256": "d6b265006d11e4c5fadaa3392b3ee5bc374a687e9bbe989bb521ebc3df41e57f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moral-compass\\logos\\wordmark-light.webp",
+      "relative": "public\\assets\\moral-compass\\logos\\wordmark-light.webp",
+      "bytes": 24272,
+      "sha256": "170a3a36d176aa386812a9e0ccac8da055c289ca2ea6cd44bb024df3867ea3a1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\collection.jpg",
+      "relative": "public\\assets\\moteon\\collection.jpg",
+      "bytes": 597512,
+      "sha256": "eca7a5aa11754ea2d59c2316cfdf98a641949e0d5b0f9a55e0455569101f4bc4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\collection.webp",
+      "relative": "public\\assets\\moteon\\collection.webp",
+      "bytes": 260750,
+      "sha256": "b2fcc6b6effe12376dbcbbdb59dbaed2951d26c04c563bb0325adcfba0f32d9f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\editorial.png",
+      "relative": "public\\assets\\moteon\\editorial.png",
+      "bytes": 1018845,
+      "sha256": "50937781846f8b340c6f90df3d5f71873c84be1702428336e0d49baef20a43c6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\editorial.webp",
+      "relative": "public\\assets\\moteon\\editorial.webp",
+      "bytes": 121860,
+      "sha256": "8d8536aef6334764c9bee116fb48aebd49f686937139ab29c0b54812af2242c4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-desktop.jpg",
+      "relative": "public\\assets\\moteon\\hero-desktop.jpg",
+      "bytes": 273922,
+      "sha256": "40014e2e00a8a9f4f134cdbd6b384f9b9d6ea107f6ea45a0c1e24ad274f84264"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-desktop.webp",
+      "relative": "public\\assets\\moteon\\hero-desktop.webp",
+      "bytes": 115264,
+      "sha256": "672dc51ba2ad077cff4c3075d12724d747f5ffcace052a425a69e0cf248bc050"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-mobile.jpg",
+      "relative": "public\\assets\\moteon\\hero-mobile.jpg",
+      "bytes": 310762,
+      "sha256": "aa35d34a75aa6557cce45554a0fb0353241e4261fbd54d2cb15ea87321fcfc5d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\hero-mobile.webp",
+      "relative": "public\\assets\\moteon\\hero-mobile.webp",
+      "bytes": 129722,
+      "sha256": "7227a2501da2fb6d0a2d57cc3607ed38dcb0a4c765c5160fde4282108930f423"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-dark.png",
+      "relative": "public\\assets\\moteon\\logos\\crest-dark.png",
+      "bytes": 158777,
+      "sha256": "227b57f1491329e0916223a5a555e2497476e0e677ad1e4e792acb396866e7c3"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-dark.webp",
+      "relative": "public\\assets\\moteon\\logos\\crest-dark.webp",
+      "bytes": 63222,
+      "sha256": "caf9050ab8741711fda8c7b06c1c581ae555e61caea63c935c4603e8dbec039a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-light.png",
+      "relative": "public\\assets\\moteon\\logos\\crest-light.png",
+      "bytes": 159780,
+      "sha256": "e3a67c9cf16aa53d95774e8d7814fff169b3050ea4b8f3e22fc6c94c3526b4b1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\crest-light.webp",
+      "relative": "public\\assets\\moteon\\logos\\crest-light.webp",
+      "bytes": 78998,
+      "sha256": "f54ff3391145d808daf511921314a4b8438f4c3e29d40fb7535b1ce5d8bdf57d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-dark.png",
+      "relative": "public\\assets\\moteon\\logos\\wordmark-dark.png",
+      "bytes": 65411,
+      "sha256": "eff89df07e458aacf9090be4fd6523dbdde58efcf2c02dfc31f05fb40b7d443b"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-dark.webp",
+      "relative": "public\\assets\\moteon\\logos\\wordmark-dark.webp",
+      "bytes": 29698,
+      "sha256": "452e01de910f65d054843565ecce50741c96b2258b2dd1d99e2bc3f6691ff6c6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-light.png",
+      "relative": "public\\assets\\moteon\\logos\\wordmark-light.png",
+      "bytes": 66112,
+      "sha256": "18cb9f60667ae14bd2073065a8a3aee8ba5eb89603952f057512536b3eba8b1a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\moteon\\logos\\wordmark-light.webp",
+      "relative": "public\\assets\\moteon\\logos\\wordmark-light.webp",
+      "bytes": 34976,
+      "sha256": "472afe19b063aab7e6910b45d71fc614f4fd0135a1ae3b6e142587cb058c3919"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\collection.jpg",
+      "relative": "public\\assets\\my-drink-family\\collection.jpg",
+      "bytes": 513324,
+      "sha256": "f8f631ba2f755628f6e86ae2eb60d36c2de3348d502042aba9b3879f014e8c3e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\collection.webp",
+      "relative": "public\\assets\\my-drink-family\\collection.webp",
+      "bytes": 206346,
+      "sha256": "06979ea38d2e31d8fc6a204c7443516329fc3cf554bc8f76273403093065037d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\editorial.jpg",
+      "relative": "public\\assets\\my-drink-family\\editorial.jpg",
+      "bytes": 260345,
+      "sha256": "d0537bf48d7a2b40c7ed09b611bc3c61bd339204abcdc1e0e67bbaee0e2cc3c4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\editorial.webp",
+      "relative": "public\\assets\\my-drink-family\\editorial.webp",
+      "bytes": 102350,
+      "sha256": "44ef556857c518bae6e00971ab81fa098874cdbf4742535b59529c66b2d4664e"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-desktop.jpg",
+      "relative": "public\\assets\\my-drink-family\\hero-desktop.jpg",
+      "bytes": 290820,
+      "sha256": "bd6f901b4241443eac15576ffc4d21efe83a4e3866f624ae7e7d2da2cd325204"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-desktop.webp",
+      "relative": "public\\assets\\my-drink-family\\hero-desktop.webp",
+      "bytes": 140494,
+      "sha256": "a005f5ee09a515a1e83f55ded334cba517ff8616b55001bbf8a0a13f2b87e3f2"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-mobile.jpg",
+      "relative": "public\\assets\\my-drink-family\\hero-mobile.jpg",
+      "bytes": 260345,
+      "sha256": "d0537bf48d7a2b40c7ed09b611bc3c61bd339204abcdc1e0e67bbaee0e2cc3c4"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\hero-mobile.webp",
+      "relative": "public\\assets\\my-drink-family\\hero-mobile.webp",
+      "bytes": 92670,
+      "sha256": "c245b673865d4990bda9d52d94dfe5cc7d1708d25b838e7e4528b51dfa863e4f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-dark.png",
+      "relative": "public\\assets\\my-drink-family\\logos\\crest-dark.png",
+      "bytes": 136245,
+      "sha256": "7e620483cb0e622aa59b1ea5516c1876d2ad027f0318b7f9fb87c28f5a523dbb"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-dark.webp",
+      "relative": "public\\assets\\my-drink-family\\logos\\crest-dark.webp",
+      "bytes": 57310,
+      "sha256": "48db4058159020494eb77c4edb9a186c2a0da95daca7893ac151233c8f972ef1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-light.png",
+      "relative": "public\\assets\\my-drink-family\\logos\\crest-light.png",
+      "bytes": 136902,
+      "sha256": "d83bc92af9bb66ebb2ada67f948fa3d6148ce57ed81d6320641625d0e04b3b2c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\crest-light.webp",
+      "relative": "public\\assets\\my-drink-family\\logos\\crest-light.webp",
+      "bytes": 72092,
+      "sha256": "ed5a38ce2f435f7ca3024707d94b6e9032df10adba14bc2cc3accc73bfbf0791"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-dark.png",
+      "relative": "public\\assets\\my-drink-family\\logos\\wordmark-dark.png",
+      "bytes": 40694,
+      "sha256": "b5ed23fdd0a4d8aaab57c22cc71635b52ee590effef584cdd866cffa3bb03b6a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-dark.webp",
+      "relative": "public\\assets\\my-drink-family\\logos\\wordmark-dark.webp",
+      "bytes": 18582,
+      "sha256": "85dfbad646b944d5b8fe31bde1c87932a3e89ee47347cacd0f4e3f59670af37c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-light.png",
+      "relative": "public\\assets\\my-drink-family\\logos\\wordmark-light.png",
+      "bytes": 40781,
+      "sha256": "3dba0064d0d9f6e4cfb32e90ef4b6a5ce49fcea0e16893f378000acd4711f026"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\public\\assets\\my-drink-family\\logos\\wordmark-light.webp",
+      "relative": "public\\assets\\my-drink-family\\logos\\wordmark-light.webp",
+      "bytes": 22772,
+      "sha256": "2567287e6b1d5c9e617a724acf15cfbfb932c78ed16442691e9b6456b8eb6315"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\App.jsx",
+      "relative": "src\\App.jsx",
+      "bytes": 6671,
+      "sha256": "3064804fd421228e0307e8f472d89a9311325d80fb90991d1f5c30d03d8fa607"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\BrandHero.jsx",
+      "relative": "src\\components\\BrandHero.jsx",
+      "bytes": 4479,
+      "sha256": "5a5902d752595c62775af2d28e30ee7859e8e33a3863beb4c33b2b2f3c1f89fc"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\CampaignImage.jsx",
+      "relative": "src\\components\\CampaignImage.jsx",
+      "bytes": 1916,
+      "sha256": "2cd0d877c7c6317d2d35889d65efa17930ceb22ebb7b69b60e0a5099c6a72035"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\CartDrawer.jsx",
+      "relative": "src\\components\\CartDrawer.jsx",
+      "bytes": 10625,
+      "sha256": "d450af19f110fcd3ddac5dbf4f3e5405ccf17eabe38e179e3ecdbcd9701088b5"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\CheckoutModal.jsx",
+      "relative": "src\\components\\CheckoutModal.jsx",
+      "bytes": 14985,
+      "sha256": "24f16adb580ab194fe941857c85ae387b1d3e72461f89255c78c711a87cfaef5"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Footer.jsx",
+      "relative": "src\\components\\Footer.jsx",
+      "bytes": 10617,
+      "sha256": "c0b1445878094dabcd73e762e394b68a9bc72cfb0eb9c5b50a7598a3f7f85fd8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\MobileMenu.jsx",
+      "relative": "src\\components\\MobileMenu.jsx",
+      "bytes": 8592,
+      "sha256": "86513f28d07606a7158be5a6df22ac97052d580a8958db22fce6feca72a32859"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\Navbar.jsx",
+      "relative": "src\\components\\Navbar.jsx",
+      "bytes": 13173,
+      "sha256": "1d2b8956835976f320843809d1c642025edf7f09dbfde2e5792c8e3fe74466cb"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\ProductCard.jsx",
+      "relative": "src\\components\\ProductCard.jsx",
+      "bytes": 6971,
+      "sha256": "d4dbc55300c7c22f036b0948c1c5775ba36350cf2feb0db612ac1f1690cd3d61"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\components\\ProductDetailModal.jsx",
+      "relative": "src\\components\\ProductDetailModal.jsx",
+      "bytes": 16184,
+      "sha256": "8626e42f30ad6e91b78d2b08b54322b9d3a9a85095fb98090a77a6bcf4cf32cf"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\context\\CartContext.jsx",
+      "relative": "src\\context\\CartContext.jsx",
+      "bytes": 3840,
+      "sha256": "aa0a7fd072233fa25b81cc43379f1772ba534db33cc56944d8fa531d6f00bcc9"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\brands.js",
+      "relative": "src\\data\\brands.js",
+      "bytes": 19327,
+      "sha256": "4bbb91cb20923b90b3ab762d580926315ff52358e31a778464151ae21f2a7daf"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\campaigns.js",
+      "relative": "src\\data\\campaigns.js",
+      "bytes": 17464,
+      "sha256": "8b4b4de2bcb7b5d9dc1b62bcafa0409ef86f3444a473fd2ea7faecbfc6034289"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\data\\products.js",
+      "relative": "src\\data\\products.js",
+      "bytes": 23071,
+      "sha256": "96126df1cf8194cdb2b5ff96aec5c23a65cc2c14615306007b0aa0e225754f59"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\index.css",
+      "relative": "src\\index.css",
+      "bytes": 3042,
+      "sha256": "b08c8865bc496626c5661c278b3c6a92c9ba6a5ed56660ea9ebb8b301c672faf"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\main.jsx",
+      "relative": "src\\main.jsx",
+      "bytes": 343,
+      "sha256": "a242f72c67dd4b1c161474e410acf6eeff2651991c81ee012b048a0e638429c6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\AboutPage.jsx",
+      "relative": "src\\pages\\AboutPage.jsx",
+      "bytes": 10621,
+      "sha256": "cfd5e4f9b4889d1ff653a43d142a54554b116735321b84cacbc56f3ffc4426fb"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\BrandPage.jsx",
+      "relative": "src\\pages\\BrandPage.jsx",
+      "bytes": 51571,
+      "sha256": "f7157b9ce57da9bf37ebb7c98f8a3e44ab3ae79a8b414c61dcc08b71e63e1b12"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\CollectionPage.jsx",
+      "relative": "src\\pages\\CollectionPage.jsx",
+      "bytes": 19381,
+      "sha256": "8bdac22b7556575de1b4bb0f0e0209c903f61e9bda840a450ad1a9d7eb202d1a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\ContactPage.jsx",
+      "relative": "src\\pages\\ContactPage.jsx",
+      "bytes": 13497,
+      "sha256": "75015653ade68a40c0511dab9775de060beadfa31d5ed3a571260df576915c00"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\pages\\HomePage.jsx",
+      "relative": "src\\pages\\HomePage.jsx",
+      "bytes": 56899,
+      "sha256": "5134edaf6d2e22fc3b720e298e7e85d087573940c26b01f0a8f5534722351fc2"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\src\\utils\\assets.js",
+      "relative": "src\\utils\\assets.js",
+      "bytes": 572,
+      "sha256": "d709394eff035a794866a85f03986971f16484b846f0d140412871ab657b07c6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\01_desktop_dashboard.png",
+      "relative": "tests\\screenshots\\01_desktop_dashboard.png",
+      "bytes": 346273,
+      "sha256": "e9ccc8eb82b060efb31388a7fcc7a07f6225a372cc5f011ba2f4e2cda0030eac"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\01_desktop_home.png",
+      "relative": "tests\\screenshots\\01_desktop_home.png",
+      "bytes": 730907,
+      "sha256": "d1b4f5b5ee75ffa76de4c9fbaa5c7bace4440860f97c60a47cce9e28b058eb92"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\02_brand_ikla_maison.png",
+      "relative": "tests\\screenshots\\02_brand_ikla_maison.png",
+      "bytes": 709547,
+      "sha256": "c2c00e9928f879bad710033f0581b326a648bb6639006eebec8bbc07176ca5b7"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\02_cart_drawer.png",
+      "relative": "tests\\screenshots\\02_cart_drawer.png",
+      "bytes": 194303,
+      "sha256": "ef79e8dd58b638f82d372209b6d361f012d16bdacf92659f6288f3d89f82d5f8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\02_mobile_dashboard.png",
+      "relative": "tests\\screenshots\\02_mobile_dashboard.png",
+      "bytes": 75390,
+      "sha256": "66006cea3f0684f562d75c06b0b05aaf21b2d1ad7fd744e009f587f04e6af8e6"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\02b_mobile_estimate.png",
+      "relative": "tests\\screenshots\\02b_mobile_estimate.png",
+      "bytes": 76430,
+      "sha256": "a9682354fe01f1500b8cdbd3bc45f4339dcdef0436d084d32129249e712d5f68"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\03_brand_ktse.png",
+      "relative": "tests\\screenshots\\03_brand_ktse.png",
+      "bytes": 874030,
+      "sha256": "6076cb3e1dcca5c5c5965d0a9e2fd1aa5c08d75d936bcfa31cdc1dfb81e2d316"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\03_checkout_modal.png",
+      "relative": "tests\\screenshots\\03_checkout_modal.png",
+      "bytes": 150896,
+      "sha256": "1f7363da269b3448167bb4d65891d1207bc050f8a2c6ca899d51ae7bd4abe8fd"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\03_new_estimate_form.png",
+      "relative": "tests\\screenshots\\03_new_estimate_form.png",
+      "bytes": 373345,
+      "sha256": "e76745565984cb07e36c8c99897fd7f82ad826f7647d65ad4e3d74b6c812a8da"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\04_brand_moteon.png",
+      "relative": "tests\\screenshots\\04_brand_moteon.png",
+      "bytes": 1086192,
+      "sha256": "103f82479c78794280214079debbc0be4f3ad0525b0f189320436fa3d56646cc"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\04_clients_view.png",
+      "relative": "tests\\screenshots\\04_clients_view.png",
+      "bytes": 304368,
+      "sha256": "29edce2969e6f72a813ad30af2acbae18861e4a0f3a89742a98edb944f10e668"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\04_tablet_home.png",
+      "relative": "tests\\screenshots\\04_tablet_home.png",
+      "bytes": 542319,
+      "sha256": "89e99b2f3e9d158996c752815dc435bde64aa9f7933d68d7a8ac11686f779b23"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\04b_flagged_clients.png",
+      "relative": "tests\\screenshots\\04b_flagged_clients.png",
+      "bytes": 162432,
+      "sha256": "57f47075d0ed77ee887b793cca0dcfa3b4c72f108fee3e16a2a857724bd67720"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\05_brand_moral_compass.png",
+      "relative": "tests\\screenshots\\05_brand_moral_compass.png",
+      "bytes": 1134780,
+      "sha256": "ffc2260de8a50afd091d5a4b43dd390026aa5110588fd7c6d58dfaec445f1c49"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\05_job_profitability.png",
+      "relative": "tests\\screenshots\\05_job_profitability.png",
+      "bytes": 268857,
+      "sha256": "09bca7e6e19690b3d8249402d74877b0076aa7ab08a1aa875c16814dd14ac369"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\05_mobile_menu.png",
+      "relative": "tests\\screenshots\\05_mobile_menu.png",
+      "bytes": 52499,
+      "sha256": "53acf81cb2adbb3e57309ab169110aca38323affc2b1a7b30f7a02912f724793"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\06_brand_my_drink_family.png",
+      "relative": "tests\\screenshots\\06_brand_my_drink_family.png",
+      "bytes": 1263659,
+      "sha256": "21113d711d8cdae7bd0c28b19b7f5c921a3e7f60193079eae0c66732bec04ae0"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\06_employees_dashboard.png",
+      "relative": "tests\\screenshots\\06_employees_dashboard.png",
+      "bytes": 263155,
+      "sha256": "99659f1d571200f33c8a67460f1f288f639e4d6b2144053e0c0694e13bdc6e59"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\06_mobile_ktse.png",
+      "relative": "tests\\screenshots\\06_mobile_ktse.png",
+      "bytes": 307730,
+      "sha256": "be528d8f302f88c73143f8b7a40eb9a235a40fec5b9c33e837339472850fa7fe"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\07_collection_catalogue.png",
+      "relative": "tests\\screenshots\\07_collection_catalogue.png",
+      "bytes": 290379,
+      "sha256": "d63b59a015bea96d29796901587a8dc9a4a506451f7430e36041e353f101919f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\07_routes_isolated_warning.png",
+      "relative": "tests\\screenshots\\07_routes_isolated_warning.png",
+      "bytes": 233796,
+      "sha256": "c90e85330800c975f0bd9093692e813510f6113c9fe309d33a824a06ff47074c"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\08_product_detail_modal.png",
+      "relative": "tests\\screenshots\\08_product_detail_modal.png",
+      "bytes": 483449,
+      "sha256": "e7d2eeac8a9249ab23528cf2d1b1aaa182c1b48dde6dbd88402601e9636f5a90"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\08_reviews_referrals.png",
+      "relative": "tests\\screenshots\\08_reviews_referrals.png",
+      "bytes": 313898,
+      "sha256": "f13e7cea7c9790837b4e50fad470e6b1a3518f0ea56f5ae3599646df5854b127"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\09_business_ceo_hub.png",
+      "relative": "tests\\screenshots\\09_business_ceo_hub.png",
+      "bytes": 306122,
+      "sha256": "8228f4b4c3f0c2f9f12f5d158df222b6e6c53aca9eb118ea500bc8f236f2a3b2"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\09_cart_drawer.png",
+      "relative": "tests\\screenshots\\09_cart_drawer.png",
+      "bytes": 152787,
+      "sha256": "6270e4223b9d830027c1e5508d6941dbd946d4f2dc7c1d3ed4aa84be0922946a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\10_checkout_modal.png",
+      "relative": "tests\\screenshots\\10_checkout_modal.png",
+      "bytes": 134112,
+      "sha256": "4c874bf25002e034712b9f01e5db3de34a3f575abbc816dea37e6ab073dc1d8d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\10_settings.png",
+      "relative": "tests\\screenshots\\10_settings.png",
+      "bytes": 213633,
+      "sha256": "c0cb12d98e90988e661b6905dd4c158474c04dcf5f3f923bd31d1e100ff71cd8"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\11_about_page.png",
+      "relative": "tests\\screenshots\\11_about_page.png",
+      "bytes": 274540,
+      "sha256": "64d0eca37b1c78ff8ba3156d4355ce7140dc774fb9c1e7c21bfa95012ae0d48a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\12_contact_concierge.png",
+      "relative": "tests\\screenshots\\12_contact_concierge.png",
+      "bytes": 110558,
+      "sha256": "8cc59c7c24b6861582bbda156adb39fc02e326994e428524256a93053d134132"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\13_tablet_home.png",
+      "relative": "tests\\screenshots\\13_tablet_home.png",
+      "bytes": 590441,
+      "sha256": "fd6648e598661155ff812a46319ef42e724c1c5ece200969925db43069a1977f"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\14_mobile_home.png",
+      "relative": "tests\\screenshots\\14_mobile_home.png",
+      "bytes": 235883,
+      "sha256": "18c22773d8199e729cdf9ea2fd7af061eec6ed7d38f10c686a573ba645c70edc"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\15_mobile_menu.png",
+      "relative": "tests\\screenshots\\15_mobile_menu.png",
+      "bytes": 56862,
+      "sha256": "5b554a22ff0f42226d7495baa284ddc808ee1fd448157f3dda57dbe01e04499a"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\16_mobile_pdp.png",
+      "relative": "tests\\screenshots\\16_mobile_pdp.png",
+      "bytes": 176876,
+      "sha256": "dca1880fee1970a04d1e11ed98426be380798394ba4fbfa06a139c8a9f502066"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_ikla-maison.png",
+      "relative": "tests\\screenshots\\brand_ikla-maison.png",
+      "bytes": 371315,
+      "sha256": "d3dfce063ca4ab95aaea26e7d446fffc3afe36d4be7f3dce3e786f6a4aa9a4b1"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_ktse.png",
+      "relative": "tests\\screenshots\\brand_ktse.png",
+      "bytes": 114704,
+      "sha256": "91046123b12ab084d75de601a8d2073bd122bd5b5760315fc00922dcd657a98d"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_moral-compass.png",
+      "relative": "tests\\screenshots\\brand_moral-compass.png",
+      "bytes": 115160,
+      "sha256": "e8cdf68afb62a57f8b35955e3eb201572dde4dccf97999d0569bdb724c249d90"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_moteon.png",
+      "relative": "tests\\screenshots\\brand_moteon.png",
+      "bytes": 116077,
+      "sha256": "6d42b38a9915323430208466418364877adf6d12177b37486fafc51590b88167"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\screenshots\\brand_my-drink-family.png",
+      "relative": "tests\\screenshots\\brand_my-drink-family.png",
+      "bytes": 119255,
+      "sha256": "7f8774de8263c68e94ea7ce9ebfa25cc44faf32ce0771814b912a2446e866b00"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\tests\\test_suite.js",
+      "relative": "tests\\test_suite.js",
+      "bytes": 12072,
+      "sha256": "d91ed6e67f7d01611b4e8ff01c6e74b9def0fbf017745f2ccb7f3fcf9ac6e39b"
+    },
+    {
+      "path": "C:\\Users\\ernes\\OneDrive\\Documents\\IKLA Maison\\vite.config.js",
+      "relative": "vite.config.js",
+      "bytes": 287,
+      "sha256": "74cba80e066bb1eb68f1f94fb132935a8abc75f5906c7b08737ba1f4dde653d3"
+    }
+  ]
+}

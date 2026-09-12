@@ -64,7 +64,7 @@ export default function CollectionPage({
           Complete Curated Inventory
         </span>
         <h1 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] mb-4 relative z-10">
-          The Five Houses Catalogue
+          The Houses Catalogue
         </h1>
         <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-xl mx-auto leading-relaxed font-manrope relative z-10">
           Explore signature silhouettes spanning architectural tailoring, disciplined streetwear, sunlit Mediterranean resort wear, and celebratory lounge garments.

@@ -48,7 +48,7 @@ export default function ContactPage({ onNavigateHome }) {
             Maison Client Concierge
           </h1>
           <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-            Our private client relations team is at your disposal for wardrobe consultations, bespoke sizing requests, order tracking, and private appointment scheduling across all five houses.
+            Our private client relations team is at your disposal for wardrobe consultations, bespoke sizing requests, order tracking, and private appointment scheduling across all houses.
           </p>
         </div>
       </section>
@@ -188,7 +188,7 @@ export default function ContactPage({ onNavigateHome }) {
                       onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
                       className="w-full bg-[#FAF8F5] border border-[#D5CFC3] rounded-xs p-3.5 text-[#111215] focus:bg-white focus:border-[#8C6D3F] focus:ring-1 focus:ring-[#8C6D3F]/30 focus:outline-none cursor-pointer transition-all font-manrope text-xs shadow-2xs"
                     >
-                      <option value="All Houses">All Five Houses</option>
+                      <option value="All Houses">All Houses</option>
                       {BRAND_LIST.map((b) => (
                         <option key={b.id} value={b.name}>
                           {b.name}

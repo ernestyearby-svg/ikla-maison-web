@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, Check, Compass, Layers, Shield, Sparkles, Droplets, Wine, Clock } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Compass, Layers, Shield, Sparkles, Droplets, Wine, Clock, Zap, Target } from 'lucide-react';
 import { BRANDS, BRAND_LIST } from '../data/brands';
 import { PRODUCTS } from '../data/products';
 import BrandHero from '../components/BrandHero';
@@ -64,179 +64,213 @@ export default function BrandPage({
       {/* ========================================================================= */}
       <div id="brand-editorial-showcase">
         {/* ----------------------------------------------------------------------- */}
-        {/* A. IKLA MAISON DEDICATED MODULES */}
+        {/* A. IKLA MAISON DEDICATED EDITORIAL PATHWAYS */}
         {/* ----------------------------------------------------------------------- */}
         {brand.id === 'ikla-maison' && (
-          <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
-            {/* Module 1: Leisure & Sport (Clean Golf Flat-Lays) */}
-            <section className="space-y-8">
-              <div className="text-center max-w-2xl mx-auto">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
-                  Maison Leisure & Sport
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* Pathway 1: Men's Considered Essentials */}
+            <section className="space-y-10">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+                  Men's Atelier Pathway
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215]">
-                  The Golf & Country Club Archive
+                <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Considered Essentials. Built for Presence.
                 </h2>
-                <p className="text-xs sm:text-sm text-[#50545E] font-light mt-2 font-manrope">
-                  Curated flat lays showcasing tailored active silhouettes, pleated technical skirts, and bespoke leather sporting accessories.
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Structured double-faced overcoats, high-twist Egyptian cotton knit polos, pleated wool trousers, and hand-finished calfskin court sneakers tailored for transcontinental executive life.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Men's Golf Flat Lay */}
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-md">
-                  <CampaignImage
-                    src="assets/campaigns/01-ready-to-use/ikla-maison/ikla-mens-golf-flatlay.jpg"
-                    alt="IKLA Maison Men's Leisure Golf flat lay with technical polo and accessories"
-                    aspectRatio="1/1"
-                    position="center"
-                    className="rounded-xs w-full mb-4"
-                  />
-                  <div className="p-3 bg-[#FAF7F2] border-t border-[#EAE5DC] rounded-xs">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#8C6D3F] font-semibold block">
-                      Men's Club Silhouette
-                    </span>
-                    <h3 className="text-base font-cormorant font-normal text-[#111215] mt-1">
-                      Technical Pique Polo & Tailored Bermudas
-                    </h3>
-                    <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                      Woven from high-twist Egyptian cotton with moisture-dissipating micro-mesh panels.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Women's Golf Flat Lay */}
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-md">
-                  <CampaignImage
-                    src="assets/campaigns/01-ready-to-use/ikla-maison/ikla-womens-golf-flatlay.jpg"
-                    alt="IKLA Maison Women's Leisure Golf flat lay with cream pleated skirt and visor"
-                    aspectRatio="1/1"
-                    position="center"
-                    className="rounded-xs w-full mb-4"
-                  />
-                  <div className="p-3 bg-[#FAF7F2] border-t border-[#EAE5DC] rounded-xs">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#8C6D3F] font-semibold block">
-                      Women's Club Silhouette
-                    </span>
-                    <h3 className="text-base font-cormorant font-normal text-[#111215] mt-1">
-                      Pleated Court Skirt & Minimalist Visor
-                    </h3>
-                    <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                      Precision knife pleats engineered from wrinkle-resilient fluid stretch twill.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Module 2: Movement (Tennis & Cycling) */}
-            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-1">
-                    Kinetic Movement
+              {/* Lifestyle Opener */}
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src="assets/campaigns/round-four/ikla-mens-editorial-lifestyle.webp"
+                  alt="Three adult men wearing refined IKLA Maison essentials in a modern luxury hotel lobby"
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 rounded-xs">
+                  <span className="text-xs text-[#111215] font-cormorant font-normal text-base">
+                    Editorial Feature · Executive Lounge Transit
                   </span>
-                  <h2 className="text-3xl font-cormorant font-normal text-[#111215]">
-                    Court & Circuit Disciplines
-                  </h2>
+                  <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
+                    Milano — Zurich — London
+                  </span>
                 </div>
-                <p className="text-xs text-[#50545E] font-light max-w-md font-manrope">
-                  Tailored active performance balancing speed and breathability on open roads and clay courts.
+              </div>
+
+              {/* Product Follow-Through */}
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-md">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  <div className="lg:col-span-7">
+                    <CampaignImage
+                      src="assets/campaigns/round-three/ikla-mens-essentials-collection.webp"
+                      alt="IKLA Maison men's knit polos trousers quarter-zips jacket belt and sneakers displayed in a travertine salon"
+                      aspectRatio="16/9"
+                      position="center center"
+                      className="rounded-xs w-full"
+                    />
+                  </div>
+                  <div className="lg:col-span-5 space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold block">
+                      The Salon Roster
+                    </span>
+                    <h3 className="text-2xl font-cormorant font-normal text-[#111215]">
+                      The Menswear Foundational Archive
+                    </h3>
+                    <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                      Knit pique quarter-zips, unlined zip blousons, supple leather belts with satin brass buckles, and minimal court sneakers resting on natural travertine.
+                    </p>
+                    <div className="pt-2">
+                      <button
+                        onClick={() => {
+                          const el = document.getElementById('brand-collection-grid');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="text-xs uppercase tracking-widest text-[#8C6D3F] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1.5"
+                      >
+                        <span>View Available Pieces</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Pathway 2: Women's Form & Movement */}
+            <section className="space-y-10 border-t border-[#E5DFD5] pt-20">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+                  Women's Atelier Pathway
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Form. Movement. Presence.
+                </h2>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Engineered with fluid anatomical panelling, compressive ribbed knitwear, and architectural drape that flows gracefully with rotational human movement.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-md">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ikla-maison/ikla-tennis-collection.jpg"
-                    alt="IKLA Maison Tennis Club editorial"
-                    aspectRatio="4/3"
-                    position="center 25%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h3 className="text-lg font-cormorant font-normal text-[#111215]">
-                    The Clay Court Tennis Collection
-                  </h3>
-                  <p className="text-xs text-[#50545E] font-light mt-1 font-manrope">
-                    Tailored whites and cream knitwear crafted for rotational mobility and crisp court presence.
-                  </p>
+              {/* Lifestyle Opener */}
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src="assets/campaigns/round-four/ikla-womens-editorial-lifestyle.webp"
+                  alt="Three adult women wearing slate blue ivory and sage IKLA Maison looks in a luxury fashion salon"
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 rounded-xs">
+                  <span className="text-xs text-[#111215] font-cormorant font-normal text-base">
+                    Editorial Feature · Salon Silhouette Study
+                  </span>
+                  <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
+                    Slate Blue · Raw Ivory · Sage
+                  </span>
                 </div>
+              </div>
 
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-md">
+              {/* Product Follow-Through */}
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-md">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  <div className="lg:col-span-7">
+                    <CampaignImage
+                      src="assets/campaigns/round-two/ikla-womens-performance-capsule.webp"
+                      alt="Four coordinated IKLA Maison women's performance sets in slate blue ivory sage and black"
+                      aspectRatio="16/9"
+                      position="center center"
+                      className="rounded-xs w-full"
+                    />
+                  </div>
+                  <div className="lg:col-span-5 space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold block">
+                      Active Capsule
+                    </span>
+                    <h3 className="text-2xl font-cormorant font-normal text-[#111215]">
+                      Coordinated Kinetic Silhouettes
+                    </h3>
+                    <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                      Four refined palettes across seamless athletic bras, high-waisted ribbed leggings, and unstructured modal wraps tailored for studio and recovery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Pathway 3: Court & Resort */}
+            <section className="space-y-10 border-t border-[#E5DFD5] pt-20">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+                  Court & Country Club
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                  Performance Meets Presence.
+                </h2>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Clay court whites, powder blue knits, pleated fluid skirts, and moisture-dissipating micro-mesh panels built for rotational mobility on court and leisurely terrace luncheons.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-8 bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-lg">
                   <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ikla-maison/ikla-coastal-cycling.jpg"
-                    alt="IKLA Maison Coastal Cycling editorial"
-                    aspectRatio="4/3"
-                    position="center 20%"
-                    className="rounded-xs w-full mb-3"
+                    src="assets/campaigns/round-three/ikla-womens-court-resort-capsule.webp"
+                    alt="IKLA Maison women's court apparel in powder blue ivory sage and black beside a private tennis court"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
                   />
-                  <h3 className="text-lg font-cormorant font-normal text-[#111215]">
-                    The Coastal Cycling Discipline
+                </div>
+                <div className="lg:col-span-4 space-y-4">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold block">
+                    Clay Court Standard
+                  </span>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215]">
+                    Court & Resort Archive
                   </h3>
-                  <p className="text-xs text-[#50545E] font-light mt-1 font-manrope">
-                    Aerodynamic windbreakers with bonded water-resistant seams engineered for alpine coastal ascents.
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Knife-pleat skirts with built-in compression liners, structured visors with embroidered tonal crests, and breathable tennis polo tops.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Module 3: Travel, Family & Business Casual */}
-            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
-              <div className="text-center max-w-2xl mx-auto">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-1">
-                  Transcontinental Transit
+            {/* Pathway 4: Accessories Complete the Standard */}
+            <section className="space-y-10 border-t border-[#E5DFD5] pt-20">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+                  Finishing Touch
                 </span>
-                <h2 className="text-3xl font-cormorant font-normal text-[#111215]">
-                  Travel, Family & Executive Leisure
+                <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                  The Details Complete the Standard.
                 </h2>
+                <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                  Ergonomic molded recovery slides, arch-cushioned pima ribbed socks, structured weekender carry goods, and Italian horn hardware.
+                </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-7 bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-lg">
                   <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ikla-maison/ikla-family-airport-travel.jpg"
-                    alt="IKLA Maison Family Travel editorial"
-                    aspectRatio="3/4"
-                    position="center 25%"
-                    className="rounded-xs w-full mb-3"
+                    src="assets/campaigns/round-two/ikla-slides-socks-collection.webp"
+                    alt="IKLA Maison slides and ribbed socks in black ivory forest and slate blue displayed on marble and travertine"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
                   />
-                  <h3 className="text-base font-cormorant font-normal text-[#111215]">
-                    Generational Travel Harmony
-                  </h3>
-                  <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                    Matching loopback fleece tailored for effortless movement through private air hubs.
-                  </p>
                 </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ikla-maison/ikla-luxury-coastal-couple.jpg"
-                    alt="IKLA Maison Yacht Coastal Leisure"
-                    aspectRatio="3/4"
-                    position="center 30%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h3 className="text-base font-cormorant font-normal text-[#111215]">
-                    Maritime Coastal Escape
+                <div className="lg:col-span-5 space-y-4">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold block">
+                    Slide & Sock Program
+                  </span>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215]">
+                    Travertine Footwear Curation
                   </h3>
-                  <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                    Unstructured linen shirts and relaxed trousers tailored for Mediterranean horizons.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-4 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/01-ready-to-use/ikla-maison/ikla-business-casual-couple.jpg"
-                    alt="IKLA Maison Business Casual Executive Couple"
-                    aspectRatio="3/4"
-                    position="center 20%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h3 className="text-base font-cormorant font-normal text-[#111215]">
-                    Executive Business Casual
-                  </h3>
-                  <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                    Sharp double-breasted outerwear and mock neck knitwear designed for international meetings.
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Black, ivory, deep forest, and slate blue palettes crafted from lightweight dual-density EVA paired with heavyweight pima cotton knitwear.
                   </p>
                 </div>
               </div>
@@ -248,8 +282,8 @@ export default function BrandPage({
         {/* B. KTSE DEDICATED EDITORIAL SHOWCASE */}
         {/* ----------------------------------------------------------------------- */}
         {brand.id === 'ktse' && (
-          <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
-            {/* KTSE Headline Statement */}
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* Headline Statement */}
             <section className="bg-black text-white p-8 sm:p-14 rounded-xs border border-neutral-800 relative overflow-hidden">
               <div className="max-w-3xl relative z-10 space-y-4">
                 <span className="text-[10px] uppercase tracking-[0.35em] text-[#C8A97E] font-semibold block">
@@ -258,178 +292,85 @@ export default function BrandPage({
                 <h2 className="text-4xl sm:text-6xl font-cinzel font-light tracking-tight leading-tight">
                   KEEP THAT SAME ENERGY.
                 </h2>
-                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope">
+                <div className="text-sm font-mono text-neutral-400 tracking-[0.25em] uppercase">
+                  NO SWITCHES. NO EXCUSES.
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
                   KTSE strips away extraneous decoration to celebrate raw loopback terry, drop-shoulder volume, and tactile weight. Designed to maintain its structural form across daily wear.
                 </p>
               </div>
             </section>
 
-            {/* KTSE Colorways Product Grid */}
-            <section className="space-y-8">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C7A6B] font-semibold block mb-1">
-                    Signature Dye Baths
+            {/* Lifestyle Emotional Anchor */}
+            <section className="space-y-6">
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src="assets/campaigns/round-four/ktse-urban-lifestyle.webp"
+                  alt="Four adult models wearing KTSE heavyweight streetwear on a monumental concrete city plaza"
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 rounded-xs">
+                  <span className="text-sm font-cormorant text-[#111215] font-normal">
+                    Monumental Urban Plaza Campaign
                   </span>
-                  <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
-                    Architectural Colorways & Heavyweight Sets
-                  </h3>
-                </div>
-                <span className="text-xs text-[#555A64] font-mono">450–520 GSM Terry</span>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-multiple-colorways-product-grid.jpg"
-                    alt="KTSE Multiple Colorways Product Grid"
-                    aspectRatio="3/4"
-                    position="center"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">The Quad Colorway Spectrum</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Stone, Slate, Moss, and Vintage Black pigment dyes.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-vintage-black-colorways.jpg"
-                    alt="KTSE Vintage Black Colorways"
-                    aspectRatio="3/4"
-                    position="center"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Vintage Washed Black</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Enzyme washed for an authentic broken-in charcoal patina.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-ash-grey-set.jpg"
-                    alt="KTSE Ash Grey Set"
-                    aspectRatio="3/4"
-                    position="center"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Ash Grey Terry Set</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Matching raw-hem sweatshorts with heavy drawstring cords.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-brand-shirt-still-life.jpg"
-                    alt="KTSE Brand Shirt Still Life"
-                    aspectRatio="3/4"
-                    position="center"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Ribbed Collar Heavyweight Tee</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    320 GSM combed cotton with high-density neck ribbing.
-                  </p>
+                  <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
+                    Brutalist Monoliths · 450–520 GSM Terry
+                  </span>
                 </div>
               </div>
             </section>
 
-            {/* KTSE Campaign Photography Gallery */}
+            {/* Core Heavyweight Sets */}
             <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
-              <div className="text-center max-w-2xl mx-auto">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C7A6B] font-semibold block mb-1">
-                  Lookbook & Atmosphere
-                </span>
-                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
-                  Keep That Same Energy Campaign Photography
-                </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C7A6B] font-semibold block">
+                    Core Uniform
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Heavyweight Core Colorway Spectrum
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Heavyweight T-shirts and raw-hem sweat shorts pigment-washed in Vintage Black, Ash Grey, Taupe, and Raw Bone. Enzyme treated for tactile broken-in comfort while retaining architectural drape.
+                  </p>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-three/ktse-heavyweight-core-colorways.webp"
+                    alt="KTSE heavyweight T-shirt and raw-hem short sets in vintage black ash grey taupe and bone"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
               </div>
+            </section>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
+            {/* Accessories Colorways Depth */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
                   <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-streetwear-duo.jpg"
-                    alt="KTSE Streetwear Duo in brutalist setting"
-                    aspectRatio="3/4"
-                    position="center 20%"
-                    className="rounded-xs w-full mb-3"
+                    src="assets/campaigns/round-two/ktse-accessories-colorways.webp"
+                    alt="KTSE bags caps socks and slides in vintage black ash grey taupe and bone on concrete steps"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
                   />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Brutalist Courtyard Duo</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Oversized architectural volume against concrete masonry.
-                  </p>
                 </div>
 
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-urban-same-energy.jpg"
-                    alt="KTSE Urban Same Energy"
-                    aspectRatio="3/4"
-                    position="center 20%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Metropolitan Same Energy</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Everyday structural durability in fast-paced urban transit.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-coastal-couple.jpg"
-                    alt="KTSE Coastal Couple"
-                    aspectRatio="3/4"
-                    position="center 25%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Pacific Horizon Leisure</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Relaxed heavy fleece tailored for ocean breeze and evening twilight.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-beach-collection.jpg"
-                    alt="KTSE Beach Collection"
-                    aspectRatio="3/4"
-                    position="center 30%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Shoreline Raw-Hem Shorts</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Natural textured terry engineered for relaxed shorefront weekends.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-summer-lifestyle-trio.jpg"
-                    alt="KTSE Summer Lifestyle Trio"
-                    aspectRatio="3/4"
-                    position="center 25%"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Summer Terrace Trio</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Communal comfort and understated streetwear cohesion.
-                  </p>
-                </div>
-
-                <div className="bg-white border border-[#DDD7CB] p-3 rounded-xs shadow-sm">
-                  <CampaignImage
-                    src="assets/campaigns/02-reference-crops/ktse/ktse-collection-collage.jpg"
-                    alt="KTSE Collection Collage"
-                    aspectRatio="3/4"
-                    position="center"
-                    className="rounded-xs w-full mb-3"
-                  />
-                  <h4 className="text-sm font-cormorant font-normal text-[#111215]">Catalogue Overview</h4>
-                  <p className="text-[11px] text-[#555A64] font-light mt-1 font-manrope">
-                    Complete archival catalogue across all four foundational palettes.
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C7A6B] font-semibold block">
+                    Utility & Carry
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Accessories on Concrete Steps
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Ballistic canvas carry weekenders, unstructured cotton twill dad caps, arch-support ribbed socks, and molded recovery slides engineered for fast-paced metropolitan movement.
                   </p>
                 </div>
               </div>
@@ -441,135 +382,441 @@ export default function BrandPage({
         {/* C. MOTÉON DEDICATED EDITORIAL SHOWCASE */}
         {/* ----------------------------------------------------------------------- */}
         {brand.id === 'moteon' && (
-          <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
-            {/* Clean Launch Spotlight */}
-            <section className="bg-[#FAF4EE] border border-[#E8DCCF] p-8 sm:p-12 rounded-xs shadow-sm">
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* Lead Narrative */}
+            <section className="bg-[#FAF4EE] border border-[#E8DCCF] p-8 sm:p-14 rounded-xs shadow-sm space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#E0D0C0] text-[#B85D3B] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs">
+                Riviera Standard
+              </div>
+              <h2 className="text-4xl sm:text-6xl font-cormorant font-normal text-[#111215] leading-tight">
+                Movement, Refined.
+              </h2>
+              <div className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#B85D3B] font-manrope font-medium">
+                Performance. Style. Discipline. Freedom.
+              </div>
+              <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope max-w-2xl pt-2">
+                Conceived on the sunlit bluffs of the Mediterranean. Fluid European linens, airy crochet open-knits, and unconstrained loungewear tailored for sun-drenched arrivals and evening aperitifs.
+              </p>
+            </section>
+
+            {/* Women's Performance Hero */}
+            <section className="space-y-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-5 space-y-5">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#B85D3B] font-semibold block">
-                    Seasonal Debut
+                    Women's Movement
                   </span>
-                  <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
-                    Motéon — Riviera Freedom & Elevated Movement
-                  </h2>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Courtyard Performance Silhouettes
+                  </h3>
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-                    Conceived on the sunlit bluffs of the Mediterranean. Fluid European linens, airy crochet knits, and unstructured loungewear tailored for sun-drenched arrivals and evening aperitifs.
+                    Deep teal and raw ivory athletic knit sets tailored for mobility under open skies, paired with fluid linen overshirts.
                   </p>
-                  <div className="pt-2">
-                    <span className="inline-block px-4 py-2 bg-white border border-[#E0D0C0] text-[#B85D3B] text-xs uppercase tracking-widest font-semibold rounded-xs">
-                      Official Debut · April 1
-                    </span>
-                  </div>
                 </div>
 
-                <div className="lg:col-span-7">
-                  <div className="bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
-                    <CampaignImage
-                      src="assets/campaigns/01-ready-to-use/moteon/moteon-launching-april-first.jpg"
-                      alt="Motéon Launching April 1 Campaign Visual"
-                      aspectRatio="3/4"
-                      position="center 20%"
-                      className="rounded-xs w-full"
-                    />
-                  </div>
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-two/moteon-womens-performance-hero.webp"
+                    alt="Two adult women wearing deep teal and ivory Motéon performance apparel in a Mediterranean courtyard"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
                 </div>
               </div>
             </section>
 
-            {/* Motéon Ethos: Not A Trend & Designed To Move */}
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white border border-[#DDD7CB] p-6 rounded-xs shadow-sm flex flex-col justify-between">
-                <CampaignImage
-                  src="assets/campaigns/02-reference-crops/moteon/moteon-not-a-trend.jpg"
-                  alt="Motéon Not A Trend campaign visual"
-                  aspectRatio="4/3"
-                  position="center 20%"
-                  className="rounded-xs w-full mb-4"
-                />
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#B85D3B] font-semibold block mb-1">
-                    Atelier Standard
-                  </span>
-                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] mb-2">
-                    Not A Trend — Timeless Riviera Permanence
-                  </h3>
-                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
-                    Motéon avoids momentary resort hype. We prioritize natural flax fibres, horn buttons, and breathable open-stitch crochet designed to age with distinguished grace.
-                  </p>
+            {/* Men's Performance Capsule */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-three/moteon-mens-performance-capsule.webp"
+                    alt="Motéon men's performance polos shirts shorts trousers and overshirts in teal black ivory and grey"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
                 </div>
-              </div>
 
-              <div className="bg-white border border-[#DDD7CB] p-6 rounded-xs shadow-sm flex flex-col justify-between">
-                <CampaignImage
-                  src="assets/campaigns/02-reference-crops/moteon/moteon-designed-to-move.jpg"
-                  alt="Motéon Designed To Move campaign visual"
-                  aspectRatio="4/3"
-                  position="center 20%"
-                  className="rounded-xs w-full mb-4"
-                />
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#B85D3B] font-semibold block mb-1">
-                    Kinetic Leisure
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#B85D3B] font-semibold block">
+                    Men's Performance
                   </span>
-                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] mb-2">
-                    Designed To Move — Fluid Unconstrained Comfort
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Breathable European Flax & Open Knits
                   </h3>
-                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
-                    Tailored with relaxed armholes, elasticated linen drawstrings, and flowing leg openings that celebrate natural human motion under open skies.
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Technical polos, pleated linen trousers, light zip overshirts, and relaxed court shorts in teal, black, ivory, and mineral grey.
                   </p>
                 </div>
               </div>
             </section>
-          </div>
-        )}
 
-        {/* ----------------------------------------------------------------------- */}
-        {/* D. MORAL COMPASS DEDICATED PREVIEW SHOWCASE */}
-        {/* ----------------------------------------------------------------------- */}
-        {brand.id === 'moral-compass' && (
-          <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-5xl mx-auto w-full text-center">
-            <section className="bg-white border border-[#DDD7CB] p-8 sm:p-14 rounded-xs shadow-lg space-y-8">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FAF7F2] border border-[#DDD7CB] text-[#7A828A] text-[10px] uppercase tracking-[0.3em] font-semibold rounded-xs">
-                <Compass className="w-3.5 h-3.5 text-[#7A828A]" />
-                Private Inception Preview
+            {/* Footwear & Movement Accessories by Pool */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#B85D3B] font-semibold block">
+                    Movement Accessories
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Footwear, Carry & Wellness
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Court sneakers, recovery slides, canvas weekenders, insulated flasks, and bespoke exercise mats displayed beside calm reflecting waters.
+                  </p>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-three/moteon-footwear-movement-accessories.webp"
+                    alt="Motéon sneakers slides socks headwear duffel bottle and exercise mat beside a reflecting pool"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
               </div>
+            </section>
 
-              <h2 className="text-3xl sm:text-5xl font-cinzel font-light text-[#111215]">
-                MORAL COMPASS — CARDINAL INCEPTION
-              </h2>
-
-              <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-xl mx-auto leading-relaxed font-manrope">
-                Guided by internal orientation rather than external momentum. A private Maison atelier currently in developmental curation.
-              </p>
-
-              <div className="max-w-md mx-auto p-3 bg-[#FAF7F2] border border-[#E0DBD0] rounded-xs shadow-inner">
+            {/* Coastal Movement Lifestyle */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
                 <CampaignImage
-                  src="assets/campaigns/02-reference-crops/moral-compass/moral-compass-coming-soon.jpg"
-                  alt="Moral Compass Coming Soon Preview Visual"
-                  aspectRatio="3/4"
-                  position="center"
+                  src="assets/campaigns/round-four/moteon-coastal-movement-lifestyle.webp"
+                  alt="Adult man and woman wearing Motéon performance apparel on a Mediterranean coastal promenade"
+                  aspectRatio="16/9"
+                  position="center center"
                   className="rounded-xs w-full"
                 />
-              </div>
-
-              <div className="pt-4 border-t border-[#EAE5DC] max-w-lg mx-auto">
-                <span className="text-[11px] text-[#7A828A] uppercase tracking-widest font-mono block mb-2">
-                  Status: Private Atelier Inception
-                </span>
-                <p className="text-xs text-[#555A64] font-light font-manrope">
-                  No commercial inventory is publicly offered at this time. Registered patrons will receive private correspondence upon collection release.
-                </p>
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] text-center rounded-xs">
+                  <span className="text-sm font-cormorant text-[#111215]">
+                    Coastal Promenade Movement Campaign · Mediterranean Light & Stone
+                  </span>
+                </div>
               </div>
             </section>
           </div>
         )}
 
         {/* ----------------------------------------------------------------------- */}
-        {/* E. IKLA WATER DEDICATED HOUSE EXTENSION SHOWCASE */}
+        {/* D. MORAL COMPASS DEDICATED EDITORIAL SHOWCASE */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'moral-compass' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            <section className="bg-white border border-[#DDD7CB] p-8 sm:p-14 rounded-xs shadow-md space-y-4 text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#FAF7F2] border border-[#DDD7CB] text-[#7A828A] text-[10px] uppercase tracking-[0.3em] font-semibold rounded-xs">
+                <Compass className="w-3.5 h-3.5 text-[#7A828A]" />
+                Cardinal Curation
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-cinzel font-light text-[#111215]">
+                Direction in Every Detail.
+              </h2>
+              <div className="text-xs uppercase tracking-[0.3em] text-[#7A828A] font-mono">
+                Designed With Intention.
+              </div>
+              <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-xl mx-auto leading-relaxed font-manrope pt-2">
+                Guided by internal orientation rather than external momentum. Structured double-breasted tailoring, celestial jacquards, and volcanic obsidian palettes.
+              </p>
+            </section>
+
+            {/* Executive Lifestyle Opener */}
+            <section className="space-y-6">
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src="assets/campaigns/round-four/moral-compass-executive-lifestyle.webp"
+                  alt="Adult Black man and woman wearing restrained Moral Compass apparel in a monumental stone corridor"
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] text-center rounded-xs">
+                  <span className="text-sm font-cinzel text-[#111215] font-light">
+                    Monumental Stone Corridor Campaign · Architectural Poise
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {/* Apparel Capsule */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A828A] font-semibold block">
+                    Apparel Capsule
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Structured Wool & Knit Layers
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Tailored overshirts, fine gauge knit hoodies, heavyweight tees, pleated wool trousers, and wool gabardine coats in deep forest, bone, and obsidian.
+                  </p>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-three/moral-compass-apparel-capsule.webp"
+                    alt="Moral Compass overshirt knit hoodie T-shirt trousers and coat in forest bone charcoal and black"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* Accessories Feature */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-two/moral-compass-accessories.webp"
+                    alt="Moral Compass tote scarf belt beanie socks folio and slides in forest bone and black"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A828A] font-semibold block">
+                    Directional Accoutrements
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Accessories With Purpose
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Leather carry folios, woven celestial scarves, solid buckle belts, ribbed merino beanies, and recovery slides arranged with measured precision.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* E. WNNR DEDICATED EDITORIAL SHOWCASE */}
+        {/* ----------------------------------------------------------------------- */}
+        {brand.id === 'wnnr' && (
+          <div className="space-y-28 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+            {/* 1. Manifesto Statement */}
+            <section className="bg-[#0D0F0E] text-[#F4F1EA] p-8 sm:p-14 rounded-xs border border-[#C5A869]/30 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-[#C5A869]/10 via-transparent to-transparent pointer-events-none" />
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A869] font-semibold block">
+                    Discipline Atelier Ethos
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#C5A869]/40 text-[#C5A869] rounded-xs font-mono">
+                    Spoken: "Winner"
+                  </span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
+                  WIN WITHIN.
+                </h2>
+                <div className="text-base sm:text-xl font-cormorant text-[#C5A869] tracking-[0.25em] uppercase font-light">
+                  Discipline. Ambition. Execution.
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope pt-2">
+                  {brand.manifesto}
+                </p>
+                <div className="pt-2 flex items-center gap-6 text-xs text-neutral-400 font-mono tracking-widest uppercase">
+                  <span>Victory Earned Internally</span>
+                  <span>•</span>
+                  <span>Monolithic Balance</span>
+                  <span>•</span>
+                  <span>Uncompromised Routine</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Discipline Lifestyle Campaign (Set Four) */}
+            <section className="space-y-6">
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src="assets/campaigns/round-four/wnnr-discipline-lifestyle.webp"
+                  alt="Adult Black man and woman wearing WNNR performance essentials in a penthouse training studio at sunrise"
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+                <div className="p-4 bg-[#FAF7F2] border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 rounded-xs">
+                  <span className="text-sm font-cormorant text-[#111215] font-normal">
+                    Penthouse Training Studio at Sunrise · Private Discipline
+                  </span>
+                  <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
+                    Discipline Uniform · High-Density French Terry
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Core Hoodie & Jogger Uniform (Set Three) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A869] font-semibold block">
+                    Core Uniform
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Five-Colorway Heavyweight Loopback Sets
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Structured 520 GSM custom-milled loopback French terry hoodies paired with tapered track joggers. Rendered in Obsidian Black, Raw Bone, Deep Forest, Oxblood Crimson, and Charcoal Patina.
+                  </p>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-three/wnnr-hoodie-jogger-colorways.webp"
+                    alt="Five WNNR hoodie and jogger sets in black bone forest oxblood and charcoal"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 4. T-Shirt Color Story (Set Two) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-two/wnnr-tshirt-colorways.webp"
+                    alt="Six heavyweight WNNR T-shirts in black bone forest oxblood ochre and charcoal"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A869] font-semibold block">
+                    Foundational Tops
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Hexa-Colorway Heavyweight T-Shirt Spectrum
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    320 GSM combed cotton drop-shoulder boxy tees featuring high-density collar ribbing and discreet tonal WNNR branding. Displaying the complete extended palette: Obsidian, Bone, Forest, Oxblood, Gold Ochre, and Charcoal.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* 5. Accessories Plinths (Set Two) */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-5 space-y-5">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A869] font-semibold block">
+                    Monolithic Plinths
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                    Accessories Architecture
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                    Reinforced canvas weekenders, unstructured dad caps, ribbed merino beanies, pima athletic socks, and recovery slides arranged on architectural concrete plinths.
+                  </p>
+                </div>
+
+                <div className="lg:col-span-7 bg-white p-3 border border-[#DDD7CB] rounded-xs shadow-xl">
+                  <CampaignImage
+                    src="assets/campaigns/round-two/wnnr-accessories-collection.webp"
+                    alt="WNNR bags caps beanies socks and slides in black bone forest and gold arranged on architectural plinths"
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="rounded-xs w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* 6. Quad-Discipline Palette Presentation */}
+            <section className="space-y-8 border-t border-[#E5DFD5] pt-16">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#C5A869] font-semibold block mb-1">
+                  Atelier Chromatics
+                </span>
+                <h3 className="text-3xl font-cormorant font-normal text-[#111215]">
+                  The WNNR Chromatic Discipline
+                </h3>
+                <p className="text-xs text-[#50545E] font-light mt-2 font-manrope">
+                  Intentional pigments engineered to express internal resolve, measured quiet confidence, and earned victory.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {brand.paletteColors && brand.paletteColors.map((color) => (
+                  <div key={color.name} className="bg-white border border-[#DDD7CB] p-5 rounded-xs shadow-sm flex flex-col justify-between">
+                    <div>
+                      <div
+                        className="w-full h-24 rounded-xs mb-4 shadow-inner border border-black/10 flex items-end p-2.5"
+                        style={{ backgroundColor: color.hex }}
+                      >
+                        <span
+                          className={`text-[10px] font-mono tracking-widest px-2 py-0.5 rounded-2xs ${
+                            color.hex === '#F4F1EA' ? 'bg-black/80 text-white' : 'bg-white/90 text-black'
+                          }`}
+                        >
+                          {color.hex}
+                        </span>
+                      </div>
+                      <h4 className="text-base font-cormorant font-normal text-[#111215]">
+                        {color.name}
+                      </h4>
+                      <p className="text-xs text-[#50545E] font-light mt-1.5 font-manrope leading-relaxed">
+                        {color.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 7. Honest Category Links & Discipline Reserve CTA */}
+            <section className="bg-gradient-to-r from-[#0D0F0E] via-[#1B2E24] to-[#0D0F0E] border border-[#C5A869]/40 p-8 sm:p-14 rounded-xs text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+              <div className="max-w-2xl mx-auto relative z-10 space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A869] font-semibold block">
+                  Discipline Allocation
+                </span>
+                <h3 className="text-3xl sm:text-5xl font-cormorant font-light tracking-tight text-white">
+                  WIN WITHIN
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope max-w-xl mx-auto">
+                  Signify your commitment to private discipline, internal focus, and elevated performance. Inquire below to join the private allocation ledger for upcoming release windows.
+                </p>
+                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('brand-collection-grid');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 bg-[#C5A869] text-[#0D0F0E] hover:bg-[#DFC78E] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-lg"
+                  >
+                    Explore WNNR Products
+                  </button>
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('site-footer');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-8 py-4 border border-[#C5A869] text-[#C5A869] hover:bg-[#C5A869] hover:text-[#0D0F0E] transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs"
+                  >
+                    Private Allocation Ledger
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* ----------------------------------------------------------------------- */}
+        {/* F. IKLA WATER DEDICATED HOUSE EXTENSION SHOWCASE */}
         {/* ----------------------------------------------------------------------- */}
         {brand.id === 'ikla-water' && (
           <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
-            {/* Lead Narrative with Dining Table Hero */}
             <section className="bg-white border border-[#CADCE0] p-8 sm:p-12 rounded-xs shadow-md">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-5 space-y-6">
@@ -577,21 +824,12 @@ export default function BrandPage({
                     <Droplets className="w-3.5 h-3.5 text-[#5E8896]" />
                     Maison Glass Extension
                   </div>
-
                   <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
                     Pure Mineral Hydration In Heavyweight Flint Glass
                   </h2>
-
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
                     IKLA Water is conceived as an architectural extension of the IKLA Maison dining salon. Reusable flint glass bottles engineered with heavy monolithic bases, designed to elevate executive hospitality, residential tables, and gallery spaces.
                   </p>
-
-                  <div className="p-4 bg-[#F5F8F9] border border-[#CADCE0] rounded-xs space-y-2 text-xs text-[#40444E] font-manrope">
-                    <div className="font-semibold text-[#111215]">Concept Specifications:</div>
-                    <div>• 100% Reusable heavy-gauge flint glass</div>
-                    <div>• Sculptural rounded decanters & monolithic cylinders</div>
-                    <div>• Designed for intentional hospitality & fine dining</div>
-                  </div>
                 </div>
 
                 <div className="lg:col-span-7">
@@ -607,89 +845,15 @@ export default function BrandPage({
                 </div>
               </div>
             </section>
-
-            {/* Pedestal & Bottle Silhouettes Grid */}
-            <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Pedestal */}
-              <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm flex flex-col justify-between">
-                <CampaignImage
-                  src="assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg"
-                  alt="IKLA Water Trio Pedestal Display"
-                  aspectRatio="1/1"
-                  position="center"
-                  className="rounded-xs w-full mb-4"
-                />
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#5E8896] font-semibold block mb-1">
-                    Pedestal Installation
-                  </span>
-                  <h3 className="text-lg font-cormorant font-normal text-[#111215]">
-                    The Gallery Pedestal Curation
-                  </h3>
-                  <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                    Sculptural vessels conceived as functional art pieces in conversation with marble and limestone.
-                  </p>
-                </div>
-              </div>
-
-              {/* Rounded Bottles */}
-              <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm flex flex-col justify-between">
-                <div className="aspect-square w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-4 mb-4 flex items-center justify-center">
-                  <CampaignImage
-                    src="assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg"
-                    alt="IKLA Water Rounded Bottles Profile"
-                    aspectRatio="1/1"
-                    fit="contain"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#5E8896] font-semibold block mb-1">
-                    Silhouette Profile 01
-                  </span>
-                  <h3 className="text-lg font-cormorant font-normal text-[#111215]">
-                    Rounded Flint Glass Decanter
-                  </h3>
-                  <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                    Soft tapered neck with embossed silver typographical seal.
-                  </p>
-                </div>
-              </div>
-
-              {/* Cylinder Bottles */}
-              <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm flex flex-col justify-between">
-                <div className="aspect-square w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-4 mb-4 flex items-center justify-center">
-                  <CampaignImage
-                    src="assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg"
-                    alt="IKLA Water Cylinder Bottles Profile"
-                    aspectRatio="1/1"
-                    fit="contain"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#5E8896] font-semibold block mb-1">
-                    Silhouette Profile 02
-                  </span>
-                  <h3 className="text-lg font-cormorant font-normal text-[#111215]">
-                    Monolithic Cylinder Vessel
-                  </h3>
-                  <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">
-                    Slender architectural proportions with weighted crystal base.
-                  </p>
-                </div>
-              </div>
-            </section>
           </div>
         )}
 
         {/* ----------------------------------------------------------------------- */}
-        {/* F. MY DRINK FAMILY DEDICATED COMMUNITY & COLLABORATION SHOWCASE */}
+        {/* G. MY DRINK FAMILY DEDICATED COMMUNITY & COLLABORATION SHOWCASE */}
         {/* ----------------------------------------------------------------------- */}
         {brand.id === 'my-drink-family' && (
           <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Rep The Legacy Merch */}
               <div className="bg-white border border-[#E2DCBE] p-6 rounded-xs shadow-sm flex flex-col justify-between">
                 <CampaignImage
                   src="assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg"
@@ -711,7 +875,6 @@ export default function BrandPage({
                 </div>
               </div>
 
-              {/* MyMosa Collaboration Merch */}
               <div className="bg-white border border-[#E2DCBE] p-6 rounded-xs shadow-sm flex flex-col justify-between">
                 <CampaignImage
                   src="assets/campaigns/02-reference-crops/my-drink-family/mymosa-family-merch.jpg"
@@ -738,98 +901,11 @@ export default function BrandPage({
       </div>
 
       {/* ========================================================================= */}
-      {/* 3. COLLECTION FLAT LAY & DESIGN LANGUAGE SPOTLIGHT (IF APPLICABLE) */}
-      {/* ========================================================================= */}
-      {!brand.isExtension && brand.id !== 'moral-compass' && (
-        <section className="relative py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full z-10 border-t border-[#E2DDD3]">
-          {/* Subtle Background Brand Wordmark Watermark */}
-          <div className="absolute -top-12 -left-20 w-[65vw] max-w-[900px] pointer-events-none select-none opacity-[0.05] filter contrast-125 z-0">
-            <img src={brand.logos.wordmarkDark} alt="" className="w-full h-full object-contain" />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-            {/* Flat Lay Visual Asset (collection.webp) */}
-            <div className="lg:col-span-7 bg-white border border-[#DDD7CB] p-3 sm:p-4 group rounded-xs shadow-lg relative overflow-hidden">
-              <div className="absolute top-6 right-6 w-24 h-24 opacity-[0.08] pointer-events-none">
-                <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain animate-spin-slow" />
-              </div>
-
-              <div className="relative aspect-square w-full overflow-hidden bg-[#F5F2EC] rounded-xs">
-                <img
-                  src={brand.assets.collection}
-                  alt={brand.alt.collection}
-                  loading="eager"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium bg-white/95 backdrop-blur-md text-[#16171A] border border-neutral-300/80 rounded-xs flex items-center gap-2 shadow-xs">
-                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: brand.palette.accent }} />
-                    {brand.name} Flat Lay Archive
-                  </span>
-                </div>
-              </div>
-              <p className="text-[11px] text-[#555A64] font-light mt-3 px-1 text-center font-manrope">
-                Official archive flat lay showcasing foundational silhouettes, construction, and textiles.
-              </p>
-            </div>
-
-            {/* Brand Identity & Attributes */}
-            <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-full bg-white border border-[#DDD7CB] flex items-center justify-center p-1 shadow-xs">
-                    <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain" />
-                  </div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-[#8C6D3F]">
-                    House Signature
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] mb-3">
-                  Materiality & Form
-                </h2>
-                <p className="text-xs sm:text-sm text-[#4A4E57] font-light leading-relaxed mb-6 font-manrope">
-                  {brand.description}
-                </p>
-              </div>
-
-              {/* Key Attributes List */}
-              <div className="space-y-3.5 border-t border-[#E2DDD3] pt-6">
-                {brand.keyAttributes.map((attr, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-xs text-[#30333A]">
-                    <div
-                      className="w-4 h-4 rounded-full flex items-center justify-center text-white shrink-0 mt-0.5"
-                      style={{ backgroundColor: brand.palette.accent }}
-                    >
-                      <Check className="w-2.5 h-2.5" />
-                    </div>
-                    <span className="font-light font-manrope leading-relaxed">{attr}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Keywords */}
-              <div className="pt-4 flex flex-wrap gap-2">
-                {brand.keywords.map((kw) => (
-                  <span
-                    key={kw}
-                    className="px-3 py-1 text-[10px] uppercase tracking-wider bg-white border border-[#DDD7CB] text-[#30333A] rounded-xs font-medium shadow-2xs"
-                  >
-                    {kw}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ========================================================================= */}
-      {/* 4. BRAND PRODUCTS COLLECTION GRID (IF PRODUCTS EXIST) */}
+      {/* 3. BRAND PRODUCTS COLLECTION GRID (IF PRODUCTS EXIST) */}
       {/* ========================================================================= */}
       {brandProducts.length > 0 && (
         <section id="brand-collection-grid" className="py-24 px-6 sm:px-8 lg:px-12 bg-[#FAF7F2] border-y border-[#E2DDD3] relative z-10">
           <div className="max-w-7xl mx-auto">
-            {/* Header & Filter Tabs */}
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
@@ -840,7 +916,6 @@ export default function BrandPage({
                 </h2>
               </div>
 
-              {/* Category Filter Pills */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => (
                   <button
@@ -858,7 +933,6 @@ export default function BrandPage({
               </div>
             </div>
 
-            {/* Grid of Products */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
               {filteredProducts.map((product) => (
                 <ProductCard
@@ -874,7 +948,7 @@ export default function BrandPage({
       )}
 
       {/* ========================================================================= */}
-      {/* 5. EDITORIAL LIFESTYLE BANNER */}
+      {/* 4. EDITORIAL LIFESTYLE BANNER */}
       {/* ========================================================================= */}
       <section id="brand-ethos-section" className="relative w-full py-32 px-6 sm:px-8 lg:px-12 bg-neutral-950 overflow-hidden z-10">
         <div className="absolute inset-0 w-full h-full">
@@ -885,10 +959,6 @@ export default function BrandPage({
             className="w-full h-full object-cover object-center brightness-45"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0d] via-black/60 to-black/40" />
-        </div>
-
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.06] overflow-hidden">
-          <img src={brand.logos.wordmarkDark} alt="" className="w-[85vw] max-w-[1100px] object-contain" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -913,7 +983,7 @@ export default function BrandPage({
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. EXPLORE NEIGHBORING HOUSES */}
+      {/* 5. EXPLORE NEIGHBORING HOUSES */}
       {/* ========================================================================= */}
       <section className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full z-10 bg-[#ECEAE4] border-t border-[#DFDBD3]">
         <div className="flex items-center justify-between mb-12 pb-4 border-b border-[#D8D3C7]">
