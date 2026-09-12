@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Compass, Sparkles, Layers, Shield, ChevronRight, Gem, Droplets, Wine, Check, Scissors, Plane, ExternalLink, Anchor, Car, Home } from 'lucide-react';
 import { BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES, BRANDS } from '../data/brands';
-import { PRODUCTS, IKLA_VIP_PRODUCTS } from '../data/products';
+import { PRODUCTS, IKLA_VIP_PRODUCTS, IKLA_APPOINTMENTS_PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
 import HeroHouseNavigation from '../components/HeroHouseNavigation';
@@ -17,6 +17,7 @@ export default function HomePage({
   onNavigateAbout,
   onNavigateKids,
   onNavigateGriffin,
+  onNavigateAppointments,
 }) {
   const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
   const [inquiryProduct, setInquiryProduct] = useState(null);
@@ -27,6 +28,13 @@ export default function HomePage({
 
   // Curated Private Previews (VIP suites)
   const curatedVIPPreviews = IKLA_VIP_PRODUCTS.slice(0, 4);
+
+  // Restrained Private Appointments Preview (Exactly 3 Cards)
+  const previewAppointmentsProducts = [
+    IKLA_APPOINTMENTS_PRODUCTS.find((p) => p.id === 'ikla-architectural-eyewear'),
+    IKLA_APPOINTMENTS_PRODUCTS.find((p) => p.id === 'ikla-onyx-cufflink-stud-set'),
+    IKLA_APPOINTMENTS_PRODUCTS.find((p) => p.id === 'ikla-private-travel-document-set'),
+  ].filter(Boolean);
 
   const handleOpenInquiry = (product = null) => {
     setInquiryProduct(product || {
@@ -399,6 +407,100 @@ export default function HomePage({
                   Concept commissions presented by invitation.
                 </span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6.5 IKLA MAISON · PRIVATE APPOINTMENTS PREVIEW */}
+      {/* ========================================================================= */}
+      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#0A0B0D] text-white border-b border-neutral-900 relative overflow-hidden">
+        {/* Subtle Walnut / Gold Ambient Glow */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#4A3728]/25 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#0F2E22]/30 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 border-b border-white/10">
+            <div className="space-y-3 max-w-2xl">
+              <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-[#0F2E22]/60 border border-[#C5A869]/40 text-[#C5A869] text-[10px] uppercase tracking-[0.3em] font-medium rounded-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869] animate-pulse" />
+                <span>IKLA Maison · Private Appointments</span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white tracking-tight leading-none">
+                Restrained Accessories & Travel Rituals
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-300 font-light font-manrope leading-relaxed">
+                A disciplined suite of private appointments and travel rituals conceived for clients who move between architectural spaces, private aviation, and ceremonial evenings with quiet poise. Available exclusively by confidential request.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <button
+                onClick={onNavigateAppointments}
+                className="px-7 py-3.5 bg-[#C5A869] hover:bg-[#D8BE82] text-black transition-all text-xs uppercase tracking-[0.22em] font-semibold cursor-pointer rounded-xs shadow-2xl flex items-center gap-2"
+              >
+                <span>Explore the Appointments</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Exactly One 16:9 Editorial Banner */}
+          <div
+            onClick={onNavigateAppointments}
+            className="relative bg-[#0F1210] border border-[#C5A869]/30 p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group cursor-pointer"
+          >
+            <div className="aspect-[16/9] w-full max-h-[460px] overflow-hidden rounded-xs relative bg-[#060708]">
+              <img
+                src={getAssetPath('assets/appointments/ikla-appointments-editorial-banner.webp')}
+                alt="Refined IKLA Maison accessories arranged across a dark walnut desk in a private appointments salon"
+                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 filter brightness-[0.92]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div className="max-w-xl">
+                  <span className="text-[9px] uppercase tracking-[0.3em] text-[#C5A869] font-mono block mb-1">
+                    Private Salon Study
+                  </span>
+                  <h3 className="text-xl sm:text-3xl font-cormorant font-light text-white leading-snug">
+                    Eight Ceremonial Objects · Two Editorial Groupings
+                  </h3>
+                </div>
+                <span className="text-xs uppercase tracking-widest text-[#C5A869] font-medium flex items-center gap-1">
+                  Enter Collection <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Exactly Three Product Cards */}
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase tracking-[0.28em] text-[#C5A869] font-mono">
+                Collection Preview · 3 of 8 Objects
+              </span>
+              <button
+                onClick={onNavigateAppointments}
+                className="text-xs uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <span>View Complete Collection (8)</span>
+                <ChevronRight className="w-3 h-3" />
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {previewAppointmentsProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  onSelectProduct={onSelectProduct}
+                  onSelectBrand={onSelectBrand}
+                  onOpenInquiry={handleOpenInquiry}
+                />
+              ))}
             </div>
           </div>
         </div>

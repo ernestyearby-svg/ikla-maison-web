@@ -1,4 +1,4 @@
-﻿/**
+/**
  * IKLA Maison — Master Luxury Design Token System
  * 
  * Governs global color foundations, typography scales, atmospheric depths,
@@ -86,6 +86,29 @@ export const PAGE_COLOR_SYSTEMS = {
     cardBg: '#0F1210',
     border: 'rgba(197, 168, 105, 0.20)',
     atmosphere: 'Invitation only, private commission, architectural, rare, future-facing',
+  },
+  'private-appointments': {
+    id: 'private-appointments',
+    name: 'IKLA Maison · Private Appointments',
+    foundation: 'Imperial Black & Warm Ivory',
+    heritageAccents: 'Maison Green, Walnut, Cream Stone, Restrained Regal Gold',
+    bgPrimary: '#FAF7F2',
+    bgDark: '#0A0B0D',
+    textPrimary: '#0A0B0D',
+    textDark: '#F7F4EE',
+    accent: '#0F2E22',
+    secondaryAccent: '#C5A869',
+    walnut: '#4A3728',
+    creamStone: '#EAE5DC',
+    warmIvory: '#F7F4EE',
+    imperialBlack: '#0A0B0D',
+    badgeBg: 'rgba(15, 46, 34, 0.08)',
+    badgeBorder: 'rgba(197, 168, 105, 0.35)',
+    cardBg: '#FFFFFF',
+    cardDarkBg: '#121418',
+    border: '#E2DDD3',
+    borderDark: 'rgba(255, 255, 255, 0.08)',
+    atmosphere: 'Intimate, bespoke, quiet authority, dressing salon & international travel rituals',
   },
   'ktse': {
     id: 'ktse',

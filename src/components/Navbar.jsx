@@ -34,7 +34,11 @@ export default function Navbar({
       {/* Top Luxury Announcement Bar */}
       <div className="bg-[#07080a] text-neutral-400 border-b border-neutral-800/80 py-2 px-4 text-center text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-light flex items-center justify-center gap-3">
         <span className="hidden sm:inline text-[#C8A97E]">•</span>
-        <span>Complimentary White-Glove Shipping On Orders Over $350</span>
+        {currentView === 'appointments' ? (
+          <span>Private Salon Appointments · By Confidential Request Only</span>
+        ) : (
+          <span>Complimentary White-Glove Shipping On Orders Over $350</span>
+        )}
         <span className="hidden sm:inline text-[#C8A97E]">•</span>
         <span className="hidden md:inline text-neutral-300">Independent Houses · One Disciplined Maison</span>
         <span className="hidden md:inline text-[#C8A97E]">•</span>
@@ -173,8 +177,8 @@ export default function Navbar({
                     </div>
                   </div>
 
-                  {/* Extension Programs: IKLA Kids, Griffin Edition, IKLA Water */}
-                  <div className="pt-3 border-t border-neutral-800/80 mt-3 grid grid-cols-3 gap-3">
+                  {/* Extension Programs: IKLA Kids, Griffin Edition, Private Appointments, IKLA Water */}
+                  <div className="pt-3 border-t border-neutral-800/80 mt-3 grid grid-cols-4 gap-2.5">
                     <button
                       onClick={() => {
                         onNavigate('kids');
@@ -217,6 +221,26 @@ export default function Navbar({
 
                     <button
                       onClick={() => {
+                        onNavigate('appointments');
+                        setIsBrandsDropdownOpen(false);
+                      }}
+                      className="text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#C5A869]/60 rounded-xs transition-all flex items-center gap-2.5 group cursor-pointer"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-[#0F2E22] border border-[#C5A869]/50 flex items-center justify-center shrink-0 text-[#C5A869] text-[10px] font-serif font-bold">
+                        A
+                      </div>
+                      <div>
+                        <div className="text-xs font-medium text-white group-hover:text-[#C5A869] transition-colors">
+                          Appointments
+                        </div>
+                        <div className="text-[9px] text-neutral-400 font-light truncate">
+                          Private Accessories
+                        </div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => {
                         onNavigate('brand', 'ikla-water');
                         setIsBrandsDropdownOpen(false);
                       }}
@@ -240,7 +264,7 @@ export default function Navbar({
             </div>
 
             {/* Desktop Direct Links */}
-            <div className="hidden lg:flex items-center gap-5 text-xs uppercase tracking-[0.2em]">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-5 text-xs uppercase tracking-[0.16em] xl:tracking-[0.2em]">
               <button
                 onClick={() => onNavigate('collection')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
@@ -266,6 +290,14 @@ export default function Navbar({
                 Griffin
               </button>
               <button
+                onClick={() => onNavigate('appointments')}
+                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C5A869] after:transition-all after:duration-300 ${
+                  currentView === 'appointments' ? 'text-[#C5A869] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                }`}
+              >
+                Private Appointments
+              </button>
+              <button
                 onClick={() => onNavigate('about')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
                   currentView === 'about' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
@@ -279,7 +311,7 @@ export default function Navbar({
                   currentView === 'contact' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
-                Concierge
+                Contact
               </button>
             </div>
           </div>

@@ -13,6 +13,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import KidsPage from './pages/KidsPage';
 import GriffinPage from './pages/GriffinPage';
+import PrivateAppointmentsPage from './pages/PrivateAppointmentsPage';
 
 import { useCart } from './context/CartContext';
 import { BRANDS } from './data/brands';
@@ -50,6 +51,8 @@ export default function App() {
         setCurrentView('kids');
       } else if (hashPath === 'brand/griffin' || hashPath === 'griffin' || hashPath.startsWith('griffin') || hashPath === 'commissions/griffin') {
         setCurrentView('griffin');
+      } else if (hashPath === 'appointments' || hashPath === 'private-appointments' || hashPath.startsWith('appointments') || hashPath.startsWith('private-appointments')) {
+        setCurrentView('appointments');
       } else if (hashPath.startsWith('brand/')) {
         const bId = hashPath.split('/')[1];
         if (BRANDS[bId]) {
@@ -146,6 +149,7 @@ export default function App() {
             onNavigateAbout={() => navigateTo('about')}
             onNavigateKids={() => navigateTo('kids')}
             onNavigateGriffin={() => navigateTo('griffin')}
+            onNavigateAppointments={() => navigateTo('appointments')}
           />
         )}
 
@@ -159,6 +163,14 @@ export default function App() {
 
         {currentView === 'griffin' && (
           <GriffinPage
+            onNavigateHome={() => navigateTo('home')}
+            onNavigateCollection={() => navigateTo('collection')}
+          />
+        )}
+
+        {currentView === 'appointments' && (
+          <PrivateAppointmentsPage
+            onSelectProduct={handleSelectProduct}
             onNavigateHome={() => navigateTo('home')}
             onNavigateCollection={() => navigateTo('collection')}
           />
@@ -180,6 +192,7 @@ export default function App() {
             onSelectBrand={handleSelectBrand}
             onNavigateKids={() => navigateTo('kids')}
             onNavigateGriffin={() => navigateTo('griffin')}
+            onNavigateAppointments={() => navigateTo('appointments')}
             initialBrandFilter="all"
             searchQuery={searchQuery}
             onClearSearch={() => setSearchQuery('')}

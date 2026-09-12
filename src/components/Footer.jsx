@@ -152,6 +152,12 @@ export default function Footer({ onNavigate }) {
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('appointments')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-neutral-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869]" />
+                  <span>Private Appointments</span>
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
                   The Maison Houses Ethos
                 </button>

@@ -2374,6 +2374,272 @@ export const PRODUCTS = [
     ],
     fabricCare: 'Professional dry clean only. Steam gently.',
     fitNotes: 'Bespoke fit tailored upon allocation confirmation.'
+  },
+  // =========================================================================
+  // IKLA MAISON · PRIVATE APPOINTMENTS (8 PRODUCTS: 4 APPOINTMENTS, 4 TRAVEL)
+  // =========================================================================
+  {
+    id: 'ikla-architectural-eyewear',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Architectural Eyewear',
+    category: 'Accessories',
+    subcategory: 'Eyewear',
+    collection: 'Private Appointments',
+    subgroup: 'Maison Appointments',
+    image: 'assets/appointments/ikla-architectural-eyewear.webp',
+    imageAlt: 'Black architectural IKLA sunglasses with fitted leather case',
+    sizes: ['Custom Fitted · 52-20-145'],
+    colors: [
+      { name: 'Obsidian Black', hex: '#0A0B0D' },
+      { name: 'Warm Tortoise Inlay', hex: '#3B2B1F' }
+    ],
+    material: '8mm Milled Japanese Cellulose Acetate & Grade-A Optical Lenses',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request Access',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Custom-milled Japanese acetate sunglasses featuring beveled architectural temples and discrete gold-inlaid Maison markings. Delivered in a structured Italian box-calf leather presentation case.',
+    details: [
+      '8mm block-milled Japanese cellulose acetate with hand-beveled geometry',
+      'Category 3 CR-39 anti-reflective scratch-resistant optical lenses',
+      'Discrete 24k gold-inlaid Maison insignia on inner temple core',
+      'Custom hand-stitched box-calf leather carrying case and microfiber foulard'
+    ],
+    fabricCare: 'Clean lenses with lukewarm water and provided microfiber cloth. Store in leather case.',
+    fitNotes: 'Universal architectural silhouette with customizable temple adjustments.'
+  },
+  {
+    id: 'ikla-silk-tie-pocket-square-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'The Formal Appointment Set',
+    category: 'Accessories',
+    subcategory: 'Formal Finishing',
+    collection: 'Private Appointments',
+    subgroup: 'Maison Appointments',
+    image: 'assets/appointments/ikla-silk-tie-pocket-square-set.webp',
+    imageAlt: 'Maison-green silk tie, pocket square and slim gold tie bar',
+    sizes: ['Standard 8cm × 148cm · 42cm × 42cm Square'],
+    colors: [
+      { name: 'Maison Green', hex: '#0F2E22' },
+      { name: 'Imperial Gold Accent', hex: '#C5A869' }
+    ],
+    material: '100% Como Silk Twill & Solid Gilded Brass',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Register Interest',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Coordinated formal finishing trio crafted in pure Como silk twill. Featuring the signature Maison-green hand-rolled tie, matching pocket square, and an architectural solid brass gilded tie bar.',
+    details: [
+      '100% heavyweight 18-momme Como silk twill with matte jacquard weave',
+      'Traditional 7-fold tie construction with wool canvas interlining',
+      'Hand-rolled and hand-stitched pocket square hemline',
+      'Architectural solid brass tie bar with satin gold bullion finish'
+    ],
+    fabricCare: 'Specialist dry clean only. Do not machine wash or steam heavily.',
+    fitNotes: 'Standard 8cm blade width proportioned for classic Maison tailoring.'
+  },
+  {
+    id: 'ikla-onyx-cufflink-stud-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Onyx Evening Studs',
+    category: 'Accessories',
+    subcategory: 'Fine Jewelry',
+    collection: 'Private Appointments',
+    subgroup: 'Maison Appointments',
+    image: 'assets/appointments/ikla-onyx-cufflink-stud-set.webp',
+    imageAlt: 'Black onyx cufflinks and shirt studs in a cream suede case',
+    sizes: ['One Size · Formal Set of 6'],
+    colors: [
+      { name: 'Natural Onyx & 18k Vermeil', hex: '#0A0B0D' }
+    ],
+    material: 'Natural Black Onyx & 18k Gold Vermeil over 925 Sterling Silver',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request an Allocation',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Formal evening jewelry suite comprising two faceted black onyx cufflinks and four coordinating formal shirt studs. Set in polished vermeil gold and housed in a travel suede keepsake case.',
+    details: [
+      'Hand-carved and hand-polished natural black onyx cabochons',
+      'Heavy 18k gold vermeil over hallmarked 925 sterling silver armature',
+      'Fixed whale-back cufflink closure with laser-engraved Maison seal',
+      'Presented in a bespoke cream alcantara suede protective travel case'
+    ],
+    fabricCare: 'Wipe with soft jewelers cloth; avoid chemical solvents and moisture.',
+    fitNotes: 'Standard dress shirt buttonhole and French cuff specifications.'
+  },
+  {
+    id: 'ikla-leather-belt-cardholder-key-sleeve',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Leather Essentials Set',
+    category: 'Accessories',
+    subcategory: 'Leather Goods',
+    collection: 'Private Appointments',
+    subgroup: 'Maison Appointments',
+    image: 'assets/appointments/ikla-leather-belt-cardholder-key-sleeve.webp',
+    imageAlt: 'Black leather belt, cardholder and key sleeve with green edge details',
+    sizes: ['Belt: 85cm–110cm · Cardholder: 10cm × 7.5cm'],
+    colors: [
+      { name: 'Box Calf Obsidian', hex: '#0A0B0D' },
+      { name: 'Maison Green Edge', hex: '#0F2E22' }
+    ],
+    material: 'French Full-Grain Box Calfskin & Brushed Brass Hardware',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Request Access',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Precision leather waist and pocket trio executed in French box calfskin. Includes a reversible dress belt with brushed gold buckle, a 6-slot cardholder, and a protective key sleeve with signature Maison green edge burnishing.',
+    details: [
+      'Full-grain French box calfskin with natural vegetable tanning',
+      'Signature Maison green hand-lacquered and hand-burnished edge finishing',
+      'Solid brushed brass dress buckle with subtle Maison insignia stamp',
+      'Six-slot cardholder with center banknote sleeve and matching key sheath'
+    ],
+    fabricCare: 'Condition annually with natural beeswax balm; store in dust bag.',
+    fitNotes: 'True to waist size; 32mm width fits formal and casual trouser loops.'
+  },
+  {
+    id: 'ikla-private-travel-document-set',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Private Travel Document Set',
+    category: 'Accessories',
+    subcategory: 'Travel Leather',
+    collection: 'Private Appointments',
+    subgroup: 'Private Travel Rituals',
+    image: 'assets/appointments/ikla-private-travel-document-set.webp',
+    imageAlt: 'Green passport cover, black luggage tag and cream travel folio',
+    sizes: ['Passport: Standard ICAO · Folio: 22cm × 12cm'],
+    colors: [
+      { name: 'Maison Green & Obsidian', hex: '#0F2E22' },
+      { name: 'Cream Stone Accent', hex: '#EAE5DC' }
+    ],
+    material: 'Aniline Calfskin Leather & RFID-Shielded Microfiber',
+    accessMode: 'Private Allocation',
+    status: 'Private Allocation',
+    cta: 'Request Access',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'A tripartite international travel suite in contrasting Maison green, obsidian black, and cream calfskin. Features a passport cover, an embossed luggage tag, and a slim document folio.',
+    details: [
+      'Maison green passport cover with integrated RFID-blocking signal shielding',
+      'Obsidian black luggage tag with concealed address privacy flap and brass pin buckle',
+      'Slim international travel folio accommodating boarding passes and customs vouchers',
+      'Blind-debossed Maison crest and reinforced tonal saddle stitching'
+    ],
+    fabricCare: 'Wipe clean with a soft dry cloth; avoid excessive heat and moisture.',
+    fitNotes: 'Calibrated for all standard international biometric passport formats.'
+  },
+  {
+    id: 'ikla-watch-roll-jewelry-envelope',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Travel Watch and Jewelry Case',
+    category: 'Accessories',
+    subcategory: 'Travel Accessories',
+    collection: 'Private Appointments',
+    subgroup: 'Private Travel Rituals',
+    image: 'assets/appointments/ikla-watch-roll-jewelry-envelope.webp',
+    imageAlt: 'Black leather watch roll and green jewelry envelope with cream interiors',
+    sizes: ['Watch Roll: 3 Watches · Envelope: 18cm × 10cm'],
+    colors: [
+      { name: 'Obsidian & Maison Green', hex: '#0A0B0D' },
+      { name: 'Cream Suede Interior', hex: '#F7F4EE' }
+    ],
+    material: 'Full-Grain Calfskin & Anti-Tarnish Alcantara Microfiber',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Register Interest',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Dual horological and jewelry travel system. A cylindrical three-watch roll in obsidian calfskin paired with an envelope pouch in Maison green, both lined in anti-tarnish micro-suede.',
+    details: [
+      'Removable individual cushioned watch pillows accommodating 36mm to 46mm timepieces',
+      'Rigid crush-resistant cylindrical core with dual antique brass snap closures',
+      'Slim jewelry envelope with ring roll, stud strap, and zippered coin compartment',
+      'Ultra-soft anti-tarnish cream microfiber lining preserving polished cases and jewels'
+    ],
+    fabricCare: 'Brush interior microfiber with soft bristle brush; store in dust bag.',
+    fitNotes: 'Engineered to fit standard hotel safe drawers and cabin luggage compartments.'
+  },
+  {
+    id: 'ikla-driving-gloves-silk-scarf',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Driving Gloves and Silk Scarf',
+    category: 'Accessories',
+    subcategory: 'Grand Touring',
+    collection: 'Private Appointments',
+    subgroup: 'Private Travel Rituals',
+    image: 'assets/appointments/ikla-driving-gloves-silk-scarf.webp',
+    imageAlt: 'Black leather driving gloves and cream-and-green silk scarf',
+    sizes: ['Gloves: 7.5–10 · Scarf: 90cm × 90cm'],
+    colors: [
+      { name: 'Obsidian Leather', hex: '#0A0B0D' },
+      { name: 'Cream & Green Silk', hex: '#0F2E22' }
+    ],
+    material: 'Italian Nappa Lambskin & 18-Momme Pure Silk Twill',
+    accessMode: 'Private Preview',
+    status: 'Private Preview',
+    cta: 'Request Access',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Heritage open-road pairing featuring perforated lambskin driving gloves and an archival cream-and-green silk twill foulard. Conceived for grand touring and coastal transfers.',
+    details: [
+      'Ultra-supple Italian nappa lambskin with precision hand-punched knuckle vents',
+      'Brass snap wrist closure with debossed Maison insignia detailing',
+      '90cm × 90cm heavyweight Como silk twill scarf with architectural border motif',
+      'Artisanal hand-rolled and hand-finished scarf edges'
+    ],
+    fabricCare: 'Professional leather and silk clean only. Protect from sustained water.',
+    fitNotes: 'Supple lambskin conforms to owner hand contour over initial wear.'
+  },
+  {
+    id: 'ikla-automatic-umbrella',
+    brandId: 'ikla-maison',
+    brandName: 'IKLA Maison',
+    houseName: 'IKLA Maison',
+    name: 'Maison Automatic Umbrella',
+    category: 'Accessories',
+    subcategory: 'Wet-Weather Shelter',
+    collection: 'Private Appointments',
+    subgroup: 'Private Travel Rituals',
+    image: 'assets/appointments/ikla-automatic-umbrella.webp',
+    imageAlt: 'Black automatic umbrella with green canopy lining and walnut handle',
+    sizes: ['Diameter: 115cm · Folded Length: 36cm'],
+    colors: [
+      { name: 'Obsidian Exterior / Green Lining', hex: '#0A0B0D' },
+      { name: 'Turned Solid Walnut Handle', hex: '#4A3728' }
+    ],
+    material: 'Double-Layer Micro-Weave Polyester, Hardened Steel & American Walnut',
+    accessMode: 'Special Order',
+    status: 'Special Order',
+    cta: 'Register Interest',
+    isAppointment: true,
+    isFeatured: true,
+    description: 'Architectural wet-weather shelter featuring a double-layer canopy in obsidian exterior and Maison green interior. Hand-turned solid American walnut handle with integrated automatic release.',
+    details: [
+      'Dual-layered water-repellent micro-weave canopy with concealed wind-release vents',
+      'Turned solid American walnut handle with laser-engraved gold collar ring',
+      'Wind-resistant reinforced fiberglass rib cage and hardened blackened steel shaft',
+      'Matching tailored sheath with box-calf leather snap retention strap'
+    ],
+    fabricCare: 'Leave open to dry thoroughly before collapsing into protective sleeve.',
+    fitNotes: 'Generous 115cm canopy coverage engineered for executive travel.'
   }
 ];
 
@@ -2381,6 +2647,9 @@ export const IKLA_VIP_PRODUCTS = PRODUCTS.filter((p) => p.isVIP);
 export const MDF_MERCHANDISE_PRODUCTS = PRODUCTS.filter((p) => p.isMDFMerch);
 export const IKLA_KIDS_PRODUCTS = PRODUCTS.filter((p) => p.isKids);
 export const IKLA_KIDS_CORE_PRODUCTS = PRODUCTS.filter((p) => p.isKidsCore);
+export const IKLA_APPOINTMENTS_PRODUCTS = PRODUCTS.filter((p) => p.isAppointment);
+export const IKLA_MAISON_APPOINTMENTS_PRODUCTS = PRODUCTS.filter((p) => p.isAppointment && p.subgroup === 'Maison Appointments');
+export const IKLA_TRAVEL_RITUALS_PRODUCTS = PRODUCTS.filter((p) => p.isAppointment && p.subgroup === 'Private Travel Rituals');
 
 PRODUCTS.forEach(product => {
   if (product.image) {

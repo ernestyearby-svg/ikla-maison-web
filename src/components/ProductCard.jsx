@@ -14,11 +14,11 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand, o
   const brandAccent = brand ? brand.palette.accent : '#C8A97E';
   const brandGlow = brand ? brand.glowColor : 'rgba(200,169,126,0.3)';
 
-  const isProductionPreview = product.isReserve || product.status || product.isVIP || product.isMDFMerch;
+  const isProductionPreview = product.isReserve || product.status || product.isVIP || product.isMDFMerch || product.isAppointment;
 
   const handleQuickAction = (e) => {
     e.stopPropagation();
-    if (product.isVIP || product.isMDFMerch) {
+    if (product.isVIP || product.isMDFMerch || product.isAppointment) {
       if (onOpenInquiry) {
         onOpenInquiry(product);
         return;
@@ -111,7 +111,7 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand, o
                 brand ? brand.buttonStyle : 'bg-[#0F172A] text-white hover:bg-[#1E293B]'
               }`}
             >
-              {product.isVIP || product.isMDFMerch ? (
+              {product.isVIP || product.isMDFMerch || product.isAppointment ? (
                 <span>{product.cta || 'Request Access'}</span>
               ) : isProductionPreview ? (
                 isReserved ? (
@@ -210,6 +210,15 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand, o
             </div>
           )}
         </div>
+
+        {product.isAppointment && (
+          <button
+            onClick={handleQuickAction}
+            className="w-full mt-2 py-2 px-3 bg-[#0F2E22] hover:bg-[#163E2F] text-[#C5A869] border border-[#C5A869]/40 text-[11px] uppercase tracking-wider font-semibold rounded-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+          >
+            <span>{product.cta || 'Request Private Allocation'}</span>
+          </button>
+        )}
       </div>
     </div>
   );

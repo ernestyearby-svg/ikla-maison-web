@@ -196,7 +196,7 @@ export default function VIPInquiryModal({
           <div className="space-y-2 border-b border-white/10 pb-5">
             <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#DFBF95] font-medium font-manrope">
               <Lock className="w-3 h-3 text-[#DFBF95]" />
-              <span>Private Client Concierge</span>
+              <span>IKLA Maison · Private Client Concierge</span>
             </div>
             <h2 id="vip-modal-title" className="text-2xl sm:text-3xl font-cormorant font-normal text-white">
               {product ? `Inquire: ${product.name}` : 'Request Private Access'}

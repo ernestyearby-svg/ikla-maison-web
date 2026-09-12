@@ -91,6 +91,21 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
             >
               Griffin Edition
             </button>
+
+            <button
+              onClick={() => {
+                onNavigate('appointments');
+                onClose();
+              }}
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors flex items-center justify-between ${
+                currentView === 'appointments' ? 'text-[#C5A869] bg-white/5' : 'text-neutral-300 hover:text-white'
+              }`}
+            >
+              <span>Private Appointments</span>
+              <span className="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#0F2E22] text-[#C5A869] border border-[#C5A869]/30">
+                Exclusive
+              </span>
+            </button>
           </div>
 
           {/* Fashion Houses */}

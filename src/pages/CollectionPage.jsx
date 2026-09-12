@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Filter, SlidersHorizontal, ArrowUpDown, Search, X, Droplets, Wine, ArrowRight, Compass, Sparkles, Check, Layers, ShieldCheck, Bookmark, Palette, ExternalLink } from 'lucide-react';
-import { PRODUCTS, CATEGORIES, IKLA_KIDS_CORE_PRODUCTS } from '../data/products';
+import { PRODUCTS, CATEGORIES, IKLA_KIDS_CORE_PRODUCTS, IKLA_APPOINTMENTS_PRODUCTS } from '../data/products';
 import { BRAND_LIST, BRANDS, FASHION_HOUSES, BEVERAGE_HOUSES } from '../data/brands';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
@@ -13,6 +13,7 @@ export default function CollectionPage({
   onSelectBrand,
   onNavigateKids,
   onNavigateGriffin,
+  onNavigateAppointments,
   initialBrandFilter = 'all',
   searchQuery = '',
   onClearSearch,
@@ -43,6 +44,8 @@ export default function CollectionPage({
       if (selectedBrand !== 'all') {
         if (selectedBrand === 'ikla-kids') {
           if (!product.isKids) return false;
+        } else if (selectedBrand === 'appointments') {
+          if (!product.isAppointment) return false;
         } else if (product.brandId !== selectedBrand) {
           return false;
         }
@@ -82,6 +85,7 @@ export default function CollectionPage({
   const vipProducts = useMemo(() => PRODUCTS.filter((p) => p.isVIP), []);
   const mdfMerchProducts = useMemo(() => PRODUCTS.filter((p) => p.isMDFMerch), []);
   const kidsProducts = useMemo(() => PRODUCTS.filter((p) => p.isKids), []);
+  const appointmentsProducts = useMemo(() => PRODUCTS.filter((p) => p.isAppointment), []);
   const filteredMdfMerch = useMemo(() => {
     if (mdfMerchFilter === 'All') return mdfMerchProducts;
     return mdfMerchProducts.filter((p) => p.category === mdfMerchFilter || p.subcategory === mdfMerchFilter);
@@ -268,6 +272,21 @@ export default function CollectionPage({
                 K
               </div>
               <span>IKLA Kids ({kidsProducts.length})</span>
+            </button>
+
+            {/* Private Appointments Tab */}
+            <button
+              onClick={() => setSelectedBrand('appointments')}
+              className={`px-4 py-2.5 text-xs uppercase tracking-[0.14em] font-medium whitespace-nowrap transition-all cursor-pointer rounded-xs flex items-center gap-2 ${
+                selectedBrand === 'appointments'
+                  ? 'bg-[#0F2E22] text-[#C5A869] shadow-md border border-[#C5A869]/50'
+                  : 'bg-white border border-[#EAE5DC] text-[#4A3728] hover:text-[#0A0B0D] hover:border-[#C5A869]/60'
+              }`}
+            >
+              <div className="w-4 h-4 rounded-full bg-[#0F2E22] border border-[#C5A869]/40 flex items-center justify-center text-[#C5A869] text-[9px] font-serif font-bold">
+                A
+              </div>
+              <span>Private Appointments ({appointmentsProducts.length})</span>
             </button>
 
             {/* IKLA Water Concept Tab */}
@@ -640,6 +659,123 @@ export default function CollectionPage({
                       className="px-4 py-2 bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 transition-all text-[11px] uppercase tracking-widest font-medium rounded-xs cursor-pointer whitespace-nowrap"
                     >
                       View The Atelier Drop
+                    </button>
+                  </div>
+                </section>
+
+                {/* ========================================================================= */}
+                {/* 2.7 IKLA MAISON · PRIVATE APPOINTMENTS */}
+                {/* ========================================================================= */}
+                <section id="ikla-private-appointments-section" className="space-y-8 bg-[#0A0B0D] text-[#F7F4EE] border border-[#C5A869]/30 p-6 sm:p-10 lg:p-12 rounded-xs shadow-2xl relative overflow-hidden">
+                  {/* Subtle Walnut / Maison Green Ambient Glow */}
+                  <div className="absolute top-0 right-0 w-96 h-96 bg-[#4A3728]/25 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#0F2E22]/40 rounded-full blur-3xl pointer-events-none" />
+
+                  {/* Section Editorial Header */}
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-white/10 relative z-10">
+                    <div className="space-y-3 max-w-2xl">
+                      <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-white/5 border border-[#C5A869]/40 text-[#C5A869] text-[10px] uppercase tracking-[0.3em] font-medium rounded-xs">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869] animate-pulse" />
+                        <span>Maison Appointments · Private Accessories & Travel Rituals</span>
+                      </div>
+                      <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-normal text-white tracking-tight leading-none">
+                        IKLA Maison · Private Appointments
+                      </h2>
+                      <p className="text-xs sm:text-sm text-neutral-300 font-light font-manrope leading-relaxed">
+                        Architectural eyewear, hand-rolled Italian silk, natural onyx evening studs, and disciplined full-grain travel leathercraft. Conceived for clients who value restraint, material integrity, and confidential allocation.
+                      </p>
+                      <p className="text-[11px] font-mono text-[#C5A869]/90 uppercase tracking-wider pt-1">
+                        Private Allocation · Reserved by Request · No Public Inventory
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 shrink-0 relative z-10">
+                      <button
+                        onClick={() => handleOpenInquiry({
+                          id: 'ikla-appointments-salon-inquiry',
+                          name: 'Private Appointments Salon Allocation',
+                          category: 'Private Accessories',
+                          accessMode: 'Private Allocation',
+                          houseName: 'IKLA Maison',
+                          image: 'assets/appointments/ikla-appointments-editorial-banner.webp'
+                        })}
+                        className="px-6 py-3 bg-[#C5A869] text-black hover:bg-[#D8BE82] transition-colors text-xs uppercase tracking-[0.2em] font-semibold rounded-xs cursor-pointer shadow-lg flex items-center gap-2"
+                      >
+                        <span>Request Private Access</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => onNavigateAppointments ? onNavigateAppointments() : (window.location.hash = '#/appointments')}
+                        className="px-5 py-3 border border-white/30 text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-[0.2em] font-medium rounded-xs cursor-pointer"
+                      >
+                        Explore Appointments
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* 16:9 Private Travel Rituals Editorial Transition Banner */}
+                  <div className="relative rounded-xs overflow-hidden border border-white/10 group aspect-16/9 sm:aspect-21/9 max-h-[420px] w-full z-10 bg-[#060708]">
+                    <img
+                      src={getAssetPath('assets/appointments/ikla-private-travel-editorial-banner.webp')}
+                      alt="Refined IKLA Maison travel accessories laid out beside architectural luggage in a quiet lounge"
+                      className="w-full h-full object-cover filter brightness-[0.88] transition-transform duration-700 group-hover:scale-[1.02]"
+                      style={{ objectPosition: 'center 45%' }}
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B0D] via-[#0A0B0D]/30 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                      <div>
+                        <span className="text-[9px] uppercase tracking-[0.25em] text-[#C5A869] font-mono">
+                          Private Travel Rituals
+                        </span>
+                        <h3 className="text-xl sm:text-2xl font-cormorant font-light text-white">
+                          Disciplined Travel Goods For The International Journey
+                        </h3>
+                      </div>
+                      <span className="text-[10px] text-neutral-300 font-mono tracking-wider hidden sm:inline">
+                        Italian Calfskin · Sterling Silver · Pure Mulberry Silk
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* 8 Square 1:1 Appointments Product Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 relative z-10">
+                    {appointmentsProducts.map((product) => (
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        onSelectProduct={onSelectProduct}
+                        onSelectBrand={onSelectBrand}
+                        onOpenInquiry={handleOpenInquiry}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Salon Inquiry Banner Footer */}
+                  <div className="p-6 bg-gradient-to-r from-[#141E1A] to-[#1F1712] border border-[#C5A869]/30 rounded-xs flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-10 h-10 rounded-full bg-[#C5A869]/10 border border-[#C5A869]/40 flex items-center justify-center text-[#C5A869] text-xs font-serif font-bold">
+                        ✦
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[9px] uppercase tracking-[0.25em] text-[#C5A869] font-mono font-semibold">
+                            Concierge Protocol
+                          </span>
+                        </div>
+                        <h4 className="text-sm sm:text-base font-cormorant font-normal text-white">
+                          The Private Appointments Salon
+                        </h4>
+                        <p className="text-xs text-neutral-400 font-light font-manrope">
+                          Available only by direct private inquiry. No automated checkouts, no public pricing.
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => onNavigateAppointments ? onNavigateAppointments() : (window.location.hash = '#/appointments')}
+                      className="px-4 py-2 bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 transition-all text-[11px] uppercase tracking-widest font-medium rounded-xs cursor-pointer whitespace-nowrap"
+                    >
+                      View Appointments Experience
                     </button>
                   </div>
                 </section>
