@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, Sparkles, Compass, Users, Heart, ArrowRight } from 'lucide-react';
-import { BRAND_LIST, BRANDS } from '../data/brands';
+import { FASHION_HOUSES, BRANDS } from '../data/brands';
 
 export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigateCollection }) {
   return (
@@ -15,7 +15,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
             The Philosophy of IKLA MAISON
           </h1>
           <p className="text-sm sm:text-lg text-[#4A4E57] font-light max-w-2xl mx-auto leading-relaxed font-manrope">
-            An architectural luxury collective uniting independent design houses under a singular standard of uncompromising materiality, disciplined construction, and cultural resonance.
+            Internationally Known. Locally Accepted. A master house connecting fashion, private objects, hospitality concepts, and future commissions through one disciplined visual language.
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
               A Multi-Disciplinary Union
             </h2>
             <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed mb-4 font-manrope">
-              IKLA MAISON was founded to create an autonomous ecosystem for distinct complementary design viewpoints. Rather than homogenizing individual brand voices into a singular corporate aesthetic, we preserve the distinct signature of each house while providing shared master-atelier resources and white-glove global client services.
+              IKLA Maison is presented as a master creative house with room for distinct fashion viewpoints. Each expression keeps its own character while sharing a commitment to restraint, clarity, and recognizable presence.
             </p>
             <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
               From the monolithic concrete spaces of modern metropolitan centers to sunlit Mediterranean villas, each collection exists in dialogue with physical architecture and contemporary living.
@@ -59,7 +59,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
           </div>
 
           <div className="space-y-10">
-            {BRAND_LIST.map((brand, idx) => (
+            {FASHION_HOUSES.map((brand, idx) => (
               <div
                 key={brand.id}
                 className="p-8 bg-white border border-[#E5E0D8] rounded-xs grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
@@ -86,7 +86,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
                       <span className="text-xs uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
                         House 0{idx + 1}
                       </span>
-                      <span className="text-[11px] text-[#717682] font-mono">{brand.origin}</span>
+                      <span className="text-[11px] text-[#717682] font-mono">Private collection</span>
                     </div>
 
                     <div className="flex items-center gap-3 mb-2">
@@ -100,7 +100,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
                       {brand.tagline}
                     </p>
                     <p className="text-xs text-[#50545E] font-light leading-relaxed mb-4 font-manrope">
-                      {brand.manifesto}
+                      {brand.description.split('.')[0]}. Presented through an individual visual system within the wider IKLA Maison world.
                     </p>
                   </div>
 
@@ -133,32 +133,32 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
               Our Charter
             </span>
             <h2 className="text-3xl font-cormorant font-normal text-[#111215]">
-              Atelier Standards & Sustainability
+              Design Standards
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white border border-[#E2DDD3] space-y-3 rounded-xs shadow-xs">
               <Shield className="w-6 h-6 text-[#8C6D3F]" />
-              <h4 className="text-base font-medium text-[#111215]">Limited Non-Industrial Runs</h4>
+              <h4 className="text-base font-medium text-[#111215]">Intentional Editions</h4>
               <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
-                Garments are produced in controlled allocations to eliminate deadstock waste and preserve exclusivity and artisanal precision.
+                The public site presents collection direction while access, quantities, and release terms are confirmed privately.
               </p>
             </div>
 
             <div className="p-6 bg-white border border-[#E2DDD3] space-y-3 rounded-xs shadow-xs">
               <Compass className="w-6 h-6 text-[#8C6D3F]" />
-              <h4 className="text-base font-medium text-[#111215]">Natural Fiber Integrity</h4>
+              <h4 className="text-base font-medium text-[#111215]">Material Intent</h4>
               <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
-                We prioritize certified Belgian flax, custom-spun organic cotton fleece, virgin merino wool, and natural horn and brass hardware.
+                Each collection begins with silhouette, function, material direction, and the way an object belongs within the larger IKLA world. Final specifications are confirmed collection by collection.
               </p>
             </div>
 
             <div className="p-6 bg-white border border-[#E2DDD3] space-y-3 rounded-xs shadow-xs">
               <Heart className="w-6 h-6 text-[#8C6D3F]" />
-              <h4 className="text-base font-medium text-[#111215]">Ethical Artisan Labor</h4>
+              <h4 className="text-base font-medium text-[#111215]">Responsible Development</h4>
               <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
-                Our partnered ateliers in Italy, Portugal, Japan, and the United States maintain living wages, master apprentice guilds, and safe conditions.
+                Production partners, sourcing standards, and care requirements are documented with the final specification rather than implied by concept imagery.
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function AboutPage({ onSelectBrand, onNavigateContact, onNavigate
             Experience the Houses in Person
           </h3>
           <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-md mx-auto font-manrope">
-            Schedule a private salon appointment or consult with our master stylists for bespoke sizing and wardrobe curation.
+            Request a private appointment, collection access, or sizing conversation through direct correspondence.
           </p>
           <div className="flex justify-center gap-4">
             <button

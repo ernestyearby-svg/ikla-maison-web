@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { ArrowRight, Check, Shield, Globe, Award, Sparkles, ExternalLink } from 'lucide-react';
-import { BRAND_LIST, BRANDS } from '../data/brands';
-import { useCart } from '../context/CartContext';
-import { ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
-import { getAssetPath } from '../utils/assets.js';
+import { ArrowRight, Check, ExternalLink } from 'lucide-react';
+import { FASHION_HOUSES, BRANDS } from '../data/brands';
+import { EXTERNAL_LINKS } from '../data/externalLinks';
 
 export default function Footer({ onNavigate }) {
-  const { openCart } = useCart();
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (email) {
+      const subject = encodeURIComponent('Maison Gazette access request');
+      const body = encodeURIComponent(`Please add ${email} to the IKLA Maison private correspondence list.`);
+      window.location.href = `mailto:concierge@iklamaison.com?subject=${subject}&body=${body}`;
       setIsSubscribed(true);
       setEmail('');
       setTimeout(() => setIsSubscribed(false), 5000);
@@ -32,7 +32,7 @@ export default function Footer({ onNavigate }) {
               Join the Maison Gazette
             </h3>
             <p className="text-sm text-neutral-400 font-light max-w-md leading-relaxed">
-              Receive private preview access to seasonal capsule releases, archival monographs, and private salon appointments across all houses.
+              Request notice of private previews, limited releases, and appointment-led collections from IKLA Maison.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function Footer({ onNavigate }) {
             {isSubscribed ? (
               <div className="p-4 bg-emerald-950/40 border border-emerald-800 text-emerald-300 text-xs flex items-center gap-2">
                 <Check className="w-4 h-4" />
-                <span>Your correspondence request has been recorded with our concierge.</span>
+                <span>Your email application should open with the request prepared.</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
@@ -71,7 +71,7 @@ export default function Footer({ onNavigate }) {
         <div className="py-14 border-b border-neutral-800/80 relative">
           {/* Subtle Collective Watermark in Footer (pointer-events: none) */}
           <div className="absolute right-0 bottom-4 w-72 h-72 pointer-events-none select-none opacity-[0.03] overflow-hidden">
-            <img src={getAssetPath(BRANDS['ikla-maison'].logos.crestLight)} alt="" className="w-full h-full object-contain" />
+            <img src={BRANDS['ikla-maison'].logos.crestLight} alt="" className="w-full h-full object-contain" />
           </div>
 
           <div className="flex items-center justify-between mb-8">
@@ -83,8 +83,8 @@ export default function Footer({ onNavigate }) {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {BRAND_LIST.map((brand) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {FASHION_HOUSES.map((brand) => (
               <div key={brand.id} className="space-y-3 relative group">
                 {/* Brand-specific accent line */}
                 <div
@@ -94,7 +94,7 @@ export default function Footer({ onNavigate }) {
 
                 <div className="flex items-center gap-2.5">
                   <div className="w-5 h-5 rounded-full overflow-hidden shrink-0 opacity-80 group-hover:opacity-100">
-                    <img src={getAssetPath(brand.logos.crestLight)} alt="" className="w-full h-full object-contain" />
+                    <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain" />
                   </div>
                   <button
                     onClick={() => onNavigate('brand', brand.id)}
@@ -121,8 +121,8 @@ export default function Footer({ onNavigate }) {
           </div>
         </div>
 
-        {/* Global Navigation, Dynasty Ecosystem & Client Services */}
-        <div className="py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-xs border-b border-neutral-800/80">
+        {/* Global Navigation & Client Services */}
+        <div className="py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs border-b border-neutral-800/80">
           {/* Navigation */}
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
@@ -140,74 +140,20 @@ export default function Footer({ onNavigate }) {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('kids')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-neutral-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#013220]" />
-                  <span>IKLA Kids</span>
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('griffin')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-neutral-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869]" />
-                  <span>Griffin Edition</span>
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('appointments')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-neutral-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869]" />
-                  <span>Private Appointments</span>
-                </button>
-              </li>
-              <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
                   The Maison Houses Ethos
                 </button>
               </li>
               <li>
-                <button onClick={openCart} className="hover:text-white transition-colors cursor-pointer">
-                  Shopping Bag
+                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors cursor-pointer">
+                  Request Private Access
                 </button>
               </li>
-            </ul>
-          </div>
-
-          {/* Dynasty Ecosystem Links */}
-          <div className="space-y-3">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-medium block">
-              Dynasty Ecosystem
-            </span>
-            <ul className="space-y-2.5 text-neutral-400 font-manrope">
               <li>
-                <div className="text-white font-medium flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E]" />
-                  <span>IKLA Maison</span>
-                </div>
-                <div className="text-[10px] text-neutral-500 font-light">
-                  Master Fashion & Lifestyle House · Active Site
-                </div>
+                <button onClick={() => onNavigate('appointments')} className="hover:text-white transition-colors cursor-pointer">
+                  Private Appointments
+                </button>
               </li>
-              {ECOSYSTEM_LINKS.map((link) => (
-                <li key={link.id}>
-                  <a
-                    href={link.href}
-                    target={link.isExternal ? '_blank' : undefined}
-                    rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                    onClick={(e) => {
-                      if (!link.isExternal) {
-                        e.preventDefault();
-                        onNavigate('brand', 'my-drink-family');
-                      }
-                    }}
-                    className="hover:text-[#E06D38] transition-colors flex items-center gap-1.5 text-white group cursor-pointer"
-                    aria-label={link.ariaLabel}
-                  >
-                    <span>{link.label}</span>
-                    {link.isExternal && <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover:opacity-100" />}
-                  </a>
-                  <div className="text-[10px] text-neutral-500 font-light">
-                    {link.description}
-                  </div>
-                </li>
-              ))}
             </ul>
           </div>
 
@@ -222,8 +168,6 @@ export default function Footer({ onNavigate }) {
                   Inquiries & Appointments
                 </button>
               </li>
-              <li>Mon – Fri: 08:00 – 20:00 CET</li>
-              <li>Sat: 10:00 – 18:00 CET</li>
               <li className="text-neutral-500">concierge@iklamaison.com</li>
             </ul>
           </div>
@@ -231,37 +175,35 @@ export default function Footer({ onNavigate }) {
           {/* Guarantees */}
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
-              White-Glove Guarantees
+              Access Model
             </span>
             <ul className="space-y-2 text-neutral-400 font-manrope">
-              <li>• Complimentary Global Insured Courier</li>
-              <li>• Archival Keepsake Gift Packaging</li>
-              <li>• 30-Day Concierge Return Escort</li>
-              <li>• Numbered Certificates of Authenticity</li>
+              <li>• Limited release previews</li>
+              <li>• Special-order inquiries</li>
+              <li>• Private appointment requests</li>
+              <li>• Specifications confirmed directly</li>
             </ul>
           </div>
 
           {/* Maison Standards */}
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
-              Artisanal Integrity
+              Connected Hospitality
             </span>
             <p className="text-neutral-400 font-light leading-relaxed font-manrope">
-              Every creation is realized through limited, non-industrial production runs in partner European ateliers adhering to strict environmental and fair artisan labor charters.
+              My Drink Family remains a separate platform connected through shared cultural vision—not an IKLA fashion house.
             </p>
+            <div className="flex flex-col gap-2 pt-1">
+              <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="hover:text-white flex items-center gap-1">Visit My Drink Family <ExternalLink className="w-3 h-3" /></a>
+              <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="hover:text-white flex items-center gap-1">Open the App <ExternalLink className="w-3 h-3" /></a>
+            </div>
           </div>
         </div>
 
         {/* Bottom Legal & Exact Brand Names Preservation */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
           <div>
-            © {new Date().getFullYear()} IKLA MAISON Collective. Representing{' '}
-            <span className="text-neutral-300 font-medium">IKLA Maison</span>,{' '}
-            <span className="text-neutral-300 font-medium">KTSE</span>,{' '}
-            <span className="text-neutral-300 font-medium">Motéon</span>,{' '}
-            <span className="text-neutral-300 font-medium">Moral Compass</span>,{' '}
-            <span className="text-neutral-300 font-medium">WNNR</span>, and{' '}
-            <span className="text-neutral-300 font-medium">My Drink Family</span>. All rights reserved.
+            © {new Date().getFullYear()} IKLA Maison. Internationally Known. Locally Accepted.
           </div>
           <div className="flex items-center gap-6">
             <button onClick={() => onNavigate('about')} className="hover:text-neutral-300 cursor-pointer">

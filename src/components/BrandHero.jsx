@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { getAssetPath } from '../utils/assets.js';
 
-export default function BrandHero({ brand, onExploreCollection, onExploreEthos, onRequestAccess }) {
+export default function BrandHero({ brand, onExploreCollection, onExploreEthos }) {
   const { name, tagline, description, assets, alt, typography, palette, buttonStyle, buttonOutlineStyle, logos } = brand;
   const isWnnr = brand.id === 'wnnr';
-  const isMDF = brand.id === 'my-drink-family';
+  const isConnectedPlatform = brand.id === 'my-drink-family';
+  const isExtension = brand.id === 'ikla-water';
 
   return (
     <div className="relative w-full min-h-[88vh] lg:min-h-[92vh] flex items-end justify-start overflow-hidden bg-[#07080a]">
@@ -14,18 +14,18 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos, 
         {/* Mobile source: vertical 9:16 hero */}
         <source
           media="(max-width: 768px)"
-          srcSet={getAssetPath(assets.heroMobile)}
+          srcSet={assets.heroMobile}
           type={assets.heroMobile?.endsWith('.webp') ? 'image/webp' : undefined}
         />
         {/* Desktop source: wide panoramic hero */}
         <source
           media="(min-width: 769px)"
-          srcSet={getAssetPath(assets.heroDesktop)}
+          srcSet={assets.heroDesktop}
           type={assets.heroDesktop?.endsWith('.webp') ? 'image/webp' : undefined}
         />
         {/* Fallback image */}
         <img
-          src={getAssetPath(assets.heroDesktop)}
+          src={assets.heroDesktop}
           alt={alt.heroDesktop}
           className={`w-full h-full object-cover transition-transform duration-1000 scale-100 ${
             isWnnr ? 'object-[42%_center]' : 'object-center'
@@ -48,7 +48,7 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos, 
       {/* Oversized Faded Brand Wordmark Watermark in background (4%–9% opacity) */}
       <div className={`absolute top-1/4 ${isWnnr ? 'left-0 -translate-x-12' : 'right-0 translate-x-12'} pointer-events-none select-none overflow-hidden opacity-[0.06] z-0`}>
         <img
-          src={getAssetPath(logos.wordmarkDark)}
+          src={logos.wordmarkDark}
           alt=""
           className="w-[60vw] max-w-[850px] object-contain filter contrast-125"
           loading="eager"
@@ -58,7 +58,7 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos, 
       {/* Rotating Circular Brand Crest Emblem in Corner (7%–14% opacity) */}
       <div className={`absolute top-12 ${isWnnr ? 'left-6 md:left-16' : 'right-6 md:right-16'} w-36 md:w-56 h-36 md:h-56 pointer-events-none select-none z-0 opacity-12`}>
         <img
-          src={getAssetPath(logos.crestLight)}
+          src={logos.crestLight}
           alt=""
           className="w-full h-full object-contain animate-spin-slow filter brightness-125"
           loading="eager"
@@ -71,28 +71,13 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos, 
           {/* House Badge with Micro Emblem */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs uppercase tracking-[0.25em] font-medium mb-5 backdrop-blur-md border border-white/20 text-white/90 bg-black/50 shadow-lg">
             <div className="w-3.5 h-3.5 rounded-full overflow-hidden shrink-0">
-              <img src={getAssetPath(logos.crestLight)} alt="" className="w-full h-full object-contain" />
+              <img src={logos.crestLight} alt="" className="w-full h-full object-contain" />
             </div>
-            <span>The House of {name}</span>
+            <span>{isConnectedPlatform ? 'Connected Hospitality Platform' : isExtension ? 'IKLA Maison Concept Extension' : `The House of ${name}`}</span>
           </div>
 
           {/* Prominent Official Brand Logo & Live Copy */}
-          {isMDF ? (
-            <div className="mb-6 space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] sm:text-xs uppercase tracking-[0.32em] text-[#E26D35] font-semibold font-manrope">
-                  MY DRINK FAMILY × IKLA MAISON
-                </span>
-              </div>
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-cormorant font-light text-white tracking-tight leading-[1.05]">
-                Wear the Family.<br />
-                <span className="italic font-normal text-[#DFBF95]">Live the Ritual.</span>
-              </h1>
-              <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed max-w-xl font-manrope pt-2">
-                A private collection of sport, leisure, and hospitality essentials created for the houses of My Drink Family.
-              </p>
-            </div>
-          ) : isWnnr ? (
+          {isWnnr ? (
             <div className="mb-6">
               <div className="flex items-baseline gap-4 mb-2">
                 <h1 className="text-4xl sm:text-6xl font-cormorant font-light text-white tracking-[0.2em] leading-none">
@@ -125,60 +110,46 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos, 
             </div>
           ) : (
             <div className="mb-4 max-w-sm">
+              <h1 className="sr-only">{name}</h1>
               <img
-                src={getAssetPath(logos.wordmarkDark)}
+                src={logos.wordmarkDark}
                 alt={name}
                 className="h-10 sm:h-14 w-auto object-contain filter brightness-110 drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]"
               />
             </div>
           )}
 
-          {!isWnnr && !isMDF && (
+          {!isWnnr && (
             <p className="text-lg sm:text-xl text-neutral-200 font-light italic mb-3 tracking-wide">
               {tagline}
             </p>
           )}
 
-          {!isMDF && (
-            <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed max-w-xl mb-8 font-manrope">
-              {description}
-            </p>
-          )}
+          <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed max-w-xl mb-8 font-manrope">
+            {isConnectedPlatform
+              ? 'A separate hospitality and culture platform connected to IKLA Maison through shared creative vision.'
+              : isExtension
+                ? 'A sculptural hospitality concept exploring hydration vessels, table ritual, and architectural form.'
+                : `A distinct expression of the IKLA world shaped through ${brand.keywords.slice(0, 3).join(', ').toLowerCase()}.`}
+          </p>
 
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={onExploreCollection}
               className={`px-8 py-4 ${buttonStyle} active:scale-95 cursor-pointer shadow-xl flex items-center gap-2`}
             >
-              <span>{isMDF ? 'Explore the Collection' : 'Shop Collection'}</span>
+              <span>Explore Private Collection</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
 
-            {isMDF ? (
-              <>
-                <button
-                  onClick={onRequestAccess || onExploreEthos}
-                  className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 active:scale-95 cursor-pointer backdrop-blur-md text-xs uppercase tracking-[0.18em] font-medium transition-all"
-                >
-                  Request Private Access
-                </button>
-                <a
-                  href={import.meta.env.VITE_MY_DRINK_FAMILY_SITE_URL || '#/brand/my-drink-family#hospitality'}
-                  target={import.meta.env.VITE_MY_DRINK_FAMILY_SITE_URL ? '_blank' : '_self'}
-                  rel={import.meta.env.VITE_MY_DRINK_FAMILY_SITE_URL ? 'noopener noreferrer' : undefined}
-                  className="text-xs font-mono uppercase tracking-widest text-[#DFBF95] hover:text-white underline underline-offset-4 transition-colors py-2 px-1"
-                >
-                  Visit My Drink Family →
-                </a>
-              </>
-            ) : onExploreEthos ? (
+            {onExploreEthos && (
               <button
                 onClick={onExploreEthos}
                 className={`px-8 py-4 ${buttonOutlineStyle} active:scale-95 cursor-pointer backdrop-blur-md`}
               >
                 Explore Atelier Ethos
               </button>
-            ) : null}
+            )}
           </div>
         </div>
       </div>

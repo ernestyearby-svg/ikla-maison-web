@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, ChevronRight, Compass, Shield, Sparkles, Check, Droplets, Clock, ExternalLink } from 'lucide-react';
-import { IKLA_MAISON_APPOINTMENTS_PRODUCTS, IKLA_TRAVEL_RITUALS_PRODUCTS, IKLA_APPOINTMENTS_PRODUCTS } from '../data/products';
+import { IKLA_MAISON_APPOINTMENTS_PRODUCTS, IKLA_TRAVEL_RITUALS_PRODUCTS, IKLA_APPOINTMENTS_PRODUCTS } from '../data/appointmentProducts';
 import ProductCard from '../components/ProductCard';
 import VIPInquiryModal from '../components/VIPInquiryModal';
 import { getAssetPath } from '../utils/assets.js';

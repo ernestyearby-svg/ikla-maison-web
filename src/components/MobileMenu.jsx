@@ -1,12 +1,18 @@
-import React from 'react';
-import { X, ChevronRight, ShoppingBag, Globe, PhoneCall, Droplets, ExternalLink } from 'lucide-react';
-import { BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES, BRANDS } from '../data/brands';
-import { useCart } from '../context/CartContext';
-import { ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
-import { getAssetPath } from '../utils/assets.js';
+import React, { useEffect, useRef } from 'react';
+import { X, ChevronRight, KeyRound, Globe, Droplets, ExternalLink } from 'lucide-react';
+import { FASHION_HOUSES, BRANDS } from '../data/brands';
+import { EXTERNAL_LINKS } from '../data/externalLinks';
 
 export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, currentBrandId }) {
-  const { totalItems, openCart } = useCart();
+  const closeButtonRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKeyDown = (event) => event.key === 'Escape' && onClose();
+    window.addEventListener('keydown', onKeyDown);
+    closeButtonRef.current?.focus();
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -32,6 +38,7 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
             <span className="text-base font-serif tracking-widest text-white">IKLA MAISON</span>
           </div>
           <button
+            ref={closeButtonRef}
             onClick={onClose}
             aria-label="Close menu"
             className="p-2 text-neutral-400 hover:text-white transition-colors"
@@ -65,31 +72,17 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                 currentView === 'collection' ? 'text-[#C8A97E] bg-white/5' : 'text-neutral-300 hover:text-white'
               }`}
             >
-              Collection
+              Shop All Collections
             </button>
 
             <button
               onClick={() => {
-                onNavigate('kids');
+                onNavigate('collection', null, 'Accessories');
                 onClose();
               }}
-              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors ${
-                currentView === 'kids' ? 'text-[#D4AF57] bg-white/5' : 'text-neutral-300 hover:text-white'
-              }`}
+              className="w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium text-neutral-300 hover:text-white transition-colors"
             >
-              IKLA Kids
-            </button>
-
-            <button
-              onClick={() => {
-                onNavigate('griffin');
-                onClose();
-              }}
-              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors ${
-                currentView === 'griffin' ? 'text-[#C5A869] bg-white/5' : 'text-neutral-300 hover:text-white'
-              }`}
-            >
-              Griffin Edition
+              Accessories Collection
             </button>
 
             <button
@@ -97,14 +90,11 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                 onNavigate('appointments');
                 onClose();
               }}
-              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors flex items-center justify-between ${
-                currentView === 'appointments' ? 'text-[#C5A869] bg-white/5' : 'text-neutral-300 hover:text-white'
+              className={`w-full text-left py-2.5 px-3 uppercase tracking-[0.2em] text-xs font-medium transition-colors ${
+                currentView === 'appointments' ? 'text-[#C8A97E] bg-white/5' : 'text-neutral-300 hover:text-white'
               }`}
             >
-              <span>Private Appointments</span>
-              <span className="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#0F2E22] text-[#C5A869] border border-[#C5A869]/30">
-                Exclusive
-              </span>
+              Private Appointments
             </button>
           </div>
 
@@ -114,7 +104,7 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium">
                 Fashion Houses
               </span>
-              <span className="text-[9px] text-neutral-500 font-mono">5 Houses</span>
+              <span className="text-[9px] text-neutral-500 font-mono">Maison Directory</span>
             </div>
             <div className="space-y-1">
               {FASHION_HOUSES.map((brand) => (
@@ -133,7 +123,7 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                   <div className="flex items-center gap-3">
                     <div className="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1">
                       <img
-                        src={getAssetPath(brand.logos.crestLight)}
+                        src={brand.logos.crestLight}
                         alt=""
                         className="w-full h-full object-contain filter brightness-110"
                         loading="lazy"
@@ -154,32 +144,21 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
             </div>
           </div>
 
-          {/* Beverage Houses & Hospitality */}
+          {/* Connected hospitality platform */}
           <div className="border-t border-neutral-800/80 pt-4">
             <div className="flex items-center justify-between px-3 mb-2">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#E26D35] font-medium">
-                Beverage & Hospitality
+                Connected World
               </span>
-              <span className="text-[9px] text-neutral-500 font-mono">6 Houses</span>
+              <span className="text-[9px] text-neutral-500 font-mono">Separate Platform</span>
             </div>
             <div className="space-y-1">
-              {[BRANDS['my-drink-family'], ...BEVERAGE_HOUSES].map((brand) => (
-                <button
-                  key={brand.id}
-                  onClick={() => {
-                    onNavigate('brand', brand.id);
-                    onClose();
-                  }}
-                  className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
-                    currentView === 'brand' && currentBrandId === brand.id
-                      ? 'bg-white/10 text-white border-l-2 border-[#E26D35]'
-                      : 'hover:bg-white/5 text-neutral-300'
-                  }`}
-                >
+              {[BRANDS['my-drink-family']].map((brand) => (
+                <button key={brand.id} onClick={() => { onNavigate('brand', brand.id); onClose(); }} className="w-full text-left p-2.5 flex items-center justify-between rounded-xs hover:bg-white/5 text-neutral-300 group">
                   <div className="flex items-center gap-3">
                     <div className="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1">
                       <img
-                        src={getAssetPath(brand.logos.crestLight)}
+                        src={brand.logos.crestLight}
                         alt=""
                         className="w-full h-full object-contain filter brightness-110"
                         loading="lazy"
@@ -197,65 +176,13 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                   <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
                 </button>
               ))}
+              <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Visit Website <ExternalLink className="w-3.5 h-3.5" /></a>
+              <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Open App <ExternalLink className="w-3.5 h-3.5" /></a>
             </div>
           </div>
 
-          {/* Special Programs: IKLA Kids, Griffin Edition, IKLA Water */}
-          <div className="border-t border-neutral-800/80 pt-3 space-y-1">
-            <button
-              onClick={() => {
-                onNavigate('kids');
-                onClose();
-              }}
-              className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
-                currentView === 'kids'
-                  ? 'bg-white/10 text-white border-l-2 border-[#013220]'
-                  : 'hover:bg-white/5 text-neutral-300'
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-full bg-[#013220]/40 border border-[#013220] flex items-center justify-center shrink-0 p-1 text-[#D4AF57] text-[10px] font-bold">
-                  K
-                </div>
-                <div>
-                  <div className="text-xs font-medium text-white group-hover:text-[#D4AF57] transition-colors tracking-wide">
-                    IKLA Kids
-                  </div>
-                  <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
-                    The First Inheritance
-                  </div>
-                </div>
-              </div>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
-            </button>
-
-            <button
-              onClick={() => {
-                onNavigate('griffin');
-                onClose();
-              }}
-              className={`w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all group cursor-pointer ${
-                currentView === 'griffin'
-                  ? 'bg-white/10 text-white border-l-2 border-[#C5A869]'
-                  : 'hover:bg-white/5 text-neutral-300'
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-full bg-[#151916] border border-[#C5A869]/40 flex items-center justify-center shrink-0 p-1 text-[#C5A869] text-[10px] font-bold">
-                  G
-                </div>
-                <div>
-                  <div className="text-xs font-medium text-white group-hover:text-[#C5A869] transition-colors tracking-wide">
-                    Griffin Edition
-                  </div>
-                  <div className="text-[10px] text-neutral-400 font-light truncate max-w-[190px]">
-                    Private Commissions Atelier
-                  </div>
-                </div>
-              </div>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
-            </button>
-
+          {/* Extension: IKLA Water */}
+          <div className="border-t border-neutral-800/80 pt-3">
             <button
               onClick={() => {
                 onNavigate('brand', 'ikla-water');
@@ -282,46 +209,6 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
               </div>
               <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
             </button>
-          </div>
-
-          {/* Dynasty Ecosystem Section */}
-          <div className="border-t border-neutral-800/80 pt-4">
-            <div className="flex items-center justify-between px-3 mb-2">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-medium">
-                Dynasty Ecosystem
-              </span>
-              <span className="text-[9px] text-neutral-500 font-mono">Cross-Property</span>
-            </div>
-            <div className="space-y-1">
-              {ECOSYSTEM_LINKS.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  target={link.isExternal ? '_blank' : undefined}
-                  rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                  onClick={(e) => {
-                    if (!link.isExternal) {
-                      e.preventDefault();
-                      onNavigate('brand', 'my-drink-family');
-                      onClose();
-                    }
-                  }}
-                  className="w-full text-left p-2.5 flex items-center justify-between rounded-xs transition-all hover:bg-white/5 text-neutral-300 group cursor-pointer"
-                  aria-label={link.ariaLabel}
-                >
-                  <div>
-                    <div className="text-xs font-medium text-white group-hover:text-[#E06D38] transition-colors flex items-center gap-1.5">
-                      <span>{link.label}</span>
-                      {link.isExternal && <ExternalLink className="w-3 h-3 text-neutral-500 group-hover:text-[#E06D38]" />}
-                    </div>
-                    <div className="text-[10px] text-neutral-400 font-light truncate max-w-[210px]">
-                      {link.description}
-                    </div>
-                  </div>
-                  <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Company Links */}
@@ -356,26 +243,24 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
         <div className="p-6 border-t border-neutral-800 bg-[#0a0b0d] space-y-3">
           <button
             onClick={() => {
+              onNavigate('contact');
               onClose();
-              openCart();
             }}
             className="w-full py-3 px-4 bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-xs uppercase tracking-widest text-white flex items-center justify-between"
           >
             <div className="flex items-center gap-2">
-              <ShoppingBag className="w-4 h-4 text-[#C8A97E]" />
-              <span>Shopping Bag</span>
+              <KeyRound className="w-4 h-4 text-[#C8A97E]" />
+              <span>Request Private Access</span>
             </div>
-            <span className="w-5 h-5 rounded-full bg-[#C8A97E] text-black text-[10px] font-bold flex items-center justify-center">
-              {totalItems}
-            </span>
+            <ChevronRight className="w-4 h-4 text-[#C8A97E]" />
           </button>
 
           <div className="flex items-center justify-between text-[11px] text-neutral-500 pt-2 px-1">
             <span className="flex items-center gap-1">
               <Globe className="w-3 h-3" />
-              <span>Global / USD ($)</span>
+              <span>International Client Relations</span>
             </span>
-            <span>24/7 Client Relations</span>
+            <span>By Appointment</span>
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { ArrowLeft, ArrowRight, Check, Compass, Layers, Shield, Sparkles, Droplets, Wine, Clock, Zap, Target, ExternalLink } from 'lucide-react';
 import { BRANDS, BRAND_LIST } from '../data/brands';
-import { PRODUCTS, IKLA_VIP_PRODUCTS, MDF_MERCHANDISE_PRODUCTS } from '../data/products';
+import { PRODUCTS } from '../data/products';
+import { PRIVATE_PRODUCTS } from '../data/privateProducts';
 import BrandHero from '../components/BrandHero';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
@@ -16,6 +17,8 @@ export default function BrandPage({
   onNavigateHome,
   onNavigateCollection
 }) {
+  const IKLA_VIP_PRODUCTS = PRIVATE_PRODUCTS.filter((product) => product.brandName === 'IKLA Maison');
+  const MDF_MERCHANDISE_PRODUCTS = PRODUCTS.filter((product) => product.brandId === 'my-drink-family');
   const brand = BRANDS[brandId] || BRANDS['ikla-maison'];
   const brandProducts = PRODUCTS.filter((p) => p.brandId === brand.id);
   const otherBrands = BRAND_LIST.filter((b) => b.id !== brand.id);
@@ -119,7 +122,7 @@ export default function BrandPage({
                     Editorial Feature · Executive Lounge Transit
                   </span>
                   <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
-                    Milano — Zurich — London
+                    International Editorial Study
                   </span>
                 </div>
               </div>
@@ -395,7 +398,7 @@ export default function BrandPage({
                         Restorative Personal Ceremony
                       </h3>
                       <p className="text-xs text-[#50545E] font-light mt-2 leading-relaxed font-manrope">
-                        750 GSM zero-twist Aegean cotton towels, textured honeycomb waffle spa robes with gilded bullion monograms, hand-turned ceramic canisters with brass lids, and full-grain calfskin dopp kits.
+                        A private bath and spa concept spanning towels, robes, vanity vessels, slippers, and travel cases. Final materials and configurations are confirmed by request.
                       </p>
                     </div>
 
@@ -505,7 +508,7 @@ export default function BrandPage({
                     Monumental Urban Plaza Campaign
                   </span>
                   <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
-                    Brutalist Monoliths · 450–520 GSM Terry
+                    Brutalist Monoliths · Material Specification by Request
                   </span>
                 </div>
               </div>
@@ -656,7 +659,7 @@ export default function BrandPage({
                 Performance. Style. Discipline. Freedom.
               </div>
               <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope max-w-2xl pt-2">
-                Conceived on the sunlit bluffs of the Mediterranean. Fluid European linens, airy crochet open-knits, and unconstrained loungewear tailored for sun-drenched arrivals and evening aperitifs.
+                A sunlit resort expression shaped by fluid silhouettes, open textures, and movement from arrival through evening.
               </p>
             </section>
 
@@ -705,10 +708,10 @@ export default function BrandPage({
                     Men's Performance
                   </span>
                   <h3 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
-                    Breathable European Flax & Open Knits
+                    Breathable Textures & Open Knits
                   </h3>
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-                    Technical polos, pleated linen trousers, light zip overshirts, and relaxed court shorts in teal, black, ivory, and mineral grey.
+                    Polos, pleated trousers, light zip overshirts, and relaxed court shorts in teal, black, ivory, and mineral grey.
                   </p>
                 </div>
               </div>
@@ -1054,7 +1057,7 @@ export default function BrandPage({
                     Five-Colorway Heavyweight Loopback Sets
                   </h3>
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-                    Structured 520 GSM custom-milled loopback French terry hoodies paired with tapered track joggers. Rendered in Obsidian Black, Raw Bone, Deep Forest, Oxblood Crimson, and Charcoal Patina.
+                    Structured hoodies paired with tapered track joggers in Obsidian Black, Raw Bone, Deep Forest, Oxblood Crimson, and Charcoal Patina. Final fabric specifications are confirmed privately.
                   </p>
                 </div>
 
@@ -1091,7 +1094,7 @@ export default function BrandPage({
                     Hexa-Colorway Heavyweight T-Shirt Spectrum
                   </h3>
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-                    320 GSM combed cotton drop-shoulder boxy tees featuring high-density collar ribbing and discreet tonal WNNR branding. Displaying the complete extended palette: Obsidian, Bone, Forest, Oxblood, Gold Ochre, and Charcoal.
+                    Drop-shoulder boxy tees with discreet tonal WNNR branding across Obsidian, Bone, Forest, Oxblood, Gold Ochre, and Charcoal. Final fabric specifications are confirmed privately.
                   </p>
                 </div>
               </div>
@@ -1419,7 +1422,7 @@ export default function BrandPage({
                       Flint Glass Carafes, Mineral Tumblers & Travertine Coaster Suites
                     </h4>
                     <p className="text-xs text-[#50545E] font-light font-manrope leading-relaxed">
-                      Hand-blown architectural flint glass carafes with precision stoppers, crystal mineral tumblers, solid travertine coaster sets, and leather-trimmed insulated canvas carriers designed for dining salons and gallery terraces.
+                      Architectural carafes, tumblers, coaster studies, and carriers designed as a sculptural hospitality concept. Final composition is confirmed before allocation.
                     </p>
                     <div className="flex flex-wrap gap-1.5 pt-2">
                       {['Glass carafes', 'Water tumblers', 'Insulated bottles', 'Reusable glass travel bottles', 'Ice buckets', 'Tongs', 'Coaster sets', 'Bottle carriers', 'Picnic coolers', 'Serving trays'].map((item) => (
@@ -1542,7 +1545,7 @@ export default function BrandPage({
                         Crystalline Stemware & Barware Suite
                       </h3>
                       <p className="text-xs text-[#50545E] font-light mt-2 leading-relaxed font-manrope">
-                        Lead-free European crystalline coupes, flutes, and rocks glasses paired with brushed brass 18/10 stainless steel shakers, jiggers, strainers, and gilded rectangular serving plinths.
+                        Coupes, flutes, rocks glasses, shakers, jiggers, strainers, and serving plinths presented as a connected hospitality collection. Final specifications are confirmed directly.
                       </p>
                     </div>
 
@@ -1754,7 +1757,7 @@ export default function BrandPage({
                     The Four-Flavor Tracksuit Suite · Classic Orange, Pineapple, Strawberry, Watermelon
                   </span>
                   <span className="text-[11px] font-mono text-[#E26D35] uppercase tracking-widest font-medium">
-                    500 GSM Heavyweight Loopback Terry
+                    Heavyweight Loopback Direction
                   </span>
                 </div>
               </div>
@@ -1905,7 +1908,7 @@ export default function BrandPage({
                   <div className="p-2">
                     <h4 className="text-base font-cormorant font-normal text-[#111215]">Heavyweight T-Shirts</h4>
                     <p className="text-xs text-[#50545E] font-light font-manrope mt-1">
-                      320 GSM drop-shoulder boxy tees in Classic Orange, Pineapple, Strawberry, and Watermelon.
+                      Drop-shoulder boxy tees in Classic Orange, Pineapple, Strawberry, and Watermelon.
                     </p>
                   </div>
                 </div>
@@ -2911,13 +2914,13 @@ export default function BrandPage({
           </span>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-cormorant font-light text-white tracking-tight mb-6 leading-snug max-w-3xl">
-            "{brand.manifesto}"
+            "{brand.tagline}"
           </h2>
 
           <div className="w-16 h-px bg-[#C8A97E] mb-6" />
 
           <p className="text-sm sm:text-base text-neutral-300 font-light max-w-2xl leading-relaxed italic font-manrope">
-            House of {brand.name} · {brand.origin}
+            {brand.id === 'my-drink-family' ? 'Connected hospitality platform' : brand.id === 'ikla-water' ? 'IKLA Maison concept extension' : `House of ${brand.name}`} · Private collection preview
           </p>
         </div>
       </section>

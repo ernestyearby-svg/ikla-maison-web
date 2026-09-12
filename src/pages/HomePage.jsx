@@ -1,71 +1,97 @@
 import React, { useState } from 'react';
-import { ArrowRight, Compass, Sparkles, Layers, Shield, ChevronRight, Gem, Droplets, Wine, Check, Scissors, Plane, ExternalLink, Anchor, Car, Home } from 'lucide-react';
-import { BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES, BRANDS } from '../data/brands';
-import { PRODUCTS, IKLA_VIP_PRODUCTS, IKLA_APPOINTMENTS_PRODUCTS } from '../data/products';
+import { ArrowRight, Compass, Sparkles, Layers, Shield, ChevronRight, Gem, Droplets, Wine, Check, Scissors, Plane, PackageCheck } from 'lucide-react';
+import { FASHION_HOUSES, BRANDS } from '../data/brands';
+import { PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
 import HeroHouseNavigation from '../components/HeroHouseNavigation';
-import VIPInquiryModal from '../components/VIPInquiryModal';
 import { getCampaignAsset } from '../data/campaigns';
-import { getAssetPath } from '../utils/assets.js';
-import { ECOSYSTEM_CONFIG, ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
 
-export default function HomePage({
-  onSelectBrand,
-  onSelectProduct,
-  onNavigateCollection,
-  onNavigateAbout,
-  onNavigateKids,
-  onNavigateGriffin,
-  onNavigateAppointments,
-}) {
-  const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
-  const [inquiryProduct, setInquiryProduct] = useState(null);
+export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout }) {
+  const [activeEditorialHouse, setActiveEditorialHouse] = useState('ikla-maison');
+  const featuredProducts = PRODUCTS.filter((p) => p.isFeatured).slice(0, 8);
 
   // Set One Assets
   const flagshipHeroAsset = getCampaignAsset('ikla-maison-flagship-hero');
+  const fashionGatewayAsset = getCampaignAsset('house-of-ikla-fashion-gateway');
   const businessCasualAsset = getCampaignAsset('ikla-business-casual-couple');
 
-  // Curated Private Previews (VIP suites)
-  const curatedVIPPreviews = IKLA_VIP_PRODUCTS.slice(0, 4);
+  // Set Two Assets
+  const accessoriesGatewayAsset = getCampaignAsset('house-of-ikla-accessories-gateway');
 
-  // Restrained Private Appointments Preview (Exactly 3 Cards)
-  const previewAppointmentsProducts = [
-    IKLA_APPOINTMENTS_PRODUCTS.find((p) => p.id === 'ikla-architectural-eyewear'),
-    IKLA_APPOINTMENTS_PRODUCTS.find((p) => p.id === 'ikla-onyx-cufflink-stud-set'),
-    IKLA_APPOINTMENTS_PRODUCTS.find((p) => p.id === 'ikla-private-travel-document-set'),
-  ].filter(Boolean);
+  // Set Three Assets
+  const travelGoodsAsset = getCampaignAsset('house-of-ikla-travel-goods');
 
-  const handleOpenInquiry = (product = null) => {
-    setInquiryProduct(product || {
-      id: 'ikla-private-concierge',
-      name: 'Maison Private Client Invitation',
-      category: 'Concierge Appointment',
-      accessMode: 'Private Allocation',
+  // Set Four Assets
+  const craftsmanshipAsset = getCampaignAsset('house-of-ikla-atelier-craftsmanship');
+  const packagingAsset = getCampaignAsset('house-of-ikla-private-client-packaging');
+
+  // Editorial Lifestyle Assets for Rotating Feature
+  const editorialLifestyleAssets = {
+    'ikla-maison': {
+      asset: getCampaignAsset('ikla-mens-editorial-lifestyle'),
       houseName: 'IKLA Maison',
-      image: 'assets/editorial/ikla-monochrome-house-editorial-banner.webp'
-    });
-    setInquiryModalOpen(true);
+      tagline: 'The Architectural Standard',
+      narrative: 'Refined menswear tailoring, structured double-faced wool overcoats, and considered essentials designed for international executive presence.',
+      accent: '#8C6D3F',
+      actionText: 'Explore IKLA Maison'
+    },
+    'wnnr': {
+      asset: getCampaignAsset('wnnr-discipline-lifestyle'),
+      houseName: 'WNNR',
+      tagline: 'WIN WITHIN — Sunrise Discipline',
+      narrative: 'Morning focus in a penthouse studio. Heavyweight 520 GSM loopback French terry and precision training layers engineered for internal resolve.',
+      accent: '#C5A869',
+      actionText: 'Explore WNNR Atelier'
+    },
+    'ktse': {
+      asset: getCampaignAsset('ktse-urban-lifestyle'),
+      houseName: 'KTSE',
+      tagline: 'NO SWITCHES. NO EXCUSES.',
+      narrative: 'Brutalist street volume, dense loopback terry, and tactile gravity against concrete plaza monoliths. Structural streetwear built to endure.',
+      accent: '#9B324D',
+      actionText: 'Explore KTSE House'
+    },
+    'moteon': {
+      asset: getCampaignAsset('moteon-coastal-movement-lifestyle'),
+      houseName: 'Motéon',
+      tagline: 'Riviera Freedom & Coastal Movement',
+      narrative: 'Fluid European linens, open-gauge artisan crochet knits, and relaxed seaside tailoring designed for unhurried Mediterranean living.',
+      accent: '#B85D3B',
+      actionText: 'Explore Motéon House'
+    },
+    'moral-compass': {
+      asset: getCampaignAsset('moral-compass-executive-lifestyle'),
+      houseName: 'Moral Compass',
+      tagline: 'Direction in Every Detail',
+      narrative: 'Cardinal double-breasted tailoring, celestial navigation jacquard linings, and volcanic obsidian tones designed with quiet intention.',
+      accent: '#132B20',
+      actionText: 'Explore Moral Compass'
+    }
   };
 
-  const handleCloseInquiry = () => {
-    setInquiryModalOpen(false);
-    setInquiryProduct(null);
-  };
+  // Preserved Collaboration & Concept Assets
+  const mymosaCollabAsset = getCampaignAsset('ikla-x-mymosa-lifestyle');
+  const waterDiningAsset = getCampaignAsset('ikla-water-dining-table');
+  const waterPedestalAsset = getCampaignAsset('ikla-water-trio-pedestal');
+  const waterRoundedAsset = getCampaignAsset('ikla-water-trio-rounded-bottles');
+  const waterCylinderAsset = getCampaignAsset('ikla-water-trio-cylinder-bottles');
+
+  const currentEditorial = editorialLifestyleAssets[activeEditorialHouse] || editorialLifestyleAssets['ikla-maison'];
 
   return (
     <div className="flex flex-col w-full bg-[#FAF7F2] text-[#16171A] overflow-hidden">
       {/* ========================================================================= */}
-      {/* 1. MASTER FLAGSHIP HERO: ikla-maison-flagship-hero.webp */}
+      {/* 1. FLAGSHIP HERO: ikla-maison-flagship-hero.webp */}
       {/* ========================================================================= */}
       <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#0A0B0D]">
         <picture className="absolute inset-0 w-full h-full">
           <source
             media="(max-width: 768px)"
-            srcSet={getAssetPath(flagshipHeroAsset?.url || flagshipHeroAsset?.file)}
+            srcSet={flagshipHeroAsset?.url || flagshipHeroAsset?.file}
           />
           <img
-            src={getAssetPath(flagshipHeroAsset?.url || flagshipHeroAsset?.file)}
+            src={flagshipHeroAsset?.url || flagshipHeroAsset?.file}
             alt={flagshipHeroAsset?.alt || 'Four adult models wearing refined IKLA Maison essentials in a sunlit travertine interior'}
             className="w-full h-full object-cover transition-transform duration-1000 scale-100 filter brightness-[0.78] contrast-[1.05]"
             style={{ objectPosition: 'center 20%' }}
@@ -82,8 +108,8 @@ export default function HomePage({
         {/* Hero Live Copy */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-28 sm:pt-32 lg:pt-36 pb-6 w-full">
           <div className="max-w-2xl text-left space-y-4 sm:space-y-5">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full text-[10px] uppercase tracking-[0.3em] font-medium backdrop-blur-md border border-[#D4AF57]/40 text-white/95 bg-black/60 shadow-xl">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF57] animate-pulse" />
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full text-[10px] uppercase tracking-[0.3em] font-medium backdrop-blur-md border border-[#C8A97E]/40 text-white/95 bg-black/60 shadow-xl">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] animate-pulse" />
               <span>International Luxury Flagship</span>
             </div>
 
@@ -102,12 +128,12 @@ export default function HomePage({
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <button
                 onClick={() => {
-                  const el = document.getElementById('houses-directory');
+                  const el = document.getElementById('fashion-houses-gateway');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="px-6 py-3 bg-white text-black hover:bg-neutral-200 transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-xl flex items-center gap-2"
               >
-                <span>Explore The Houses</span>
+                <span>Explore The Maison</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
 
@@ -115,13 +141,13 @@ export default function HomePage({
                 onClick={onNavigateCollection}
                 className="px-6 py-3 border border-white/40 text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-[0.2em] font-medium cursor-pointer rounded-xs backdrop-blur-xs"
               >
-                View Collections
+                Shop All Collections
               </button>
             </div>
           </div>
         </div>
 
-        {/* Docked Hero House Navigation along the lower edge */}
+        {/* 1.5. Docked Hero House Navigation along the lower edge */}
         <div className="relative z-20 w-full mt-auto">
           <HeroHouseNavigation onSelectBrand={onSelectBrand} />
         </div>
@@ -137,7 +163,7 @@ export default function HomePage({
               The Maison Heritage
             </span>
             <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
-              A Federation of Independent Ateliers
+              A Maison of Distinct Expressions
             </h2>
             <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
               IKLA Maison operates as an international umbrella uniting autonomous design disciplines. We reject disposable trends, engineering pieces with deliberate weight, architectural poise, and generational permanence.
@@ -173,7 +199,57 @@ export default function HomePage({
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. EXPLORE THE HOUSES CARDS */}
+      {/* 3. FASHION HOUSES GATEWAY: house-of-ikla-fashion-gateway.webp */}
+      {/* ========================================================================= */}
+      <section id="fashion-houses-gateway" className="relative py-28 px-6 sm:px-8 lg:px-12 bg-[#F5EFEB] border-b border-[#E2DDD3]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs shadow-2xs">
+              <span>The Fashion Houses</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
+              Curated Fashion Viewpoints
+            </h2>
+            <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+              United under the House of IKLA umbrella. Distinct Houses. One Standard. From architectural couture tailoring to brutalist street gravity, sunlit resort open-knits, celestial direction, and internal victory discipline.
+            </p>
+          </div>
+
+          <div className="relative bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group">
+            <CampaignImage
+              src={fashionGatewayAsset?.url || fashionGatewayAsset?.file}
+              alt={fashionGatewayAsset?.alt || 'Five curated fashion looks representing IKLA Maison KTSE Motéon Moral Compass and WNNR in a luxury showroom'}
+              aspectRatio="16/9"
+              position="center center"
+              className="rounded-xs w-full"
+            />
+            <div className="p-4 sm:p-6 bg-[#FAF7F2] border-t border-[#EAE5DC] flex flex-col md:flex-row items-center justify-between gap-4 mt-2 rounded-xs">
+              <div className="text-center md:text-left">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block">
+                  Showroom Federation
+                </span>
+                <h3 className="text-base sm:text-lg font-cormorant font-normal text-[#111215] mt-0.5">
+                  IKLA Maison · KTSE · Motéon · Moral Compass · WNNR
+                </h3>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                {FASHION_HOUSES.map((h) => (
+                  <button
+                    key={h.id}
+                    onClick={() => onSelectBrand(h.id)}
+                    className="px-3.5 py-2 text-[10px] uppercase tracking-[0.18em] font-medium bg-white border border-[#DDD7CB] hover:border-[#111215] text-[#111215] transition-all rounded-xs cursor-pointer shadow-xs"
+                  >
+                    {h.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. SHOP THE HOUSES: ALL HOUSES & EXTENSIONS (INCLUDING WNNR) */}
       {/* ========================================================================= */}
       <section id="houses-directory" className="relative py-28 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full bg-[#FAF7F2]">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#E5DFD5]">
@@ -191,7 +267,7 @@ export default function HomePage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BRAND_LIST.map((brand, idx) => (
+          {FASHION_HOUSES.map((brand, idx) => (
             <div
               key={brand.id}
               onClick={() => onSelectBrand(brand.id)}
@@ -200,7 +276,7 @@ export default function HomePage({
               <div>
                 <div className="aspect-[4/3] w-full overflow-hidden bg-[#F5F2EC] mb-5 rounded-xs relative">
                   <img
-                    src={getAssetPath(brand.assets.collection)}
+                    src={brand.assets.collection}
                     alt={brand.alt.collection}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
@@ -211,7 +287,7 @@ export default function HomePage({
                     </span>
                   </div>
                   <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md p-1.5 shadow-xs border border-neutral-200">
-                    <img src={getAssetPath(brand.logos.crestLight)} alt="" className="w-full h-full object-contain" />
+                    <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain" />
                   </div>
                 </div>
 
@@ -228,702 +304,828 @@ export default function HomePage({
               </div>
 
               <div className="pt-4 mt-6 border-t border-[#EAE5DC] flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#8C6D3F] group-hover:text-[#111215] transition-colors">
-                <span>Explore the House</span>
+                <span>Enter House</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
               </div>
             </div>
           ))}
+
+          {/* IKLA Water Card */}
+          <div
+            onClick={() => onSelectBrand('ikla-water')}
+            className="group bg-white border border-[#CADCE0] hover:border-[#5E8896] transition-all duration-300 p-6 flex flex-col justify-between rounded-xs shadow-xs hover:shadow-xl cursor-pointer relative"
+          >
+            <div>
+              <div className="aspect-[4/3] w-full overflow-hidden bg-[#FAFBFB] mb-5 rounded-xs relative">
+                <img
+                  src={BRANDS['ikla-water'].assets.collection}
+                  alt={BRANDS['ikla-water'].alt.collection}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-[#1A2830]/80 backdrop-blur-md px-2.5 py-1 rounded-2xs border border-[#5E8896]/40">
+                  <span className="text-[9px] uppercase tracking-widest text-[#FAFBFB] font-mono">Extension</span>
+                </div>
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#1A2830] p-1.5 shadow-xs border border-[#5E8896]/40 flex items-center justify-center text-[#5E8896]">
+                  <Droplets className="w-4 h-4" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-cormorant font-normal text-[#111215]">IKLA Water</h3>
+                <span className="text-[10px] font-mono text-[#5E8896] uppercase tracking-widest">Glass Extension</span>
+              </div>
+
+              <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope mt-2 line-clamp-2">
+                A concept study in sculptural hydration vessels and intentional table presentation.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-[#E5EEF0] flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#5E8896] group-hover:text-[#1A2830] transition-colors">
+              <span>Discover Vessels</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. NEW ARRIVALS & PRIVATE PREVIEWS: VIP PRODUCT CARDS */}
+      {/* 5. ACCESSORIES ACROSS THE HOUSES: house-of-ikla-accessories-gateway.webp */}
       {/* ========================================================================= */}
-      <section className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F6F2EB] border-y border-[#E2DDD3]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-[#DDD7CB]">
+      <section id="accessories-across-houses" className="relative py-24 px-6 sm:px-8 lg:px-12 bg-[#F6F4EF] border-y border-[#E2DDD3]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#D8D3C7]">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
-                Private Previews
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block mb-2">
+                Cross-House Program
               </span>
               <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
-                Curated Private Suites
+                Accessories Across the Houses
               </h2>
             </div>
+            <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-md font-manrope">
+              Footwear, headwear, travel bags, and leather goods curated across the fashion houses. Unifying brutalist carry bags, monolithic slides, and architectural travel accessories.
+            </p>
+          </div>
+
+          <div className="bg-white border border-[#DDD7CB] p-3 sm:p-5 rounded-xs shadow-xl overflow-hidden group">
+            <CampaignImage
+              src={accessoriesGatewayAsset?.url || accessoriesGatewayAsset?.file}
+              alt={accessoriesGatewayAsset?.alt || 'Accessory displays representing IKLA Maison KTSE Motéon Moral Compass and WNNR in a luxury showroom'}
+              aspectRatio="16/9"
+              position="center center"
+              className="rounded-xs w-full"
+            />
+            <div className="p-6 bg-[#FAF7F2] border-t border-[#EAE5DC] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-3 rounded-xs">
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-semibold block">01. Footwear & Slides</span>
+                <p className="text-xs text-[#50545E] font-light font-manrope">Ergonomic recovery slides, molded EVA footbeds, and leather court sneakers.</p>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-semibold block">02. Headwear Architecture</span>
+                <p className="text-xs text-[#50545E] font-light font-manrope">Unstructured twill dad caps, ribbed merino beanies, and minimal visors.</p>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-semibold block">03. Carry & Weekenders</span>
+                <p className="text-xs text-[#50545E] font-light font-manrope">Ballistic cotton weekenders, heavyweight canvas totes, and leather travel folios.</p>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-semibold block">04. Socks & Small Goods</span>
+                <p className="text-xs text-[#50545E] font-light font-manrope">Arch-support ribbed pima knit socks, solid brass buckle belts, and silk twill scarves.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. CRAFTSMANSHIP: house-of-ikla-atelier-craftsmanship.webp */}
+      {/* ========================================================================= */}
+      <section id="atelier-craftsmanship" className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+              Materiality & Standard
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+              The Standard Is in the Making
+            </h2>
+            <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+              Every collection begins with disciplined proportion, tactile direction, and a clear reason for belonging within the wider Maison. Final material specifications are confirmed before allocation.
+            </p>
+            <div className="space-y-3 pt-2 text-xs text-[#40444E] font-manrope border-t border-[#E5DFD5]">
+              <div className="flex items-center gap-3">
+                <Check className="w-4 h-4 text-[#8C6D3F]" />
+                <span>Proportion and movement considered from the first study</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-4 h-4 text-[#8C6D3F]" />
+                <span>Release structure and production partners confirmed per collection</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-4 h-4 text-[#8C6D3F]" />
+                <span>Construction details documented in the final client dossier</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6">
+            <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+              <CampaignImage
+                src={craftsmanshipAsset?.url || craftsmanshipAsset?.file}
+                alt={craftsmanshipAsset?.alt || 'Artisan hands measuring and finishing premium IKLA garments among fabric tools and pattern paper'}
+                aspectRatio="16/9"
+                position="center center"
+                className="rounded-xs w-full"
+              />
+              <div className="p-3 text-center bg-[#FAF7F2] border-t border-[#EAE5DC] mt-2 rounded-xs">
+                <span className="text-[11px] text-[#555A64] font-light font-manrope">
+                  Design Study · Tailoring, Pattern, and Construction Direction
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. ROTATING / ALTERNATING EDITORIAL FEATURE BY HOUSE */}
+      {/* ========================================================================= */}
+      <section id="rotating-editorial-showcase" className="relative py-28 px-6 sm:px-8 lg:px-12 bg-[#0E1013] text-white border-y border-neutral-800 overflow-hidden">
+        <div className="max-w-7xl mx-auto space-y-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-neutral-800">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C8A97E] font-semibold block mb-2">
+                Editorial Showcase
+              </span>
+              <h2 className="text-3xl sm:text-5xl font-cormorant font-light text-white">
+                Voices of the Maison
+              </h2>
+            </div>
+            {/* House Switcher Tabs */}
+            <div className="flex flex-wrap gap-2">
+              {Object.keys(editorialLifestyleAssets).map((key) => {
+                const item = editorialLifestyleAssets[key];
+                const isActive = activeEditorialHouse === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setActiveEditorialHouse(key)}
+                    className={`px-3.5 py-1.5 text-xs uppercase tracking-[0.16em] transition-all rounded-xs cursor-pointer ${
+                      isActive
+                        ? 'bg-white text-black font-semibold shadow-lg'
+                        : 'bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white'
+                    }`}
+                  >
+                    {item.houseName}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Active Editorial Stage */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 bg-neutral-900 border border-neutral-800 p-3 rounded-xs shadow-2xl overflow-hidden">
+              <CampaignImage
+                src={currentEditorial.asset?.url || currentEditorial.asset?.file}
+                alt={currentEditorial.asset?.alt || currentEditorial.tagline}
+                aspectRatio="16/9"
+                position="center center"
+                className="rounded-xs w-full"
+              />
+            </div>
+
+            <div className="lg:col-span-5 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest bg-white/10 text-white border border-white/20 font-mono">
+                <span>{currentEditorial.houseName} Lifestyle</span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-cormorant font-light text-white leading-tight">
+                {currentEditorial.tagline}
+              </h3>
+              <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope">
+                {currentEditorial.narrative}
+              </p>
+              <div className="pt-2">
+                <button
+                  onClick={() => onSelectBrand(activeEditorialHouse)}
+                  className="px-6 py-3.5 bg-white text-black hover:bg-[#C8A97E] hover:text-black transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs flex items-center gap-2"
+                >
+                  <span>{currentEditorial.actionText}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. TRAVEL GOODS: house-of-ikla-travel-goods.webp */}
+      {/* ========================================================================= */}
+      <section id="travel-goods-showcase" className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+              <CampaignImage
+                src={travelGoodsAsset?.url || travelGoodsAsset?.file}
+                alt={travelGoodsAsset?.alt || 'Luxury travel goods representing IKLA Maison KTSE Motéon Moral Compass and WNNR in an airport lounge'}
+                aspectRatio="16/9"
+                position="center center"
+                className="rounded-xs w-full"
+              />
+              <div className="p-3 text-center bg-[#FAF7F2] border-t border-[#EAE5DC] mt-2 rounded-xs">
+                <span className="text-[11px] text-[#555A64] font-light font-manrope">
+                  Transcontinental Airport Lounge Transit · Weekenders, Duffels & Leather Folios
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 space-y-6">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block">
+              Transcontinental Transit
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+              Made to Move With You
+            </h2>
+            <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+              Engineered for seamless international passage between private lounges and transatlantic cabins. Heavy-gauge cotton canvas, reinforced saddlery leather straps, and solid gold-tone hardware designed to patina gracefully across journeys.
+            </p>
+            <p className="text-xs text-[#7A828A] font-light italic font-manrope">
+              Curated cross-house archival travel display. Select bespoke travel pieces available by private client inquiry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. PACKAGING & GIFTING SERVICE (USED ONCE): house-of-ikla-private-client-packaging.webp */}
+      {/* ========================================================================= */}
+      <section id="private-client-packaging-feature" className="relative py-24 px-6 sm:px-8 lg:px-12 bg-[#F6F4EE] border-y border-[#E2DDD3]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs shadow-2xs">
+                <PackageCheck className="w-3.5 h-3.5 text-[#8C6D3F]" />
+                <span>Archival Packaging & Service</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215] leading-tight">
+                White-Glove Archival Presentation
+              </h2>
+              <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                A packaging concept built around restrained presentation, protective storage, and a sense of ceremony. Final packaging details are confirmed with each release.
+              </p>
+              <div className="space-y-2 pt-2 text-xs text-[#555A64] font-manrope border-t border-[#DCD6C8]">
+                <div>• House-marked presentation direction</div>
+                <div>• Protective storage concepts for garments and objects</div>
+                <div>• Final service terms confirmed directly</div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7">
+              <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl overflow-hidden group">
+                <CampaignImage
+                  src={packagingAsset?.url || packagingAsset?.file}
+                  alt={packagingAsset?.alt || 'Luxury packaging and apparel representing IKLA Maison KTSE Motéon Moral Compass and WNNR'}
+                  aspectRatio="16/9"
+                  position="center center"
+                  className="rounded-xs w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. PRESERVED COLLECTIVE: WORLD OF IKLA 6 PILLARS */}
+      {/* ========================================================================= */}
+      <section className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
+            The Dynasty Doctrine
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-cormorant font-normal text-[#111215]">
+            Six Pillars of the Maison
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Gem,
+              title: 'Architectural Form',
+              desc: 'Tailoring that preserves its structural silhouette through movement, balancing proportion and kinetic grace.'
+            },
+            {
+              icon: Layers,
+              title: 'Material Integrity',
+              desc: 'Custom-milled Egyptian cottons, heavy loopback terry, and breathable European flax crafted for longevity.'
+            },
+            {
+              icon: Compass,
+              title: 'Cardinal Purpose',
+              desc: 'Internal direction over transient seasonal momentum. Clothes designed to anchor and center the wearer.'
+            },
+            {
+              icon: Shield,
+              title: 'Disciplined Execution',
+              desc: 'Rigorous attention to stitch count, tonal silicon branding, bespoke jacquard linings, and precision hardware.'
+            },
+            {
+              icon: Droplets,
+              title: 'Sensory Living',
+              desc: 'Extending luxury beyond apparel into sculptural flint glass hydration, hospitality, and residential dining.'
+            },
+            {
+              icon: Wine,
+              title: 'Shared Celebration',
+              desc: 'Rooted in authentic connection, community clubhouse apparel, and joyful toasts under golden hour skies.'
+            }
+          ].map((pillar, idx) => {
+            const Icon = pillar.icon;
+            return (
+              <div key={idx} className="bg-white border border-[#DDD7CB] p-6 rounded-xs shadow-xs space-y-3">
+                <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#DDD7CB] flex items-center justify-center text-[#8C6D3F]">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-cormorant font-normal text-[#111215]">{pillar.title}</h3>
+                <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">{pillar.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 11. PRESERVED COLLECTIVE: IKLA × MYMOSA COLLABORATION */}
+      {/* ========================================================================= */}
+      <section className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F9F6F0] border-y border-[#E5DFD5]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-5 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs">
+              <Wine className="w-3.5 h-3.5 text-[#8C6D3F]" />
+              Maison Collaboration
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+              IKLA × MyMosa — The Art of Celebration
+            </h2>
+            <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+              Conceived alongside MyMosa, the celebrated Premium Wine Cocktail. Bridging daytime poolside leisure with twilight toasts, featuring limited clubhouse capsules and commemorative glassware.
+            </p>
+            <div className="pt-2">
+              <button
+                onClick={() => onSelectBrand('my-drink-family')}
+                className="px-6 py-3 bg-[#111215] text-white hover:bg-neutral-800 transition-colors text-xs uppercase tracking-widest font-medium rounded-xs cursor-pointer flex items-center gap-2"
+              >
+                <span>Explore Family Clubhouse</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="bg-white border border-[#DDD7CB] p-3 sm:p-4 rounded-xs shadow-xl group">
+              <CampaignImage
+                src={mymosaCollabAsset?.url || mymosaCollabAsset?.file}
+                alt="IKLA x MyMosa collaborative lifestyle portrait"
+                aspectRatio="16/9"
+                position="center 25%"
+                className="rounded-xs w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 11.5. THE HOUSES, WORN: SPORTS-FASHION EXPRESSION OF MY DRINK FAMILY */}
+      {/* ========================================================================= */}
+      <section id="the-houses-worn" className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F3EFE6] border-y border-[#DFDBD0]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#D8D3C5]">
+            <div className="max-w-2xl space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs shadow-2xs">
+                <span>Sports-Fashion Universe</span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                The Houses, Worn.
+              </h2>
+              <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
+                A sports-fashion expression of the My Drink Family universe—built through five distinct houses, each carrying its own color, character, and ritual.
+              </p>
+            </div>
+
             <button
               onClick={onNavigateCollection}
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-medium text-[#8C6D3F] hover:text-[#111215] transition-colors mt-3 md:mt-0 cursor-pointer"
+              className="px-6 py-3 border border-[#111215] text-[#111215] hover:bg-[#111215] hover:text-white transition-colors text-xs uppercase tracking-widest font-medium rounded-xs cursor-pointer flex items-center gap-2 self-start md:self-end shrink-0"
             >
-              <span>View All Allocations</span>
+              <span>Shop All Houses</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {curatedVIPPreviews.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onSelectProduct={onSelectProduct}
-                onSelectBrand={onSelectBrand}
-                onOpenInquiry={handleOpenInquiry}
-              />
+          {/* 5 Linked Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                id: 'mymosa',
+                name: 'MyMosa',
+                tagline: 'Four-Flavor Sports-Fashion Flagship',
+                subtitle: 'Classic Orange · Pineapple · Strawberry · Watermelon',
+                image: 'assets/products/mymosa/mymosa-four-flavor-tracksuits.webp',
+                alt: 'MyMosa four-flavor sports-fashion tracksuits collection in Classic Orange, Pineapple, Strawberry, and Watermelon colorways',
+                accent: '#E26D35',
+                badge: 'Flagship House'
+              },
+              {
+                id: 'mytai',
+                name: 'MyTai',
+                tagline: 'Island Leisure & Tropical Sports-Fashion',
+                subtitle: 'Black · Ivory · Deep Teal · Sunset Coral · Gold',
+                image: 'assets/products/mytai/mytai-apparel-products.webp',
+                alt: 'MyTai island-inspired sports-fashion apparel collection in black, ivory, teal, coral, and restrained gold',
+                accent: '#2A7B88',
+                badge: 'Island House'
+              },
+              {
+                id: 'mytini',
+                name: 'MyTini',
+                tagline: 'Nocturnal Poise & Lounge Sports-Fashion',
+                subtitle: 'Midnight Black · Roast Espresso · Ivory · Gold',
+                image: 'assets/products/mytini/mytini-apparel-products.webp',
+                alt: 'MyTini nocturnal lounge sports-fashion apparel collection in black, espresso, ivory, and restrained gold',
+                accent: '#382B24',
+                badge: 'Nocturnal House'
+              },
+              {
+                id: 'myjito',
+                name: 'MyJito',
+                tagline: 'Botanical Vitality & Crisp Sports-Fashion',
+                subtitle: 'Botanical Mint · Deep Navy · Fresh Lime · Gold',
+                image: 'assets/products/myjito/myjito-apparel-products.webp',
+                alt: 'MyJito mint and navy sports-fashion apparel collection featuring T-shirts, hoodies, a track jacket, and sweatpants',
+                accent: '#2D7F67',
+                badge: 'Botanical House'
+              },
+              {
+                id: 'mygarita',
+                name: 'MyGarita',
+                tagline: 'Agave Horizon & Warm Desert Sports-Fashion',
+                subtitle: 'Agave Sage · Warm Sand · Cream · Black · Gold',
+                image: 'assets/products/mygarita/mygarita-apparel-products.webp',
+                alt: 'MyGarita agave sage and warm sand sports-fashion apparel collection featuring hoodies, track jackets, tees, and sweatpants',
+                accent: '#7A8C74',
+                badge: 'Desert Horizon'
+              }
+            ].map((house, idx) => (
+              <div
+                key={house.id}
+                onClick={() => onSelectBrand(house.id)}
+                className={`group bg-white border border-[#DDD7CB] hover:border-[#C8A97E] p-4 rounded-xs shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between ${
+                  idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''
+                }`}
+              >
+                <div>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xs mb-4 bg-neutral-100">
+                    <CampaignImage
+                      src={house.image}
+                      alt={house.alt}
+                      aspectRatio="16/9"
+                      position="center center"
+                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
+                    />
+                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-black/70 backdrop-blur-xs text-white text-[9px] font-mono uppercase tracking-widest rounded-2xs border border-white/20">
+                      {house.badge}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 px-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-[#8C6D3F] transition-colors">
+                        {house.name}
+                      </h3>
+                      <span
+                        className="w-2.5 h-2.5 rounded-full border border-black/10 shrink-0"
+                        style={{ backgroundColor: house.accent }}
+                      />
+                    </div>
+                    <p className="text-xs text-[#50545E] font-medium font-manrope">
+                      {house.tagline}
+                    </p>
+                    <p className="text-[11px] text-[#7A828A] font-light font-manrope">
+                      {house.subtitle}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-[#EAE5DC] px-1 flex items-center justify-between text-xs text-[#8C6D3F] font-semibold uppercase tracking-wider">
+                  <span>Explore House Collection</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. IKLA KIDS INTRODUCTION: ikla-kids-core-collection-hero.webp */}
+      {/* 11.8. RESTRAINED LIFESTYLE MODULE: BEYOND THE WARDROBE */}
       {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#FBF9F5] border-b border-[#E8E1D5]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#013220]/10 border border-[#013220]/25 text-[#013220] text-[10px] uppercase tracking-[0.28em] font-medium rounded-xs">
-                <span>IKLA KIDS · THE FIRST INHERITANCE</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-light text-[#14181B] leading-tight">
-                The Standard Starts Early.
-              </h2>
-
-              <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-                Considered essentials for the next generation—built with the same discipline, material integrity and quiet confidence as the House. Repeatable core sweatsuits and summer essentials tailored for young pioneers.
-              </p>
-
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={onNavigateKids}
-                  className="px-7 py-3.5 bg-[#013220] hover:bg-[#02442c] text-white transition-all text-xs uppercase tracking-[0.22em] font-medium cursor-pointer rounded-xs shadow-xl flex items-center gap-2"
-                >
-                  <span>Explore IKLA Kids</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-                <button
-                  onClick={() => handleOpenInquiry({
-                    id: 'ikla-kids-intro',
-                    name: 'IKLA Kids Allocation Inquiry',
-                    category: 'Kids Essentials',
-                    accessMode: 'Private Preview',
-                    houseName: 'IKLA Kids'
-                  })}
-                  className="px-6 py-3.5 border border-[#013220]/30 hover:bg-[#013220]/5 text-[#013220] transition-all text-xs uppercase tracking-[0.22em] font-medium cursor-pointer rounded-xs"
-                >
-                  Join Family List
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6">
-              <div
-                onClick={onNavigateKids}
-                className="relative bg-white border border-[#E8E1D5] p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group cursor-pointer"
-              >
-                <div className="aspect-[16/9] w-full overflow-hidden rounded-xs relative">
-                  <img
-                    src={getAssetPath('assets/kids/ikla-kids-core-collection-hero.webp')}
-                    alt="Four children wearing coordinated IKLA Kids sweatsuit essentials in a warm architectural studio"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-2xs border border-[#D4AF57]/40">
-                    <span className="text-[10px] uppercase tracking-widest text-[#D4AF57] font-mono">
-                      Ages 4Y — 14Y
-                    </span>
-                  </div>
-                </div>
-                <div className="p-3 bg-[#FAF7F2] border-t border-[#EAE5DC] mt-2 rounded-xs flex items-center justify-between">
-                  <span className="text-[11px] text-[#555A64] font-light font-manrope">
-                    The First Inheritance · Core Collection
-                  </span>
-                  <span className="text-[10px] text-[#013220] uppercase tracking-widest font-semibold flex items-center gap-1">
-                    Enter Kids <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 6. GRIFFIN EDITION TEASER: griffin-private-commissions-hero.webp */}
-      {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#0A0C0B] text-white border-b border-neutral-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 order-2 lg:order-1">
-              <div
-                onClick={onNavigateGriffin}
-                className="relative bg-[#0F1210] border border-[#C5A869]/30 p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group cursor-pointer"
-              >
-                <div className="aspect-[16/9] w-full overflow-hidden rounded-xs relative bg-[#060708]">
-                  <img
-                    src={getAssetPath('assets/griffin/griffin-private-commissions-hero.webp')}
-                    alt="Dark IKLA Maison commission atelier with a griffin medallion and bespoke mobility concepts"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 rounded-2xs border border-[#C5A869]/40">
-                    <span className="text-[9px] uppercase tracking-widest text-[#C5A869] font-mono">
-                      Private Commission Program
-                    </span>
-                  </div>
-                </div>
-                <div className="p-3 bg-[#131714] border-t border-neutral-800 mt-2 rounded-xs flex items-center justify-between">
-                  <span className="text-[11px] text-neutral-400 font-light font-manrope">
-                    Mobility · Maritime · Residence · Aviation
-                  </span>
-                  <span className="text-[10px] text-[#C5A869] uppercase tracking-widest font-semibold flex items-center gap-1">
-                    Discover Griffin <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-6 lg:pl-6 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#C5A869]/10 border border-[#C5A869]/30 text-[#C5A869] text-[10px] uppercase tracking-[0.28em] font-medium rounded-xs">
-                <span>IKLA MAISON · GRIFFIN EDITION</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white leading-tight">
-                One Standard. Every Environment.
-              </h2>
-
-              <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope">
-                A private commission program extending the language of the Maison into mobility, residence, maritime, and aviation. Bespoke cabin studies, owner environments, and complete spatial sanctuaries.
-              </p>
-
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={onNavigateGriffin}
-                  className="px-7 py-3.5 bg-[#C5A869] hover:bg-[#D8BE82] text-black transition-all text-xs uppercase tracking-[0.22em] font-semibold cursor-pointer rounded-xs shadow-2xl flex items-center gap-2"
-                >
-                  <span>Discover Griffin Edition</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-                <span className="text-[11px] text-neutral-400 font-mono">
-                  Concept commissions presented by invitation.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 6.5 IKLA MAISON · PRIVATE APPOINTMENTS PREVIEW */}
-      {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#0A0B0D] text-white border-b border-neutral-900 relative overflow-hidden">
-        {/* Subtle Walnut / Gold Ambient Glow */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#4A3728]/25 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#0F2E22]/30 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto space-y-12 relative z-10">
-          {/* Section Header */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 border-b border-white/10">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-[#0F2E22]/60 border border-[#C5A869]/40 text-[#C5A869] text-[10px] uppercase tracking-[0.3em] font-medium rounded-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C5A869] animate-pulse" />
-                <span>IKLA Maison · Private Appointments</span>
-              </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white tracking-tight leading-none">
-                Restrained Accessories & Travel Rituals
-              </h2>
-              <p className="text-xs sm:text-sm text-neutral-300 font-light font-manrope leading-relaxed">
-                A disciplined suite of private appointments and travel rituals conceived for clients who move between architectural spaces, private aviation, and ceremonial evenings with quiet poise. Available exclusively by confidential request.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-3 shrink-0">
-              <button
-                onClick={onNavigateAppointments}
-                className="px-7 py-3.5 bg-[#C5A869] hover:bg-[#D8BE82] text-black transition-all text-xs uppercase tracking-[0.22em] font-semibold cursor-pointer rounded-xs shadow-2xl flex items-center gap-2"
-              >
-                <span>Explore the Appointments</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Exactly One 16:9 Editorial Banner */}
-          <div
-            onClick={onNavigateAppointments}
-            className="relative bg-[#0F1210] border border-[#C5A869]/30 p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group cursor-pointer"
-          >
-            <div className="aspect-[16/9] w-full max-h-[460px] overflow-hidden rounded-xs relative bg-[#060708]">
-              <img
-                src={getAssetPath('assets/appointments/ikla-appointments-editorial-banner.webp')}
-                alt="Refined IKLA Maison accessories arranged across a dark walnut desk in a private appointments salon"
-                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 filter brightness-[0.92]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
-              <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div className="max-w-xl">
-                  <span className="text-[9px] uppercase tracking-[0.3em] text-[#C5A869] font-mono block mb-1">
-                    Private Salon Study
-                  </span>
-                  <h3 className="text-xl sm:text-3xl font-cormorant font-light text-white leading-snug">
-                    Eight Ceremonial Objects · Two Editorial Groupings
-                  </h3>
-                </div>
-                <span className="text-xs uppercase tracking-widest text-[#C5A869] font-medium flex items-center gap-1">
-                  Enter Collection <ArrowRight className="w-3.5 h-3.5" />
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Exactly Three Product Cards */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] uppercase tracking-[0.28em] text-[#C5A869] font-mono">
-                Collection Preview · 3 of 8 Objects
-              </span>
-              <button
-                onClick={onNavigateAppointments}
-                className="text-xs uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1"
-              >
-                <span>View Complete Collection (8)</span>
-                <ChevronRight className="w-3 h-3" />
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {previewAppointmentsProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onSelectProduct={onSelectProduct}
-                  onSelectBrand={onSelectBrand}
-                  onOpenInquiry={handleOpenInquiry}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 7. MAISON EDITORIAL INTERLUDE: 3 MONOCHROME ASSETS */}
-      {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#121316] text-white border-b border-neutral-800">
+      <section id="lifestyle-preview" className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F6F3EC] border-b border-[#E2DDD3]">
         <div className="max-w-7xl mx-auto space-y-12">
-          {/* Interlude Header */}
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#D4AF57] font-semibold block">
-              Maison Editorial
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-white">
-              The Architecture of Form
-            </h2>
-            <p className="text-xs sm:text-sm text-neutral-400 font-light font-manrope leading-relaxed">
-              Monochrome studies of silence, stone, and structure. Exploring the dialogue between tailored silhouettes and monolithic architectural volumes.
-            </p>
-          </div>
-
-          {/* Wide Gallery Banner */}
-          <div className="relative bg-[#1A1C20] border border-neutral-800 p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group">
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-xs relative">
-              <img
-                src={getAssetPath('assets/editorial/ikla-monochrome-house-editorial-banner.webp')}
-                alt="Four models in refined IKLA Maison essentials photographed in a monochrome stone gallery"
-                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 max-w-xl text-left">
-                <span className="text-[9px] uppercase tracking-[0.3em] text-[#D4AF57] font-mono block mb-1">
-                  Atelier Narrative
-                </span>
-                <h3 className="text-xl sm:text-3xl font-cormorant font-light text-white leading-snug">
-                  Four Disciplines · One Architectural Standard
-                </h3>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#D8D2C4]">
+            <div className="max-w-2xl space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#DDD7CB] text-[#8C6D3F] text-[10px] uppercase tracking-[0.25em] font-semibold rounded-xs shadow-2xs">
+                <span>Lifestyle & Personal Rituals</span>
               </div>
-            </div>
-          </div>
-
-          {/* Two Portrait Editorial Tiles */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Menswear Portrait Tile */}
-            <div className="bg-[#1A1C20] border border-neutral-800 p-4 rounded-xs shadow-xl flex flex-col justify-between group">
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-xs relative mb-4 bg-black">
-                <img
-                  src={getAssetPath('assets/editorial/ikla-monochrome-menswear-portrait.webp')}
-                  alt="Male model in a tailored black overcoat and cream knit on a stone staircase"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-[#D4AF57] font-mono block">
-                  Tailored Poise
-                </span>
-                <h4 className="text-xl font-cormorant text-white">
-                  Structured Wool & Architectural Knits
-                </h4>
-                <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
-                  Sculpted double-faced wool overcoats and heavyweight cream knitwear engineered for quiet presence.
-                </p>
-              </div>
-            </div>
-
-            {/* Accessories Portrait Tile */}
-            <div className="bg-[#1A1C20] border border-neutral-800 p-4 rounded-xs shadow-xl flex flex-col justify-between group">
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-xs relative mb-4 bg-black">
-                <img
-                  src={getAssetPath('assets/editorial/ikla-monochrome-accessories-portrait.webp')}
-                  alt="Woman in a sculptural black coat holding a structured IKLA handbag"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-[#D4AF57] font-mono block">
-                  Private Objects
-                </span>
-                <h4 className="text-xl font-cormorant text-white">
-                  Structured Leathercraft & Monolithic Hardware
-                </h4>
-                <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
-                  Top-handle handbags and bespoke leather travel goods crafted with invisible stitching and hand-buffed edges.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 8. LIFESTYLE & PRIVATE OBJECTS: BEYOND THE WARDROBE */}
-      {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#E5DFD5]">
-          <div>
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#8C6D3F] font-semibold block mb-2">
-              Beyond the Wardrobe
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
-              Living, Travel & Private Objects
-            </h2>
-          </div>
-          <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-md font-manrope mt-3 md:mt-0">
-            Private dining porcelain, bedroom textiles, desk accessories, and cabin leathercraft conceived to integrate seamlessly into intentional spaces.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-6 bg-white border border-[#DDD7CB] rounded-xs shadow-xs space-y-4">
-            <div className="aspect-[4/3] w-full overflow-hidden rounded-xs bg-[#F5F2EC]">
-              <img
-                src={getAssetPath('assets/vip-products/private-table-dinnerware-set.webp')}
-                alt="Private Table Dinnerware Set"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-mono block">Dining Salon</span>
-            <h3 className="text-xl font-cormorant text-[#111215]">Private Table Porcelain</h3>
-            <p className="text-xs text-[#50545E] font-light font-manrope">Twelve-piece bone china service rimmed in liquid-applied matte gold.</p>
-          </div>
-
-          <div className="p-6 bg-white border border-[#DDD7CB] rounded-xs shadow-xs space-y-4">
-            <div className="aspect-[4/3] w-full overflow-hidden rounded-xs bg-[#F5F2EC]">
-              <img
-                src={getAssetPath('assets/vip-products/signature-bedroom-textile-set.webp')}
-                alt="Signature Bedroom Textile Set"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-mono block">Private Residence</span>
-            <h3 className="text-xl font-cormorant text-[#111215]">Sanctuary Bedding Textiles</h3>
-            <p className="text-xs text-[#50545E] font-light font-manrope">800 thread-count Egyptian cotton sateen finished with double hemstitch.</p>
-          </div>
-
-          <div className="p-6 bg-white border border-[#DDD7CB] rounded-xs shadow-xs space-y-4">
-            <div className="aspect-[4/3] w-full overflow-hidden rounded-xs bg-[#F5F2EC]">
-              <img
-                src={getAssetPath('assets/vip-products/bespoke-cabin-travel-set.webp')}
-                alt="Bespoke Cabin Travel Set"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <span className="text-[10px] uppercase tracking-widest text-[#8C6D3F] font-mono block">Executive Mobility</span>
-            <h3 className="text-xl font-cormorant text-[#111215]">Bespoke Cabin Travel Set</h3>
-            <p className="text-xs text-[#50545E] font-light font-manrope">Full-grain calfskin luggage with aerospace aluminum framework.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 9. MY DRINK FAMILY CONNECTION & THREE-WAY ECOSYSTEM */}
-      {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#0D0F13] text-white border-y border-neutral-800">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#E26D35]/10 border border-[#E26D35]/30 text-[#E26D35] text-[10px] uppercase tracking-[0.28em] font-medium rounded-xs">
-                <span>Dynasty Universe · Beverage & Hospitality</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white leading-tight">
-                My Drink Family
+              <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215] leading-tight">
+                Beyond the Wardrobe.
               </h2>
-
-              <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed font-manrope">
-                Connecting beverage culture, sports leisure, barware, and clubhouse hospitality. Explore coordinated sportswear, crystal flutes, and poolside ritual objects.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a
-                  href="https://astronomy-refine-exact-adjustment.trycloudflare.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3.5 bg-[#E26D35] hover:bg-[#F07F48] text-white transition-all text-xs uppercase tracking-[0.2em] font-medium rounded-xs shadow-xl flex items-center gap-2"
-                >
-                  <span>Visit My Drink Family</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-
-                <a
-                  href="https://considerable-system-gif-poet.trycloudflare.com/preview/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3.5 border border-white/30 hover:bg-white/10 text-white transition-all text-xs uppercase tracking-[0.2em] font-medium rounded-xs flex items-center gap-2"
-                >
-                  <span>Open Family App</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6">
-              <div
-                onClick={() => onSelectBrand('my-drink-family')}
-                className="relative bg-[#151920] border border-neutral-800 p-3 sm:p-4 rounded-xs shadow-2xl overflow-hidden group cursor-pointer"
-              >
-                <div className="aspect-[16/9] w-full overflow-hidden rounded-xs relative">
-                  <img
-                    src={getAssetPath('assets/my-drink-family/hero-editorial-merch.webp')}
-                    alt="My Drink Family Editorial Merch"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-3 bg-[#0B0D10] border-t border-neutral-800 mt-2 rounded-xs flex items-center justify-between">
-                  <span className="text-[11px] text-neutral-400 font-light font-manrope">
-                    Wear the Family · Live the Ritual
-                  </span>
-                  <span className="text-[10px] text-[#E26D35] uppercase tracking-widest font-semibold flex items-center gap-1">
-                    Explore MDF Atelier <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 10. IKLA WATER HOSPITALITY FEATURE */}
-      {/* ========================================================================= */}
-      <section className="py-24 px-6 sm:px-8 lg:px-12 bg-[#F5F8F9] border-b border-[#CADCE0]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="aspect-[16/9] w-full overflow-hidden rounded-xs bg-[#EAF2F4] border border-[#CADCE0] shadow-xl">
-                <img
-                  src={getAssetPath('assets/campaigns/01-ready-to-use/ikla-water/ikla-water-dining-table.jpg')}
-                  alt="IKLA Water sculptural bottle beside crystal glassware on a formal dining table"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#5E8896]/10 border border-[#5E8896]/30 text-[#5E8896] text-[10px] uppercase tracking-[0.28em] font-medium rounded-xs">
-                <span>Architectural Hydration</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#12171B]">
-                IKLA Water · Pure Mineral Stillness
-              </h2>
-
               <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-                Natural alpine mineral water presented in heavyweight reusable flint glass vessels. Conceived as an architectural component for intentional dining tables and hospitality environments.
+                The world of IKLA Maison extends into private living, hospitality, movement, travel, and daily ritual—each house expressed through objects designed for its own environment.
               </p>
-
-              <button
-                onClick={() => onSelectBrand('ikla-water')}
-                className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#5E8896] hover:text-[#12171B] transition-colors cursor-pointer"
-              >
-                <span>Explore IKLA Water</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ========================================================================= */}
-      {/* 11. PRIVATE CLIENT INVITATION */}
-      {/* ========================================================================= */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12 bg-[#080808] text-white text-center border-t border-[#D4AF57]/30 relative overflow-hidden">
-        <div className="max-w-3xl mx-auto space-y-6 relative z-10">
-          <div className="w-12 h-12 rounded-full bg-[#D4AF57]/10 border border-[#D4AF57]/40 flex items-center justify-center mx-auto text-[#D4AF57]">
-            <Compass className="w-5 h-5" />
-          </div>
-
-          <span className="text-[10px] uppercase tracking-[0.35em] text-[#D4AF57] font-semibold block">
-            Private Client Directorate
-          </span>
-
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white leading-tight">
-            An Invitation to the Sanctuary
-          </h2>
-
-          <p className="text-xs sm:text-sm text-neutral-300 font-light max-w-xl mx-auto leading-relaxed font-manrope">
-            Connect directly with Maison concierges for private salon appointments, bespoke commission inquiries, and advance capsule allocations.
-          </p>
-
-          <div className="pt-4">
             <button
-              onClick={() => handleOpenInquiry()}
-              className="px-8 py-4 bg-[#D4AF57] hover:bg-[#E5BF67] text-black text-xs uppercase tracking-[0.22em] font-semibold rounded-xs shadow-2xl transition-all cursor-pointer inline-flex items-center gap-2"
+              onClick={() => {
+                window.location.hash = '/collection#beyond-the-wardrobe';
+              }}
+              className="px-6 py-3.5 bg-[#111215] text-white hover:bg-neutral-800 text-xs uppercase tracking-widest font-semibold rounded-xs transition-colors cursor-pointer flex items-center gap-2 shrink-0 self-start md:self-auto shadow-md"
             >
-              <span>Request Private Client Introduction</span>
+              <span>Explore Lifestyle Collections</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
+
+          {/* Exactly 3 Featured Collection Cards as instructed: 1. IKLA Maison Home & Living, 2. MDF Hospitality, 3. WNNR Travel */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 1. IKLA Maison Home & Living */}
+            <div
+              onClick={() => {
+                window.location.hash = '/brand/ikla-maison#home-living';
+              }}
+              className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                  <CampaignImage
+                    src="assets/accessories/ikla-maison/ikla-maison-bedroom-collection.webp"
+                    alt="IKLA Maison bedroom collection featuring bedding, pillows, throws, slippers, a sleep mask, candle, and leather valet tray."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
+                      Maison Living
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                      Preview
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                    The Maison, At Home.
+                  </h3>
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Private rituals, considered materials, and quiet comfort—an extension of IKLA Maison beyond the wardrobe.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#8C6D3F] group-hover:text-[#111215]">
+                <span>Discover Home & Living</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+
+            {/* 2. My Drink Family Hospitality */}
+            <div
+              onClick={() => {
+                window.location.hash = '/brand/my-drink-family#hospitality';
+              }}
+              className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                  <CampaignImage
+                    src="assets/accessories/my-drink-family/my-drink-family-glassware-barware.webp"
+                    alt="My Drink Family glassware and barware suite featuring crystal coupes, champagne flutes, rocks glasses, cocktail shaker, jigger, strainer, and gold serving tray."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#E06D38] font-semibold">
+                      Hospitality Universe
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                      Preview
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                    The Art of the Serve.
+                  </h3>
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Objects designed for gathering—across the bar, beside the pool, and throughout the seventeen-house hospitality universe.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#E06D38] group-hover:text-[#111215]">
+                <span>Discover Hospitality</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+
+            {/* 3. WNNR Executive Travel */}
+            <div
+              onClick={() => {
+                window.location.hash = '/brand/wnnr#executive-travel';
+              }}
+              className="bg-white border border-[#DDD7CB] hover:border-[#111215] rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                <div className="overflow-hidden aspect-[16/9] w-full bg-neutral-900">
+                  <CampaignImage
+                    src="assets/accessories/wnnr/wnnr-executive-travel.webp"
+                    alt="WNNR executive travel and everyday-carry collection featuring obsidian leather totes, weekender duffels, executive backpacks, headwear, card holders, and discipline travel accessories."
+                    aspectRatio="16/9"
+                    position="center center"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A869] font-semibold">
+                      WIN WITHIN
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                      Preview
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-cormorant font-normal text-[#111215] group-hover:text-black">
+                    Prepared to Win.
+                  </h3>
+                  <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
+                    Executive travel and everyday-carry objects built around discipline, readiness, and the victory that begins within.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#C5A869] group-hover:text-[#111215]">
+                <span>Discover Executive Travel</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 12. THREE-WAY DYNASTY ECOSYSTEM */}
+      {/* 12. PRESERVED COLLECTIVE: IKLA WATER EXTENSION (OBJECT-FIT: CONTAIN) */}
       {/* ========================================================================= */}
-      <section id="dynasty-ecosystem-section" className="py-24 px-6 sm:px-8 lg:px-12 bg-[#0C0E11] text-white border-t border-[#C8A97E]/30 relative overflow-hidden">
-        {/* Subtle Ambient Background Glow */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C8A97E]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#E26D35]/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto space-y-12 relative z-10">
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-[#C8A97E]/30 text-[#DFBF95] text-[10px] uppercase tracking-[0.3em] font-medium rounded-xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#DFBF95] animate-pulse" />
-              <span>Dynasty Ecosystem · Connected Properties</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-white tracking-tight">
-              Three Sovereign Expressions
+      <section className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#CADCE0]">
+          <div>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#5E8896] font-semibold block mb-2">
+              Maison Extension
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
+              IKLA Water — Heavyweight Flint Glass Decanters
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-300 font-light font-manrope leading-relaxed">
-              Explore the complete ecosystem uniting master couture fashion, international beverage hospitality, and the private digital member portal.
-            </p>
+          </div>
+          <button
+            onClick={() => onSelectBrand('ikla-water')}
+            className="text-xs uppercase tracking-widest text-[#5E8896] hover:text-[#1A2830] font-semibold cursor-pointer flex items-center gap-1 mt-4 md:mt-0"
+          >
+            <span>View Water Archive</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm">
+            <CampaignImage
+              src={waterDiningAsset?.url || waterDiningAsset?.file}
+              alt="IKLA Water on dining table"
+              aspectRatio="4/3"
+              position="center 40%"
+              className="rounded-xs w-full mb-3"
+            />
+            <h3 className="text-base font-cormorant font-normal text-[#111215]">The Dining Table Setting</h3>
+            <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">Refined mineral hydration designed for fine dining salon settings.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Property 1: IKLA Maison */}
-            <div className="bg-[#14171D] border border-white/10 hover:border-[#C8A97E]/50 p-6 sm:p-8 rounded-xs transition-all duration-300 flex flex-col justify-between group">
-              <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xs bg-[#C8A97E]/10 border border-[#C8A97E]/30 flex items-center justify-center text-[#C8A97E] text-xs font-mono font-bold">
-                  01
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#DFBF95] font-mono block">
-                    Current Property · Master House
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-cormorant font-normal text-white mt-1">
-                    IKLA Maison
-                  </h3>
-                </div>
-                <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
-                  The master house of architectural tailoring, luxury knits, private commissions, and transcontinental leisure.
-                </p>
-              </div>
+          <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm">
+            <CampaignImage
+              src={waterPedestalAsset?.url || waterPedestalAsset?.file}
+              alt="IKLA Water on architectural pedestal"
+              aspectRatio="4/3"
+              position="center"
+              className="rounded-xs w-full mb-3"
+            />
+            <h3 className="text-base font-cormorant font-normal text-[#111215]">Gallery Pedestal Installation</h3>
+            <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">Sculptural vessels displayed as architectural objects.</p>
+          </div>
 
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#DFBF95]">
-                <span className="text-[11px] font-mono text-neutral-400">Active Sanctum</span>
-                <span className="w-2 h-2 rounded-full bg-[#DFBF95]" />
-              </div>
+          <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm">
+            <div className="aspect-[4/3] w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-3 mb-3 flex items-center justify-center">
+              <CampaignImage
+                src={waterRoundedAsset?.url || waterRoundedAsset?.file}
+                alt="Rounded flint glass decanter"
+                aspectRatio="4/3"
+                fit="contain"
+                className="w-full h-full"
+              />
             </div>
+            <h3 className="text-base font-cormorant font-normal text-[#111215]">Rounded Decanter Profile</h3>
+            <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">Soft curved shoulder silhouette in heavyweight reusable flint glass.</p>
+          </div>
 
-            {/* Property 2: My Drink Family Website */}
-            <a
-              href={ECOSYSTEM_CONFIG.myDrinkFamilySiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit the official My Drink Family website (opens in new tab)"
-              className="bg-[#14171D] border border-white/10 hover:border-[#E26D35]/50 p-6 sm:p-8 rounded-xs transition-all duration-300 flex flex-col justify-between group cursor-pointer shadow-lg hover:shadow-2xl"
-            >
-              <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xs bg-[#E26D35]/10 border border-[#E26D35]/30 flex items-center justify-center text-[#E26D35] text-xs font-mono font-bold">
-                  02
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#E26D35] font-mono block">
-                    Hospitality Universe · Cloudflare Verified
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-cormorant font-normal text-white mt-1 flex items-center gap-2">
-                    <span>My Drink Family</span>
-                    <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors" />
-                  </h3>
-                </div>
-                <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
-                  The celebrated beverage portfolio, five signature flavor houses, cocktail lounges, and event hospitality.
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#E26D35] group-hover:text-white transition-colors">
-                <span>Visit Universe</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </a>
-
-            {/* Property 3: My Drink Family App */}
-            <a
-              href={ECOSYSTEM_CONFIG.myDrinkFamilyAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open the My Drink Family member portal app (opens in new tab)"
-              className="bg-[#14171D] border border-white/10 hover:border-[#DFBF95]/50 p-6 sm:p-8 rounded-xs transition-all duration-300 flex flex-col justify-between group cursor-pointer shadow-lg hover:shadow-2xl"
-            >
-              <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xs bg-white/10 border border-white/20 flex items-center justify-center text-white text-xs font-mono font-bold">
-                  03
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#DFBF95] font-mono block">
-                    Member Experience Portal · Cloudflare Verified
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-cormorant font-normal text-white mt-1 flex items-center gap-2">
-                    <span>MDF Member App</span>
-                    <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors" />
-                  </h3>
-                </div>
-                <p className="text-xs text-neutral-400 font-light font-manrope leading-relaxed">
-                  The private digital application for member login, secret tasting reservations, bottle allocations, and rewards.
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#DFBF95] group-hover:text-white transition-colors">
-                <span>Launch App</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </a>
+          <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm">
+            <div className="aspect-[4/3] w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-3 mb-3 flex items-center justify-center">
+              <CampaignImage
+                src={waterCylinderAsset?.url || waterCylinderAsset?.file}
+                alt="Monolithic cylinder vessel"
+                aspectRatio="4/3"
+                fit="contain"
+                className="w-full h-full"
+              />
+            </div>
+            <h3 className="text-base font-cormorant font-normal text-[#111215]">Monolithic Cylinder Profile</h3>
+            <p className="text-xs text-[#555A64] font-light mt-1 font-manrope">Slender architectural cylinder with weighted crystal glass base.</p>
           </div>
         </div>
       </section>
 
-      {/* VIP Inquiry Modal */}
-      <VIPInquiryModal
-        isOpen={inquiryModalOpen}
-        onClose={handleCloseInquiry}
-        product={inquiryProduct}
-      />
+      {/* ========================================================================= */}
+      {/* 13. PRIVATE WORLDS: KIDS + GRIFFIN */}
+      {/* ========================================================================= */}
+      <section className="py-24 px-6 sm:px-8 lg:px-12 bg-[#0B0C0E] text-white border-y border-[#C8A97E]/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mb-12">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#C8A97E] font-semibold">The Maison Expands</span>
+            <h2 className="mt-3 text-4xl sm:text-6xl font-cormorant font-light">Core for the next generation. Finished by appointment. Commissioned beyond fashion.</h2>
+            <p className="mt-4 text-sm text-neutral-400 font-manrope font-light leading-relaxed">Three distinct expressions of IKLA Maison: children’s essentials, appointment-led finishing pieces, and the invitation-led Griffin Edition design vision.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: 'IKLA Kids', label: 'Core Collection Preview', image: 'assets/ikla-kids/ikla-kids-core-collection-hero.webp', href: '#/kids', alt: 'IKLA Kids core collection sweatsuits' },
+              { title: 'Private Appointments', label: 'Accessories by Request', image: 'assets/appointments/ikla-appointments-editorial-banner.webp', href: '#/appointments', alt: 'IKLA Maison private appointment accessories arranged in a dressing salon' },
+              { title: 'The Griffin Edition', label: 'Private Commission Concept', image: 'assets/griffin/griffin-private-commissions-hero.webp', href: '#/griffin', alt: 'Griffin Edition private commission concept' },
+            ].map((item) => (
+              <a key={item.title} href={item.href} className="group relative aspect-[4/3] overflow-hidden border border-white/15 hover:border-[#C8A97E]/70">
+                <img src={item.image} alt={item.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-7">
+                  <span className="text-[9px] uppercase tracking-[0.28em] text-[#D8B77D]">{item.label}</span>
+                  <div className="mt-2 flex items-end justify-between"><h3 className="text-3xl sm:text-4xl font-cormorant">{item.title}</h3><ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 14. PRIVATE COLLECTION HIGHLIGHTS */}
+      {/* ========================================================================= */}
+      <section className="py-24 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full border-t border-[#E5DFD5]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#E5DFD5]">
+          <div>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#8C6D3F] font-semibold block mb-2">
+              Featured Curations
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-normal text-[#111215]">
+              Foundational Silhouettes
+            </h2>
+          </div>
+          <button
+            onClick={onNavigateCollection}
+            className="text-xs uppercase tracking-widest text-[#8C6D3F] hover:text-[#111215] font-semibold cursor-pointer flex items-center gap-1 mt-4 md:mt-0"
+          >
+            <span>View All Curations</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          {featuredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onSelectProduct={onSelectProduct}
+              onSelectBrand={onSelectBrand}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

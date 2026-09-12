@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Clock, Phone, MapPin, Send, CheckCircle2, Shield } from 'lucide-react';
+import { Mail, Send, CheckCircle2, KeyRound } from 'lucide-react';
 import { BRAND_LIST } from '../data/brands';
 
 export default function ContactPage({ onNavigateHome }) {
@@ -13,13 +13,12 @@ export default function ContactPage({ onNavigateHome }) {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [inquiryCode, setInquiryCode] = useState('');
-
   const handleSubmit = (e) => {
     if (e && typeof e.preventDefault === 'function') e.preventDefault();
     if (formData.name && formData.email && formData.message) {
-      const code = 'INQ-' + Math.floor(100000 + Math.random() * 900000);
-      setInquiryCode(code);
+      const subject = encodeURIComponent(`${formData.subject} — ${formData.brand}`);
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nInterest: ${formData.brand}\n\n${formData.message}`);
+      window.location.href = `mailto:concierge@iklamaison.com?subject=${subject}&body=${body}`;
       setIsSubmitted(true);
     }
   };
@@ -48,7 +47,7 @@ export default function ContactPage({ onNavigateHome }) {
             Maison Client Concierge
           </h1>
           <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
-            Our private client relations team is at your disposal for wardrobe consultations, bespoke sizing requests, order tracking, and private appointment scheduling across all houses.
+            Request collection access, a private appointment, sizing guidance, or a commission conversation. Every request is reviewed individually.
           </p>
         </div>
       </section>
@@ -62,10 +61,10 @@ export default function ContactPage({ onNavigateHome }) {
                 Direct Relations
               </span>
               <h2 className="text-2xl font-cormorant font-normal text-[#111215] mb-4">
-                Atelier Communications
+                Direct Correspondence
               </h2>
               <p className="text-xs text-[#50545E] font-light leading-relaxed font-manrope">
-                Every inquiry is addressed directly by a dedicated Maison client associate within 4 business hours.
+                Private client requests are handled through direct email correspondence. No payment is collected through this website.
               </p>
             </div>
 
@@ -80,28 +79,13 @@ export default function ContactPage({ onNavigateHome }) {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-white border border-[#E2DDD3] shadow-xs rounded-xs">
-                <Clock className="w-5 h-5 text-[#8C6D3F] shrink-0 mt-0.5" />
+                <KeyRound className="w-5 h-5 text-[#8C6D3F] shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-[#111215] font-medium mb-1">Client Advisory Hours</div>
-                  <div className="text-[#50545E]">Monday – Friday: 08:00 – 20:00 CET</div>
-                  <div className="text-[#50545E]">Saturday: 10:00 – 18:00 CET</div>
-                  <div className="text-[#717682] text-[11px] mt-0.5">Sunday by private salon appointment only</div>
+                  <div className="text-[#111215] font-medium mb-1">Private Access</div>
+                  <div className="text-[#50545E]">Limited drops, special orders, and Griffin Edition commissions</div>
+                  <div className="text-[#717682] text-[11px] mt-0.5">Details are confirmed directly after review</div>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4 p-4 bg-white border border-[#E2DDD3] shadow-xs rounded-xs">
-                <MapPin className="w-5 h-5 text-[#8C6D3F] shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-[#111215] font-medium mb-1">Regional Salon Hubs</div>
-                  <div className="text-[#50545E]">Paris (75001) • Milan (20121) • New York (10021)</div>
-                  <div className="text-[#717682] text-[11px] mt-0.5">Private client fittings by invitation</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-4 bg-[#EBF4F0] border border-[#C2E0D4] text-xs text-[#0B4F37] flex items-center gap-3 rounded-xs font-manrope">
-              <Shield className="w-4 h-4 text-[#0B4F37] shrink-0" />
-              <span>All client communications are strictly confidential and encrypted.</span>
             </div>
           </div>
 
@@ -120,7 +104,7 @@ export default function ContactPage({ onNavigateHome }) {
                     Thank You, {formData.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#50545E] font-light max-w-md mx-auto leading-relaxed font-manrope">
-                    Your correspondence has been assigned inquiry manifest code <strong className="text-[#111215] font-mono">{inquiryCode}</strong>. A dedicated client advisor will reply to <strong className="text-[#111215]">{formData.email}</strong> shortly.
+                    Your email application should now be open with your request prepared for <strong className="text-[#111215]">concierge@iklamaison.com</strong>. Send it from your email application to complete the inquiry.
                   </p>
                 </div>
 
@@ -208,7 +192,9 @@ export default function ContactPage({ onNavigateHome }) {
                     >
                       <option value="Sizing & Wardrobe Advisory">Sizing & Wardrobe Advisory</option>
                       <option value="Private Salon Appointment">Private Salon Appointment</option>
-                      <option value="Order Dispatch & Tracking">Order Dispatch & Tracking</option>
+                      <option value="Private Allocation Request">Private Allocation Request</option>
+                      <option value="IKLA Kids Interest">IKLA Kids Interest</option>
+                      <option value="Griffin Edition Commission">Griffin Edition Commission</option>
                       <option value="Garment Archival Care">Garment Archival Care</option>
                       <option value="Press & Editorial Inquiries">Press & Editorial Inquiries</option>
                     </select>

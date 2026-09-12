@@ -1,12 +1,15 @@
-﻿# IKLA MAISON — Five Luxury Houses Digital Flagship
+﻿# IKLA MAISON — Digital Flagship
 
-An architectural, multi-brand digital collective uniting five distinct independent fashion houses under a singular high-editorial luxury experience:
+Internationally Known. Locally Accepted. A high-editorial digital flagship presenting IKLA Maison, distinct fashion expressions, concept extensions, and private-client collections:
 
 * **IKLA Maison** — Architectural elegance, structured tailoring, and quiet travertine luxury.
 * **KTSE** — Disciplined brutalist streetwear, heavyweight cottons, and monolithic silhouettes.
 * **Motéon** — Mediterranean resort leisure, fluid woven linens, and sunlit terracotta warmth.
 * **Moral Compass** — Directional precision, celestial slate/forest aesthetics, and astronomical navigation.
-* **My Drink Family** — Celebratory lounge, emerald velvet textures, and evening golden-hour silhouettes.
+* **WNNR** — Discipline-led essentials grounded in “Win Within.”
+* **IKLA Water** — A sculptural hospitality concept extension.
+
+My Drink Family is a separate connected hospitality platform and is not classified as an IKLA fashion house.
 
 ---
 
@@ -96,16 +99,9 @@ node tests/test_suite.js
 
 ## Deployment Guide
 
-### Vercel Deployment (Recommended)
+### GitHub Pages Deployment
 
-1. Import the repository `ikla-maison-web` into your [Vercel Dashboard](https://vercel.com/dashboard).
-2. Configure project settings:
-   * **Framework Preset**: `Vite`
-   * **Build Command**: `npm run build`
-   * **Output Directory**: `dist`
-   * **Install Command**: `npm install`
-   * **Node.js Version**: `18.x` or `20.x`
-3. Click **Deploy**.
+The repository includes a GitHub Pages workflow and Vite is configured for the `/ikla-maison-web/` base path. Publishing remains a separate, explicit action from local development.
 
 ---
 
@@ -119,10 +115,13 @@ ikla-maison-web/
 │       ├── ktse/
 │       ├── moteon/
 │       ├── moral-compass/
-│       └── my-drink-family/
+│       ├── my-drink-family/
+│       ├── ikla-kids/
+│       ├── griffin/
+│       └── private-collections/
 ├── src/
 │   ├── components/              # Reusable UI components (ProductCard, Navbar, CartDrawer, etc.)
-│   ├── context/                 # State providers (CartContext)
+│   ├── context/                 # Legacy local state providers
 │   ├── data/                    # Authoritative brand catalogues and product data
 │   ├── pages/                   # Core views (HomePage, BrandPage, CollectionPage, AboutPage, ContactPage)
 │   ├── App.jsx                  # Main routing & notification wrapper

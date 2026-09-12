@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, ShoppingBag, Search, ChevronDown, ArrowRight, X, Droplets, ExternalLink } from 'lucide-react';
-import { BRANDS, BRAND_LIST, FASHION_HOUSES, BEVERAGE_HOUSES } from '../data/brands';
-import { useCart } from '../context/CartContext';
-import { ECOSYSTEM_LINKS } from '../utils/ecosystemLinks';
-import { getAssetPath } from '../utils/assets.js';
+import { Menu, KeyRound, Search, ChevronDown, ArrowRight, X, Droplets, ExternalLink } from 'lucide-react';
+import { BRANDS, FASHION_HOUSES } from '../data/brands';
+import { EXTERNAL_LINKS } from '../data/externalLinks';
 
 export default function Navbar({
   currentView,
@@ -13,7 +11,6 @@ export default function Navbar({
   searchQuery,
   onSearchChange,
 }) {
-  const { totalItems, openCart } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBrandsDropdownOpen, setIsBrandsDropdownOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -34,13 +31,9 @@ export default function Navbar({
       {/* Top Luxury Announcement Bar */}
       <div className="bg-[#07080a] text-neutral-400 border-b border-neutral-800/80 py-2 px-4 text-center text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-light flex items-center justify-center gap-3">
         <span className="hidden sm:inline text-[#C8A97E]">•</span>
-        {currentView === 'appointments' ? (
-          <span>Private Salon Appointments · By Confidential Request Only</span>
-        ) : (
-          <span>Complimentary White-Glove Shipping On Orders Over $350</span>
-        )}
+        <span>Private Collections · Access by Request</span>
         <span className="hidden sm:inline text-[#C8A97E]">•</span>
-        <span className="hidden md:inline text-neutral-300">Independent Houses · One Disciplined Maison</span>
+        <span className="hidden md:inline text-neutral-300">Internationally Known · Locally Accepted</span>
         <span className="hidden md:inline text-[#C8A97E]">•</span>
       </div>
 
@@ -79,6 +72,8 @@ export default function Navbar({
               <button
                 onClick={() => setIsBrandsDropdownOpen((prev) => !prev)}
                 onMouseEnter={() => setIsBrandsDropdownOpen(true)}
+                aria-expanded={isBrandsDropdownOpen}
+                aria-haspopup="menu"
                 className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-neutral-300 hover:text-[#C8A97E] py-2 transition-colors cursor-pointer group"
               >
                 <span>The Houses</span>
@@ -96,7 +91,7 @@ export default function Navbar({
                     <div>
                       <div className="flex items-center justify-between px-2 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#C8A97E] font-medium">
                         <span>Fashion Houses</span>
-                        <span className="text-[9px] text-neutral-500 font-normal">5 Houses</span>
+                        <span className="text-[9px] text-neutral-500 font-normal">Maison Directory</span>
                       </div>
                       <div className="mt-2 space-y-1">
                         {FASHION_HOUSES.map((b) => (
@@ -111,7 +106,7 @@ export default function Navbar({
                             <div className="flex items-center gap-3">
                               <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1 group-hover:border-[#C8A97E]/50 transition-colors">
                                 <img
-                                  src={getAssetPath(b.logos.crestLight)}
+                                  src={b.logos.crestLight}
                                   alt=""
                                   className="w-full h-full object-contain filter brightness-110 group-hover:scale-105 transition-transform"
                                   loading="lazy"
@@ -134,168 +129,54 @@ export default function Navbar({
                       </div>
                     </div>
 
-                    {/* Column 2: Beverage Houses & Hospitality */}
+                    {/* Column 2: Extensions and connected platforms */}
                     <div>
                       <div className="flex items-center justify-between px-2 pb-2.5 border-b border-neutral-800 text-[9px] uppercase tracking-[0.3em] text-[#E26D35] font-medium">
-                        <span>Beverage Houses & Hospitality</span>
-                        <span className="text-[9px] text-neutral-500 font-normal">6 Houses</span>
+                        <span>Extensions & Connected Worlds</span>
+                        <span className="text-[9px] text-neutral-500 font-normal">Distinct Platforms</span>
                       </div>
-                      <div className="mt-2 space-y-1">
-                        {[BRANDS['my-drink-family'], ...BEVERAGE_HOUSES].map((b) => (
-                          <button
-                            key={b.id}
-                            onClick={() => {
-                              onNavigate('brand', b.id);
-                              setIsBrandsDropdownOpen(false);
-                            }}
-                            className="w-full text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-neutral-700/60 rounded-xs transition-all flex items-center justify-between group cursor-pointer"
-                          >
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 p-1 group-hover:border-[#E26D35]/50 transition-colors">
-                                <img
-                                  src={getAssetPath(b.logos.crestLight)}
-                                  alt=""
-                                  className="w-full h-full object-contain filter brightness-110 group-hover:scale-105 transition-transform"
-                                  loading="lazy"
-                                />
-                              </div>
-                              <div>
-                                <div className="text-xs font-medium text-white group-hover:text-[#E26D35] transition-colors tracking-[0.06em]">
-                                  {b.name}
-                                </div>
-                                <div className="text-[10px] text-neutral-400 font-light truncate max-w-[220px]">
-                                  {b.tagline}
-                                </div>
-                              </div>
-                            </div>
-                            <span className="text-[10px] text-neutral-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1">
-                              <ArrowRight className="w-3 h-3" />
-                            </span>
-                          </button>
-                        ))}
+                      <div className="mt-2 space-y-1 text-left">
+                        <button onClick={() => { onNavigate('brand', 'ikla-water'); setIsBrandsDropdownOpen(false); }} className="w-full p-3 hover:bg-white/[0.04] border border-transparent hover:border-[#5E8896]/40 flex items-center gap-3">
+                          <Droplets className="w-5 h-5 text-[#5E8896]" />
+                          <span><strong className="block text-xs text-white">IKLA Water</strong><span className="text-[10px] text-neutral-400">Maison concept extension</span></span>
+                        </button>
+                        <button onClick={() => { onNavigate('brand', 'my-drink-family'); setIsBrandsDropdownOpen(false); }} className="w-full p-3 hover:bg-white/[0.04] border border-transparent hover:border-[#E26D35]/40 flex items-center gap-3">
+                          <img src={BRANDS['my-drink-family'].logos.crestLight} alt="" className="w-5 h-5 object-contain" />
+                          <span><strong className="block text-xs text-white">My Drink Family</strong><span className="text-[10px] text-neutral-400">Connected hospitality platform</span></span>
+                        </button>
+                        <button onClick={() => { onNavigate('appointments'); setIsBrandsDropdownOpen(false); }} className="w-full p-3 hover:bg-white/[0.04] border border-transparent hover:border-[#C8A97E]/40 flex items-center gap-3">
+                          <KeyRound className="w-5 h-5 text-[#C8A97E]" />
+                          <span><strong className="block text-xs text-white">Private Appointments</strong><span className="text-[10px] text-neutral-400">Accessories by confidential request</span></span>
+                        </button>
+                        <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="w-full p-3 hover:bg-white/[0.04] flex items-center justify-between text-xs text-neutral-300 hover:text-white">
+                          Visit My Drink Family <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                        <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="w-full p-3 hover:bg-white/[0.04] flex items-center justify-between text-xs text-neutral-300 hover:text-white">
+                          Open My Drink Family App <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
                       </div>
                     </div>
                   </div>
 
-                  {/* Extension Programs: IKLA Kids, Griffin Edition, Private Appointments, IKLA Water */}
-                  <div className="pt-3 border-t border-neutral-800/80 mt-3 grid grid-cols-4 gap-2.5">
-                    <button
-                      onClick={() => {
-                        onNavigate('kids');
-                        setIsBrandsDropdownOpen(false);
-                      }}
-                      className="text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#013220]/60 rounded-xs transition-all flex items-center gap-2.5 group cursor-pointer"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-[#013220]/40 border border-[#013220] flex items-center justify-center shrink-0 text-[#D4AF57] text-[10px] font-bold">
-                        K
-                      </div>
-                      <div>
-                        <div className="text-xs font-medium text-white group-hover:text-[#D4AF57] transition-colors">
-                          IKLA Kids
-                        </div>
-                        <div className="text-[9px] text-neutral-400 font-light truncate">
-                          The First Inheritance
-                        </div>
-                      </div>
-                    </button>
-
-                    <button
-                      onClick={() => {
-                        onNavigate('griffin');
-                        setIsBrandsDropdownOpen(false);
-                      }}
-                      className="text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#C5A869]/60 rounded-xs transition-all flex items-center gap-2.5 group cursor-pointer"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-[#151916] border border-[#C5A869]/40 flex items-center justify-center shrink-0 text-[#C5A869] text-[10px] font-bold">
-                        G
-                      </div>
-                      <div>
-                        <div className="text-xs font-medium text-white group-hover:text-[#C5A869] transition-colors">
-                          Griffin Edition
-                        </div>
-                        <div className="text-[9px] text-neutral-400 font-light truncate">
-                          Private Commissions
-                        </div>
-                      </div>
-                    </button>
-
-                    <button
-                      onClick={() => {
-                        onNavigate('appointments');
-                        setIsBrandsDropdownOpen(false);
-                      }}
-                      className="text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#C5A869]/60 rounded-xs transition-all flex items-center gap-2.5 group cursor-pointer"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-[#0F2E22] border border-[#C5A869]/50 flex items-center justify-center shrink-0 text-[#C5A869] text-[10px] font-serif font-bold">
-                        A
-                      </div>
-                      <div>
-                        <div className="text-xs font-medium text-white group-hover:text-[#C5A869] transition-colors">
-                          Appointments
-                        </div>
-                        <div className="text-[9px] text-neutral-400 font-light truncate">
-                          Private Accessories
-                        </div>
-                      </div>
-                    </button>
-
-                    <button
-                      onClick={() => {
-                        onNavigate('brand', 'ikla-water');
-                        setIsBrandsDropdownOpen(false);
-                      }}
-                      className="text-left p-2 hover:bg-white/[0.04] border border-transparent hover:border-[#5E8896]/40 rounded-xs transition-all flex items-center gap-2.5 group cursor-pointer"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-[#1A2830] border border-[#5E8896]/40 flex items-center justify-center shrink-0 p-1 text-[#5E8896]">
-                        <Droplets className="w-3 h-3" />
-                      </div>
-                      <div>
-                        <div className="text-xs font-medium text-white group-hover:text-[#5E8896] transition-colors">
-                          IKLA Water
-                        </div>
-                        <div className="text-[9px] text-neutral-400 font-light truncate">
-                          Pure Mineral Stillness
-                        </div>
-                      </div>
-                    </button>
-                  </div>
                 </div>
               )}
             </div>
 
             {/* Desktop Direct Links */}
-            <div className="hidden lg:flex items-center gap-4 xl:gap-5 text-xs uppercase tracking-[0.16em] xl:tracking-[0.2em]">
+            <div className="hidden lg:flex items-center gap-6 text-xs uppercase tracking-[0.2em]">
               <button
                 onClick={() => onNavigate('collection')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
                   currentView === 'collection' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
-                Collection
+                Shop
               </button>
               <button
-                onClick={() => onNavigate('kids')}
-                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#013220] after:transition-all after:duration-300 ${
-                  currentView === 'kids' ? 'text-[#D4AF57] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
-                }`}
+                onClick={() => onNavigate('collection', null, 'Accessories')}
+                className="relative py-2 text-neutral-300 hover:text-white transition-colors cursor-pointer"
               >
-                IKLA Kids
-              </button>
-              <button
-                onClick={() => onNavigate('griffin')}
-                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C5A869] after:transition-all after:duration-300 ${
-                  currentView === 'griffin' ? 'text-[#C5A869] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
-                }`}
-              >
-                Griffin
-              </button>
-              <button
-                onClick={() => onNavigate('appointments')}
-                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C5A869] after:transition-all after:duration-300 ${
-                  currentView === 'appointments' ? 'text-[#C5A869] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
-                }`}
-              >
-                Private Appointments
+                Accessories
               </button>
               <button
                 onClick={() => onNavigate('about')}
@@ -306,12 +187,20 @@ export default function Navbar({
                 The Maison
               </button>
               <button
+                onClick={() => onNavigate('appointments')}
+                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
+                  currentView === 'appointments' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                }`}
+              >
+                Appointments
+              </button>
+              <button
                 onClick={() => onNavigate('contact')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
                   currentView === 'contact' ? 'text-[#C8A97E] after:w-full' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
                 }`}
               >
-                Contact
+                Concierge
               </button>
             </div>
           </div>
@@ -322,35 +211,12 @@ export default function Navbar({
               IKLA MAISON
             </span>
             <span className="block text-[8px] tracking-[0.45em] text-[#C8A97E] uppercase font-light -mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
-              The Houses & Collective
+              Internationally Known · Locally Accepted
             </span>
           </div>
 
-          {/* Right section: Ecosystem links, Search trigger & Shopping Bag */}
+          {/* Right section: Search trigger & Private Access */}
           <div className="flex items-center gap-3 sm:gap-5">
-            {/* Desktop Dynasty Ecosystem Links */}
-            <div className="hidden xl:flex items-center gap-4 text-[11px] uppercase tracking-[0.16em] text-neutral-400 border-r border-white/10 pr-5">
-              {ECOSYSTEM_LINKS.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  target={link.isExternal ? '_blank' : undefined}
-                  rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                  onClick={(e) => {
-                    if (!link.isExternal) {
-                      e.preventDefault();
-                      onNavigate('brand', 'my-drink-family');
-                    }
-                  }}
-                  className="hover:text-[#E06D38] transition-colors flex items-center gap-1.5 cursor-pointer font-light"
-                  aria-label={link.ariaLabel}
-                >
-                  <span>{link.label}</span>
-                  {link.isExternal && <ExternalLink className="w-2.5 h-2.5 opacity-70" />}
-                </a>
-              ))}
-            </div>
-
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen((prev) => !prev)}
@@ -360,18 +226,15 @@ export default function Navbar({
               {isSearchOpen ? <X className="w-4 h-4" /> : <Search className="w-4 h-4" />}
             </button>
 
-            {/* Shopping Bag Trigger */}
+            {/* Private client access trigger */}
             <button
-              onClick={openCart}
-              aria-label="Open luxury shopping bag"
+              onClick={() => onNavigate('contact')}
+              aria-label="Request private access"
               className="relative p-2 text-neutral-200 hover:text-white flex items-center gap-2 transition-colors cursor-pointer"
             >
-              <ShoppingBag className="w-4 h-4" />
+              <KeyRound className="w-4 h-4" />
               <span className="hidden sm:inline text-xs uppercase tracking-[0.15em] font-medium">
-                Bag
-              </span>
-              <span className="w-4 h-4 rounded-full bg-[#C8A97E] text-black text-[9px] font-bold flex items-center justify-center">
-                {totalItems}
+                Private Access
               </span>
             </button>
           </div>

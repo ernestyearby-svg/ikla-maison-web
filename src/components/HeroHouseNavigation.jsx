@@ -67,7 +67,7 @@ export const HERO_HOUSES = [
   {
     id: 'my-drink-family',
     name: 'My Drink Family',
-    badge: 'Clubhouse',
+    badge: 'Connected World',
     category: 'Celebration & Spirits',
     cta: 'Explore My Drink Family',
     image: 'assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg',
@@ -80,7 +80,7 @@ export default function HeroHouseNavigation({ onSelectBrand }) {
   return (
     <div
       id="hero-house-navigation"
-      aria-label="The Houses of IKLA Maison"
+      aria-label="IKLA Maison houses, extension, and connected world"
       className="w-full bg-[#0A0B0D]/90 backdrop-blur-md border-t border-[#C8A97E]/30 pt-3.5 pb-5 px-4 sm:px-6 lg:px-8 shadow-2xl"
     >
       <div className="max-w-7xl mx-auto">
@@ -89,11 +89,11 @@ export default function HeroHouseNavigation({ onSelectBrand }) {
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] animate-pulse" />
             <span className="text-[10px] uppercase tracking-[0.28em] font-medium text-white/90 font-manrope">
-              The Seven Houses & Extensions
+              Five Houses · One Extension · One Connected World
             </span>
           </div>
           <span className="hidden sm:inline text-[10px] font-mono text-[#C8A97E]/80 tracking-widest uppercase">
-            Direct Atelier Gateways · EST. 2026
+            Direct House Gateways
           </span>
           <span className="sm:hidden text-[9px] font-mono text-[#C8A97E]/80 tracking-wider uppercase">
             Swipe to Explore →
