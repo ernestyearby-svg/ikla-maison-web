@@ -4,6 +4,7 @@ import { BRAND_LIST, FASHION_HOUSES, BRANDS } from '../data/brands';
 import { PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import CampaignImage from '../components/CampaignImage';
+import HeroHouseNavigation from '../components/HeroHouseNavigation';
 import { getCampaignAsset } from '../data/campaigns';
 
 export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout }) {
@@ -83,7 +84,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
       {/* ========================================================================= */}
       {/* 1. FLAGSHIP HERO: ikla-maison-flagship-hero.webp */}
       {/* ========================================================================= */}
-      <section className="relative w-full min-h-[92vh] lg:min-h-[95vh] flex items-end justify-start overflow-hidden bg-[#0A0B0D]">
+      <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#0A0B0D]">
         <picture className="absolute inset-0 w-full h-full">
           <source
             media="(max-width: 768px)"
@@ -93,7 +94,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             src={flagshipHeroAsset?.url || flagshipHeroAsset?.file}
             alt={flagshipHeroAsset?.alt || 'Four adult models wearing refined IKLA Maison essentials in a sunlit travertine interior'}
             className="w-full h-full object-cover transition-transform duration-1000 scale-100 filter brightness-[0.78] contrast-[1.05]"
-            style={{ objectPosition: 'center center' }}
+            style={{ objectPosition: 'center 20%' }}
             loading="eager"
             fetchPriority="high"
           />
@@ -105,14 +106,14 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
         <div className="absolute inset-0 bg-radial from-transparent via-[#0A0B0D]/20 to-[#0A0B0D]/75 pointer-events-none" />
 
         {/* Hero Live Copy */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24 w-full">
-          <div className="max-w-2xl text-left space-y-6">
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.3em] font-medium backdrop-blur-md border border-[#C8A97E]/40 text-white/95 bg-black/60 shadow-xl">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-28 sm:pt-32 lg:pt-36 pb-6 w-full">
+          <div className="max-w-2xl text-left space-y-4 sm:space-y-5">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full text-[10px] uppercase tracking-[0.3em] font-medium backdrop-blur-md border border-[#C8A97E]/40 text-white/95 bg-black/60 shadow-xl">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C8A97E] animate-pulse" />
               <span>International Luxury Flagship</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-cormorant font-light text-white tracking-tight leading-[1.04]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white tracking-tight leading-[1.04]">
               I·K·L·A MAISON
             </h1>
 
@@ -120,17 +121,17 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
               INTERNATIONALLY KNOWN • LOCALLY ACCEPTED
             </p>
 
-            <p className="text-xs sm:text-base text-neutral-300 font-light leading-relaxed max-w-xl font-manrope">
+            <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed max-w-xl font-manrope">
               A curated federation of contemporary design viewpoints. Disciplined tailoring, heavyweight natural knits, resort silhouettes, and ceremonial hospitality under one singular standard.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <button
                 onClick={() => {
                   const el = document.getElementById('fashion-houses-gateway');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-8 py-4 bg-white text-black hover:bg-neutral-200 transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-xl flex items-center gap-2"
+                className="px-6 py-3 bg-white text-black hover:bg-neutral-200 transition-colors text-xs uppercase tracking-[0.2em] font-semibold cursor-pointer rounded-xs shadow-xl flex items-center gap-2"
               >
                 <span>Explore The Maison</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -138,12 +139,17 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
 
               <button
                 onClick={onNavigateCollection}
-                className="px-8 py-4 border border-white/40 text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-[0.2em] font-medium cursor-pointer rounded-xs backdrop-blur-xs"
+                className="px-6 py-3 border border-white/40 text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-[0.2em] font-medium cursor-pointer rounded-xs backdrop-blur-xs"
               >
                 Shop All Collections
               </button>
             </div>
           </div>
+        </div>
+
+        {/* 1.5. Docked Hero House Navigation along the lower edge */}
+        <div className="relative z-20 w-full mt-auto">
+          <HeroHouseNavigation onSelectBrand={onSelectBrand} />
         </div>
       </section>
 

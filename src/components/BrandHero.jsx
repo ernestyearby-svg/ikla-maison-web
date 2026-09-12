@@ -13,13 +13,13 @@ export default function BrandHero({ brand, onExploreCollection, onExploreEthos }
         <source
           media="(max-width: 768px)"
           srcSet={assets.heroMobile}
-          type="image/webp"
+          type={assets.heroMobile?.endsWith('.webp') ? 'image/webp' : undefined}
         />
         {/* Desktop source: wide panoramic hero */}
         <source
           media="(min-width: 769px)"
           srcSet={assets.heroDesktop}
-          type="image/webp"
+          type={assets.heroDesktop?.endsWith('.webp') ? 'image/webp' : undefined}
         />
         {/* Fallback image */}
         <img

@@ -609,7 +609,7 @@ export default function BrandPage({
                     Discipline Atelier Ethos
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-0.5 border border-[#C5A869]/40 text-[#C5A869] rounded-xs font-mono">
-                    Spoken: "Winner"
+                    Pronounced "winner"
                   </span>
                 </div>
                 <h2 className="text-4xl sm:text-6xl font-cormorant font-light tracking-tight leading-tight text-white">
@@ -816,7 +816,7 @@ export default function BrandPage({
         {/* F. IKLA WATER DEDICATED HOUSE EXTENSION SHOWCASE */}
         {/* ----------------------------------------------------------------------- */}
         {brand.id === 'ikla-water' && (
-          <div className="space-y-24 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+          <div className="space-y-20 py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
             <section className="bg-white border border-[#CADCE0] p-8 sm:p-12 rounded-xs shadow-md">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-5 space-y-6">
@@ -830,6 +830,11 @@ export default function BrandPage({
                   <p className="text-xs sm:text-sm text-[#50545E] font-light leading-relaxed font-manrope">
                     IKLA Water is conceived as an architectural extension of the IKLA Maison dining salon. Reusable flint glass bottles engineered with heavy monolithic bases, designed to elevate executive hospitality, residential tables, and gallery spaces.
                   </p>
+                  <div className="pt-2">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAFBFB] border border-[#CADCE0] rounded-xs text-xs font-mono text-[#5E8896]">
+                      <span>Zero-Waste · Reusable Flint Glass · Alpine Provenance</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="lg:col-span-7">
@@ -841,7 +846,82 @@ export default function BrandPage({
                       position="center 40%"
                       className="rounded-xs w-full"
                     />
+                    <div className="p-3 bg-white border-t border-[#E5EEF0] mt-2 text-center rounded-xs">
+                      <span className="text-xs text-[#555A64] font-manrope font-light">
+                        The Formal Dining Salon Setting · Flint Glass & Fine Crystal
+                      </span>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* The Sculptural Vessels Grid */}
+            <section className="space-y-8">
+              <div className="flex flex-col md:flex-row md:items-end justify-between pb-4 border-b border-[#CADCE0]">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#5E8896] font-semibold block mb-1">
+                    Vessel Architecture
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-cormorant font-normal text-[#111215]">
+                    Monolithic Glass Profiles
+                  </h3>
+                </div>
+                <p className="text-xs text-[#50545E] font-light max-w-md font-manrope mt-2 md:mt-0">
+                  Engineered with weighted crystal glass pedestals for tactile balance and formal table presence.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* 1. Rounded Decanter */}
+                <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm hover:shadow-md transition-shadow">
+                  <div className="aspect-[4/3] w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-3 mb-4 flex items-center justify-center">
+                    <CampaignImage
+                      src="assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-rounded-bottles.jpg"
+                      alt="Rounded flint glass decanter"
+                      aspectRatio="4/3"
+                      fit="contain"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <h4 className="text-lg font-cormorant font-normal text-[#111215]">Rounded Decanter Profile</h4>
+                  <p className="text-xs text-[#50545E] font-light mt-1 font-manrope">
+                    Soft curved shoulder silhouette cast in heavyweight reusable flint glass with polished stopper.
+                  </p>
+                </div>
+
+                {/* 2. Monolithic Cylinder */}
+                <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm hover:shadow-md transition-shadow">
+                  <div className="aspect-[4/3] w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-3 mb-4 flex items-center justify-center">
+                    <CampaignImage
+                      src="assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-cylinder-bottles.jpg"
+                      alt="Monolithic cylinder vessel"
+                      aspectRatio="4/3"
+                      fit="contain"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <h4 className="text-lg font-cormorant font-normal text-[#111215]">Monolithic Cylinder Profile</h4>
+                  <p className="text-xs text-[#50545E] font-light mt-1 font-manrope">
+                    Slender architectural cylinder with weighted base, designed for clean refrigeration storage and dining.
+                  </p>
+                </div>
+
+                {/* 3. Pedestal Gallery Trio */}
+                <div className="bg-white border border-[#CADCE0] p-4 rounded-xs shadow-sm hover:shadow-md transition-shadow">
+                  <div className="aspect-[4/3] w-full bg-[#FAFBFB] border border-[#E5EEF0] rounded-xs p-3 mb-4 flex items-center justify-center">
+                    <CampaignImage
+                      src="assets/campaigns/01-ready-to-use/ikla-water/ikla-water-trio-pedestal.jpg"
+                      alt="Three IKLA Water bottles on travertine pedestal"
+                      aspectRatio="4/3"
+                      fit="contain"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <h4 className="text-lg font-cormorant font-normal text-[#111215]">Travertine Pedestal Installation</h4>
+                  <p className="text-xs text-[#50545E] font-light mt-1 font-manrope">
+                    Sculptural vessels displayed as architectural objects in private residential galleries.
+                  </p>
                 </div>
               </div>
             </section>
