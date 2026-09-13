@@ -13,6 +13,7 @@ Round 2 · 2026-09-08 · INTERNAL · Founder review pending where stated.
 | IKLA-D07 | 2026-09-12 | My Drink Family remains separate but must be reachable from IKLA through its website and app links. | Presented as a connected hospitality platform, never counted as an IKLA fashion house. |
 | IKLA-D08 | 2026-09-12 | Public product pricing and instant checkout are replaced by private allocation, limited-drop, appointment, and direct-email pathways. | Matches founder direction for special order / waiting list / VIP access and removes unsupported transactional claims. |
 | IKLA-D09 | 2026-09-12 | IKLA Kids is a core master-house expression; Griffin Edition is an invitation-led future commission concept. | Neither is added to the fashion-house count. |
+| IKLA-D10 | 2026-09-13 | Founder authorized paired product-card presentation: item photography first, coordinated modeled look on hover for desktop and tap/swipe for mobile. | Implement only where a credible product-to-look pairing exists; retain unmatched objects and accessories as single-image cards. My Drink Family remains a separate connected platform. |
 
 Sources: preserved founder Round 2 request; Round 1 studio decision record; original implementation indexed with hashes. Dates refer to recorded instructions, not invented founding/launch dates. Append future decisions with scope, evidence, approval, affected versions and supersession; do not erase history.
 
