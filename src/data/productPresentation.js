@@ -20,24 +20,24 @@ const EXACT_STYLED_LOOKS = {
 // remain single-image cards so the interface never implies a false product match.
 const HOUSE_STYLED_LOOKS = {
   'ikla-maison': [
+    styled('campaigns/round-five/ikla-maison-complete-look.webp'),
     styled('lookbook/product-hover/ikla-maison-01.webp'),
-    styled('lookbook/product-hover/ikla-maison-02.webp'),
   ],
   ktse: [
+    styled('campaigns/round-five/ktse-complete-look.webp'),
     styled('lookbook/product-hover/ktse-01.webp'),
-    styled('lookbook/product-hover/ktse-02.webp'),
   ],
   moteon: [
+    styled('campaigns/round-five/moteon-complete-look.webp'),
     styled('lookbook/product-hover/moteon-01.webp'),
-    styled('lookbook/product-hover/moteon-02.webp'),
   ],
   'moral-compass': [
+    styled('campaigns/round-five/moral-compass-complete-look.webp'),
     styled('lookbook/product-hover/moral-compass-01.webp'),
-    styled('lookbook/product-hover/moral-compass-02.webp'),
   ],
   wnnr: [
+    styled('campaigns/round-five/wnnr-complete-look.webp'),
     styled('lookbook/product-hover/wnnr-01.webp'),
-    styled('lookbook/product-hover/wnnr-02.webp'),
   ],
   mymosa: [
     styled('lookbook/product-hover/mymosa-01.webp'),
@@ -62,8 +62,8 @@ const HOUSE_STYLED_LOOKS = {
 };
 
 const KIDS_STYLED_LOOKS = [
-  styled('lookbook/product-hover/ikla-kids-01.webp'),
-  styled('lookbook/product-hover/ikla-kids-02.webp'),
+  styled('kids/round-five/ikla-kids-athletic-look.webp'),
+  styled('kids/round-five/ikla-kids-dress-look.webp'),
 ];
 
 const APPAREL_CATEGORIES = new Set(['Tops', 'Bottoms', 'Outerwear', 'Sets']);

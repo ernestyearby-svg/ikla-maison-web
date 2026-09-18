@@ -1,3 +1,11 @@
+import { getAssetPath } from '../utils/assets.js';
+
+const ROUND_FIVE_PRIVATE_IMAGES = {
+  'bespoke-cabin-travel-set': 'assets/products/round-five/ikla-cabin-luggage-set.webp',
+  'signature-top-handle-handbag': 'assets/products/round-five/ikla-signature-handbag.webp',
+  'private-table-dinnerware-set': 'assets/products/round-five/ikla-limoges-dining-set.webp',
+};
+
 const maisonPrivate = [
   ['signature-evening-pajama-set', 'Signature Evening Pajama Set', 'Sets'],
   ['bespoke-cabin-travel-set', 'Bespoke Cabin Travel Set', 'Accessories'],
@@ -15,7 +23,7 @@ const maisonPrivate = [
   brandName: 'IKLA Maison',
   name,
   category,
-  image: `/assets/private-collections/${file}.webp`,
+  image: getAssetPath(ROUND_FIVE_PRIVATE_IMAGES[file] || `assets/private-collections/${file}.webp`),
   imageAlt: `${name}, IKLA Maison private collection presentation`,
   sizes: category === 'Sets' ? ['XS', 'S', 'M', 'L', 'XL'] : ['Private Configuration'],
   colors: [{ name: 'Maison Selection', hex: index % 2 ? '#141414' : '#E8DDC8' }],
@@ -42,7 +50,7 @@ const kids = [
   brandName: 'IKLA Kids',
   name,
   category,
-  image: `/assets/ikla-kids/${file}.webp`,
+  image: getAssetPath(`assets/ikla-kids/${file}.webp`),
   imageAlt: `${name}, IKLA Kids core collection presentation`,
   sizes: ['Child sizing by request'],
   colors: [{ name: 'Editorial Colorway', hex: '#173A2B' }],
@@ -57,4 +65,3 @@ const kids = [
 }));
 
 export const PRIVATE_PRODUCTS = [...maisonPrivate, ...kids];
-

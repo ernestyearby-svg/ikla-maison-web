@@ -24,7 +24,7 @@ export default function GriffinPage({ onNavigateHome, onNavigateCollection }) {
       id: 'automotive',
       title: 'Automotive · Bespoke Cabin Studies',
       domain: 'Mobility & Grand Touring',
-      image: 'assets/griffin/griffin-automotive-commission.webp',
+      image: 'assets/griffin/round-five/griffin-automotive-interior.webp',
       alt: 'Bespoke green leather grand touring interior with a gold griffin medallion and walnut veneers',
       narrative: 'Tailored grand touring interiors engineered in partnership with premier coachbuilders. Hand-selected aniline hides, bookmatched walnut veneers, and solid brass tactile switchgear.',
       attributes: ['Hand-stitched saddle leather', 'Custom griffin seal medallion', 'Acoustic micro-perforation']
@@ -33,7 +33,7 @@ export default function GriffinPage({ onNavigateHome, onNavigateCollection }) {
       id: 'maritime',
       title: "Maritime · Owner's Environments",
       domain: 'Superyacht & Naval Architecture',
-      image: 'assets/griffin/griffin-maritime-commission.webp',
+      image: 'assets/griffin/round-five/griffin-maritime-cockpit.webp',
       alt: "Bespoke superyacht owner's cabin with deep green textiles, brushed metal fixtures, and subtle griffin detailing",
       narrative: "Private suites and salon atmospheres for transoceanic vessels. Marine-grade climate-calibrated textiles, teak-inlaid joinery, and restrained architectural illumination.",
       attributes: ['Salt-resistant titanium hardware', 'Custom woven deep green cashmere blankets', 'Integrated hidden illumination']
@@ -51,7 +51,7 @@ export default function GriffinPage({ onNavigateHome, onNavigateCollection }) {
       id: 'aviation',
       title: 'Aviation · Private Cabin Concepts',
       domain: 'Long-Range Executive Aviation',
-      image: 'assets/griffin/griffin-residence-aviation-commission.webp',
+      image: 'assets/griffin/round-five/griffin-aviation-cabin.webp',
       alt: 'Private aircraft cabin and material study with restrained griffin detailing',
       narrative: 'Ultra-long-range cabin environments designed for sustained transcontinental composure. Weight-optimized natural fibers, whisper-soft leather seating, and ergonomic rest suites.',
       attributes: ['FAA/EASA certified luxury textiles', 'Custom executive workstation inlays', 'Low-emissivity ambient lighting']

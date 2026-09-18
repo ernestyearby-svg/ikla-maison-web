@@ -20,7 +20,7 @@ export default function KidsPage({ onSelectProduct, onNavigateHome, onNavigateCo
       category: 'Family Concierge',
       accessMode: 'Private Preview',
       houseName: 'IKLA Kids',
-      image: 'assets/kids/ikla-kids-core-collection-hero.webp'
+      image: 'assets/kids/round-five/ikla-kids-group-editorial.webp'
     });
     setInquiryModalOpen(true);
   };
@@ -38,7 +38,7 @@ export default function KidsPage({ onSelectProduct, onNavigateHome, onNavigateCo
       <section className="relative w-full min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#0D1612]">
         <div className="absolute inset-0 w-full h-full">
           <img
-            src={getAssetPath('assets/kids/ikla-kids-core-collection-hero.webp')}
+            src={getAssetPath('assets/kids/round-five/ikla-kids-group-editorial.webp')}
             alt="Four children wearing coordinated IKLA Kids sweatsuit essentials in a warm architectural studio"
             className="w-full h-full object-cover transition-transform duration-1000 scale-100 filter brightness-[0.82] contrast-[1.04]"
             style={{ objectPosition: 'center 25%' }}

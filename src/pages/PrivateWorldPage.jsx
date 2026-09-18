@@ -25,9 +25,9 @@ const WORLDS = {
     heroAlt: 'Griffin Edition private commission design vision',
     note: 'Commission concept · By private conversation',
     items: [
-      ['Automotive Commission', 'assets/griffin/griffin-automotive-commission.webp'],
-      ['Maritime Commission', 'assets/griffin/griffin-maritime-commission.webp'],
-      ['Residence & Aviation Study', 'assets/griffin/griffin-residence-aviation-commission.webp'],
+      ['Automotive Commission', 'assets/griffin/round-five/griffin-automotive-interior.webp'],
+      ['Maritime Commission', 'assets/griffin/round-five/griffin-maritime-cockpit.webp'],
+      ['Residence & Aviation Study', 'assets/griffin/round-five/griffin-aviation-cabin.webp'],
       ['Monochrome House Study', 'assets/editorial/ikla-monochrome-house-editorial-banner.webp'],
     ],
   },

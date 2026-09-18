@@ -296,6 +296,14 @@ export default function Navbar({
                 Shop
               </button>
               <button
+                onClick={() => onNavigate('kids')}
+                className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C8A97E] after:transition-all after:duration-300 ${
+                  currentView === 'kids' ? 'text-[#C8A97E] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'
+                }`}
+              >
+                Kids
+              </button>
+              <button
                 onClick={() => onNavigate('griffin')}
                 className={`relative py-2 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#D4A657] after:transition-all after:duration-300 ${
                   currentView === 'griffin' ? 'text-[#D4A657] after:w-full font-medium' : 'text-neutral-300 hover:text-white after:w-0 hover:after:w-full'

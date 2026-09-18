@@ -560,7 +560,7 @@ export const EXPANSION_PRODUCTS = [
     pathway: 'Griffin Edition',
     gender: 'Unisex',
     collection: 'Griffin Edition',
-    image: getAssetPath('assets/eyewear-insignia/04_ikla_griffin_aviation_frame.webp'),
+    image: getAssetPath('assets/products/round-five/griffin-aviation-eyewear.webp'),
     imageAlt: 'Griffin Aviation Frame with green gradient lenses, wing hinges, and leather-wrapped temples',
     sizes: ['Universal Frame Size'],
     colors: [
@@ -594,7 +594,7 @@ export const EXPANSION_PRODUCTS = [
     pathway: 'Griffin Edition',
     gender: 'Unisex',
     collection: 'Griffin Edition',
-    image: getAssetPath('assets/eyewear-insignia/05_ikla_griffin_heirloom_brooch.webp'),
+    image: getAssetPath('assets/products/round-five/griffin-heirloom-brooch.webp'),
     imageAlt: 'Griffin Heirloom Brooch in brushed champagne gold, black enamel, and deep-green tourmaline stone',
     sizes: ['Unique Piece'],
     colors: [
@@ -735,7 +735,7 @@ export const EXPANSION_PRODUCTS = [
     pathway: 'Footwear',
     gender: 'Men',
     collection: 'Formal Footwear',
-    image: getAssetPath('assets/footwear/formal/01_mens_imperial_wholecut_oxford.webp'),
+    image: getAssetPath('assets/products/round-five/ikla-imperial-wholecut-oxford.webp'),
     imageAlt: 'Imperial Wholecut Oxford in mirror-polished black calfskin with Maison Green undertone',
     sizes: ['40', '41', '42', '43', '44', '45', '46'],
     colors: [
@@ -769,7 +769,7 @@ export const EXPANSION_PRODUCTS = [
     pathway: 'Griffin Edition',
     gender: 'Men',
     collection: 'Griffin Edition',
-    image: getAssetPath('assets/footwear/formal/02_mens_griffin_evening_loafer.webp'),
+    image: getAssetPath('assets/products/round-five/griffin-evening-loafer.webp'),
     imageAlt: 'Griffin Evening Loafer in deep Maison Green cotton velvet with Crown Bridge hardware',
     sizes: ['40', '41', '42', '43', '44', '45', '46'],
     colors: [
@@ -803,7 +803,7 @@ export const EXPANSION_PRODUCTS = [
     pathway: 'Footwear',
     gender: 'Men',
     collection: 'Formal Footwear',
-    image: getAssetPath('assets/footwear/formal/03_mens_executive_chelsea_boot.webp'),
+    image: getAssetPath('assets/products/round-five/ikla-executive-chelsea-boot.webp'),
     imageAlt: 'Executive Chelsea Boot in black museum calf with green burnishing and fine gold welt',
     sizes: ['40', '41', '42', '43', '44', '45', '46'],
     colors: [

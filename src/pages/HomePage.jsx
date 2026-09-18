@@ -7,6 +7,7 @@ import CampaignImage from '../components/CampaignImage';
 import HeroHouseNavigation from '../components/HeroHouseNavigation';
 import { getCampaignAsset } from '../data/campaigns';
 import { WARDROBE_CAMPAIGN_LOOKS, EXPANSION_PRODUCTS } from '../data/expansionProducts';
+import { getAssetPath } from '../utils/assets.js';
 
 export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout, onNavigate }) {
   const [activeEditorialHouse, setActiveEditorialHouse] = useState('ikla-maison');
@@ -80,6 +81,27 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
 
   const currentEditorial = editorialLifestyleAssets[activeEditorialHouse] || editorialLifestyleAssets['ikla-maison'];
 
+  const flagshipEnvironments = [
+    {
+      title: 'The International Flagship',
+      eyebrow: 'Architecture · By Appointment',
+      image: getAssetPath('assets/campaigns/round-five/ikla-flagship-facade-twilight.webp'),
+      alt: 'IKLA Maison travertine flagship exterior illuminated at twilight',
+    },
+    {
+      title: 'The Private Salon',
+      eyebrow: 'Fittings · Private Client Relations',
+      image: getAssetPath('assets/campaigns/round-five/ikla-private-salon-fitting.webp'),
+      alt: 'Private IKLA Maison salon fitting in a sunlit travertine interior',
+    },
+    {
+      title: 'The Atelier Standard',
+      eyebrow: 'Handwork · Material Permanence',
+      image: getAssetPath('assets/campaigns/round-five/ikla-atelier-craft-detail.webp'),
+      alt: 'Master tailor hand finishing an IKLA Maison green evening jacket',
+    },
+  ];
+
   return (
     <div className="flex flex-col w-full bg-[#FAF7F2] text-[#16171A] overflow-hidden">
       {/* ========================================================================= */}
@@ -151,6 +173,45 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
         {/* 1.5. Docked Hero House Navigation along the lower edge */}
         <div className="relative z-20 w-full mt-auto">
           <HeroHouseNavigation onSelectBrand={onSelectBrand} onNavigate={onNavigate} />
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* FLAGSHIP ENVIRONMENTS: ARCHITECTURE, SALON, AND ATELIER */}
+      {/* ========================================================================= */}
+      <section className="py-24 px-6 sm:px-8 lg:px-12 bg-[#101311] text-white border-y border-[#C8A97E]/25">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-12">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#C8A97E] font-semibold block mb-3">
+              The Physical Maison
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-cormorant font-light tracking-[0.02em]">
+              Architecture Before Commerce
+            </h2>
+            <div className="mt-5 h-px w-40 bg-gradient-to-r from-[#C8A97E] via-[#DFBF95] to-transparent" />
+            <p className="mt-6 text-xs sm:text-sm text-neutral-300 font-light leading-relaxed max-w-2xl font-manrope">
+              The flagship, private salon, and atelier form one continuous standard—spaces designed for private introduction, considered fitting, and enduring craft.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {flagshipEnvironments.map((environment, index) => (
+              <article key={environment.title} className="group border border-white/15 bg-black/25 overflow-hidden rounded-xs">
+                <div className="aspect-[4/3] overflow-hidden bg-black">
+                  <img
+                    src={environment.image}
+                    alt={environment.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                </div>
+                <div className="p-5 border-t border-white/10">
+                  <span className="text-[9px] uppercase tracking-[0.25em] text-[#C8A97E]">{environment.eyebrow}</span>
+                  <h3 className="mt-2 text-xl font-cormorant font-light">{environment.title}</h3>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -439,7 +500,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             <div>
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#F2F6F3] mb-5 rounded-xs relative">
                 <img
-                  src="assets/ikla-kids/ikla-kids-core-collection-hero.webp"
+                  src={getAssetPath('assets/kids/round-five/ikla-kids-group-editorial.webp')}
                   alt="IKLA Kids core collection sweatsuits"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
@@ -594,19 +655,19 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
               {
                 title: 'Automotive Commission',
                 subtitle: 'Grand Touring Interior',
-                image: 'assets/griffin/griffin-automotive-commission.webp',
+                image: 'assets/griffin/round-five/griffin-automotive-interior.webp',
                 desc: 'Bespoke green leather grand touring interior with gold griffin medallion and walnut veneers.'
               },
               {
                 title: 'Maritime Commission',
                 subtitle: 'Superyacht Stateroom',
-                image: 'assets/griffin/griffin-maritime-commission.webp',
+                image: 'assets/griffin/round-five/griffin-maritime-cockpit.webp',
                 desc: 'Deep marine navy appointments, teak decking, brushed bronze hardware, and silk-wool throw.'
               },
               {
                 title: 'Residence & Aviation Study',
                 subtitle: 'Private Salons & Cabins',
-                image: 'assets/griffin/griffin-residence-aviation-commission.webp',
+                image: 'assets/griffin/round-five/griffin-aviation-cabin.webp',
                 desc: 'Architectural scale study translating the Maison insignia across private aircraft and residential salons.'
               }
             ].map((study, sIdx) => (
@@ -1365,12 +1426,12 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'IKLA Kids', label: 'Core Collection Preview', image: 'assets/ikla-kids/ikla-kids-core-collection-hero.webp', href: '#/kids', alt: 'IKLA Kids core collection sweatsuits' },
+              { title: 'IKLA Kids', label: 'Core Collection Preview', image: 'assets/kids/round-five/ikla-kids-group-editorial.webp', href: '#/kids', alt: 'IKLA Kids core collection sweatsuits' },
               { title: 'Private Appointments', label: 'Accessories by Request', image: 'assets/appointments/ikla-appointments-editorial-banner.webp', href: '#/appointments', alt: 'IKLA Maison private appointment accessories arranged in a dressing salon' },
               { title: 'The Griffin Edition', label: 'Private Commission Concept', image: 'assets/griffin/griffin-private-commissions-hero.webp', href: '#/griffin', alt: 'Griffin Edition private commission concept' },
             ].map((item) => (
               <a key={item.title} href={item.href} className="group relative aspect-[4/3] overflow-hidden border border-white/15 hover:border-[#C8A97E]/70">
-                <img src={item.image} alt={item.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={getAssetPath(item.image)} alt={item.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-7">
                   <span className="text-[9px] uppercase tracking-[0.28em] text-[#D8B77D]">{item.label}</span>

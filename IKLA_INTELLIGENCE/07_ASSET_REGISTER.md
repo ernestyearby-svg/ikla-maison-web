@@ -18,3 +18,9 @@ Sources: exact paths and SHA-256 in 06_SOURCE_OF_TRUTH_REGISTER.md / SOURCE_INDE
 - Source editorials remain preserved outside the production tree; no source image was overwritten.
 - Pairings are governed by `src/data/productPresentation.js`: exact wardrobe matches take priority, followed by house-specific apparel editorials. Unmatched footwear, objects, and accessories deliberately remain single-image cards.
 - The My Drink Family children’s ensemble was excluded from IKLA Kids presentation to preserve the founder-approved separation between IKLA Maison and My Drink Family.
+
+## 2026-09-18 Round Five production assets
+
+- 22 independent production assets are registered in `14_MASTER_NEW_ASSET_REGISTER.md`.
+- The batch adds flagship environments, five House complete looks, three IKLA Kids editorials, three Griffin commission studies, and eight product silhouettes.
+- All new website derivatives use versioned Round Five paths; no earlier source or production asset was overwritten.

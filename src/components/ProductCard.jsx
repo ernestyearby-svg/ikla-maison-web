@@ -126,8 +126,9 @@ export default function ProductCard({ product, onSelectProduct, onSelectBrand })
         )}
 
         {styledImage && (
-          <span className="absolute top-3 left-3 z-20 px-2.5 py-1 text-[8px] uppercase tracking-[0.18em] bg-white/90 text-[#16171A] border border-black/10 backdrop-blur-sm">
-            {isStyledVisible ? 'Styled View' : 'Hover · Tap · Swipe'}
+          <span className="absolute top-3 left-3 z-20 inline-flex items-center gap-1.5 px-2.5 py-1 text-[8px] uppercase tracking-[0.18em] bg-white/92 text-[#16171A] border border-[#C8A97E]/50 backdrop-blur-sm shadow-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#C8A97E]" aria-hidden="true" />
+            {isStyledVisible ? 'Styled View' : 'Item ⇄ Look'}
           </span>
         )}
         <span className="absolute top-3 right-3 px-2.5 py-1 text-[9px] uppercase tracking-[0.18em] bg-black/75 text-white border border-white/20 backdrop-blur-sm">
