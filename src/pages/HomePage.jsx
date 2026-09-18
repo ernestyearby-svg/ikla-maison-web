@@ -7,6 +7,7 @@ import CampaignImage from '../components/CampaignImage';
 import HeroHouseNavigation from '../components/HeroHouseNavigation';
 import { getCampaignAsset } from '../data/campaigns';
 import { WARDROBE_CAMPAIGN_LOOKS, EXPANSION_PRODUCTS } from '../data/expansionProducts';
+import { getAssetPath } from '../utils/assets.js';
 
 export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCollection, onNavigateAbout, onNavigate }) {
   const [activeEditorialHouse, setActiveEditorialHouse] = useState('ikla-maison');
@@ -114,11 +115,13 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
               <span>International Luxury Flagship</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white tracking-tight leading-[1.04]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-light text-white tracking-[0.18em] leading-[1.04]">
               I·K·L·A MAISON
             </h1>
 
-            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#DFBF95] font-light font-manrope">
+            <div className="w-16 h-px bg-gradient-to-r from-[#C8A97E] via-[#DFBF95] to-transparent my-2" />
+
+            <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-[#DFBF95] font-light font-manrope">
               INTERNATIONALLY KNOWN • LOCALLY ACCEPTED
             </p>
 
@@ -277,7 +280,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
               <div>
                 <div className="aspect-[4/3] w-full overflow-hidden bg-[#F5F2EC] mb-5 rounded-xs relative">
                   <img
-                    src={brand.assets.collection}
+                    src={getAssetPath(brand.assets.collection)}
                     alt={brand.alt.collection}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
@@ -288,7 +291,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
                     </span>
                   </div>
                   <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md p-1.5 shadow-xs border border-neutral-200">
-                    <img src={brand.logos.crestLight} alt="" className="w-full h-full object-contain" />
+                    <img src={getAssetPath(brand.logos.crestLight)} alt="" className="w-full h-full object-contain" />
                   </div>
                 </div>
 
@@ -319,7 +322,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             <div>
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#FAFBFB] mb-5 rounded-xs relative">
                 <img
-                  src={BRANDS['ikla-water'].assets.collection}
+                  src={getAssetPath(BRANDS['ikla-water'].assets.collection)}
                   alt={BRANDS['ikla-water'].alt.collection}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
@@ -359,7 +362,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             <div>
               <div className="aspect-[4/3] w-full overflow-hidden bg-black mb-5 rounded-xs relative">
                 <img
-                  src="assets/griffin/griffin-private-commissions-hero.webp"
+                  src={getAssetPath('assets/griffin/griffin-private-commissions-hero.webp')}
                   alt="The Griffin Edition private commission design vision"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
                   loading="lazy"
@@ -399,7 +402,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             <div>
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#F5F2EC] mb-5 rounded-xs relative">
                 <img
-                  src="assets/eyewear-insignia/01_ikla_architectural_shield_sunglass.webp"
+                  src={getAssetPath('assets/eyewear-insignia/01_ikla_architectural_shield_sunglass.webp')}
                   alt="IKLA Maison private appointments eyewear and accessories"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
@@ -439,7 +442,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             <div>
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#F2F6F3] mb-5 rounded-xs relative">
                 <img
-                  src="assets/ikla-kids/ikla-kids-core-collection-hero.webp"
+                  src={getAssetPath('assets/ikla-kids/ikla-kids-core-collection-hero.webp')}
                   alt="IKLA Kids core collection sweatsuits"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
@@ -476,7 +479,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
             <div>
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#FAF5F0] mb-5 rounded-xs relative">
                 <img
-                  src="assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg"
+                  src={getAssetPath('assets/campaigns/02-reference-crops/my-drink-family/my-drink-family-rep-the-legacy-merch.jpg')}
                   alt="My Drink Family Rep The Legacy circular crest clubhouse fleece"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
@@ -485,7 +488,7 @@ export default function HomePage({ onSelectBrand, onSelectProduct, onNavigateCol
                   <span className="text-[9px] uppercase tracking-widest text-white font-mono">Connected</span>
                 </div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white p-1.5 shadow-xs border border-neutral-200">
-                  <img src={BRANDS['my-drink-family'].logos.crestLight} alt="" className="w-full h-full object-contain" />
+                  <img src={getAssetPath(BRANDS['my-drink-family'].logos.crestLight)} alt="" className="w-full h-full object-contain" />
                 </div>
               </div>
 

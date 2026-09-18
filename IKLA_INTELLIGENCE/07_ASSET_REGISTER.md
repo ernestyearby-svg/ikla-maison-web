@@ -18,3 +18,9 @@ Sources: exact paths and SHA-256 in 06_SOURCE_OF_TRUTH_REGISTER.md / SOURCE_INDE
 - Source editorials remain preserved outside the production tree; no source image was overwritten.
 - Pairings are governed by `src/data/productPresentation.js`: exact wardrobe matches take priority, followed by house-specific apparel editorials. Unmatched footwear, objects, and accessories deliberately remain single-image cards.
 - The My Drink Family children’s ensemble was excluded from IKLA Kids presentation to preserve the founder-approved separation between IKLA Maison and My Drink Family.
+
+## 2026-09-17 Master New Asset Register
+
+- Complete forward-looking art direction manifest and asset specification defined in `IKLA_INTELLIGENCE/14_MASTER_NEW_ASSET_REGISTER.md`.
+- Covers 22+ planned assets across Flagship Architecture, Sovereign House Editorial Pairings, Youth Atelier, The Griffin Edition, and 1:1 Product Photography Silhouettes.
+- Governed by Dynasty Render DNA (03), zero retail pricing, and 1:1 role exclusivity.
