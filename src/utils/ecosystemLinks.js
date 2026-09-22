@@ -13,9 +13,9 @@
  */
 
 export const ECOSYSTEM_CONFIG = {
-  iklaMaisonUrl: import.meta.env.VITE_IKLA_MAISON_URL || 'https://ernestyearby-svg.github.io/ikla-maison-web/#/',
-  myDrinkFamilySiteUrl: import.meta.env.VITE_MY_DRINK_FAMILY_SITE_URL || 'https://astronomy-refine-exact-adjustment.trycloudflare.com/',
-  myDrinkFamilyAppUrl: import.meta.env.VITE_MY_DRINK_FAMILY_APP_URL || 'https://considerable-system-gif-poet.trycloudflare.com/preview/login',
+  iklaMaisonUrl: import.meta.env.VITE_IKLA_MAISON_URL || 'https://iklamaison.com/#/',
+  myDrinkFamilySiteUrl: import.meta.env.VITE_MY_DRINK_FAMILY_SITE_URL || 'https://mydrinkfamily.com/',
+  myDrinkFamilyAppUrl: import.meta.env.VITE_MY_DRINK_FAMILY_APP_URL || 'https://mydrinkfamily.com/app',
 };
 
 export const ECOSYSTEM_STATUS = {
