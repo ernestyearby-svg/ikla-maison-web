@@ -67,3 +67,6 @@ archival/
 scratch/
 IKLA-Maison-Kids-Griffin-Editorial-Asset-Pack/
 IKLA-Maison-Private-Appointments-Asset-Pack/
+
+# Local Netlify folder
+.netlify
