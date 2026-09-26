@@ -268,12 +268,15 @@ export default function Navbar({
                             <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#E26D35] group-hover:translate-x-1 transition-all" />
                           </button>
 
-                          <div className="grid grid-cols-2 gap-2 mt-1 px-1">
-                            <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
-                              <span>MDF Website</span> <ExternalLink className="w-3 h-3" />
+                          <div className="grid grid-cols-3 gap-1.5 mt-1 px-1">
+                            <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
+                              <span>MDF Site</span> <ExternalLink className="w-3 h-3" />
                             </a>
-                            <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
+                            <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
                               <span>MDF App</span> <ExternalLink className="w-3 h-3" />
+                            </a>
+                            <a href={EXTERNAL_LINKS.dynastyWorksStudio} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
+                              <span>Dynasty</span> <ExternalLink className="w-3 h-3" />
                             </a>
                           </div>
                         </div>

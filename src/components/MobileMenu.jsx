@@ -192,8 +192,9 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, currentView, c
                   <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-transform group-hover:translate-x-1" />
                 </button>
               ))}
-              <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Visit Website <ExternalLink className="w-3.5 h-3.5" /></a>
-              <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Open App <ExternalLink className="w-3.5 h-3.5" /></a>
+              <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noopener noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Visit MDF Website <ExternalLink className="w-3.5 h-3.5" /></a>
+              <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noopener noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Open MDF App <ExternalLink className="w-3.5 h-3.5" /></a>
+              <a href={EXTERNAL_LINKS.dynastyWorksStudio} target="_blank" rel="noopener noreferrer" className="p-2.5 flex items-center justify-between text-xs text-neutral-300 hover:text-white">Dynasty Works Studio <ExternalLink className="w-3.5 h-3.5" /></a>
             </div>
           </div>
 

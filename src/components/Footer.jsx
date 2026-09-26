@@ -203,14 +203,15 @@ export default function Footer({ onNavigate }) {
           {/* Maison Standards */}
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
-              Connected Hospitality
+              Connected Ecosystem
             </span>
             <p className="text-neutral-400 font-light leading-relaxed font-manrope">
-              My Drink Family remains a separate platform connected through shared cultural vision—not an IKLA fashion house.
+              Connected through shared cultural vision across fashion, beverage hospitality, and strategic design.
             </p>
             <div className="flex flex-col gap-2 pt-1">
-              <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noreferrer" className="hover:text-white flex items-center gap-1">Visit My Drink Family <ExternalLink className="w-3 h-3" /></a>
-              <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noreferrer" className="hover:text-white flex items-center gap-1">Open the App <ExternalLink className="w-3 h-3" /></a>
+              <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">Visit My Drink Family <ExternalLink className="w-3 h-3" /></a>
+              <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">Open the App <ExternalLink className="w-3 h-3" /></a>
+              <a href={EXTERNAL_LINKS.dynastyWorksStudio} target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">Dynasty Works Studio <ExternalLink className="w-3 h-3" /></a>
             </div>
           </div>
         </div>

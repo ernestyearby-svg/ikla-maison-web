@@ -1,5 +1,5 @@
 export const EXTERNAL_LINKS = {
-  myDrinkFamilyWebsite: 'https://astronomy-refine-exact-adjustment.trycloudflare.com/',
-  myDrinkFamilyApp: 'https://considerable-system-gif-poet.trycloudflare.com/preview/login',
+  myDrinkFamilyWebsite: 'https://mydrinkfamily.com/',
+  myDrinkFamilyApp: 'https://mydrinkfamily.com/app',
+  dynastyWorksStudio: 'https://dynastyworksstudio.com/',
 };
-
