@@ -4,7 +4,7 @@
  * Provides verified links connecting the official Crown Bridge / Dynasty properties:
  * 1. IKLA Maison: https://iklamaison.com/ (Master Fashion & Lifestyle House)
  * 2. My Drink Family: https://mydrinkfamily.com/ (Beverage & Hospitality Universe)
- * 3. My Drink Family App: https://mydrinkfamily.com/app (Member Engagement & Experience App)
+ * 3. My Drink Family App: https://my-drink-family-app-demo.netlify.app/ (Member Engagement & Experience App)
  * 4. Dynasty Works Studio: https://dynastyworksstudio.com/ (Strategy, Brand & Digital Infrastructure)
  * 
  * Verified Official Domains:
@@ -16,7 +16,7 @@
 export const ECOSYSTEM_CONFIG = {
   iklaMaisonUrl: import.meta.env.VITE_IKLA_MAISON_URL || 'https://iklamaison.com/',
   myDrinkFamilySiteUrl: import.meta.env.VITE_MY_DRINK_FAMILY_SITE_URL || 'https://mydrinkfamily.com/',
-  myDrinkFamilyAppUrl: import.meta.env.VITE_MY_DRINK_FAMILY_APP_URL || 'https://mydrinkfamily.com/app',
+  myDrinkFamilyAppUrl: import.meta.env.VITE_MY_DRINK_FAMILY_APP_URL || 'https://my-drink-family-app-demo.netlify.app/',
   dynastyWorksStudioUrl: import.meta.env.VITE_DYNASTY_WORKS_STUDIO_URL || 'https://dynastyworksstudio.com/',
 };
 

@@ -203,7 +203,7 @@ export default function Footer({ onNavigate }) {
           {/* Maison Standards */}
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A97E] font-medium block">
-              Connected Ecosystem
+              Connected Hospitality
             </span>
             <p className="text-neutral-400 font-light leading-relaxed font-manrope">
               Connected through shared cultural vision across fashion, beverage hospitality, and strategic design.

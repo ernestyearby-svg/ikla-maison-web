@@ -270,7 +270,7 @@ export default function Navbar({
 
                           <div className="grid grid-cols-3 gap-1.5 mt-1 px-1">
                             <a href={EXTERNAL_LINKS.myDrinkFamilyWebsite} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
-                              <span>MDF Site</span> <ExternalLink className="w-3 h-3" />
+                              <span>MDF Website</span> <ExternalLink className="w-3 h-3" />
                             </a>
                             <a href={EXTERNAL_LINKS.myDrinkFamilyApp} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/[0.04] flex items-center justify-between text-[11px] text-neutral-400 hover:text-white rounded-xs">
                               <span>MDF App</span> <ExternalLink className="w-3 h-3" />
